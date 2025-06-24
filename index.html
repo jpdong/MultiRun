@@ -11,11 +11,16 @@
     <link rel="icon" href="res/logo.webp" type="image/webp">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-73VJ83N7ZR"></script>
     <script>
+        // Google Consent Mode v2 初始化
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-73VJ83N7ZR');
+        // 默认全部拒绝
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'analytics_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied'
+        });
     </script>
     <style>
         /* 全局样式 */
@@ -386,6 +391,68 @@
             </div>
         </div>
     </div>
+
+    <div id="cookie-consent-banner" style="position:fixed;bottom:0;left:0;right:0;background:#fff;padding:20px;box-shadow:0 -2px 8px rgba(0,0,0,0.1);z-index:9999;display:flex;justify-content:space-between;align-items:center;">
+        <span>This website uses cookies for analytics and ad personalization. Please agree to our collection of your data to improve your experience。</span>
+        <div>
+            <button onclick="acceptAllCookies()" style="margin-right:10px; background-color:#165DFF; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; box-shadow:0 2px 4px rgba(0,0,0,0.1); transition:all 0.3s ease;">Agree All</button>
+            <button onclick="rejectAllCookies()" style="background-color:#f5f5f5; color:#333; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; box-shadow:0 2px 4px rgba(0,0,0,0.1); transition:all 0.3s ease;">Only allow necessary</button>
+        </div>
+    </div>
+
+    <script>
+    // 页面加载时检查Cookie同意状态
+    document.addEventListener('DOMContentLoaded', function() {
+      const consent = localStorage.getItem('cookieConsent');
+      const banner = document.getElementById('cookie-consent-banner');
+      if (consent) {
+        banner.style.display = 'none';
+        // 用户同意时初始化Google Analytics
+        if (consent === 'accepted') {
+          // 请将此处替换为您的GA测量ID
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-73VJ83N7ZR');
+          gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+      });
+        }
+      }
+    });
+
+    function acceptAllCookies() {
+      localStorage.setItem('cookieConsent', 'accepted');
+      document.getElementById('cookie-consent-banner').style.display = 'none';
+      // 更新Google Analytics consent状态
+      gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+      });
+      // 初始化Google Analytics
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-73VJ83N7ZR'); // 替换为您的GA测量ID
+    }
+
+    function rejectAllCookies() {
+      localStorage.setItem('cookieConsent', 'rejected');
+      document.getElementById('cookie-consent-banner').style.display = 'none';
+      // 更新Google Analytics consent状态
+      gtag('consent', 'update', {
+          'ad_storage': 'denied',
+          'analytics_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied'
+      });
+    }
+    </script>
 </body>
 
 </html>
