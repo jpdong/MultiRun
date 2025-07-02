@@ -13,7 +13,7 @@ const menuItems = [
 const NavBar: React.FC = () => (
   <Header style={{ background: '#fff', boxShadow: '0 2px 10px rgba(0,0,0,0.07)', padding: '0 24px', display: 'flex', alignItems: 'center', zIndex: 100 }}>
     <div style={{ display: 'flex', alignItems: 'center', flex: 1 }}>
-      <img src="../logo.webp" alt="Multiple Accounts Logo" style={{ width: 40, height: 40, marginRight: 12 }} />
+      <img src="/logo.webp" alt="Multiple Accounts Logo" style={{ width: 40, height: 40, marginRight: 12 }} />
       <span style={{ fontSize: 24, fontWeight: 'bold', color: '#2c3e50' }}>Multi Run</span>
     </div>
     <Menu mode="horizontal" items={menuItems} style={{ flex: 2, minWidth: 400, borderBottom: 'none', justifyContent: 'center' }} />
