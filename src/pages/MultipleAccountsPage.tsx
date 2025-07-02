@@ -14,22 +14,22 @@ import { Divider } from 'antd';
 
 const features = [
   {
-    img: '../public/multi_feature_1.webp',
+    img: '/multi_feature_1.webp',
     title: 'App Cloning',
     desc: 'Clone and run multiple instances of the same app with separate data storage.',
   },
   {
-    img: '../public/multi_feature_2.webp',
+    img: '/multi_feature_2.webp',
     title: 'Data Isolation',
     desc: 'Keep your accounts secure with isolated data spaces and no cross-contamination.',
   },
   {
-    img: '../public/multi_feature_3.webp',
+    img: '/multi_feature_3.webp',
     title: 'Parallel Running',
     desc: 'Run multiple accounts simultaneously without performance issues.',
   },
   {
-    img: '../public/multi_feature_4.webp',
+    img: '/multi_feature_4.webp',
     title: 'Easy Switching',
     desc: 'Quickly switch between accounts with our intuitive interface.',
   },
@@ -92,7 +92,7 @@ const MultipleAccountsPage: React.FC = () => (
             <DownloadButton icon={<DownloadOutlined />} text="Get Started" href="https://play.google.com/store/apps/details?id=com.dong.multirun" />
           </Column>
           <Column xs={24} md={12} style={{ textAlign: 'center' }}>
-            <img src="../public/multi_title_image.webp" alt="Multi Run" style={{ maxWidth: '100%', height: 'auto', borderRadius: 10, boxShadow: '0 4px 16px rgba(52,152,219,0.08)' }} />
+            <img src="/multi_title_image.webp" alt="Multi Run" style={{ maxWidth: '100%', height: 'auto', borderRadius: 10, boxShadow: '0 4px 16px rgba(52,152,219,0.08)' }} />
           </Column>
         </Row>
       </Container>
