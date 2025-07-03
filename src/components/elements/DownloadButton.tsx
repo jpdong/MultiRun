@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from 'antd';
 
 export interface DownloadButtonProps {
   icon?: React.ReactNode;
@@ -8,9 +7,10 @@ export interface DownloadButtonProps {
 }
 
 const DownloadButton: React.FC<DownloadButtonProps> = ({ icon, text, href }) => (
-  <Button type="primary" icon={icon} size="large" href={href} style={{ borderRadius: 10, margin: 8 }}>
+  <a href={href} className="btn btn-large" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+    {icon}
     {text}
-  </Button>
+  </a>
 );
 
-export default DownloadButton; 
+export default DownloadButton;

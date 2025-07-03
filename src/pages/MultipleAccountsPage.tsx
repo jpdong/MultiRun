@@ -3,14 +3,11 @@ import NavBar from '../components/elements/NavBar';
 import Footer from '../components/elements/Footer';
 import FeatureCard from '../components/elements/FeatureCard';
 import TestimonialCard from '../components/elements/TestimonialCard';
-import FAQItem from '../components/elements/FAQItem';
 import SectionTitle from '../components/elements/SectionTitle';
 import Container from '../components/layout/Container';
 import Row from '../components/layout/Row';
 import Column from '../components/layout/Column';
-import { DownloadOutlined, AppleOutlined } from '@ant-design/icons';
 import DownloadButton from '../components/elements/DownloadButton';
-import { Divider } from 'antd';
 
 const features = [
   {
@@ -89,7 +86,7 @@ const MultipleAccountsPage: React.FC = () => (
             <p style={{ fontSize: '1.1rem', marginBottom: 30, color: '#666' }}>
               Keep your personal and professional lives separate with our secure app cloning solution. No more switching between accounts - run them all simultaneously!
             </p>
-            <DownloadButton icon={<DownloadOutlined />} text="Get Started" href="https://play.google.com/store/apps/details?id=com.dong.multirun" />
+            <DownloadButton text="Get Started" href="https://play.google.com/store/apps/details?id=com.dong.multirun" />
           </Column>
           <Column xs={24} md={12} style={{ textAlign: 'center' }}>
             <img src="/multi_title_image.webp" alt="Multi Run" style={{ maxWidth: '100%', height: 'auto', borderRadius: 10, boxShadow: '0 4px 16px rgba(52,152,219,0.08)' }} />
@@ -114,16 +111,21 @@ const MultipleAccountsPage: React.FC = () => (
         <Container>
           <SectionTitle>Download Multi Run</SectionTitle>
           <p>Available on all major platforms. Get started today!</p>
-          <DownloadButton icon={<DownloadOutlined />} text="Google Play" href="https://play.google.com/store/apps/details?id=com.dong.multirun" />
+          <DownloadButton text="Google Play" href="https://play.google.com/store/apps/details?id=com.dong.multirun" />
         </Container>
       </div>
       {/* FAQ Section */}
       <div style={{ background: '#fff', padding: '80px 0' }} id="faq">
         <Container>
           <SectionTitle>Frequently Asked Questions</SectionTitle>
-          {faqs.map(f => (
-            <FAQItem key={f.question} question={f.question} answer={f.answer} />
-          ))}
+          <div style={{ maxWidth: 800, margin: '0 auto' }}>
+            {faqs.map(f => (
+              <div key={f.question} style={{ marginBottom: 30, padding: 20, background: '#f9f9f9', borderRadius: 10 }}>
+                <h3 style={{ color: '#2c3e50', marginBottom: 10 }}>{f.question}</h3>
+                <p style={{ color: '#666', margin: 0 }}>{f.answer}</p>
+              </div>
+            ))}
+          </div>
         </Container>
       </div>
       {/* Testimonials Section */}

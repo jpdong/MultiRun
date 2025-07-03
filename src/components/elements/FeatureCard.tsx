@@ -1,5 +1,4 @@
 import React from 'react';
-import { Card } from 'antd';
 
 export interface FeatureCardProps {
   img: string;
@@ -8,20 +7,15 @@ export interface FeatureCardProps {
 }
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ img, title, desc }) => (
-  <Card
-    hoverable
-    cover={<img alt={title} src={img} style={{ width: '100%', height: 'auto', objectFit: 'contain', margin: '0 auto', background: '#f5f5f5', borderRadius: 10, marginTop: 0 }} />}
-    style={{ borderRadius: 10, textAlign: 'center', boxShadow: '0 3px 10px rgba(0,0,0,0.07)', marginBottom: 24 }}
-  >
-    <Card.Meta
-      title={<span style={{ color: '#2c3e50', fontWeight: 600 }}>{title}</span>}
-      description={<span style={{ color: '#666' }}>{desc}</span>}
-      style={{
-        minHeight: 100, // 设置最小高度
-        overflow: 'hidden' // 如果内容可能溢出，可以隐藏
-      }}
-    />
-  </Card>
+  <div className="card" style={{ marginBottom: 24 }}>
+    <div className="card-cover">
+      <img alt={title} src={img} />
+    </div>
+    <div className="card-body">
+      <h3 className="card-title">{title}</h3>
+      <p className="card-description">{desc}</p>
+    </div>
+  </div>
 );
 
 export default FeatureCard;
