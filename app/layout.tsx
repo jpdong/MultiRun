@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import 'antd/dist/reset.css'
-import CookieConsent from '../src/components/elements/CookieConsent'
+import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,7 +17,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <CookieConsent />
         {children}
       </body>
     </html>

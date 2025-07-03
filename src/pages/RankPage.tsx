@@ -1,123 +1,59 @@
-'use client';
-
 import React from 'react';
-import { Layout, Typography, Table, Avatar } from 'antd';
 import Container from '../components/layout/Container';
 
-const { Content } = Layout;
-const { Title, Paragraph, Text } = Typography;
-
-const columns = [
-  {
-    title: 'Rank',
-    dataIndex: 'rank',
-    key: 'rank',
-    width: 80,
-  },
-  {
-    title: 'App',
-    dataIndex: 'appName',
-    key: 'appName',
-    render: (text: string, record: { appName: string; icon: string; description: string }) => (
-      <div style={{ display: 'flex', alignItems: 'center' }}>
-        <Avatar src={record.icon} size={48} style={{ marginRight: 16 }} />
-        <div>
-          <Text strong>{record.appName}</Text>
-          <Paragraph type="secondary" style={{ margin: 0 }}>{record.description}</Paragraph>
-        </div>
-      </div>
-    ),
-  },
-];
-
-const data = [
-  {
-    key: '1',
-    rank: 1,
-    appName: 'WhatsApp',
-    icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/240px-WhatsApp.svg.png',
-    description: 'A popular messaging and VoIP service.',
-  },
-  {
-    key: '2',
-    rank: 2,
-    appName: 'Facebook',
-    icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/240px-Facebook_f_logo_%282019%29.svg.png',
-    description: "The world's largest social network.",
-  },
-  {
-    key: '3',
-    rank: 3,
-    appName: 'Garena Free Fire',
-    icon: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/b3/Garena_Free_Fire_Booyah_Day_Logo.png/220px-Garena_Free_Fire_Booyah_Day_Logo.png',
-    description: 'A popular battle royale game.',
-  },
-  {
-    key: '4',
-    rank: 4,
-    appName: 'Mobile Legends: Bang Bang',
-    icon: 'https://upload.wikimedia.org/wikipedia/en/thumb/a/a6/Mobile_Legends_Bang_Bang_logo.png/220px-Mobile_Legends_Bang_Bang_logo.png',
-    description: 'A multiplayer online battle arena (MOBA) game.',
-  },
-  {
-    key: '5',
-    rank: 5,
-    appName: 'eFootball PES 2021',
-    icon: 'https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Pro_Evolution_Soccer_2021_Season_Update_cover.jpg/220px-Pro_Evolution_Soccer_2021_Season_Update_cover.jpg',
-    description: 'A football simulation video game.',
-  },
-  {
-    key: '6',
-    rank: 6,
-    appName: 'Instagram',
-    icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/240px-Instagram_icon.png',
-    description: 'A photo and video sharing social network.',
-  },
-  {
-    key: '7',
-    rank: 7,
-    appName: 'Clash of Clans',
-    icon: 'https://upload.wikimedia.org/wikipedia/en/thumb/8/86/Clash_of_Clans_Logo.png/220px-Clash_of_Clans_Logo.png',
-    description: 'A popular mobile strategy video game.',
-  },
-  {
-    key: '8',
-    rank: 8,
-    appName: 'Facebook Lite',
-    icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/240px-Facebook_f_logo_%282019%29.svg.png',
-    description: 'A lightweight version of the Facebook app.',
-  },
-  {
-    key: '9',
-    rank: 9,
-    appName: 'WhatsApp Business',
-    icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/240px-WhatsApp.svg.png',
-    description: 'A version of WhatsApp for business owners.',
-  },
-  {
-    key: '10',
-    rank: 10,
-    appName: 'ShareChat',
-    icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/ShareChat_logo.svg/240px-ShareChat_logo.svg.png',
-    description: 'An Indian social media platform.',
-  },
+const apps = [
+  { rank: 1, name: 'WhatsApp', description: 'Popular messaging app' },
+  { rank: 2, name: 'Instagram', description: 'Social media platform' },
+  { rank: 3, name: 'Facebook', description: 'Social networking service' },
+  { rank: 4, name: 'TikTok', description: 'Short video platform' },
+  { rank: 5, name: 'Telegram', description: 'Secure messaging app' },
 ];
 
 const RankPage: React.FC = () => {
   return (
-    <Layout>
-      <Content>
-        <Container>
-          <div style={{ padding: '4rem 0', textAlign: 'center' }}>
-            <Title>Top 10 Cloned Applications</Title>
-            <Paragraph style={{ marginBottom: '3rem', fontSize: '1.2rem' }}>
-              Here are the most popular apps that users clone with Multi Run.
-            </Paragraph>
-            <Table columns={columns} dataSource={data} pagination={false} />
+    <div>
+      <Container>
+        <div className="page-content">
+          <h1>Top 5 Cloned Applications</h1>
+          <p style={{ marginBottom: '3rem', fontSize: '1.2rem' }}>
+            Here are the most popular apps that users clone with Multi Run.
+          </p>
+          
+          <div style={{ maxWidth: 800, margin: '0 auto' }}>
+            {apps.map(app => (
+              <div key={app.rank} style={{ 
+                display: 'flex', 
+                alignItems: 'center', 
+                padding: '20px', 
+                marginBottom: '16px',
+                background: '#f9f9f9', 
+                borderRadius: '10px',
+                textAlign: 'left'
+              }}>
+                <div style={{ 
+                  width: '40px', 
+                  height: '40px', 
+                  borderRadius: '50%', 
+                  background: '#1890ff', 
+                  color: 'white',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  marginRight: '20px',
+                  fontWeight: 'bold'
+                }}>
+                  {app.rank}
+                </div>
+                <div>
+                  <h3 style={{ margin: 0, color: '#2c3e50' }}>{app.name}</h3>
+                  <p style={{ margin: 0, color: '#666' }}>{app.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
-        </Container>
-      </Content>
-    </Layout>
+        </div>
+      </Container>
+    </div>
   );
 };
 

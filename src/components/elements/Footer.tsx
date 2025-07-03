@@ -1,43 +1,34 @@
 import React from 'react';
-import { Layout, Row, Col } from 'antd';
 import Link from 'next/link';
 
-const { Footer: AntFooter } = Layout;
-
 const Footer: React.FC = () => (
-  <AntFooter style={{ background: '#2c3e50', color: 'white', padding: '50px 0 20px', marginTop: 48 }}>
-    <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 20px' }}>
-      <Row gutter={[32, 32]}>
-        <Col xs={24} md={8}>
-          <h3 style={{ color: 'white', marginBottom: 20 }}>Multi Run</h3>
+  <footer className="footer">
+    <div className="container">
+      <div className="row">
+        <div className="col col-4">
+          <h3>Multi Run</h3>
           <p>Run multiple accounts and apps simultaneously on one device with complete data isolation.</p>
-        </Col>
-        <Col xs={24} md={8}>
-          <h3 style={{ color: 'white', marginBottom: 20 }}>Products</h3>
-          <ul style={{ listStyle: 'none', padding: 0 }}>
-            <li><a href="#features" style={footerLinkStyle}>Features</a></li>
-            <li><a href="#download" style={footerLinkStyle}>Download</a></li>
+        </div>
+        <div className="col col-4">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#download">Download</a></li>
           </ul>
-        </Col>
-        <Col xs={24} md={8}>
-          <h3 style={{ color: 'white', marginBottom: 20 }}>Support</h3>
-          <ul style={{ listStyle: 'none', padding: 0 }}>
-            <li><Link href="/privacy-policy" style={footerLinkStyle}>Privacy Policy</Link></li>
-            <li><Link href="/terms-of-use" style={footerLinkStyle}>Terms of Use</Link></li>
+        </div>
+        <div className="col col-4">
+          <h3>Support</h3>
+          <ul>
+            <li><Link href="/privacy-policy">Privacy Policy</Link></li>
+            <li><Link href="/terms-of-use">Terms of Use</Link></li>
           </ul>
-        </Col>
-      </Row>
-      <div style={{ textAlign: 'center', paddingTop: 20, borderTop: '1px solid #444', color: '#aaa', marginTop: 40 }}>
+        </div>
+      </div>
+      <div className="footer-bottom">
         &copy; 2024 Multi Run. All rights reserved.
       </div>
     </div>
-  </AntFooter>
+  </footer>
 );
-
-const footerLinkStyle: React.CSSProperties = {
-  color: '#ddd',
-  textDecoration: 'none',
-  transition: 'color 0.3s',
-};
 
 export default Footer;
