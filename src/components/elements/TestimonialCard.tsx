@@ -25,7 +25,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ avatar, name, text })
           <h4 style={{ fontWeight: 'bold', color: '#2c3e50', margin: 0 }}>{name}</h4>
         </div>
       </div>
-      <p style={{ color: '#666', fontSize: '1rem', margin: 0 }}>{text}</p>
+      <p style={{ color: '#666', fontSize: '1rem', margin: 0, minHeight: '200px' }}>{text}</p>
     </div>
   </div>
 );

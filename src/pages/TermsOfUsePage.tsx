@@ -39,10 +39,10 @@ const TermsOfUsePage: React.FC = () => {
 
           <h2>Contact Us</h2>
           <p>
-            dongshan1025@gmail.com
+            If you have any questions about these Terms, please contact us.
           </p>
           <p>
-            If you have any questions about these Terms, please contact us.
+            dongshan1025@gmail.com
           </p>
         </div>
       </Container>

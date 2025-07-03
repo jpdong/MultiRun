@@ -5,7 +5,7 @@ const PrivacyPolicyPage: React.FC = () => {
   return (
     <div>
       <Container>
-        <div style={{ padding: '2rem 0' }}>
+        <div className="page-content">
           <h1>Privacy Policy</h1>
           <p>
             Last updated: July 3, 2025
@@ -23,20 +23,20 @@ const PrivacyPolicyPage: React.FC = () => {
           </p>
 
           <h3>Types of Data Collected</h3>
-          <strong>Personal Data</strong>
-          <p>
+          <h3>Personal Data</h3>
+          <div>
             While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). Personally identifiable information may include, but is not limited to:
             <ul>
               <li>Email address</li>
               <li>First name and last name</li>
               <li>Cookies and Usage Data</li>
             </ul>
-          </p>
-          <strong>Usage Data</strong>
+          </div>
+          <h3>Usage Data</h3>
           <p>
             We may also collect information on how the Service is accessed and used ("Usage Data"). This Usage Data may include information such as your computer's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers and other diagnostic data.
           </p>
-          <strong>Tracking & Cookies Data</strong>
+          <h3>Tracking & Cookies Data</h3>
           <p>
             We use cookies and similar tracking technologies to track the activity on our Service and hold certain information. Cookies are files with a small amount of data which may include an anonymous unique identifier. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service.
           </p>
@@ -67,10 +67,10 @@ const PrivacyPolicyPage: React.FC = () => {
 
           <h2>Contact Us</h2>
           <p>
-            dongshan1025@gmail.com
+            If you have any questions about this Privacy Policy, please contact us.
           </p>
           <p>
-            If you have any questions about this Privacy Policy, please contact us.
+            dongshan1025@gmail.com
           </p>
         </div>
       </Container>
