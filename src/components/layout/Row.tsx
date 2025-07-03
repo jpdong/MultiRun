@@ -1,6 +1,16 @@
 import React from 'react';
-import { Row as AntRow, RowProps as AntRowProps } from 'antd';
 
-const Row: React.FC<AntRowProps> = (props) => <AntRow {...props} />;
+interface RowProps {
+  gutter?: [number, number];
+  align?: string;
+  style?: React.CSSProperties;
+  children: React.ReactNode;
+}
 
-export default Row; 
+const Row: React.FC<RowProps> = ({ children, style, ...props }) => (
+  <div className="row" style={style}>
+    {children}
+  </div>
+);
+
+export default Row;
