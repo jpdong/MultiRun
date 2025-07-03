@@ -8,7 +8,7 @@ const menuItems = [
   { key: 'download', label: <a href="/#download">Download</a> },
   { key: 'faq', label: <a href="/#faq">FAQ</a> },
   { key: 'testimonials', label: <a href="/#testimonials">Testimonials</a> },
-  { key: 'rank', label: <Link to="/rank">Rank</Link> },
+  //{ key: 'rank', label: <Link to="/rank">Rank</Link> },
   { key: 'contact', label: <Link to="/contact">Contact</Link> },
 ];
 
