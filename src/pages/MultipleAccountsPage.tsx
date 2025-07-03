@@ -38,11 +38,11 @@ const features = [
 const faqs = [
   {
     question: 'How do I clone an app?',
-    answer: 'Simply open Multiple Accounts, select the app you want to clone, and follow the on-screen instructions.',
+    answer: 'Simply open Multi Run, select the app you want to clone, and follow the on-screen instructions.',
   },
   {
-    question: 'Is Multiple Accounts free?',
-    answer: 'Yes, Multiple Accounts is free to use for all users.',
+    question: 'Is Multi Run free?',
+    answer: 'Yes, Multi Run is free to use for all users.',
   },
   {
     question: 'Will my data be safe and isolated?',
@@ -50,7 +50,7 @@ const faqs = [
   },
   {
     question: 'Which platforms are supported?',
-    answer: 'Multiple Accounts is available for Android and iOS.',
+    answer: 'Multi Run is available for Android.',
   },
 ];
 
@@ -63,7 +63,7 @@ const testimonials = [
   {
     avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
     name: 'Linda',
-    text: 'I use this app only for my game accounts. It\'s working very fine. No issues. Clean, simple & clear.',
+    text: "i can't really believe my eyes it's really totaly free and there is no ads u can add multiple apps with free and quickly thank you so much for the creator 😙😙😍really advice everyone to try it it's better than others apps",
   },
   {
     avatar: 'https://randomuser.me/api/portraits/men/65.jpg',

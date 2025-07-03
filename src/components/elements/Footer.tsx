@@ -1,5 +1,6 @@
 import React from 'react';
 import { Layout, Row, Col } from 'antd';
+import { Link } from 'react-router-dom';
 
 const { Footer: AntFooter } = Layout;
 
@@ -28,11 +29,8 @@ const Footer: React.FC = () => (
         <Col xs={24} md={8}>
           <h3 style={{ color: 'white', marginBottom: 20 }}>Support</h3>
           <ul style={{ listStyle: 'none', padding: 0 }}>
-            <li><a href="#faq" style={footerLinkStyle}>FAQ</a></li>
-            <li><a href="#contact" style={footerLinkStyle}>Contact Us</a></li>
-            <li><a href="#tutorials" style={footerLinkStyle}>Tutorials</a></li>
-            <li><a href="#privacy" style={footerLinkStyle}>Privacy Policy</a></li>
-            <li><a href="#terms" style={footerLinkStyle}>Terms of Use</a></li>
+            <li><a href="#privacy" style={footerLinkStyle}><Link to="/privacy-policy">Privacy Policy</Link></a></li>
+            <li><a href="#terms" style={footerLinkStyle}><Link to="/terms-of-use">Terms of Use</Link></a></li>
           </ul>
         </Col>
       </Row>
