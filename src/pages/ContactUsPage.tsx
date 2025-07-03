@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Typography, Card, Row, Col, Avatar } from 'antd';
+import { Layout, Typography, Card, Row, Col, Avatar, Button, message } from 'antd';
 import { TwitterOutlined, FacebookOutlined, MessageOutlined, MailOutlined } from '@ant-design/icons';
 import { FaDiscord, FaTelegramPlane, FaProductHunt } from 'react-icons/fa';
 import Container from '../components/layout/Container';
@@ -7,50 +7,44 @@ import Container from '../components/layout/Container';
 const { Content } = Layout;
 const { Title, Paragraph } = Typography;
 
+const emailAddress = 'dongshan1025@gmail.com';
+
 const contactMethods = [
   {
-    icon: <FaTelegramPlane style={{ fontSize: 24, color: '#0088cc' }} />,
+    icon: <FaTelegramPlane style={{ fontSize: 64, color: '#0088cc' }} />,
     title: 'Telegram Channel',
-    link: '#', // 在此处替换为您的 Telegram 频道链接
+    link: 'https://t.me/multi_run',
     description: 'Get the latest updates and announcements.',
   },
   {
-    icon: <MessageOutlined style={{ fontSize: 24, color: '#0088cc' }} />,
+    icon: <MessageOutlined style={{ fontSize: 64, color: '#0088cc' }} />,
     title: 'Telegram Group',
-    link: '#', // 在此处替换为您的 Telegram 群组链接
+    link: 'https://t.me/+m8gMGEhAb5E0ODk1',
     description: 'Join the community discussion.',
   },
   {
-    icon: <FaDiscord style={{ fontSize: 24, color: '#7289DA' }} />,
+    icon: <FaDiscord style={{ fontSize: 64, color: '#7289DA' }} />,
     title: 'Discord',
-    link: '#', // 在此处替换为您的 Discord 链接
+    link: 'https://discord.gg/T7DsKkdz',
     description: 'Chat with the team and community.',
   },
   {
-    icon: <TwitterOutlined style={{ fontSize: 24, color: '#1DA1F2' }} />,
+    icon: <TwitterOutlined style={{ fontSize: 64, color: '#1DA1F2' }} />,
     title: 'Twitter',
-    link: '#', // 在此处替换为您的 Twitter 链接
+    link: 'https://x.com/JP_DONG',
     description: 'Follow us for news and updates.',
   },
   {
-    icon: <FacebookOutlined style={{ fontSize: 24, color: '#4267B2' }} />,
-    title: 'Facebook',
-    link: '#', // 在此处替换为您的 Facebook 链接
-    description: 'Like our page for more content.',
-  },
-  {
-    icon: <FaProductHunt style={{ fontSize: 24, color: '#DA552F' }} />,
+    icon: <FaProductHunt style={{ fontSize: 64, color: '#DA552F' }} />,
     title: 'Product Hunt',
-    link: '#', // 在此处替换为您的 Product Hunt 链接
+    link: 'https://www.producthunt.com/@jumpdong',
     description: 'See our launch and leave a review.',
   },
-  {
-    icon: <MailOutlined style={{ fontSize: 24, color: '#D44638' }} />,
-    title: 'Email',
-    link: 'mailto:your-email@example.com', // 在此处替换为您的邮箱地址
-    description: 'For business inquiries and support.',
-  },
 ];
+
+const handleCopy = () => {
+  navigator.clipboard.writeText(emailAddress);
+};
 
 const ContactUsPage: React.FC = () => {
   return (
@@ -68,7 +62,7 @@ const ContactUsPage: React.FC = () => {
                   <a href={method.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
                     <Card hoverable style={{ height: '100%' }}>
                       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '1rem' }}>
-                        <Avatar size={64} icon={method.icon} style={{ marginBottom: '1rem', backgroundColor: 'transparent' }} />
+                        <Avatar size={100} icon={method.icon} style={{ marginBottom: '1rem', backgroundColor: 'transparent' }} />
                         <Title level={4}>{method.title}</Title>
                         <Paragraph>{method.description}</Paragraph>
                       </div>
@@ -76,6 +70,23 @@ const ContactUsPage: React.FC = () => {
                   </a>
                 </Col>
               ))}
+              <Col xs={24} sm={12} md={8}>
+                <Card hoverable style={{ height: '100%' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '1rem' }}>
+                    <Avatar size={100} icon={<MailOutlined style={{ fontSize: 64, color: '#D44638' }} />} style={{ marginBottom: '1rem', backgroundColor: 'transparent' }} />
+                    <Title level={4}>Email</Title>
+                    <Paragraph>For business inquiries and support.</Paragraph>
+                    <div style={{ marginTop: 'auto' }}>
+                      <Button type="primary" href={`mailto:${emailAddress}`} style={{ marginRight: 8 }}>
+                        Send Email
+                      </Button>
+                      <Button onClick={handleCopy}>
+                        Copy Address
+                      </Button>
+                    </div>
+                  </div>
+                </Card>
+              </Col>
             </Row>
           </div>
         </Container>
