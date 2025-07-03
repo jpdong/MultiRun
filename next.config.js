@@ -6,8 +6,8 @@ const nextConfig = {
   },
   // 禁用React严格模式以避免hydration问题
   reactStrictMode: false,
-  // 压缩配置
-  compress: true,
+  // 确保正确的trailing slash配置
+  trailingSlash: false,
 }
 
 module.exports = nextConfig
