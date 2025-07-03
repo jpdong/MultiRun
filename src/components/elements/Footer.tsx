@@ -11,19 +11,12 @@ const Footer: React.FC = () => (
         <Col xs={24} md={8}>
           <h3 style={{ color: 'white', marginBottom: 20 }}>Multi Run</h3>
           <p>Run multiple accounts and apps simultaneously on one device with complete data isolation.</p>
-          <div style={{ display: 'flex', gap: 15, marginTop: 10 }}>
-            <a href="#" title="Twitter" style={{ color: '#fff', fontSize: '1.3rem' }}>🐦</a>
-            <a href="#" title="Facebook" style={{ color: '#fff', fontSize: '1.3rem' }}>📘</a>
-            <a href="#" title="Instagram" style={{ color: '#fff', fontSize: '1.3rem' }}>📸</a>
-          </div>
         </Col>
         <Col xs={24} md={8}>
           <h3 style={{ color: 'white', marginBottom: 20 }}>Products</h3>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             <li><a href="#features" style={footerLinkStyle}>Features</a></li>
             <li><a href="#download" style={footerLinkStyle}>Download</a></li>
-            <li><a href="#pricing" style={footerLinkStyle}>Pricing</a></li>
-            <li><a href="#updates" style={footerLinkStyle}>Updates</a></li>
           </ul>
         </Col>
         <Col xs={24} md={8}>
