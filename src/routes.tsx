@@ -3,6 +3,7 @@ import MultipleAccountsPage from './pages/MultipleAccountsPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsOfUsePage from './pages/TermsOfUsePage';
 import ContactUsPage from './pages/ContactUsPage';
+import RankPage from './pages/RankPage';
 
 const routes: RouteObject[] = [
   {
@@ -20,6 +21,10 @@ const routes: RouteObject[] = [
   {
     path: '/contact',
     element: <ContactUsPage />,
+  },
+  {
+    path: '/rank',
+    element: <RankPage />,
   },
   // 可在此添加更多页面
 ];
