@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { Layout, Typography, Table, Avatar } from 'antd';
 import Container from '../components/layout/Container';

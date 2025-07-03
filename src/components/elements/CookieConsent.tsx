@@ -1,6 +1,8 @@
+'use client';
+
 import React, { useEffect, useState } from 'react';
 import { Button, Typography, Space, Card, Layout } from 'antd';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const { Footer } = Layout;
 const COOKIE_KEY = 'cookieConsent';
@@ -64,7 +66,7 @@ const CookieConsent: React.FC = () => {
       <Card>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' }}>
           <Typography.Text style={{ flex: '1 1 300px', minWidth: '300px', marginRight: '1rem' }}>
-            This website uses cookies for analytics and ad personalization. Please agree to our collection of your data to improve your experience. Read our <Link to="/privacy-policy">Privacy Policy</Link> and <Link to="/terms-of-use">Terms of Use</Link>.
+            This website uses cookies for analytics and ad personalization. Please agree to our collection of your data to improve your experience. Read our <Link href="/privacy-policy">Privacy Policy</Link> and <Link href="/terms-of-use">Terms of Use</Link>.
           </Typography.Text>
           <Space wrap style={{ flex: '0 0 auto' }}>
             <Button type="primary" onClick={acceptAll}>
