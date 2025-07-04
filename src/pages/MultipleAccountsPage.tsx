@@ -36,15 +36,15 @@ const features = [
 const faqs = [
   {
     question: 'How do I clone an app?',
-    answer: 'Simply open Multi Run, select the app you want to clone, and follow the on-screen instructions.',
+    answer: 'Simply open Multi Run, select the app you want to clone, and follow the on-screen instructions.Separate workspaces for professional/personal use. Auto-schedule switches (e.g., mute work apps after hours) and hide sensitive apps in ​​Stealth Mode​​.',
   },
   {
     question: 'Is Multi Run free?',
-    answer: 'Yes, Multi Run is free to use for all users.',
+    answer: 'Yes, Multi Run is free to use for all users.Dominate PUBG, Free Fire, or Genshin Impact with dual accounts—boost resources, strategize, or share devices hassle-free.',
   },
   {
     question: 'Will my data be safe and isolated?',
-    answer: 'Yes, each cloned app runs in a separate, isolated environment to keep your data secure.',
+    answer: 'Yes, each cloned app runs in a separate, isolated environment to keep your data secure.Clone WhatsApp, Instagram, TikTok, games, and 2000+ apps—manage personal, work, and gaming profiles ​​simultaneously​​ on one device. Keep data 100% isolated with no overlap!',
   },
   {
     question: 'Which platforms are supported?',
