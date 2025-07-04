@@ -8,6 +8,7 @@ import Container from '../components/layout/Container';
 import Row from '../components/layout/Row';
 import Column from '../components/layout/Column';
 import DownloadButton from '../components/elements/DownloadButton';
+import { FaGooglePlay } from 'react-icons/fa';
 
 const features = [
   {
@@ -111,7 +112,7 @@ const MultipleAccountsPage: React.FC = () => (
         <Container>
           <SectionTitle>Download Multi Run</SectionTitle>
           <p>Available on all major platforms. Get started today!</p>
-          <DownloadButton text="Google Play" href="https://play.google.com/store/apps/details?id=com.dong.multirun" />
+          <DownloadButton text="Google Play" href="https://play.google.com/store/apps/details?id=com.dong.multirun" icon={<FaGooglePlay />} />
         </Container>
       </div>
       {/* FAQ Section */}

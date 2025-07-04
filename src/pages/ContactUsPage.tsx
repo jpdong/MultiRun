@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '../components/layout/Container';
-import { FaEnvelope, FaTelegram, FaDiscord, FaTwitter, FaHome } from 'react-icons/fa';
+import { FaEnvelope, FaTelegram, FaDiscord, FaTwitter, FaHome, FaProductHunt } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
 
 const ContactCard: React.FC<{ icon: React.ReactNode; title: string; link: string; value: string }> = ({ icon, title, link, value }) => (
@@ -25,13 +25,7 @@ const ContactUsPage: React.FC = () => {
             We'd love to hear from you! Reach out through any of these channels:
           </p>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
-            <ContactCard
-              icon={<FaEnvelope />}
-              title="Email"
-              link="mailto:dongshan1025@gmail.com"
-              value="dongshan1025@gmail.com"
-            />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '2rem', maxWidth: '1200px', margin: '0 auto' }}>   
             <ContactCard
               icon={<FaTelegram />}
               title="Telegram Channel"
@@ -57,10 +51,16 @@ const ContactUsPage: React.FC = () => {
               value="https://x.com/JP_DONG"
             />
             <ContactCard
-              icon={<FiExternalLink />}
+              icon={<FaProductHunt />}
               title="ProductHunt"
               link="https://www.producthunt.com/@jumpdong"
               value="https://www.producthunt.com/@jumpdong"
+            />
+            <ContactCard
+              icon={<FaEnvelope />}
+              title="Email"
+              link="mailto:dongshan1025@gmail.com"
+              value="dongshan1025@gmail.com"
             />
           </div>
         </div>
