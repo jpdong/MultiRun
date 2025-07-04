@@ -4,7 +4,7 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Multi Run - Parallel Dual App',
   description: 'Multi Run​​ is a powerful tool that allows you to run multiple accounts or applications simultaneously on a single device.',
-  keywords: 'Multi Run,Parallel Space,Dual App,Multiple Accounts',
+  keywords: 'Multi Run,Parallel Space,Dual App,Multiple Accounts,Cloner,Virtual',
   icons: {
     icon: '/logo.webp',
   },
