@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from '../components/layout/Container';
-import { FaEnvelope, FaTelegram, FaDiscord, FaTwitter, FaHome } from 'react-icons/fa';
+import Link from 'next/link';
+import { FaEnvelope, FaTelegram, FaDiscord, FaTwitter, FaProductHunt } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
 
 const ContactCard: React.FC<{ icon: React.ReactNode; title: string; link: string; value: string }> = ({ icon, title, link, value }) => (
@@ -14,24 +15,23 @@ const ContactCard: React.FC<{ icon: React.ReactNode; title: string; link: string
 const ContactUsPage: React.FC = () => {
   return (
     <div>
+      <header className="header">
+      <div className="header-content">
+        <Link href="/" className="logo">
+          <img src="/logo.webp" alt="Multiple Accounts Logo" />
+          <span className="logo-text">Multi Run</span>
+        </Link>
+      </div>
+    </header>
       <Container>
         <div className="page-content" style={{ padding: '4rem 0', textAlign: 'center' }}>
-          <a href="/" style={{ position: 'absolute', left: '2rem', top: '2rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#165DFF', textDecoration: 'none' }}>
-            <FaHome style={{ fontSize: '1.2rem' }} />
-            <span>HOME</span>
-          </a>
+    
           <h1>Contact Us</h1>
           <p style={{ marginBottom: '3rem', fontSize: '1.2rem' }}>
             We'd love to hear from you! Reach out through any of these channels:
           </p>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
-            <ContactCard
-              icon={<FaEnvelope />}
-              title="Email"
-              link="mailto:dongshan1025@gmail.com"
-              value="dongshan1025@gmail.com"
-            />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '2rem', maxWidth: '1200px', margin: '0 auto' }}>   
             <ContactCard
               icon={<FaTelegram />}
               title="Telegram Channel"
@@ -57,10 +57,16 @@ const ContactUsPage: React.FC = () => {
               value="https://x.com/JP_DONG"
             />
             <ContactCard
-              icon={<FiExternalLink />}
+              icon={<FaProductHunt />}
               title="ProductHunt"
               link="https://www.producthunt.com/@jumpdong"
               value="https://www.producthunt.com/@jumpdong"
+            />
+            <ContactCard
+              icon={<FaEnvelope />}
+              title="Email"
+              link="mailto:dongshan1025@gmail.com"
+              value="dongshan1025@gmail.com"
             />
           </div>
         </div>
