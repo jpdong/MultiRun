@@ -54,22 +54,22 @@ const faqs = [
 
 const testimonials = [
   {
-    avatar: '/avatars/alex.svg',
+    avatar: '/avatars/alex.jpg',
     name: 'Alex',
     text: 'Ever since I started using it, I enjoyed every bit of it. It\'s very simple to use and has a great interface. The experience so far is great. Worth 5 stars!',
   },
   {
-    avatar: '/avatars/linda.svg',
+    avatar: '/avatars/linda.jpg',
     name: 'Linda',
     text: "i can't really believe my eyes it's really totaly free and there is no ads u can add multiple apps with free and quickly thank you so much for the creator 😙😙😍really advice everyone to try it it's better than others apps",
   },
   {
-    avatar: '/avatars/sam.svg',
+    avatar: '/avatars/sam.jpg',
     name: 'Sam',
     text: 'Finally an app which works with WhatsApp and with less ads. As an Android developer, I understand the need of a foreground notification. But the app shows two foreground notifications.',
   },
   {
-    avatar: '/avatars/emily.svg',
+    avatar: '/avatars/emily.jpg',
     name: 'Emily',
     text: 'I tried so many clone apps for this particular app and all didn\'t work except this one! Simple and plays its role very nicely.',
   },
