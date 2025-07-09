@@ -12,23 +12,27 @@ import { FaGooglePlay } from 'react-icons/fa';
 
 const features = [
   {
-    img: '/multi_feature_1.webp',
+    img: '/multi_run_1.webp',
     title: 'App Cloning',
+    alt: 'Multi Run',
     desc: 'Clone and run multiple instances of the same app with separate data storage.',
   },
   {
-    img: '/multi_feature_2.webp',
+    img: '/multi_run_2.webp',
     title: 'Data Isolation',
+    alt: 'Multiple Accounts',
     desc: 'Keep your accounts secure with isolated data spaces and no cross-contamination.',
   },
   {
-    img: '/multi_feature_3.webp',
+    img: '/multi_run_3.webp',
     title: 'Parallel Running',
+    alt: 'Parallel Space',
     desc: 'Run multiple accounts simultaneously without performance issues.',
   },
   {
-    img: '/multi_feature_4.webp',
+    img: '/multi_run_4.webp',
     title: 'Easy Switching',
+    alt: 'Dual Clone App',
     desc: 'Quickly switch between accounts with our intuitive interface.',
   },
 ];
