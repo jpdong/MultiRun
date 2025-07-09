@@ -15,16 +15,13 @@ export default function CookieConsent() {
 
   useEffect(() => {
     const storedConsent = localStorage.getItem('cookieConsent');
-    if (!storedConsent) {
+    if (!storedConsent || storedConsent != 'accepted') {
       setShowBanner(true);
       return;
     }
     
     setConsent(storedConsent);
-    
-    // If user previously accepted, initialize GA
-    if (storedConsent === 'accepted') {
-      window.dataLayer = window.dataLayer || [];
+     window.dataLayer = window.dataLayer || [];
       
       // Define gtag function on window object
       window.gtag = function(...args: any[]) {
@@ -33,12 +30,20 @@ export default function CookieConsent() {
       
       window.gtag('js', new Date());
       window.gtag('config', 'G-74Q8HLBVL9');
-      
+    // If user previously accepted, initialize GA
+    if (storedConsent === 'accepted') {
       window.gtag('consent', 'update', {
         'ad_storage': 'granted',
         'analytics_storage': 'granted',
         'ad_user_data': 'granted',
         'ad_personalization': 'granted'
+      });
+    } else {
+      window.gtag('consent', 'update', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'granted',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
       });
     }
   }, []);
@@ -81,7 +86,7 @@ export default function CookieConsent() {
     
     window.gtag('consent', 'update', {
       'ad_storage': 'denied',
-      'analytics_storage': 'denied',
+      'analytics_storage': 'granted',
       'ad_user_data': 'denied',
       'ad_personalization': 'denied'
     });
@@ -121,7 +126,7 @@ export default function CookieConsent() {
             transition: 'all 0.3s ease'
           }}
         >
-          Agree All
+          Agree
         </button>
         <button 
           onClick={rejectCookies}
@@ -136,7 +141,7 @@ export default function CookieConsent() {
             transition: 'all 0.3s ease'
           }}
         >
-          Only allow necessary
+          Necessary
         </button>
       </div>
     </div>
