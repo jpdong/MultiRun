@@ -4,7 +4,7 @@ import NavBar from '../../../src/components/elements/NavBar';
 import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
 
-const TelegramPage: React.FC = () => {
+const DiscordPage: React.FC = () => {
   return (
     <>
       <NavBar />
@@ -19,44 +19,44 @@ const TelegramPage: React.FC = () => {
             
             <div className="detail-page">
               <div className="detail-header">
-                <div className="detail-icon">✈️</div>
-                <h1 className="detail-title">Telegram</h1>
+                <div className="detail-icon">🎮</div>
+                <h1 className="detail-title">Discord</h1>
                 <p className="detail-subtitle">
-                  Use multiple Telegram accounts for different purposes while maintaining privacy and organization.
+                  Join multiple Discord servers with different accounts for gaming, communities, and work.
                 </p>
                 <div className="detail-badges">
                   <span className="detail-badge app-category">
                     Communication
                   </span>
                   <span className="detail-badge app-category green">
-                    3M+ Downloads
+                    1.8M+ Downloads
                   </span>
                 </div>
               </div>
 
               <div className="detail-content">
                 <div className="detail-section">
-                  <h2>Why Use Multiple Telegram Accounts?</h2>
+                  <h2>Why Use Multiple Discord Accounts?</h2>
                   <ul className="detail-list">
                     <li>
                       <span className="check">✓</span>
-                      <span>Separate personal and business communications</span>
+                      <span>Separate gaming and professional communities</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Join different communities with different identities</span>
+                      <span>Join servers with different personas or identities</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Maintain privacy across different social circles</span>
+                      <span>Manage multiple gaming groups or guilds</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Organize channels and groups by purpose</span>
+                      <span>Keep work and personal Discord separate</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Enhanced security with separate accounts</span>
+                      <span>Test bots and server setups safely</span>
                     </li>
                   </ul>
                 </div>
@@ -66,60 +66,71 @@ const TelegramPage: React.FC = () => {
                   <ul className="detail-list">
                     <li>
                       <span className="check blue">✓</span>
-                      <span>Run multiple Telegram accounts simultaneously</span>
+                      <span>Be online in multiple servers simultaneously</span>
                     </li>
                     <li>
                       <span className="check blue">✓</span>
-                      <span>No need to log in/out constantly</span>
+                      <span>Manage voice chats across different accounts</span>
                     </li>
                     <li>
                       <span className="check blue">✓</span>
-                      <span>Isolated data and notifications</span>
+                      <span>Separate notifications for each account</span>
                     </li>
                     <li>
                       <span className="check blue">✓</span>
-                      <span>Easy switching between accounts</span>
+                      <span>Quick switching between gaming and work Discord</span>
                     </li>
                     <li>
                       <span className="check blue">✓</span>
-                      <span>Secure virtualization technology</span>
+                      <span>Private message management across accounts</span>
                     </li>
                   </ul>
                 </div>
               </div>
 
               <div className="detail-section">
-                <h2>Use Cases</h2>
+                <h2>Discord Use Cases</h2>
                 <div className="use-cases">
                   <div className="use-case">
-                    <h3>💼 Business Communication</h3>
-                    <p>Keep business chats separate from personal conversations</p>
+                    <h3>🎮 Gaming Communities</h3>
+                    <p>Join different gaming servers for various games and tournaments</p>
                   </div>
                   <div className="use-case">
-                    <h3>📱 Privacy Management</h3>
-                    <p>Maintain anonymity in different communities</p>
+                    <h3>💼 Professional Teams</h3>
+                    <p>Collaborate with work teams and professional communities</p>
                   </div>
                   <div className="use-case">
-                    <h3>📊 Channel Management</h3>
-                    <p>Manage multiple channels with different accounts</p>
+                    <h3>🎓 Educational Groups</h3>
+                    <p>Participate in study groups, coding bootcamps, and learning communities</p>
                   </div>
                   <div className="use-case">
-                    <h3>🌍 Regional Accounts</h3>
-                    <p>Use different accounts for different regions</p>
+                    <h3>🎨 Creative Collaborations</h3>
+                    <p>Work with artists, musicians, and content creators</p>
+                  </div>
+                  <div className="use-case">
+                    <h3>🤖 Bot Development</h3>
+                    <p>Test and develop Discord bots with separate test accounts</p>
+                  </div>
+                  <div className="use-case">
+                    <h3>🌐 Community Management</h3>
+                    <p>Moderate multiple servers with different administrative accounts</p>
                   </div>
                 </div>
               </div>
 
               <div className="cta-section">
-                <div className="cta-card blue">
-                  <h2 className="cta-title">Ready to Clone Telegram?</h2>
+                <div className="cta-card" style={{background: 'linear-gradient(135deg, #5865f2 0%, #3c45a5 100%)'}}>
+                  <h2 className="cta-title">Level Up Your Discord Experience</h2>
                   <p className="cta-description">
-                    Download Multi Run now and start managing multiple Telegram accounts effortlessly.
+                    Download Multi Run and manage multiple Discord accounts for all your communities.
                   </p>
                   <div className="cta-buttons">
                     <a href="/#download" className="cta-button">
                       Download Multi Run
                     </a>
+                    <Link href="/hot-apps" className="cta-button secondary">
+                      View More Apps
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -132,4 +143,4 @@ const TelegramPage: React.FC = () => {
   );
 };
 
-export default TelegramPage;
+export default DiscordPage;

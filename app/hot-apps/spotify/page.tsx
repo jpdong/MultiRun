@@ -4,7 +4,7 @@ import NavBar from '../../../src/components/elements/NavBar';
 import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
 
-const TelegramPage: React.FC = () => {
+const SpotifyPage: React.FC = () => {
   return (
     <>
       <NavBar />
@@ -19,44 +19,44 @@ const TelegramPage: React.FC = () => {
             
             <div className="detail-page">
               <div className="detail-header">
-                <div className="detail-icon">✈️</div>
-                <h1 className="detail-title">Telegram</h1>
+                <div className="detail-icon">🎶</div>
+                <h1 className="detail-title">Spotify</h1>
                 <p className="detail-subtitle">
-                  Use multiple Telegram accounts for different purposes while maintaining privacy and organization.
+                  Use multiple Spotify accounts for different music preferences and family sharing.
                 </p>
                 <div className="detail-badges">
                   <span className="detail-badge app-category">
-                    Communication
+                    Entertainment
                   </span>
                   <span className="detail-badge app-category green">
-                    3M+ Downloads
+                    3.2M+ Downloads
                   </span>
                 </div>
               </div>
 
               <div className="detail-content">
                 <div className="detail-section">
-                  <h2>Why Use Multiple Telegram Accounts?</h2>
+                  <h2>Why Use Multiple Spotify Accounts?</h2>
                   <ul className="detail-list">
                     <li>
                       <span className="check">✓</span>
-                      <span>Separate personal and business communications</span>
+                      <span>Separate music preferences for different moods</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Join different communities with different identities</span>
+                      <span>Manage family accounts and shared playlists</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Maintain privacy across different social circles</span>
+                      <span>Keep work and personal music libraries separate</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Organize channels and groups by purpose</span>
+                      <span>Access region-specific content with different accounts</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Enhanced security with separate accounts</span>
+                      <span>Curate specialized playlists for different purposes</span>
                     </li>
                   </ul>
                 </div>
@@ -66,60 +66,71 @@ const TelegramPage: React.FC = () => {
                   <ul className="detail-list">
                     <li>
                       <span className="check blue">✓</span>
-                      <span>Run multiple Telegram accounts simultaneously</span>
+                      <span>Switch between music libraries instantly</span>
                     </li>
                     <li>
                       <span className="check blue">✓</span>
-                      <span>No need to log in/out constantly</span>
+                      <span>Maintain separate listening histories</span>
                     </li>
                     <li>
                       <span className="check blue">✓</span>
-                      <span>Isolated data and notifications</span>
+                      <span>Access multiple premium subscriptions</span>
                     </li>
                     <li>
                       <span className="check blue">✓</span>
-                      <span>Easy switching between accounts</span>
+                      <span>Manage playlists across different accounts</span>
                     </li>
                     <li>
                       <span className="check blue">✓</span>
-                      <span>Secure virtualization technology</span>
+                      <span>Keep recommendations algorithm separate</span>
                     </li>
                   </ul>
                 </div>
               </div>
 
               <div className="detail-section">
-                <h2>Use Cases</h2>
+                <h2>Music Management Strategies</h2>
                 <div className="use-cases">
                   <div className="use-case">
-                    <h3>💼 Business Communication</h3>
-                    <p>Keep business chats separate from personal conversations</p>
+                    <h3>🎵 Genre Separation</h3>
+                    <p>Keep different music genres in separate accounts for pure discovery</p>
                   </div>
                   <div className="use-case">
-                    <h3>📱 Privacy Management</h3>
-                    <p>Maintain anonymity in different communities</p>
+                    <h3>👨‍👩‍👧‍👦 Family Sharing</h3>
+                    <p>Manage family members' accounts and create shared family playlists</p>
                   </div>
                   <div className="use-case">
-                    <h3>📊 Channel Management</h3>
-                    <p>Manage multiple channels with different accounts</p>
+                    <h3>💼 Work & Focus</h3>
+                    <p>Maintain a dedicated account for work music and concentration playlists</p>
                   </div>
                   <div className="use-case">
-                    <h3>🌍 Regional Accounts</h3>
-                    <p>Use different accounts for different regions</p>
+                    <h3>🏃‍♀️ Activity-Based</h3>
+                    <p>Create accounts for specific activities like workout, study, or relaxation</p>
+                  </div>
+                  <div className="use-case">
+                    <h3>🌍 Regional Content</h3>
+                    <p>Access different regional music libraries and local artist content</p>
+                  </div>
+                  <div className="use-case">
+                    <h3>🎧 Audio Quality</h3>
+                    <p>Test different subscription tiers and audio quality settings</p>
                   </div>
                 </div>
               </div>
 
               <div className="cta-section">
-                <div className="cta-card blue">
-                  <h2 className="cta-title">Ready to Clone Telegram?</h2>
+                <div className="cta-card" style={{background: 'linear-gradient(135deg, #1db954 0%, #1ed760 100%)'}}>
+                  <h2 className="cta-title">Amplify Your Music Experience</h2>
                   <p className="cta-description">
-                    Download Multi Run now and start managing multiple Telegram accounts effortlessly.
+                    Download Multi Run and enjoy seamless access to multiple Spotify accounts.
                   </p>
                   <div className="cta-buttons">
                     <a href="/#download" className="cta-button">
                       Download Multi Run
                     </a>
+                    <Link href="/hot-apps" className="cta-button secondary">
+                      View More Apps
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -132,4 +143,4 @@ const TelegramPage: React.FC = () => {
   );
 };
 
-export default TelegramPage;
+export default SpotifyPage;

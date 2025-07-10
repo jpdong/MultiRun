@@ -4,7 +4,7 @@ import NavBar from '../../../src/components/elements/NavBar';
 import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
 
-const TelegramPage: React.FC = () => {
+const TwitterPage: React.FC = () => {
   return (
     <>
       <NavBar />
@@ -19,44 +19,44 @@ const TelegramPage: React.FC = () => {
             
             <div className="detail-page">
               <div className="detail-header">
-                <div className="detail-icon">✈️</div>
-                <h1 className="detail-title">Telegram</h1>
+                <div className="detail-icon">🐦</div>
+                <h1 className="detail-title">Twitter (X)</h1>
                 <p className="detail-subtitle">
-                  Use multiple Telegram accounts for different purposes while maintaining privacy and organization.
+                  Manage multiple Twitter accounts for different interests, businesses, or social circles.
                 </p>
                 <div className="detail-badges">
                   <span className="detail-badge app-category">
-                    Communication
+                    Social Media
                   </span>
                   <span className="detail-badge app-category green">
-                    3M+ Downloads
+                    2.5M+ Downloads
                   </span>
                 </div>
               </div>
 
               <div className="detail-content">
                 <div className="detail-section">
-                  <h2>Why Use Multiple Telegram Accounts?</h2>
+                  <h2>Why Use Multiple Twitter Accounts?</h2>
                   <ul className="detail-list">
                     <li>
                       <span className="check">✓</span>
-                      <span>Separate personal and business communications</span>
+                      <span>Separate professional and personal content</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Join different communities with different identities</span>
+                      <span>Target different audiences with specialized content</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Maintain privacy across different social circles</span>
+                      <span>Manage business accounts for different brands</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Organize channels and groups by purpose</span>
+                      <span>Engage with different communities and interests</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Enhanced security with separate accounts</span>
+                      <span>Maintain anonymity for sensitive topics</span>
                     </li>
                   </ul>
                 </div>
@@ -66,60 +66,71 @@ const TelegramPage: React.FC = () => {
                   <ul className="detail-list">
                     <li>
                       <span className="check blue">✓</span>
-                      <span>Run multiple Telegram accounts simultaneously</span>
+                      <span>Tweet from multiple accounts simultaneously</span>
                     </li>
                     <li>
                       <span className="check blue">✓</span>
-                      <span>No need to log in/out constantly</span>
+                      <span>Monitor different timelines concurrently</span>
                     </li>
                     <li>
                       <span className="check blue">✓</span>
-                      <span>Isolated data and notifications</span>
+                      <span>Manage DMs across all accounts</span>
                     </li>
                     <li>
                       <span className="check blue">✓</span>
-                      <span>Easy switching between accounts</span>
+                      <span>Schedule content for different accounts</span>
                     </li>
                     <li>
                       <span className="check blue">✓</span>
-                      <span>Secure virtualization technology</span>
+                      <span>Quick account switching without re-login</span>
                     </li>
                   </ul>
                 </div>
               </div>
 
               <div className="detail-section">
-                <h2>Use Cases</h2>
+                <h2>Twitter Strategies</h2>
                 <div className="use-cases">
                   <div className="use-case">
-                    <h3>💼 Business Communication</h3>
-                    <p>Keep business chats separate from personal conversations</p>
+                    <h3>💼 Professional Networking</h3>
+                    <p>Build your professional brand and connect with industry peers</p>
                   </div>
                   <div className="use-case">
-                    <h3>📱 Privacy Management</h3>
-                    <p>Maintain anonymity in different communities</p>
+                    <h3>🎯 Niche Communities</h3>
+                    <p>Engage with specific communities around your interests or expertise</p>
                   </div>
                   <div className="use-case">
-                    <h3>📊 Channel Management</h3>
-                    <p>Manage multiple channels with different accounts</p>
+                    <h3>📢 Brand Marketing</h3>
+                    <p>Promote different brands or products with dedicated accounts</p>
                   </div>
                   <div className="use-case">
-                    <h3>🌍 Regional Accounts</h3>
-                    <p>Use different accounts for different regions</p>
+                    <h3>📰 News & Commentary</h3>
+                    <p>Share news and commentary on current events and trending topics</p>
+                  </div>
+                  <div className="use-case">
+                    <h3>🎨 Creative Showcase</h3>
+                    <p>Display your creative work, art, or creative projects</p>
+                  </div>
+                  <div className="use-case">
+                    <h3>🤝 Customer Support</h3>
+                    <p>Provide customer support and engage with customers directly</p>
                   </div>
                 </div>
               </div>
 
               <div className="cta-section">
-                <div className="cta-card blue">
-                  <h2 className="cta-title">Ready to Clone Telegram?</h2>
+                <div className="cta-card" style={{background: 'linear-gradient(135deg, #1da1f2 0%, #0d8bd9 100%)'}}>
+                  <h2 className="cta-title">Amplify Your Twitter Presence</h2>
                   <p className="cta-description">
-                    Download Multi Run now and start managing multiple Telegram accounts effortlessly.
+                    Download Multi Run and manage multiple Twitter accounts like a social media pro.
                   </p>
                   <div className="cta-buttons">
                     <a href="/#download" className="cta-button">
                       Download Multi Run
                     </a>
+                    <Link href="/hot-apps" className="cta-button secondary">
+                      View More Apps
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -132,4 +143,4 @@ const TelegramPage: React.FC = () => {
   );
 };
 
-export default TelegramPage;
+export default TwitterPage;

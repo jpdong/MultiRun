@@ -12,23 +12,23 @@ const TikTokPage: React.FC = () => {
         <Container>
           <div className="py-16">
             <div className="mb-8">
-              <Link href="/hot-apps" className="text-blue-600 hover:text-blue-800 font-medium">
+              <Link href="/hot-apps" className="back-link blue">
                 ← Back to Hot Apps
               </Link>
             </div>
             
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-12">
-                <div className="text-8xl mb-6">🎵</div>
-                <h1 className="text-4xl font-bold mb-4">TikTok</h1>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <div className="detail-page">
+              <div className="detail-header">
+                <div className="detail-icon">🎵</div>
+                <h1 className="detail-title">TikTok</h1>
+                <p className="detail-subtitle">
                   Create and manage multiple TikTok accounts for different content themes and audiences.
                 </p>
-                <div className="flex flex-wrap justify-center gap-4 mt-6">
-                  <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">
+                <div className="detail-badges">
+                  <span className="detail-badge app-category">
                     Entertainment
                   </span>
-                  <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full font-medium">
+                  <span className="detail-badge app-category green">
                     4M+ Downloads
                   </span>
                 </div>
