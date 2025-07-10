@@ -4,7 +4,7 @@ import NavBar from '../../../src/components/elements/NavBar';
 import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
 
-const EpicPage: React.FC = () => {
+const AndroidContainerPage: React.FC = () => {
   return (
     <>
       <NavBar />
@@ -19,19 +19,19 @@ const EpicPage: React.FC = () => {
             
             <div className="detail-page">
               <div className="detail-header">
-                <h1 className="detail-title">Epic</h1>
+                <h1 className="detail-title">Android Container</h1>
                 <p className="detail-subtitle">
-                  A modern Android app virtualization solution with enhanced security and performance.
+                  Lightweight container technology for running isolated Android applications.
                 </p>
                 <div className="detail-badges">
                   <span className="detail-badge tech-category">
-                    App Virtualization
+                    Containerization
                   </span>
                   <span className="detail-badge tech-language">
-                    Java/C++
+                    C++/Java
                   </span>
                   <span className="detail-badge tech-stars">
-                    ⭐ 1.8k Stars
+                    ⭐ 956 Stars
                   </span>
                 </div>
               </div>
@@ -42,23 +42,23 @@ const EpicPage: React.FC = () => {
                   <ul className="detail-list">
                     <li>
                       <span className="check">✓</span>
-                      <span>Modern virtualization architecture</span>
+                      <span>Lightweight containerization technology</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Enhanced security features</span>
+                      <span>Isolated application environments</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Optimized performance</span>
+                      <span>Resource management and control</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Native code support</span>
+                      <span>High performance execution</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Advanced debugging capabilities</span>
+                      <span>System-level security</span>
                     </li>
                   </ul>
                 </div>
@@ -67,20 +67,20 @@ const EpicPage: React.FC = () => {
                   <h2>Technical Details</h2>
                   <div className="use-cases">
                     <div className="use-case">
-                      <h3>🏢 Architecture</h3>
-                      <p>Next-generation virtualization framework</p>
+                      <h3>🏗️ Architecture</h3>
+                      <p>Container-based virtualization with minimal overhead</p>
                     </div>
                     <div className="use-case">
-                      <h3>💻 Languages</h3>
-                      <p>Java, C++, Assembly</p>
+                      <h3>⚡ Performance</h3>
+                      <p>Near-native performance with resource isolation</p>
                     </div>
                     <div className="use-case">
-                      <h3>📱 Compatibility</h3>
-                      <p>Android 6.0 - 14.0</p>
+                      <h3>🔒 Security</h3>
+                      <p>Sandboxed execution environment for applications</p>
                     </div>
                     <div className="use-case">
-                      <h3>📜 License</h3>
-                      <p>MIT License</p>
+                      <h3>🛠️ Implementation</h3>
+                      <p>Advanced C++ core with Java API layer</p>
                     </div>
                   </div>
                 </div>
@@ -89,24 +89,38 @@ const EpicPage: React.FC = () => {
               <div className="detail-section">
                 <h2>How Multi Run Uses This Technology</h2>
                 <p className="app-description">
-                  Multi Run utilizes Epic's modern virtualization architecture to provide superior 
-                  performance and security when running multiple app instances. The enhanced security 
-                  features ensure that each virtual app runs in a completely isolated environment.
+                  Multi Run incorporates Android Container technology to provide lightweight and efficient 
+                  app virtualization. This containerization approach ensures minimal resource overhead while 
+                  maintaining strong isolation between different app instances.
                 </p>
+                <div className="use-cases">
+                  <div className="use-case">
+                    <h3>🚀 Performance Optimization</h3>
+                    <p>Minimal overhead ensures smooth operation of multiple app instances</p>
+                  </div>
+                  <div className="use-case">
+                    <h3>🛡️ Enhanced Security</h3>
+                    <p>Container isolation prevents interference between applications</p>
+                  </div>
+                  <div className="use-case">
+                    <h3>⚙️ Resource Management</h3>
+                    <p>Efficient allocation and control of system resources</p>
+                  </div>
+                </div>
               </div>
 
               <div className="cta-section">
                 <div className="cta-card purple">
-                  <h2 className="cta-title">Modern Virtualization</h2>
+                  <h2 className="cta-title">Experience Container Technology</h2>
                   <p className="cta-description">
-                    Experience next-generation app virtualization with Multi Run.
+                    See how Multi Run leverages Android Container technology for superior app virtualization.
                   </p>
                   <div className="cta-buttons">
                     <a href="/#download" className="cta-button">
                       Download Multi Run
                     </a>
                     <a 
-                      href="https://github.com/tiann/epic" 
+                      href="https://github.com/container4android/AndroidContainer" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="cta-button secondary"
@@ -125,4 +139,4 @@ const EpicPage: React.FC = () => {
   );
 };
 
-export default EpicPage;
+export default AndroidContainerPage;

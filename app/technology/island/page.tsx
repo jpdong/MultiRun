@@ -4,7 +4,7 @@ import NavBar from '../../../src/components/elements/NavBar';
 import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
 
-const EpicPage: React.FC = () => {
+const IslandPage: React.FC = () => {
   return (
     <>
       <NavBar />
@@ -19,19 +19,19 @@ const EpicPage: React.FC = () => {
             
             <div className="detail-page">
               <div className="detail-header">
-                <h1 className="detail-title">Epic</h1>
+                <h1 className="detail-title">Island</h1>
                 <p className="detail-subtitle">
-                  A modern Android app virtualization solution with enhanced security and performance.
+                  App isolation solution using Android work profile with enhanced management features.
                 </p>
                 <div className="detail-badges">
                   <span className="detail-badge tech-category">
-                    App Virtualization
+                    App Isolation
                   </span>
                   <span className="detail-badge tech-language">
-                    Java/C++
+                    Java
                   </span>
                   <span className="detail-badge tech-stars">
-                    ⭐ 1.8k Stars
+                    ⭐ 3.1k Stars
                   </span>
                 </div>
               </div>
@@ -42,45 +42,45 @@ const EpicPage: React.FC = () => {
                   <ul className="detail-list">
                     <li>
                       <span className="check">✓</span>
-                      <span>Modern virtualization architecture</span>
+                      <span>Work profile-based app isolation</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Enhanced security features</span>
+                      <span>Enhanced management interface</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Optimized performance</span>
+                      <span>Advanced app cloning capabilities</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Native code support</span>
+                      <span>Intelligent app organization</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Advanced debugging capabilities</span>
+                      <span>Seamless user experience</span>
                     </li>
                   </ul>
                 </div>
 
                 <div className="detail-section">
-                  <h2>Technical Details</h2>
+                  <h2>Advanced Isolation Technology</h2>
                   <div className="use-cases">
                     <div className="use-case">
-                      <h3>🏢 Architecture</h3>
-                      <p>Next-generation virtualization framework</p>
+                      <h3>🏝️ Complete Isolation</h3>
+                      <p>Full separation of apps using Android work profile technology</p>
                     </div>
                     <div className="use-case">
-                      <h3>💻 Languages</h3>
-                      <p>Java, C++, Assembly</p>
+                      <h3>🎛️ Smart Management</h3>
+                      <p>Intelligent app organization and management features</p>
                     </div>
                     <div className="use-case">
-                      <h3>📱 Compatibility</h3>
-                      <p>Android 6.0 - 14.0</p>
+                      <h3>🔄 Seamless Switching</h3>
+                      <p>Easy switching between isolated and regular app instances</p>
                     </div>
                     <div className="use-case">
-                      <h3>📜 License</h3>
-                      <p>MIT License</p>
+                      <h3>👤 User-Friendly</h3>
+                      <p>Intuitive interface for managing isolated applications</p>
                     </div>
                   </div>
                 </div>
@@ -89,24 +89,42 @@ const EpicPage: React.FC = () => {
               <div className="detail-section">
                 <h2>How Multi Run Uses This Technology</h2>
                 <p className="app-description">
-                  Multi Run utilizes Epic's modern virtualization architecture to provide superior 
-                  performance and security when running multiple app instances. The enhanced security 
-                  features ensure that each virtual app runs in a completely isolated environment.
+                  Multi Run incorporates the elegant isolation and management concepts from Island 
+                  to provide a seamless user experience while maintaining strong app separation. 
+                  The work profile approach informs our architecture for secure app virtualization.
                 </p>
+                <div className="use-cases">
+                  <div className="use-case">
+                    <h3>🎯 Smart Isolation</h3>
+                    <p>Intelligent app separation with minimal user intervention</p>
+                  </div>
+                  <div className="use-case">
+                    <h3>📱 Enhanced UX</h3>
+                    <p>Smooth and intuitive interface for managing multiple app instances</p>
+                  </div>
+                  <div className="use-case">
+                    <h3>🔒 Security Focus</h3>
+                    <p>Strong security model inspired by work profile architecture</p>
+                  </div>
+                  <div className="use-case">
+                    <h3>⚡ Performance</h3>
+                    <p>Optimized performance for daily use scenarios</p>
+                  </div>
+                </div>
               </div>
 
               <div className="cta-section">
                 <div className="cta-card purple">
-                  <h2 className="cta-title">Modern Virtualization</h2>
+                  <h2 className="cta-title">Elegant App Isolation</h2>
                   <p className="cta-description">
-                    Experience next-generation app virtualization with Multi Run.
+                    Discover how Multi Run combines powerful isolation with an elegant user experience.
                   </p>
                   <div className="cta-buttons">
                     <a href="/#download" className="cta-button">
                       Download Multi Run
                     </a>
                     <a 
-                      href="https://github.com/tiann/epic" 
+                      href="https://github.com/oasisfeng/island" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="cta-button secondary"
@@ -125,4 +143,4 @@ const EpicPage: React.FC = () => {
   );
 };
 
-export default EpicPage;
+export default IslandPage;

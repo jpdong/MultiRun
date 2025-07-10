@@ -4,7 +4,7 @@ import NavBar from '../../../src/components/elements/NavBar';
 import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
 
-const EpicPage: React.FC = () => {
+const MagiskModulesPage: React.FC = () => {
   return (
     <>
       <NavBar />
@@ -19,19 +19,19 @@ const EpicPage: React.FC = () => {
             
             <div className="detail-page">
               <div className="detail-header">
-                <h1 className="detail-title">Epic</h1>
+                <h1 className="detail-title">Magisk Hide</h1>
                 <p className="detail-subtitle">
-                  A modern Android app virtualization solution with enhanced security and performance.
+                  Systemless root solution with app hiding capabilities for sensitive applications.
                 </p>
                 <div className="detail-badges">
                   <span className="detail-badge tech-category">
-                    App Virtualization
+                    Root & Hide
                   </span>
                   <span className="detail-badge tech-language">
-                    Java/C++
+                    C++/Java
                   </span>
                   <span className="detail-badge tech-stars">
-                    ⭐ 1.8k Stars
+                    ⭐ 35k Stars
                   </span>
                 </div>
               </div>
@@ -42,71 +42,89 @@ const EpicPage: React.FC = () => {
                   <ul className="detail-list">
                     <li>
                       <span className="check">✓</span>
-                      <span>Modern virtualization architecture</span>
+                      <span>Systemless root implementation</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Enhanced security features</span>
+                      <span>App hiding and detection bypass</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Optimized performance</span>
+                      <span>Module system for extensibility</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Native code support</span>
+                      <span>SafetyNet bypass capabilities</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Advanced debugging capabilities</span>
+                      <span>Advanced stealth technology</span>
                     </li>
                   </ul>
                 </div>
 
                 <div className="detail-section">
-                  <h2>Technical Details</h2>
+                  <h2>Technical Innovation</h2>
                   <div className="use-cases">
                     <div className="use-case">
-                      <h3>🏢 Architecture</h3>
-                      <p>Next-generation virtualization framework</p>
+                      <h3>🎭 Stealth Technology</h3>
+                      <p>Advanced hiding mechanisms to bypass detection systems</p>
                     </div>
                     <div className="use-case">
-                      <h3>💻 Languages</h3>
-                      <p>Java, C++, Assembly</p>
+                      <h3>🔧 Systemless Approach</h3>
+                      <p>Modifies system behavior without touching system partitions</p>
                     </div>
                     <div className="use-case">
-                      <h3>📱 Compatibility</h3>
-                      <p>Android 6.0 - 14.0</p>
+                      <h3>🛡️ SafetyNet Bypass</h3>
+                      <p>Sophisticated methods to pass Google's security checks</p>
                     </div>
                     <div className="use-case">
-                      <h3>📜 License</h3>
-                      <p>MIT License</p>
+                      <h3>📦 Module Ecosystem</h3>
+                      <p>Extensible framework for custom modifications</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="detail-section">
-                <h2>How Multi Run Uses This Technology</h2>
+                <h2>How Multi Run Benefits from This Technology</h2>
                 <p className="app-description">
-                  Multi Run utilizes Epic's modern virtualization architecture to provide superior 
-                  performance and security when running multiple app instances. The enhanced security 
-                  features ensure that each virtual app runs in a completely isolated environment.
+                  Multi Run draws inspiration from Magisk's stealth and hiding technologies to create 
+                  sophisticated app virtualization that can operate transparently. The systemless 
+                  approach influences our non-intrusive virtualization methods.
                 </p>
+                <div className="use-cases">
+                  <div className="use-case">
+                    <h3>🎯 Detection Avoidance</h3>
+                    <p>Advanced techniques to avoid detection by apps</p>
+                  </div>
+                  <div className="use-case">
+                    <h3>⚡ Systemless Operation</h3>
+                    <p>Non-intrusive virtualization without system modifications</p>
+                  </div>
+                  <div className="use-case">
+                    <h3>🔒 Security Compliance</h3>
+                    <p>Maintaining app functionality while providing virtualization</p>
+                  </div>
+                  <div className="use-case">
+                    <h3>🛠️ Advanced Engineering</h3>
+                    <p>Sophisticated low-level techniques for seamless operation</p>
+                  </div>
+                </div>
               </div>
 
               <div className="cta-section">
                 <div className="cta-card purple">
-                  <h2 className="cta-title">Modern Virtualization</h2>
+                  <h2 className="cta-title">Stealth Virtualization Technology</h2>
                   <p className="cta-description">
-                    Experience next-generation app virtualization with Multi Run.
+                    Discover how Multi Run uses advanced stealth techniques for transparent app virtualization.
                   </p>
                   <div className="cta-buttons">
                     <a href="/#download" className="cta-button">
                       Download Multi Run
                     </a>
                     <a 
-                      href="https://github.com/tiann/epic" 
+                      href="https://github.com/topjohnwu/Magisk" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="cta-button secondary"
@@ -125,4 +143,4 @@ const EpicPage: React.FC = () => {
   );
 };
 
-export default EpicPage;
+export default MagiskModulesPage;

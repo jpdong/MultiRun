@@ -54,22 +54,6 @@ const hotApps = [
     downloads: '2.5M+'
   },
   {
-    id: 'youtube',
-    name: 'YouTube',
-    description: 'Run multiple YouTube channels with different accounts for content creation and viewing.',
-    icon: '📺',
-    category: 'Entertainment',
-    downloads: '4.5M+'
-  },
-  {
-    id: 'gmail',
-    name: 'Gmail',
-    description: 'Access multiple Gmail accounts simultaneously for personal and professional email management.',
-    icon: '📧',
-    category: 'Productivity',
-    downloads: '7M+'
-  },
-  {
     id: 'discord',
     name: 'Discord',
     description: 'Join multiple Discord servers with different accounts for gaming, communities, and work.',

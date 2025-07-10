@@ -4,7 +4,7 @@ import NavBar from '../../../src/components/elements/NavBar';
 import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
 
-const EpicPage: React.FC = () => {
+const DualBootPage: React.FC = () => {
   return (
     <>
       <NavBar />
@@ -19,19 +19,19 @@ const EpicPage: React.FC = () => {
             
             <div className="detail-page">
               <div className="detail-header">
-                <h1 className="detail-title">Epic</h1>
+                <h1 className="detail-title">DualBootPatcher</h1>
                 <p className="detail-subtitle">
-                  A modern Android app virtualization solution with enhanced security and performance.
+                  Advanced dual boot solution allowing multiple Android ROMs on a single device.
                 </p>
                 <div className="detail-badges">
                   <span className="detail-badge tech-category">
-                    App Virtualization
+                    System Level
                   </span>
                   <span className="detail-badge tech-language">
-                    Java/C++
+                    C++
                   </span>
                   <span className="detail-badge tech-stars">
-                    ⭐ 1.8k Stars
+                    ⭐ 1.2k Stars
                   </span>
                 </div>
               </div>
@@ -42,71 +42,85 @@ const EpicPage: React.FC = () => {
                   <ul className="detail-list">
                     <li>
                       <span className="check">✓</span>
-                      <span>Modern virtualization architecture</span>
+                      <span>Multiple ROM support on single device</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Enhanced security features</span>
+                      <span>Advanced boot management</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Optimized performance</span>
+                      <span>System partition management</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Native code support</span>
+                      <span>Recovery integration</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Advanced debugging capabilities</span>
+                      <span>Custom kernel support</span>
                     </li>
                   </ul>
                 </div>
 
                 <div className="detail-section">
-                  <h2>Technical Details</h2>
+                  <h2>Technical Architecture</h2>
                   <div className="use-cases">
                     <div className="use-case">
-                      <h3>🏢 Architecture</h3>
-                      <p>Next-generation virtualization framework</p>
+                      <h3>🔧 System Level</h3>
+                      <p>Deep system integration with bootloader and recovery</p>
                     </div>
                     <div className="use-case">
-                      <h3>💻 Languages</h3>
-                      <p>Java, C++, Assembly</p>
+                      <h3>💾 Partition Management</h3>
+                      <p>Advanced partition handling for multiple ROM installations</p>
                     </div>
                     <div className="use-case">
-                      <h3>📱 Compatibility</h3>
-                      <p>Android 6.0 - 14.0</p>
+                      <h3>⚙️ Boot Control</h3>
+                      <p>Sophisticated boot selection and management system</p>
                     </div>
                     <div className="use-case">
-                      <h3>📜 License</h3>
-                      <p>MIT License</p>
+                      <h3>🛠️ Recovery Tools</h3>
+                      <p>Integrated recovery tools for ROM management</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="detail-section">
-                <h2>How Multi Run Uses This Technology</h2>
+                <h2>How Multi Run Benefits from This Technology</h2>
                 <p className="app-description">
-                  Multi Run utilizes Epic's modern virtualization architecture to provide superior 
-                  performance and security when running multiple app instances. The enhanced security 
-                  features ensure that each virtual app runs in a completely isolated environment.
+                  While Multi Run operates at the application level, the dual boot concepts from 
+                  DualBootPatcher inspire our approach to creating isolated environments for apps. 
+                  The partition and environment isolation techniques inform our virtualization strategy.
                 </p>
+                <div className="use-cases">
+                  <div className="use-case">
+                    <h3>🔄 Environment Isolation</h3>
+                    <p>Inspired isolation techniques for application environments</p>
+                  </div>
+                  <div className="use-case">
+                    <h3>⚡ System Integration</h3>
+                    <p>Deep system understanding for better app virtualization</p>
+                  </div>
+                  <div className="use-case">
+                    <h3>🛡️ Security Models</h3>
+                    <p>Advanced security concepts applied to app isolation</p>
+                  </div>
+                </div>
               </div>
 
               <div className="cta-section">
                 <div className="cta-card purple">
-                  <h2 className="cta-title">Modern Virtualization</h2>
+                  <h2 className="cta-title">Advanced System Technology</h2>
                   <p className="cta-description">
-                    Experience next-generation app virtualization with Multi Run.
+                    Discover how Multi Run applies system-level concepts for superior app virtualization.
                   </p>
                   <div className="cta-buttons">
                     <a href="/#download" className="cta-button">
                       Download Multi Run
                     </a>
                     <a 
-                      href="https://github.com/tiann/epic" 
+                      href="https://github.com/chenxiaolong/DualBootPatcher" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="cta-button secondary"
@@ -125,4 +139,4 @@ const EpicPage: React.FC = () => {
   );
 };
 
-export default EpicPage;
+export default DualBootPage;

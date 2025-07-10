@@ -4,7 +4,7 @@ import NavBar from '../../../src/components/elements/NavBar';
 import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
 
-const EpicPage: React.FC = () => {
+const AppOpsPage: React.FC = () => {
   return (
     <>
       <NavBar />
@@ -19,19 +19,19 @@ const EpicPage: React.FC = () => {
             
             <div className="detail-page">
               <div className="detail-header">
-                <h1 className="detail-title">Epic</h1>
+                <h1 className="detail-title">App Ops</h1>
                 <p className="detail-subtitle">
-                  A modern Android app virtualization solution with enhanced security and performance.
+                  Permission management framework for controlling app access and behavior.
                 </p>
                 <div className="detail-badges">
                   <span className="detail-badge tech-category">
-                    App Virtualization
+                    Permission Control
                   </span>
                   <span className="detail-badge tech-language">
-                    Java/C++
+                    Java
                   </span>
                   <span className="detail-badge tech-stars">
-                    ⭐ 1.8k Stars
+                    ⭐ 1.5k Stars
                   </span>
                 </div>
               </div>
@@ -42,45 +42,45 @@ const EpicPage: React.FC = () => {
                   <ul className="detail-list">
                     <li>
                       <span className="check">✓</span>
-                      <span>Modern virtualization architecture</span>
+                      <span>Fine-grained permission control</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Enhanced security features</span>
+                      <span>App operation monitoring</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Optimized performance</span>
+                      <span>Behavior analysis and control</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Native code support</span>
+                      <span>Privacy protection mechanisms</span>
                     </li>
                     <li>
                       <span className="check">✓</span>
-                      <span>Advanced debugging capabilities</span>
+                      <span>Real-time permission management</span>
                     </li>
                   </ul>
                 </div>
 
                 <div className="detail-section">
-                  <h2>Technical Details</h2>
+                  <h2>Permission Management</h2>
                   <div className="use-cases">
                     <div className="use-case">
-                      <h3>🏢 Architecture</h3>
-                      <p>Next-generation virtualization framework</p>
+                      <h3>🔐 Access Control</h3>
+                      <p>Granular control over app permissions and system access</p>
                     </div>
                     <div className="use-case">
-                      <h3>💻 Languages</h3>
-                      <p>Java, C++, Assembly</p>
+                      <h3>📊 Monitoring</h3>
+                      <p>Real-time tracking of app operations and behaviors</p>
                     </div>
                     <div className="use-case">
-                      <h3>📱 Compatibility</h3>
-                      <p>Android 6.0 - 14.0</p>
+                      <h3>🛡️ Privacy Shield</h3>
+                      <p>Advanced privacy protection through permission limiting</p>
                     </div>
                     <div className="use-case">
-                      <h3>📜 License</h3>
-                      <p>MIT License</p>
+                      <h3>⚙️ Customization</h3>
+                      <p>Flexible permission policies for different use cases</p>
                     </div>
                   </div>
                 </div>
@@ -89,24 +89,42 @@ const EpicPage: React.FC = () => {
               <div className="detail-section">
                 <h2>How Multi Run Uses This Technology</h2>
                 <p className="app-description">
-                  Multi Run utilizes Epic's modern virtualization architecture to provide superior 
-                  performance and security when running multiple app instances. The enhanced security 
-                  features ensure that each virtual app runs in a completely isolated environment.
+                  Multi Run integrates permission management concepts from App Ops to provide 
+                  sophisticated control over virtualized app permissions. This ensures that each 
+                  app instance operates with appropriate access levels and privacy protections.
                 </p>
+                <div className="use-cases">
+                  <div className="use-case">
+                    <h3>🎛️ Permission Isolation</h3>
+                    <p>Independent permission settings for each app instance</p>
+                  </div>
+                  <div className="use-case">
+                    <h3>📱 Behavior Control</h3>
+                    <p>Fine-tuned control over app behaviors and access patterns</p>
+                  </div>
+                  <div className="use-case">
+                    <h3>🔍 Operation Monitoring</h3>
+                    <p>Tracking and controlling app operations in virtual environments</p>
+                  </div>
+                  <div className="use-case">
+                    <h3>👤 User Privacy</h3>
+                    <p>Enhanced privacy through intelligent permission management</p>
+                  </div>
+                </div>
               </div>
 
               <div className="cta-section">
                 <div className="cta-card purple">
-                  <h2 className="cta-title">Modern Virtualization</h2>
+                  <h2 className="cta-title">Advanced Permission Management</h2>
                   <p className="cta-description">
-                    Experience next-generation app virtualization with Multi Run.
+                    Experience how Multi Run provides sophisticated permission control for virtualized apps.
                   </p>
                   <div className="cta-buttons">
                     <a href="/#download" className="cta-button">
                       Download Multi Run
                     </a>
                     <a 
-                      href="https://github.com/tiann/epic" 
+                      href="https://github.com/rikka/AppOps" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="cta-button secondary"
@@ -125,4 +143,4 @@ const EpicPage: React.FC = () => {
   );
 };
 
-export default EpicPage;
+export default AppOpsPage;
