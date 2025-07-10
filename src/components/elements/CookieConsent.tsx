@@ -9,90 +9,79 @@ declare global {
   }
 }
 
+// 添加GA脚本加载函数
+const loadGAScript = () => {
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-74Q8HLBVL9';
+    script.async = true;
+    script.onload = resolve;
+    script.onerror = reject;
+    document.head.appendChild(script);
+  });
+};
+
 export default function CookieConsent() {
   const [showBanner, setShowBanner] = useState(false);
   const [consent, setConsent] = useState<string | null>(null);
 
   useEffect(() => {
     const storedConsent = localStorage.getItem('cookieConsent');
-    if (!storedConsent || storedConsent != 'accepted') {
+    if (!storedConsent) {
       setShowBanner(true);
-      return;
-    }
-    
-    setConsent(storedConsent);
-     window.dataLayer = window.dataLayer || [];
-      
-      // Define gtag function on window object
-      window.gtag = function(...args: any[]) {
-        window.dataLayer.push(args);
-      };
-      
-      window.gtag('js', new Date());
-      window.gtag('config', 'G-74Q8HLBVL9');
-    // If user previously accepted, initialize GA
-    if (storedConsent === 'accepted') {
-      window.gtag('consent', 'update', {
-        'ad_storage': 'granted',
-        'analytics_storage': 'granted',
-        'ad_user_data': 'granted',
-        'ad_personalization': 'granted'
-      });
     } else {
-      window.gtag('consent', 'update', {
-        'ad_storage': 'denied',
-        'analytics_storage': 'granted',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied'
-      });
+      setConsent(storedConsent);
     }
   }, []);
+
+  // 统一GA初始化函数
+  const initializeGA = async () => {
+    try {
+      // 确保dataLayer存在
+      window.dataLayer = window.dataLayer || [];
+
+      // 定义gtag函数
+      window.gtag = function (...args: any[]) {
+        window.dataLayer.push(args);
+      };
+
+      // 加载GA脚本
+      await loadGAScript();
+
+      // 初始化GA配置
+      window.gtag('js', new Date());
+      window.gtag('config', 'G-74Q8HLBVL9');
+
+      // 设置同意状态
+      window.gtag('consent', 'update', {
+        'ad_storage': consent === 'accepted' ? 'granted' : 'denied',
+        'analytics_storage': 'granted',
+        'ad_user_data': consent === 'accepted' ? 'granted' : 'denied',
+        'ad_personalization': consent === 'accepted' ? 'granted' : 'denied'
+      });
+    } catch (error) {
+      console.error('Failed to initialize Google Analytics:', error);
+    }
+  };
 
   const acceptCookies = () => {
     localStorage.setItem('cookieConsent', 'accepted');
     setShowBanner(false);
-    
-    // Initialize GA
-    window.dataLayer = window.dataLayer || [];
-    
-    // Define gtag function on window object
-    window.gtag = function(...args: any[]) {
-      window.dataLayer.push(args);
-    };
-    
-    window.gtag('js', new Date());
-    window.gtag('config', 'G-74Q8HLBVL9');
-    
-    window.gtag('consent', 'update', {
-      'ad_storage': 'granted',
-      'analytics_storage': 'granted',
-      'ad_user_data': 'granted',
-      'ad_personalization': 'granted'
-    });
-    
     setConsent('accepted');
+    initializeGA();
   };
 
   const rejectCookies = () => {
     localStorage.setItem('cookieConsent', 'rejected');
     setShowBanner(false);
-    
-    // Define gtag function if not already defined
-    if (!window.gtag) {
-      window.gtag = function(...args: any[]) {
-        window.dataLayer.push(args);
-      };
-    }
-    
-    window.gtag('consent', 'update', {
-      'ad_storage': 'denied',
-      'analytics_storage': 'granted',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied'
-    });
-    
     setConsent('rejected');
+    initializeGA();
   };
+  useEffect(() => {
+    if (consent) {
+      initializeGA();
+    }
+  }, [consent]);
 
   if (!showBanner) return null;
 
@@ -109,10 +98,12 @@ export default function CookieConsent() {
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
+      flexWrap: 'wrap',
+      gap: '1rem'
     }}>
-      <span>This website uses cookies for analytics and ad personalization. Please agree to our collection of your data to improve your experience</span>
+      <span style={{ maxWidth: '70%' }}>This website uses cookies for analytics and ad personalization. Please agree to our collection of your data to improve your experience</span>
       <div>
-        <button 
+        <button
           onClick={acceptCookies}
           style={{
             marginRight: '10px',
@@ -128,7 +119,7 @@ export default function CookieConsent() {
         >
           Agree
         </button>
-        <button 
+        <button
           onClick={rejectCookies}
           style={{
             backgroundColor: '#f5f5f5',
