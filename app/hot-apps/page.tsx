@@ -94,49 +94,50 @@ const HotAppsPage: React.FC = () => {
       <main className="main">
         <Container>
           <div className="py-16">
-            <div className="text-center mb-12">
-              <h1 className="text-4xl font-bold mb-4">Hot Clone Apps</h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <div className="page-header">
+              <h1 className="page-title">Hot Clone Apps</h1>
+              <p className="page-subtitle">
                 Discover the most popular apps that users clone with Multi Run. 
                 Manage multiple accounts efficiently and boost your productivity.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="app-grid">
               {hotApps.map((app) => (
                 <Link 
                   key={app.id} 
                   href={`/hot-apps/${app.id}`}
-                  className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 block"
+                  className="app-card"
                 >
-                  <div className="text-center mb-4">
-                    <div className="text-5xl mb-3">{app.icon}</div>
-                    <h3 className="text-xl font-semibold text-gray-800">{app.name}</h3>
-                    <span className="inline-block bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full mt-2">
-                      {app.category}
-                    </span>
+                  <div className="app-card-header">
+                    <div className="app-icon">{app.icon}</div>
                   </div>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">{app.description}</p>
-                  <div className="flex justify-between items-center text-sm text-gray-500">
-                    <span>Downloads: {app.downloads}</span>
-                    <span className="text-blue-600 font-medium">Learn More →</span>
+                  <h3 className="app-title">{app.name}</h3>
+                  <span className="app-category">
+                    {app.category}
+                  </span>
+                  <p className="app-description">{app.description}</p>
+                  <div className="app-footer">
+                    <div className="app-stats">
+                      <span>Downloads: {app.downloads}</span>
+                    </div>
+                    <span className="app-link">Learn More →</span>
                   </div>
                 </Link>
               ))}
             </div>
             
-            <div className="text-center mt-12">
-              <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-8">
-                <h2 className="text-2xl font-bold mb-4">Ready to Clone Your Favorite Apps?</h2>
-                <p className="text-gray-600 mb-6">
+            <div className="cta-section">
+              <div className="cta-card blue">
+                <h2 className="cta-title">Ready to Clone Your Favorite Apps?</h2>
+                <p className="cta-description">
                   Download Multi Run now and start managing multiple accounts with ease.
                 </p>
-                <a 
-                  href="/#download" 
-                  className="btn bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                >
-                  Download Multi Run
-                </a>
+                <div className="cta-buttons">
+                  <a href="/#download" className="cta-button">
+                    Download Multi Run
+                  </a>
+                </div>
               </div>
             </div>
           </div>
