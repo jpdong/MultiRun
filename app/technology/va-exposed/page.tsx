@@ -86,15 +86,6 @@ const VaExposedPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="detail-section">
-                <h2>How Multi Run Uses This Technology</h2>
-                <p className="app-description">
-                  Multi Run leverages VirtualApp + Xposed technology to provide advanced app virtualization 
-                  capabilities. This enables users to run multiple instances of apps with enhanced control 
-                  over app behavior and permissions.
-                </p>
-              </div>
-
               <div className="cta-section">
                 <div className="cta-card purple">
                   <h2 className="cta-title">Advanced Framework Integration</h2>

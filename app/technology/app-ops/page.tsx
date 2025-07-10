@@ -86,39 +86,12 @@ const AppOpsPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="detail-section">
-                <h2>How Multi Run Uses This Technology</h2>
-                <p className="app-description">
-                  Multi Run integrates permission management concepts from App Ops to provide 
-                  sophisticated control over virtualized app permissions. This ensures that each 
-                  app instance operates with appropriate access levels and privacy protections.
-                </p>
-                <div className="use-cases">
-                  <div className="use-case">
-                    <h3>🎛️ Permission Isolation</h3>
-                    <p>Independent permission settings for each app instance</p>
-                  </div>
-                  <div className="use-case">
-                    <h3>📱 Behavior Control</h3>
-                    <p>Fine-tuned control over app behaviors and access patterns</p>
-                  </div>
-                  <div className="use-case">
-                    <h3>🔍 Operation Monitoring</h3>
-                    <p>Tracking and controlling app operations in virtual environments</p>
-                  </div>
-                  <div className="use-case">
-                    <h3>👤 User Privacy</h3>
-                    <p>Enhanced privacy through intelligent permission management</p>
-                  </div>
-                </div>
-              </div>
+              
 
               <div className="cta-section">
                 <div className="cta-card purple">
                   <h2 className="cta-title">Advanced Permission Management</h2>
-                  <p className="cta-description">
-                    Experience how Multi Run provides sophisticated permission control for virtualized apps.
-                  </p>
+                  
                   <div className="cta-buttons">
                     <a href="/#download" className="cta-button">
                       Download Multi Run

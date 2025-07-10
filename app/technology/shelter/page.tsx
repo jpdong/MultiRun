@@ -116,9 +116,6 @@ const ShelterPage: React.FC = () => {
               <div className="cta-section">
                 <div className="cta-card purple">
                   <h2 className="cta-title">Privacy-First App Virtualization</h2>
-                  <p className="cta-description">
-                    Experience how Multi Run prioritizes your privacy and security with advanced isolation technology.
-                  </p>
                   <div className="cta-buttons">
                     <a href="/#download" className="cta-button">
                       Download Multi Run

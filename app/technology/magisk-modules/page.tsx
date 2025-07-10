@@ -86,39 +86,10 @@ const MagiskModulesPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="detail-section">
-                <h2>How Multi Run Benefits from This Technology</h2>
-                <p className="app-description">
-                  Multi Run draws inspiration from Magisk's stealth and hiding technologies to create 
-                  sophisticated app virtualization that can operate transparently. The systemless 
-                  approach influences our non-intrusive virtualization methods.
-                </p>
-                <div className="use-cases">
-                  <div className="use-case">
-                    <h3>🎯 Detection Avoidance</h3>
-                    <p>Advanced techniques to avoid detection by apps</p>
-                  </div>
-                  <div className="use-case">
-                    <h3>⚡ Systemless Operation</h3>
-                    <p>Non-intrusive virtualization without system modifications</p>
-                  </div>
-                  <div className="use-case">
-                    <h3>🔒 Security Compliance</h3>
-                    <p>Maintaining app functionality while providing virtualization</p>
-                  </div>
-                  <div className="use-case">
-                    <h3>🛠️ Advanced Engineering</h3>
-                    <p>Sophisticated low-level techniques for seamless operation</p>
-                  </div>
-                </div>
-              </div>
-
               <div className="cta-section">
                 <div className="cta-card purple">
                   <h2 className="cta-title">Stealth Virtualization Technology</h2>
-                  <p className="cta-description">
-                    Discover how Multi Run uses advanced stealth techniques for transparent app virtualization.
-                  </p>
+                  
                   <div className="cta-buttons">
                     <a href="/#download" className="cta-button">
                       Download Multi Run

@@ -86,14 +86,7 @@ const ParallelSpacePage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="detail-section">
-                <h2>How Multi Run Uses This Technology</h2>
-                <p className="app-description">
-                  Multi Run incorporates Parallel Space technology to create isolated environments for 
-                  running multiple instances of the same app. This ensures data separation and prevents 
-                  conflicts between different app instances.
-                </p>
-              </div>
+          
 
               <div className="cta-section">
                 <div className="cta-card purple">

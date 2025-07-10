@@ -86,35 +86,12 @@ const DualBootPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="detail-section">
-                <h2>How Multi Run Benefits from This Technology</h2>
-                <p className="app-description">
-                  While Multi Run operates at the application level, the dual boot concepts from 
-                  DualBootPatcher inspire our approach to creating isolated environments for apps. 
-                  The partition and environment isolation techniques inform our virtualization strategy.
-                </p>
-                <div className="use-cases">
-                  <div className="use-case">
-                    <h3>🔄 Environment Isolation</h3>
-                    <p>Inspired isolation techniques for application environments</p>
-                  </div>
-                  <div className="use-case">
-                    <h3>⚡ System Integration</h3>
-                    <p>Deep system understanding for better app virtualization</p>
-                  </div>
-                  <div className="use-case">
-                    <h3>🛡️ Security Models</h3>
-                    <p>Advanced security concepts applied to app isolation</p>
-                  </div>
-                </div>
-              </div>
+          
 
               <div className="cta-section">
                 <div className="cta-card purple">
                   <h2 className="cta-title">Advanced System Technology</h2>
-                  <p className="cta-description">
-                    Discover how Multi Run applies system-level concepts for superior app virtualization.
-                  </p>
+                  
                   <div className="cta-buttons">
                     <a href="/#download" className="cta-button">
                       Download Multi Run

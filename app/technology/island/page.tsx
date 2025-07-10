@@ -86,39 +86,12 @@ const IslandPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="detail-section">
-                <h2>How Multi Run Uses This Technology</h2>
-                <p className="app-description">
-                  Multi Run incorporates the elegant isolation and management concepts from Island 
-                  to provide a seamless user experience while maintaining strong app separation. 
-                  The work profile approach informs our architecture for secure app virtualization.
-                </p>
-                <div className="use-cases">
-                  <div className="use-case">
-                    <h3>🎯 Smart Isolation</h3>
-                    <p>Intelligent app separation with minimal user intervention</p>
-                  </div>
-                  <div className="use-case">
-                    <h3>📱 Enhanced UX</h3>
-                    <p>Smooth and intuitive interface for managing multiple app instances</p>
-                  </div>
-                  <div className="use-case">
-                    <h3>🔒 Security Focus</h3>
-                    <p>Strong security model inspired by work profile architecture</p>
-                  </div>
-                  <div className="use-case">
-                    <h3>⚡ Performance</h3>
-                    <p>Optimized performance for daily use scenarios</p>
-                  </div>
-                </div>
-              </div>
+              
 
               <div className="cta-section">
                 <div className="cta-card purple">
                   <h2 className="cta-title">Elegant App Isolation</h2>
-                  <p className="cta-description">
-                    Discover how Multi Run combines powerful isolation with an elegant user experience.
-                  </p>
+                  
                   <div className="cta-buttons">
                     <a href="/#download" className="cta-button">
                       Download Multi Run

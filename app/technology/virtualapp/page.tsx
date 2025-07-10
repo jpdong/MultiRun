@@ -124,9 +124,6 @@ const VirtualAppPage: React.FC = () => {
               <div className="cta-section">
                 <div className="cta-card purple">
                   <h2 className="cta-title">Core Virtualization Technology</h2>
-                  <p className="cta-description">
-                    Discover how Multi Run builds upon VirtualApp's foundation to provide the best app cloning experience.
-                  </p>
                   <div className="cta-buttons">
                     <a href="/#download" className="cta-button">
                       Try Multi Run

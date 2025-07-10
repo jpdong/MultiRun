@@ -86,14 +86,7 @@ const EpicPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="detail-section">
-                <h2>How Multi Run Uses This Technology</h2>
-                <p className="app-description">
-                  Multi Run utilizes Epic's modern virtualization architecture to provide superior 
-                  performance and security when running multiple app instances. The enhanced security 
-                  features ensure that each virtual app runs in a completely isolated environment.
-                </p>
-              </div>
+        
 
               <div className="cta-section">
                 <div className="cta-card purple">

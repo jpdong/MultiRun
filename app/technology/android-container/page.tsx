@@ -86,35 +86,12 @@ const AndroidContainerPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="detail-section">
-                <h2>How Multi Run Uses This Technology</h2>
-                <p className="app-description">
-                  Multi Run incorporates Android Container technology to provide lightweight and efficient 
-                  app virtualization. This containerization approach ensures minimal resource overhead while 
-                  maintaining strong isolation between different app instances.
-                </p>
-                <div className="use-cases">
-                  <div className="use-case">
-                    <h3>🚀 Performance Optimization</h3>
-                    <p>Minimal overhead ensures smooth operation of multiple app instances</p>
-                  </div>
-                  <div className="use-case">
-                    <h3>🛡️ Enhanced Security</h3>
-                    <p>Container isolation prevents interference between applications</p>
-                  </div>
-                  <div className="use-case">
-                    <h3>⚙️ Resource Management</h3>
-                    <p>Efficient allocation and control of system resources</p>
-                  </div>
-                </div>
-              </div>
+          
 
               <div className="cta-section">
                 <div className="cta-card purple">
                   <h2 className="cta-title">Experience Container Technology</h2>
-                  <p className="cta-description">
-                    See how Multi Run leverages Android Container technology for superior app virtualization.
-                  </p>
+                
                   <div className="cta-buttons">
                     <a href="/#download" className="cta-button">
                       Download Multi Run
