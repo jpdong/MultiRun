@@ -10,10 +10,9 @@ const NavBar: React.FC = () => (
       </Link>
       <nav>
         <ul className="nav">
-          <li><a href="/#features">Features</a></li>
-          <li><a href="/#download">Download</a></li>
-          <li><a href="/#faq">FAQ</a></li>
-          <li><a href="/#testimonials">Testimonials</a></li>
+          <li><Link href="/">Home</Link></li>
+          <li><Link href="/hot-apps">Hot Apps</Link></li>
+          <li><Link href="/technology">Technology</Link></li>
           <li><Link href="/contact">Contact</Link></li>
         </ul>
       </nav>

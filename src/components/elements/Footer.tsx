@@ -12,8 +12,8 @@ const Footer: React.FC = () => (
         <div className="col col-4">
           <h3>Products</h3>
           <ul>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#download">Download</a></li>
+            <li><Link href="/">Download</Link></li>
+            <li><Link href="/contact">Contact Us</Link></li>
           </ul>
         </div>
         <div className="col col-4">

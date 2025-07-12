@@ -3,6 +3,7 @@ import Container from '../components/layout/Container';
 import Link from 'next/link';
 import { FaEnvelope, FaTelegram, FaDiscord, FaTwitter, FaProductHunt } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
+import NavBar from '../components/elements/NavBar';
 
 const ContactCard: React.FC<{ icon: React.ReactNode; title: string; link: string; value: string }> = ({ icon, title, link, value }) => (
   <div style={{ padding: '2rem', background: '#f9f9f9', borderRadius: '10px', textAlign: 'center' }}>
@@ -15,14 +16,7 @@ const ContactCard: React.FC<{ icon: React.ReactNode; title: string; link: string
 const ContactUsPage: React.FC = () => {
   return (
     <div>
-      <header className="header">
-      <div className="header-content">
-        <Link href="/" className="logo">
-          <img src="/logo.webp" alt="Multiple Accounts Logo" />
-          <span className="logo-text">Multi Run</span>
-        </Link>
-      </div>
-    </header>
+      <NavBar/>
       <Container>
         <div className="page-content" style={{ padding: '4rem 0', textAlign: 'center' }}>
     

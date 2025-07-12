@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import CookieConsent from '../src/components/elements/CookieConsent';
+import GoogleAnalytics from '../src/components/analytics/GoogleAnalytics'
+import CookieConsent from '../src/components/analytics/CookieConsent'
 
 export const metadata: Metadata = {
   title: 'Multi Run - Parallel Dual App',
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
+        <GoogleAnalytics />
         {children}
         <CookieConsent />
       </body>
