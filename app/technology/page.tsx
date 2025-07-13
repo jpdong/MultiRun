@@ -139,28 +139,6 @@ const TechnologyPage: React.FC = () => {
                 </Link>
               ))}
             </div>
-            
-            <div className="cta-section">
-              <div className="cta-card purple">
-                <h2 className="cta-title">Powered by Open Source Innovation</h2>
-                <p className="cta-description">
-                  Multi Run leverages these advanced technologies to provide the best app virtualization experience.
-                </p>
-                <div className="cta-buttons">
-                  <a href="/#download" className="cta-button">
-                    Try Multi Run
-                  </a>
-                  <a 
-                    href="https://github.com" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="cta-button secondary"
-                  >
-                    View on GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
           </div>
         </Container>
       </main>
