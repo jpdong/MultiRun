@@ -5,42 +5,42 @@ import Footer from '../../src/components/elements/Footer';
 import Container from '../../src/components/layout/Container';
 
 const hotGames = [
-  {
-    id: 'mobile-legends',
-    name: 'Mobile Legends: Bang Bang',
-    description: 'Clone multiple Mobile Legends accounts to play different roles and rank up separately. Perfect for gamers with multiple strategies.',
-    icon: '⚔️',
-    category: 'MOBA',
-    downloads: '8M+',
-    rating: '4.5/5'
-  },
-  {
-    id: 'free-fire',
-    name: 'Free Fire',
-    description: 'Run multiple Free Fire accounts to experiment with different play styles and character builds without affecting your main account.',
-    icon: '🔫',
-    category: 'Battle Royale',
-    downloads: '12M+',
-    rating: '4.3/5'
-  },
-  {
-    id: 'pubg-mobile',
-    name: 'PUBG Mobile',
-    description: 'Manage separate PUBG Mobile accounts for casual play, competitive gaming, and streaming purposes.',
-    icon: '🎮',
-    category: 'Battle Royale',
-    downloads: '15M+',
-    rating: '4.4/5'
-  },
-  {
-    id: 'clash-of-clans',
-    name: 'Clash of Clans',
-    description: 'Clone your Clash of Clans village to try different strategies and base layouts without risking your main village.',
-    icon: '🏰',
-    category: 'Strategy',
-    downloads: '6M+',
-    rating: '4.6/5'
-  },
+  // {
+  //   id: 'mobile-legends',
+  //   name: 'Mobile Legends: Bang Bang',
+  //   description: 'Clone multiple Mobile Legends accounts to play different roles and rank up separately. Perfect for gamers with multiple strategies.',
+  //   icon: '⚔️',
+  //   category: 'MOBA',
+  //   downloads: '8M+',
+  //   rating: '4.5/5'
+  // },
+  // {
+  //   id: 'free-fire',
+  //   name: 'Free Fire',
+  //   description: 'Run multiple Free Fire accounts to experiment with different play styles and character builds without affecting your main account.',
+  //   icon: '🔫',
+  //   category: 'Battle Royale',
+  //   downloads: '12M+',
+  //   rating: '4.3/5'
+  // },
+  // {
+  //   id: 'pubg-mobile',
+  //   name: 'PUBG Mobile',
+  //   description: 'Manage separate PUBG Mobile accounts for casual play, competitive gaming, and streaming purposes.',
+  //   icon: '🎮',
+  //   category: 'Battle Royale',
+  //   downloads: '15M+',
+  //   rating: '4.4/5'
+  // },
+  // {
+  //   id: 'clash-of-clans',
+  //   name: 'Clash of Clans',
+  //   description: 'Clone your Clash of Clans village to try different strategies and base layouts without risking your main village.',
+  //   icon: '🏰',
+  //   category: 'Strategy',
+  //   downloads: '6M+',
+  //   rating: '4.6/5'
+  // },
   {
     id: 'roblox',
     name: 'Roblox',
@@ -49,6 +49,15 @@ const hotGames = [
     category: 'Metaverse',
     downloads: '10M+',
     rating: '4.2/5'
+  },
+  {
+    id: 'growagarden',
+    name: 'Grow a Garden',
+    description: 'Cultivate multiple virtual gardens with separate accounts to experiment with different plant combinations and landscaping styles.',
+    icon: '🌱',
+    category: 'Simulation',
+    downloads: '3M+',
+    rating: '4.6/5'
   }
 ];
 
