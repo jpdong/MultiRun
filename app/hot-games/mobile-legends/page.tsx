@@ -10,6 +10,12 @@ const MobileLegendsPage: React.FC = () => {
       <main className="main">
         <Container>
           <div className="py-16">
+            <div className="back-button-container">
+              <a href="/hot-games" className="back-button">
+                <span className="back-arrow">←</span>
+                Back to Hot Games
+              </a>
+            </div>
             <div className="app-detail-header">
               <div className="app-icon-large">⚔️</div>
               <div className="app-info">
