@@ -23,78 +23,78 @@ const technologyProjects = [
     language: 'Java/C++',
     category: 'Framework Integration'
   },
-  {
-    id: 'parallel-space',
-    name: 'Parallel Space',
-    description: 'Open source implementation of parallel app technology for Android devices.',
-    github: 'xx-dev/ParallelSpace',
-    stars: '2.1k',
-    language: 'Java',
-    category: 'Parallel Apps'
-  },
-  {
-    id: 'epic',
-    name: 'Epic',
-    description: 'A modern Android app virtualization solution with enhanced security and performance.',
-    github: 'tiann/epic',
-    stars: '1.8k',
-    language: 'Java/C++',
-    category: 'App Virtualization'
-  },
-  {
-    id: 'android-container',
-    name: 'Android Container',
-    description: 'Lightweight container technology for running isolated Android applications.',
-    github: 'container4android/AndroidContainer',
-    stars: '956',
-    language: 'C++/Java',
-    category: 'Containerization'
-  },
-  {
-    id: 'dual-boot',
-    name: 'DualBootPatcher',
-    description: 'Advanced dual boot solution allowing multiple Android ROMs on a single device.',
-    github: 'chenxiaolong/DualBootPatcher',
-    stars: '1.2k',
-    language: 'C++',
-    category: 'System Level'
-  },
-  {
-    id: 'shelter',
-    name: 'Shelter',
-    description: 'Isolate and clone apps using Android work profile for enhanced privacy.',
-    github: 'PeterCxy/Shelter',
-    stars: '2.8k',
-    language: 'Java',
-    category: 'Privacy & Security'
-  },
-  {
-    id: 'magisk-modules',
-    name: 'Magisk Hide',
-    description: 'Systemless root solution with app hiding capabilities for sensitive applications.',
-    github: 'topjohnwu/Magisk',
-    stars: '35k',
-    language: 'C++/Java',
-    category: 'Root & Hide'
-  },
-  {
-    id: 'app-ops',
-    name: 'App Ops',
-    description: 'Permission management framework for controlling app access and behavior.',
-    github: 'rikka/AppOps',
-    stars: '1.5k',
-    language: 'Java',
-    category: 'Permission Control'
-  },
-  {
-    id: 'island',
-    name: 'Island',
-    description: 'App isolation solution using Android work profile with enhanced management features.',
-    github: 'oasisfeng/island',
-    stars: '3.1k',
-    language: 'Java',
-    category: 'App Isolation'
-  }
+  // {
+  //   id: 'parallel-space',
+  //   name: 'Parallel Space',
+  //   description: 'Open source implementation of parallel app technology for Android devices.',
+  //   github: 'xx-dev/ParallelSpace',
+  //   stars: '2.1k',
+  //   language: 'Java',
+  //   category: 'Parallel Apps'
+  // },
+  // {
+  //   id: 'epic',
+  //   name: 'Epic',
+  //   description: 'A modern Android app virtualization solution with enhanced security and performance.',
+  //   github: 'tiann/epic',
+  //   stars: '1.8k',
+  //   language: 'Java/C++',
+  //   category: 'App Virtualization'
+  // },
+  // {
+  //   id: 'android-container',
+  //   name: 'Android Container',
+  //   description: 'Lightweight container technology for running isolated Android applications.',
+  //   github: 'container4android/AndroidContainer',
+  //   stars: '956',
+  //   language: 'C++/Java',
+  //   category: 'Containerization'
+  // },
+  // {
+  //   id: 'dual-boot',
+  //   name: 'DualBootPatcher',
+  //   description: 'Advanced dual boot solution allowing multiple Android ROMs on a single device.',
+  //   github: 'chenxiaolong/DualBootPatcher',
+  //   stars: '1.2k',
+  //   language: 'C++',
+  //   category: 'System Level'
+  // },
+  // {
+  //   id: 'shelter',
+  //   name: 'Shelter',
+  //   description: 'Isolate and clone apps using Android work profile for enhanced privacy.',
+  //   github: 'PeterCxy/Shelter',
+  //   stars: '2.8k',
+  //   language: 'Java',
+  //   category: 'Privacy & Security'
+  // },
+  // {
+  //   id: 'magisk-modules',
+  //   name: 'Magisk Hide',
+  //   description: 'Systemless root solution with app hiding capabilities for sensitive applications.',
+  //   github: 'topjohnwu/Magisk',
+  //   stars: '35k',
+  //   language: 'C++/Java',
+  //   category: 'Root & Hide'
+  // },
+  // {
+  //   id: 'app-ops',
+  //   name: 'App Ops',
+  //   description: 'Permission management framework for controlling app access and behavior.',
+  //   github: 'rikka/AppOps',
+  //   stars: '1.5k',
+  //   language: 'Java',
+  //   category: 'Permission Control'
+  // },
+  // {
+  //   id: 'island',
+  //   name: 'Island',
+  //   description: 'App isolation solution using Android work profile with enhanced management features.',
+  //   github: 'oasisfeng/island',
+  //   stars: '3.1k',
+  //   language: 'Java',
+  //   category: 'App Isolation'
+  // }
 ];
 
 const TechnologyPage: React.FC = () => {

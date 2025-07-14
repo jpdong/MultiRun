@@ -5,14 +5,14 @@ import Footer from '../../src/components/elements/Footer';
 import Container from '../../src/components/layout/Container';
 
 const hotApps = [
-  {
-    id: 'whatsapp-business',
-    name: 'WhatsApp Business',
-    description: 'Run multiple WhatsApp Business accounts for different business ventures or client management.',
-    icon: '💬',
-    category: 'Communication',
-    downloads: '2M+'
-  },
+  // {
+  //   id: 'whatsapp-business',
+  //   name: 'WhatsApp Business',
+  //   description: 'Run multiple WhatsApp Business accounts for different business ventures or client management.',
+  //   icon: '💬',
+  //   category: 'Communication',
+  //   downloads: '2M+'
+  // },
   {
     id: 'instagram',
     name: 'Instagram',
@@ -21,22 +21,22 @@ const hotApps = [
     category: 'Social Media',
     downloads: '5M+'
   },
-  {
-    id: 'telegram',
-    name: 'Telegram',
-    description: 'Use multiple Telegram accounts for different purposes while maintaining privacy and organization.',
-    icon: '✈️',
-    category: 'Communication',
-    downloads: '3M+'
-  },
-  {
-    id: 'tiktok',
-    name: 'TikTok',
-    description: 'Create and manage multiple TikTok accounts for different content themes and audiences.',
-    icon: '🎵',
-    category: 'Entertainment',
-    downloads: '4M+'
-  },
+  // {
+  //   id: 'telegram',
+  //   name: 'Telegram',
+  //   description: 'Use multiple Telegram accounts for different purposes while maintaining privacy and organization.',
+  //   icon: '✈️',
+  //   category: 'Communication',
+  //   downloads: '3M+'
+  // },
+  // {
+  //   id: 'tiktok',
+  //   name: 'TikTok',
+  //   description: 'Create and manage multiple TikTok accounts for different content themes and audiences.',
+  //   icon: '🎵',
+  //   category: 'Entertainment',
+  //   downloads: '4M+'
+  // },
   {
     id: 'facebook',
     name: 'Facebook',
@@ -53,14 +53,14 @@ const hotApps = [
     category: 'Social Media',
     downloads: '2.5M+'
   },
-  {
-    id: 'discord',
-    name: 'Discord',
-    description: 'Join multiple Discord servers with different accounts for gaming, communities, and work.',
-    icon: '🎮',
-    category: 'Communication',
-    downloads: '1.8M+'
-  },
+  // {
+  //   id: 'discord',
+  //   name: 'Discord',
+  //   description: 'Join multiple Discord servers with different accounts for gaming, communities, and work.',
+  //   icon: '🎮',
+  //   category: 'Communication',
+  //   downloads: '1.8M+'
+  // },
   {
     id: 'spotify',
     name: 'Spotify',
