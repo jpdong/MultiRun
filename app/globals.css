@@ -602,6 +602,380 @@ body {
   margin: 0 auto;
 }
 
+/* Hot Games Sub-Page Styles */
+.app-detail-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.app-icon-large {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1;
+}
+
+.app-info h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.app-tagline {
+  font-size: 1.25rem;
+  color: #6b7280;
+  max-width: 48rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.app-content {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.app-section {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.app-section h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.app-section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+
+.app-section p {
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.feature-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0.125rem;
+  color: #10b981;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.feature-list strong {
+  color: #1f2937;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.benefit-card {
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-left: 4px solid #3b82f6;
+  transition: transform 0.2s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-2px);
+}
+
+.benefit-card h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+
+.benefit-card p {
+  color: #4b5563;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.strategy-grid,
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.strategy-card,
+.tip-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.strategy-card:hover,
+.tip-card:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.strategy-card h3,
+.tip-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+
+.strategy-card p,
+.tip-card p {
+  color: #6b7280;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.strategy-card ul,
+.tip-card ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: #4b5563;
+}
+
+.strategy-card li,
+.tip-card li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.advanced-tips {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tip-item {
+  background: #f9fafb;
+  border-left: 4px solid #7c3aed;
+  padding: 1.5rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.tip-item h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.tip-item p {
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.popular-games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.game-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.game-card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.game-card p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.steps-list {
+  counter-reset: step-counter;
+  list-style: none;
+  padding: 0;
+}
+
+.steps-list li {
+  counter-increment: step-counter;
+  position: relative;
+  padding-left: 3rem;
+  margin-bottom: 1rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.steps-list li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #3b82f6;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+/* Custom CTA cards for game pages */
+.cta-card.battle {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff4757 100%);
+}
+
+.cta-card.battle-royale {
+  background: linear-gradient(135deg, #ffa726 0%, #ff7043 100%);
+}
+
+.cta-card.pubg {
+  background: linear-gradient(135deg, #42a5f5 0%, #1976d2 100%);
+}
+
+.cta-card.strategy {
+  background: linear-gradient(135deg, #66bb6a 0%, #43a047 100%);
+}
+
+.cta-card.metaverse {
+  background: linear-gradient(135deg, #ab47bc 0%, #8e24aa 100%);
+}
+
+.battle-button,
+.battle-royale-button,
+.pubg-button,
+.strategy-button,
+.metaverse-button {
+  background: white;
+  color: #1f2937;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.battle-button:hover {
+  background: #ff6b6b;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.battle-royale-button:hover {
+  background: #ffa726;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.pubg-button:hover {
+  background: #42a5f5;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.strategy-button:hover {
+  background: #66bb6a;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.metaverse-button:hover {
+  background: #ab47bc;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app-detail-header {
+    padding: 1rem 0;
+  }
+
+  .app-icon-large {
+    font-size: 4rem;
+  }
+
+  .app-info h1 {
+    font-size: 2rem;
+  }
+
+  .app-tagline {
+    font-size: 1.125rem;
+  }
+
+  .app-section {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .app-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .benefits-grid,
+  .strategy-grid,
+  .tips-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .popular-games-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .detail-header {
   text-align: center;
   margin-bottom: 3rem;
