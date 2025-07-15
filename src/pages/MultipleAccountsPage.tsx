@@ -87,7 +87,7 @@ const MultipleAccountsPage: React.FC = () => (
       <Container>
         <Row gutter={[40, 40]} align="middle" style={{ padding: '80px 0 40px 0' }}>
           <Column xs={24} md={12}>
-            <h1 style={{ fontSize: '2.5rem', marginBottom: 20, color: '#2c3e50' }}>Run Multi Accounts on One Device</h1>
+            <h1 style={{ fontSize: '2.5rem', marginBottom: 20, color: '#2c3e50' }}>Run Multiple Accounts on One Device</h1>
             <p style={{ fontSize: '1.1rem', marginBottom: 30, color: '#666' }}>
               Keep your personal and professional lives separate with our secure app cloning solution. No more switching between accounts - run them all simultaneously!
             </p>

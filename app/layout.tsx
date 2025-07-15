@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   icons: {
     icon: '/logo.webp',
   },
+  other: {
+    "saashub-verification":"8myrsab5uhvd"
+  },
+  
 }
 
 export default function RootLayout({
