@@ -1,9 +1,12 @@
 import React from 'react';
 import Container from '../components/layout/Container';
+import Footer from '../components/elements/Footer';
+import NavBar from '../components/elements/NavBar';
 
 const TermsOfUsePage: React.FC = () => {
   return (
     <div>
+      <NavBar />
       <Container>
         <div className="page-content">
           <h1>Terms of Use</h1>
@@ -46,6 +49,7 @@ const TermsOfUsePage: React.FC = () => {
           </p>
         </div>
       </Container>
+      <Footer />
     </div>
   );
 };

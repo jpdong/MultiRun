@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { FaEnvelope, FaTelegram, FaDiscord, FaTwitter, FaProductHunt } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
 import NavBar from '../components/elements/NavBar';
+import Footer from '../components/elements/Footer';
 
 const ContactCard: React.FC<{ icon: React.ReactNode; title: string; link: string; value: string }> = ({ icon, title, link, value }) => (
   <div style={{ padding: '2rem', background: '#f9f9f9', borderRadius: '10px', textAlign: 'center' }}>
@@ -24,7 +25,7 @@ const ContactUsPage: React.FC = () => {
           <p style={{ marginBottom: '3rem', fontSize: '1.2rem' }}>
             We'd love to hear from you! Reach out through any of these channels:
           </p>
-
+          <a href="https://link.zhihu.com/?target=https%3A//multirun.space/"> </a>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '2rem', maxWidth: '1200px', margin: '0 auto' }}>   
             <ContactCard
               icon={<FaTelegram />}
@@ -65,6 +66,7 @@ const ContactUsPage: React.FC = () => {
           </div>
         </div>
       </Container>
+      <Footer />
     </div>
   );
 };
