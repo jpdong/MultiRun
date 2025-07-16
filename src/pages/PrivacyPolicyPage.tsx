@@ -1,9 +1,12 @@
 import React from 'react';
 import Container from '../components/layout/Container';
+import Footer from '../components/elements/Footer';
+import NavBar from '../components/elements/NavBar';
 
 const PrivacyPolicyPage: React.FC = () => {
   return (
     <div>
+      <NavBar />
       <Container>
         <div className="page-content">
           <h1>Privacy Policy</h1>
@@ -74,6 +77,7 @@ const PrivacyPolicyPage: React.FC = () => {
           </p>
         </div>
       </Container>
+      <Footer />
     </div>
   );
 };
