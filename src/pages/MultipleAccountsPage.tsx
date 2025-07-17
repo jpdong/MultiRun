@@ -9,6 +9,7 @@ import Row from '../components/layout/Row';
 import Column from '../components/layout/Column';
 import DownloadButton from '../components/elements/DownloadButton';
 import { FaGooglePlay } from 'react-icons/fa';
+import HotArea from './HotArea';
 
 const features = [
   {
@@ -145,8 +146,9 @@ const MultipleAccountsPage: React.FC = () => (
             ))}
           </Row>
         </Container>
-      </div>
+      </div>   
     </div>
+    <HotArea />
     <Footer />
   </>
 );
