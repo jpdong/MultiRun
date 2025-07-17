@@ -4,6 +4,11 @@ import NavBar from '../../../src/components/elements/NavBar';
 import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
 
+export const metadata = {
+  title: 'VirtualApp Multiple Accounts | Multi Run',
+  description: 'A powerful Android app virtualization framework that allows running multiple app instances.',
+};
+
 const VirtualAppPage: React.FC = () => {
   return (
     <>

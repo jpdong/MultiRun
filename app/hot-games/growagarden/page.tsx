@@ -3,6 +3,11 @@ import NavBar from '../../../src/components/elements/NavBar';
 import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
 
+export const metadata = {
+  title: 'Grow a Garden Multiple Accounts | Multi Run',
+  description: 'Cultivate multiple virtual gardens with unique identities and creative styles.',
+};
+
 const GrowGardenPage: React.FC = () => {
   return (
     <>

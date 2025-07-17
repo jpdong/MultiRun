@@ -4,6 +4,11 @@ import NavBar from '../../src/components/elements/NavBar';
 import Footer from '../../src/components/elements/Footer';
 import Container from '../../src/components/layout/Container';
 
+export const metadata = {
+  title: 'Technology Multiple Accounts | Multi Run',
+  description: 'Explore the latest advancements in technology, focusing on multiple accounts and multi-run capabilities. Dive into the world of app virtualization, parallel apps, and more.',
+};
+
 const technologyProjects = [
   {
     id: 'virtualapp',

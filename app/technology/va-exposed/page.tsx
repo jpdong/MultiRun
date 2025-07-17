@@ -4,6 +4,11 @@ import NavBar from '../../../src/components/elements/NavBar';
 import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
 
+export const metadata = {
+  title: 'VirtualApp + Xposed Multiple Accounts | Multi Run',
+  description: 'Enhanced VirtualApp with Xposed framework integration for advanced app manipulation.',
+};
+
 const VaExposedPage: React.FC = () => {
   return (
     <>
