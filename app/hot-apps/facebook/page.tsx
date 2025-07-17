@@ -4,6 +4,11 @@ import NavBar from '../../../src/components/elements/NavBar';
 import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
 
+export const metadata = {
+  title: 'Facebook Multiple Accounts | Multi Run',
+  description: 'Manage multiple Facebook accounts for personal use, business promotion, and content creation.',
+};
+
 const FacebookPage: React.FC = () => {
   return (
     <>

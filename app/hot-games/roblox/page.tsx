@@ -2,6 +2,12 @@ import React from 'react';
 import NavBar from '../../../src/components/elements/NavBar';
 import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
+import { Metadata } from 'next';
+
+export const metadata:Metadata = {
+  title: 'Roblox Multiple Accounts | Multi Run',
+  description: 'Discover the most popular Roblox clone games that users clone with Multi Run. Manage multiple accounts and dominate the competition.',
+};
 
 const RobloxPage: React.FC = () => {
   return (

@@ -3,6 +3,12 @@ import Link from 'next/link';
 import NavBar from '../../src/components/elements/NavBar';
 import Footer from '../../src/components/elements/Footer';
 import Container from '../../src/components/layout/Container';
+import { Metadata } from 'next';
+
+export const metadata:Metadata = {
+  title: 'Hot Clone Games Multiple Accounts | Multi Run',
+  description: 'Discover the most popular games that users clone with Multi Run. Manage multiple accounts and dominate the competition.',
+};
 
 const hotGames = [
   // {
@@ -69,7 +75,7 @@ const HotGamesPage: React.FC = () => {
         <Container>
           <div className="py-16">
             <div className="page-header">
-              <h1 className="page-title">Hot Clone Games</h1>
+              <h1 className="page-title">Hot Clone Games with Multi Run</h1>
               <p className="page-subtitle">
                 Discover the most popular games that users clone with Multi Run. 
                 Manage multiple gaming accounts and dominate the competition.
@@ -104,10 +110,10 @@ const HotGamesPage: React.FC = () => {
             
             <div className="cta-section">
               <div className="cta-card purple">
-                <h2 className="cta-title">Ready to Clone Your Favorite Games?</h2>
-                <p className="cta-description">
-                  Download Multi Run now and start managing multiple gaming accounts with ease.
-                </p>
+                <h2 className="cta-title">Ready to Clone Your Favorite Games with Multi Run?</h2>
+                <h3 className="cta-description">
+                  Download Multi Run now and start managing multiple accounts with game ease.
+                </h3>
                 <div className="cta-buttons">
                   <a href="/#download" className="cta-button">
                     Download Multi Run
