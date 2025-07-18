@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   other: {
     "saashub-verification":"8myrsab5uhvd"
   },
+  alternates: {
+      canonical: `https://multirun.space/`,
+    },
   
 }
 
