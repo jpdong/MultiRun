@@ -1,6 +1,6 @@
 import React from 'react';
-import NavBar from '../../../src/components/elements/NavBar';
 import Footer from '../../../src/components/elements/Footer';
+import NavBar from '../../../src/components/elements/NavBar';
 import Container from '../../../src/components/layout/Container';
 
 export const metadata = {
@@ -33,8 +33,8 @@ const GrowGardenPage: React.FC = () => {
               <section className="app-section">
                 <h2>Why Clone Grow a Garden?</h2>
                 <p>
-                  Grow a Garden is a peaceful yet engaging simulation game where creativity meets strategy. 
-                  Cloning it allows you to explore unlimited gardening possibilities and create distinct 
+                  Grow a Garden is a peaceful yet engaging simulation game where creativity meets strategy.
+                  Cloning it allows you to explore unlimited gardening possibilities and create distinct
                   botanical masterpieces without interfering with your main garden's progress.
                 </p>
                 <ul className="feature-list">
@@ -153,7 +153,7 @@ const GrowGardenPage: React.FC = () => {
               <div className="cta-card green">
                 <h2>Ready to Grow Your Garden Empire?</h2>
                 <p>
-                  Transform your gardening experience with Multi Run. Create multiple gardens, 
+                  Transform your gardening experience with Multi Run. Create multiple gardens,
                   explore endless creative possibilities, and become the ultimate virtual gardener!
                 </p>
                 <a href="/#download" className="cta-button green-button">
