@@ -146,7 +146,7 @@ const MultipleAccountsPage: React.FC = () => (
             ))}
           </Row>
         </Container>
-      </div>   
+      </div>
     </div>
     <HotArea />
     <Footer />
