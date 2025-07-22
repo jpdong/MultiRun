@@ -19,6 +19,14 @@ const hotApps = [
   //   downloads: '2M+'
   // },
   {
+    id: 'bluesky',
+    name: 'Bluesky',
+    description: 'Manage multiple Bluesky accounts for personal use, content creation, and community engagement.',
+    icon: '🔵',
+    category: 'Social Media',
+    downloads: 'Growing Fast'
+  },
+  {
     id: 'instagram',
     name: 'Instagram',
     description: 'Manage multiple Instagram accounts for personal use, business promotion, and content creation.',
