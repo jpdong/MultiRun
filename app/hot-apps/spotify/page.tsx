@@ -8,7 +8,7 @@ export const metadata = {
   title: 'Spotify Multiple Accounts | Multi Run',
   description: 'Manage multiple Spotify accounts for different music preferences and family sharing.',
   alternates: {
-    canonical: 'https://multirun.app/hot-apps/spotify'
+    canonical: 'https://multirun.space/hot-apps/spotify'
   }
 };
 

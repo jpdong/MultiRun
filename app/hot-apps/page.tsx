@@ -8,7 +8,7 @@ export const metadata = {
   title: 'Hot Clone Apps Multiple Accounts | Multi Run',
   description: 'Explore a variety of apps and manage multiple accounts simultaneously with Multi Run App.',
   alternates: {
-    canonical: 'https://multirun.app/hot-apps'
+    canonical: 'https://multirun.space/hot-apps'
   }
 };
 

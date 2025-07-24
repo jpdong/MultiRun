@@ -8,7 +8,7 @@ export const metadata = {
   title: 'TikTok Multiple Accounts | Multi Run',
   description: 'Create and manage multiple TikTok accounts for different content themes and audiences.',
   alternates: {
-    canonical: 'https://multirun.app/hot-apps/tiktok'
+    canonical: 'https://multirun.space/hot-apps/tiktok'
   }
 };
 

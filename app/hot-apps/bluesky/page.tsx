@@ -8,7 +8,7 @@ export const metadata = {
   title: 'Bluesky Multiple Accounts | Multi Run',
   description: 'Manage multiple Bluesky accounts for personal use, content creation, and community engagement.',
   alternates: {
-    canonical: 'https://multirun.app/hot-apps/bluesky'
+    canonical: 'https://multirun.space/hot-apps/bluesky'
   }
 };
 

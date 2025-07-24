@@ -7,7 +7,7 @@ export const metadata = {
   title: 'Free Fire Multiple Accounts | Multi Run',
   description: 'Play Free Fire with multiple accounts to explore different strategies and game modes.',
   alternates: {
-    canonical: 'https://multirun.app/hot-games/free-fire'
+    canonical: 'https://multirun.space/hot-games/free-fire'
   }
 };
 

@@ -7,6 +7,9 @@ import Container from '../../../src/components/layout/Container';
 export const metadata = {
   title: 'VirtualApp + Xposed Multiple Accounts | Multi Run',
   description: 'Enhanced VirtualApp with Xposed framework integration for advanced app manipulation.',
+  alternates: {
+    canonical: 'https://multirun.space/technology/va-exposed'
+  }
 };
 
 const VaExposedPage: React.FC = () => {

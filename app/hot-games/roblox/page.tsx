@@ -8,7 +8,7 @@ export const metadata:Metadata = {
   title: 'Roblox Multiple Accounts | Multi Run',
   description: 'Discover the most popular Roblox clone games that users clone with Multi Run. Manage multiple accounts and dominate the competition.',
   alternates: {
-    canonical: 'https://multirun.app/hot-games/roblox'
+    canonical: 'https://multirun.space/hot-games/roblox'
   }
 };
 

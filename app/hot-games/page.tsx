@@ -5,11 +5,11 @@ import Footer from '../../src/components/elements/Footer';
 import Container from '../../src/components/layout/Container';
 import { Metadata } from 'next';
 
-export const metadata:Metadata = {
+export const metadata: Metadata = {
   title: 'Hot Clone Games Multiple Accounts | Multi Run',
   description: 'Discover the most popular games that users clone with Multi Run. Manage multiple accounts and dominate the competition.',
   alternates: {
-    canonical: 'https://multirun.app/hot-games'
+    canonical: 'https://multirun.space/hot-games'
   }
 };
 
@@ -80,15 +80,15 @@ const HotGamesPage: React.FC = () => {
             <div className="page-header">
               <h1 className="page-title">Hot Clone Games with Multi Run</h1>
               <p className="page-subtitle">
-                Discover the most popular games that users clone with Multi Run. 
+                Discover the most popular games that users clone with Multi Run.
                 Manage multiple gaming accounts and dominate the competition.
               </p>
             </div>
-            
+
             <div className="app-grid">
               {hotGames.map((game) => (
-                <Link 
-                  key={game.id} 
+                <Link
+                  key={game.id}
                   href={`/hot-games/${game.id}`}
                   className="app-card"
                 >
@@ -110,7 +110,7 @@ const HotGamesPage: React.FC = () => {
                 </Link>
               ))}
             </div>
-            
+
             <div className="cta-section">
               <div className="cta-card purple">
                 <h2 className="cta-title">Ready to Clone Your Favorite Games with Multi Run?</h2>

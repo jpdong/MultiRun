@@ -7,7 +7,7 @@ export const metadata = {
   title: 'Grow a Garden Multiple Accounts | Multi Run',
   description: 'Cultivate multiple virtual gardens with unique identities and creative styles.',
   alternates: {
-    canonical: 'https://multirun.app/hot-games/growagarden'
+    canonical: 'https://multirun.space/hot-games/growagarden'
   }
 };
 

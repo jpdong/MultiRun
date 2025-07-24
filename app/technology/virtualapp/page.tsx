@@ -7,6 +7,9 @@ import Container from '../../../src/components/layout/Container';
 export const metadata = {
   title: 'VirtualApp Multiple Accounts | Multi Run',
   description: 'A powerful Android app virtualization framework that allows running multiple app instances.',
+  alternates: {
+    canonical: 'https://multirun.space/technology/virtualapp'
+  }
 };
 
 const VirtualAppPage: React.FC = () => {

@@ -8,7 +8,7 @@ export const metadata = {
   title: 'Discord Multiple Accounts | Multi Run',
   description: 'Join multiple Discord servers with different accounts for gaming, communities, and work.',
   alternates: {
-    canonical: 'https://multirun.app/hot-apps/discord'
+    canonical: 'https://multirun.space/hot-apps/discord'
   }
 };
 

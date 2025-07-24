@@ -7,6 +7,9 @@ import Container from '../../src/components/layout/Container';
 export const metadata = {
   title: 'Technology Multiple Accounts | Multi Run',
   description: 'Explore the latest advancements in technology, focusing on multiple accounts and multi-run capabilities. Dive into the world of app virtualization, parallel apps, and more.',
+  alternates: {
+    canonical: 'https://multirun.space/technology'
+  }
 };
 
 const technologyProjects = [

@@ -7,7 +7,7 @@ export const metadata = {
   title: 'Mobile Legends Multiple Accounts | Multi Run',
   description: 'Manage multiple Mobile Legends accounts to play with different heroes and strategies.',
   alternates: {
-    canonical: 'https://multirun.app/hot-games/mobile-legends'
+    canonical: 'https://multirun.space/hot-games/mobile-legends'
   }
 };
 

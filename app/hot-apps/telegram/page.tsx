@@ -8,7 +8,7 @@ export const metadata = {
   title: 'Telegram Multiple Accounts | Multi Run',
   description: 'Use multiple Telegram accounts for different purposes while maintaining privacy and organization.',
   alternates: {
-    canonical: 'https://multirun.app/hot-apps/telegram'
+    canonical: 'https://multirun.space/hot-apps/telegram'
   }
 };
 

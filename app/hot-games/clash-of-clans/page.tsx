@@ -7,7 +7,7 @@ export const metadata = {
   title: 'Clash of Clans Multiple Accounts | Multi Run',
   description: 'Manage multiple Clash of Clans accounts to build different villages and strategies.',
   alternates: {
-    canonical: 'https://multirun.app/hot-games/clash-of-clans'
+    canonical: 'https://multirun.space/hot-games/clash-of-clans'
   }
 };
 

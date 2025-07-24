@@ -8,7 +8,7 @@ export const metadata = {
   title: 'Facebook Multiple Accounts | Multi Run',
   description: 'Manage multiple Facebook accounts for personal use, business promotion, and content creation.',
   alternates: {
-    canonical: 'https://multirun.app/hot-apps/facebook'
+    canonical: 'https://multirun.space/hot-apps/facebook'
   }
 };
 

@@ -8,7 +8,7 @@ export const metadata = {
   title: 'WhatsApp Business Multiple Accounts | Multi Run',
   description: 'Run multiple WhatsApp Business accounts for different business ventures or client management.',
   alternates: {
-    canonical: 'https://multirun.app/hot-apps/whatsapp-business'
+    canonical: 'https://multirun.space/hot-apps/whatsapp-business'
   }
 };
 
