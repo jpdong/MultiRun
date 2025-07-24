@@ -4,6 +4,14 @@ import NavBar from '../../../src/components/elements/NavBar';
 import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
 
+export const metadata = {
+  title: 'Discord Multiple Accounts | Multi Run',
+  description: 'Join multiple Discord servers with different accounts for gaming, communities, and work.',
+  alternates: {
+    canonical: 'https://multirun.app/hot-apps/discord'
+  }
+};
+
 const DiscordPage: React.FC = () => {
   return (
     <>
@@ -16,7 +24,7 @@ const DiscordPage: React.FC = () => {
                 ← Back to Hot Apps
               </Link>
             </div>
-            
+
             <div className="detail-page">
               <div className="detail-header">
                 <div className="detail-icon">🎮</div>
@@ -119,7 +127,7 @@ const DiscordPage: React.FC = () => {
               </div>
 
               <div className="cta-section">
-                <div className="cta-card" style={{background: 'linear-gradient(135deg, #5865f2 0%, #3c45a5 100%)'}}>
+                <div className="cta-card" style={{ background: 'linear-gradient(135deg, #5865f2 0%, #3c45a5 100%)' }}>
                   <h2 className="cta-title">Level Up Your Discord Experience</h2>
                   <p className="cta-description">
                     Download Multi Run and manage multiple Discord accounts for all your communities.

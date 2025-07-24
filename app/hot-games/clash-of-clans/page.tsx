@@ -3,6 +3,14 @@ import NavBar from '../../../src/components/elements/NavBar';
 import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
 
+export const metadata = {
+  title: 'Clash of Clans Multiple Accounts | Multi Run',
+  description: 'Manage multiple Clash of Clans accounts to build different villages and strategies.',
+  alternates: {
+    canonical: 'https://multirun.app/hot-games/clash-of-clans'
+  }
+};
+
 const ClashOfClansPage: React.FC = () => {
   return (
     <>

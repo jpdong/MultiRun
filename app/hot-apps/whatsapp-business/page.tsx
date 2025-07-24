@@ -4,6 +4,14 @@ import NavBar from '../../../src/components/elements/NavBar';
 import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
 
+export const metadata = {
+  title: 'WhatsApp Business Multiple Accounts | Multi Run',
+  description: 'Run multiple WhatsApp Business accounts for different business ventures or client management.',
+  alternates: {
+    canonical: 'https://multirun.app/hot-apps/whatsapp-business'
+  }
+};
+
 const WhatsAppBusinessPage: React.FC = () => {
   return (
     <>

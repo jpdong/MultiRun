@@ -4,6 +4,14 @@ import NavBar from '../../../src/components/elements/NavBar';
 import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
 
+export const metadata = {
+  title: 'TikTok Multiple Accounts | Multi Run',
+  description: 'Create and manage multiple TikTok accounts for different content themes and audiences.',
+  alternates: {
+    canonical: 'https://multirun.app/hot-apps/tiktok'
+  }
+};
+
 const TikTokPage: React.FC = () => {
   return (
     <>

@@ -3,6 +3,14 @@ import NavBar from '../../../src/components/elements/NavBar';
 import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
 
+export const metadata = {
+  title: 'PUBG Mobile Multiple Accounts | Multi Run',
+  description: 'Play PUBG Mobile with multiple accounts to explore different strategies and game modes.',
+  alternates: {
+    canonical: 'https://multirun.app/hot-games/pubg-mobile'
+  }
+};
+
 const PubgMobilePage: React.FC = () => {
   return (
     <>

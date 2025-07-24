@@ -3,6 +3,14 @@ import NavBar from '../../../src/components/elements/NavBar';
 import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
 
+export const metadata = {
+  title: 'Free Fire Multiple Accounts | Multi Run',
+  description: 'Play Free Fire with multiple accounts to explore different strategies and game modes.',
+  alternates: {
+    canonical: 'https://multirun.app/hot-games/free-fire'
+  }
+};
+
 const FreeFirePage: React.FC = () => {
   return (
     <>

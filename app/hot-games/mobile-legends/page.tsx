@@ -3,6 +3,14 @@ import NavBar from '../../../src/components/elements/NavBar';
 import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
 
+export const metadata = {
+  title: 'Mobile Legends Multiple Accounts | Multi Run',
+  description: 'Manage multiple Mobile Legends accounts to play with different heroes and strategies.',
+  alternates: {
+    canonical: 'https://multirun.app/hot-games/mobile-legends'
+  }
+};
+
 const MobileLegendsPage: React.FC = () => {
   return (
     <>

@@ -8,6 +8,9 @@ import { Metadata } from 'next';
 export const metadata:Metadata = {
   title: 'Hot Clone Games Multiple Accounts | Multi Run',
   description: 'Discover the most popular games that users clone with Multi Run. Manage multiple accounts and dominate the competition.',
+  alternates: {
+    canonical: 'https://multirun.app/hot-games'
+  }
 };
 
 const hotGames = [

@@ -7,6 +7,9 @@ import Container from '../../../src/components/layout/Container';
 export const metadata = {
   title: 'Instagram Multiple Accounts | Multi Run',
   description: 'Manage multiple Instagram accounts for personal use, business promotion, and content creation.',
+  alternates: {
+    canonical: 'https://multirun.app/hot-apps/instagram'
+  }
 };
 
 const InstagramPage: React.FC = () => {

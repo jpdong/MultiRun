@@ -7,6 +7,9 @@ import Container from '../../../src/components/layout/Container';
 export const metadata = {
   title: 'Twitter Multiple Accounts | Multi Run',
   description: 'Manage multiple Twitter accounts for different interests, businesses, or social circles.',
+  alternates: {
+    canonical: 'https://multirun.app/hot-apps/twitter'
+  }
 };
 
 const TwitterPage: React.FC = () => {

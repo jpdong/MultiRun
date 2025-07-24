@@ -7,6 +7,9 @@ import Container from '../../../src/components/layout/Container';
 export const metadata = {
   title: 'Bluesky Multiple Accounts | Multi Run',
   description: 'Manage multiple Bluesky accounts for personal use, content creation, and community engagement.',
+  alternates: {
+    canonical: 'https://multirun.app/hot-apps/bluesky'
+  }
 };
 
 const BlueskyPage: React.FC = () => {
