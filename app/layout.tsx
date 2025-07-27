@@ -3,6 +3,7 @@ import './globals.css'
 import './tailwind.css'
 import GoogleAnalytics from '../src/components/analytics/GoogleAnalytics'
 import CookieConsent from '../src/components/analytics/CookieConsent'
+import Ad from '@/src/components/ad/Ad'
 
 export const metadata: Metadata = {
   title: 'Multi Run - Parallel Dual App',
@@ -31,6 +32,7 @@ export default function RootLayout({
         <GoogleAnalytics />
         {children}
         <CookieConsent />
+        <Ad />
       </body>
     </html>
   )
