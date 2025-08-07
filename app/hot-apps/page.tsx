@@ -3,13 +3,14 @@ import Link from 'next/link';
 import NavBar from '../../src/components/elements/NavBar';
 import Footer from '../../src/components/elements/Footer';
 import Container from '../../src/components/layout/Container';
+import { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Hot Clone Apps Multiple Accounts | Multi Run',
   description: 'Explore a variety of apps and manage multiple accounts simultaneously with Multi Run App.',
   alternates: {
-    canonical: 'https://multirun.space/hot-apps'
-  }
+    canonical: 'https://multirun.space/hot-apps',
+  },
 };
 
 const hotApps = [

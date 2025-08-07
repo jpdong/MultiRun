@@ -3,13 +3,14 @@ import Link from 'next/link';
 import NavBar from '../../../src/components/elements/NavBar';
 import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
+import { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Bluesky Multiple Accounts | Multi Run',
   description: 'Manage multiple Bluesky accounts for personal use, content creation, and community engagement.',
   alternates: {
-    canonical: 'https://multirun.space/hot-apps/bluesky'
-  }
+    canonical: 'https://multirun.space/hot-apps/bluesky',
+  },
 };
 
 const BlueskyPage: React.FC = () => {

@@ -3,13 +3,14 @@ import Link from 'next/link';
 import NavBar from '../../../src/components/elements/NavBar';
 import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
+import { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Instagram Multiple Accounts | Multi Run',
   description: 'Manage multiple Instagram accounts for personal use, business promotion, and content creation.',
   alternates: {
-    canonical: 'https://multirun.space/hot-apps/instagram'
-  }
+    canonical: 'https://multirun.space/hot-apps/instagram',
+  },
 };
 
 const InstagramPage: React.FC = () => {
