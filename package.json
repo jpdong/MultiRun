@@ -1,11 +1,17 @@
 {
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && npm run sitemap:generate",
+    "build:only": "next build",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "sitemap:generate": "node scripts/generate-sitemap.js",
+    "sitemap:generate:verbose": "node scripts/generate-sitemap.js --verbose",
+    "sitemap:dry-run": "node scripts/generate-sitemap.mjs --dry-run --verbose",
+    "sitemap:validate": "node scripts/generate-sitemap.js --verbose",
+    "sitemap:test": "node scripts/test-sitemap.js"
   },
   "dependencies": {
     "@types/marked": "^5.0.2",
