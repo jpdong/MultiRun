@@ -2,10 +2,14 @@ import React from 'react';
 import Footer from '../../../src/components/elements/Footer';
 import NavBar from '../../../src/components/elements/NavBar';
 import Container from '../../../src/components/layout/Container';
+import { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Grow a Garden Multiple Accounts | Multi Run',
   description: 'Cultivate multiple virtual gardens with unique identities and creative styles.',
+  alternates: {
+    canonical: 'https://multirun.space/hot-games/growagarden',
+  },
 };
 
 const GrowGardenPage: React.FC = () => {

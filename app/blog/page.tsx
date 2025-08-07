@@ -10,7 +10,9 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Blog - Multi Run',
   description: 'Explore the latest technical articles, usage tips, and industry insights from Multi Run',
-  keywords: 'Multi Run blog, technical articles, application tips, multiple accounts tool',
+  alternates: {
+    canonical: `https://multirun.space/blog`,
+  },
 };
 
 export default async function BlogPage({

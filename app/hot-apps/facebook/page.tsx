@@ -3,10 +3,14 @@ import Link from 'next/link';
 import NavBar from '../../../src/components/elements/NavBar';
 import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
+import { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Facebook Multiple Accounts | Multi Run',
   description: 'Manage multiple Facebook accounts for personal use, business promotion, and content creation.',
+  alternates: {
+    canonical: 'https://multirun.space/hot-apps/facebook',
+  },
 };
 
 const FacebookPage: React.FC = () => {

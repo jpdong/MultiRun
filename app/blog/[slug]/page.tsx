@@ -37,6 +37,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       authors: post.author ? [post.author] : ['Multi Run Team'],
       tags: post.tags,
     },
+    alternates: {
+      canonical: `https://multirun.space/blog/${slug}`,
+    },
   };
 }
 
