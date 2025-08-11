@@ -2,7 +2,7 @@
 title: "Multi Run App Updated to Version 1.0.26.20"
 slug: multi-run-update-1-0-26-20
 description: "The latest update brings crash fixes, performance improvements, Target SDK 35 upgrade, and support for 16KB SO files."
-date: "2024-08-06"
+date: "2025-08-06"
 author: "Multi Run Team"
 tags: ["update", "release", "performance", "android"]
 ---

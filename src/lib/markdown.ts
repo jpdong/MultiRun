@@ -36,7 +36,20 @@ export function parseFrontmatter(markdownContent: string): {
  */
 export function markdownToHtml(markdown: string): string {
   try {
-    return marked.parse(markdown);
+    // First convert markdown to HTML
+    let html = marked.parse(markdown);
+    
+    // Fix image paths - convert relative paths to absolute paths for public directory
+    html = html.replace(/<img([^>]*?)src="([^"]*?)"([^>]*?)>/g, (match, before, src, after) => {
+      // If the src doesn't start with http, https, or /, assume it's in public/images
+      if (!src.startsWith('http') && !src.startsWith('https') && !src.startsWith('/')) {
+        const newSrc = `/images/${src}`;
+        return `<img${before}src="${newSrc}"${after}>`;
+      }
+      return match;
+    });
+    
+    return html;
   } catch (error) {
     console.error('Markdown conversion failed:', error);
     return `<p>Error rendering content</p>`;
@@ -67,17 +80,17 @@ export function generateSlug(title: string): string {
 }
 
 /**
- * Extract slug from filename (format: YYYY-MM-DD-slug.md)
+ * Extract slug from filename (supports both YYYY-MM-DD-slug.md and slug.md formats)
  */
 export function extractSlugFromFilename(filename: string): string {
   const nameWithoutExt = filename.replace(/\.md$/, '');
   const parts = nameWithoutExt.split('-');
   
-  // If filename follows date format, extract slug part
-  if (parts.length >= 4 && /^\d{4}$/.test(parts[0])) {
+  // If filename follows date format (YYYY-MM-DD-slug), extract slug part
+  if (parts.length >= 4 && /^\d{4}$/.test(parts[0]) && /^\d{2}$/.test(parts[1]) && /^\d{2}$/.test(parts[2])) {
     return parts.slice(3).join('-');
   }
   
-  // Otherwise use entire filename as slug
-  return generateSlug(nameWithoutExt);
+  // Otherwise use entire filename as slug (already clean)
+  return nameWithoutExt;
 }
