@@ -3,11 +3,12 @@ import Link from 'next/link';
 import NavBar from '../../../src/components/elements/NavBar';
 import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
+import styles from '../../../src/components/app-pages/AppPage.module.css';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Bluesky Multiple Accounts | Multi Run',
-  description: 'Manage multiple Bluesky accounts for personal use, content creation, and community engagement.',
+  title: 'BlueSky Multiple Accounts | Multi Run - Decentralized Social Media',
+  description: 'Manage multiple BlueSky accounts seamlessly with Multi Run. Perfect for content creators, professionals, and community managers on the decentralized social platform.',
   alternates: {
     canonical: 'https://multirun.space/hot-apps/bluesky',
   },
@@ -15,124 +16,199 @@ export const metadata: Metadata = {
 
 const BlueskyPage: React.FC = () => {
   return (
-    <>
+    <div className={styles.appPage}>
       <NavBar />
-      <main className="main">
+
+      {/* Hero Section */}
+      <section className={styles.heroSection}>
         <Container>
-          <div className="py-16">
-            <div className="mb-8">
-              <Link href="/hot-apps" className="back-link blue">
-                ← Back to Hot Apps
-              </Link>
-            </div>
-            
-            <div className="detail-page">
-              <div className="detail-header">
-                <div className="detail-icon">🔵</div>
-                <h1 className="detail-title">Bluesky</h1>
-                <p className="detail-subtitle">
-                  Manage multiple Bluesky accounts for personal use, content creation, and community engagement.
-                </p>
-                <div className="detail-badges">
-                  <span className="detail-badge app-category">
-                    Social Media
-                  </span>
-                  <span className="detail-badge app-category green">
-                    Growing Fast
-                  </span>
-                </div>
-              </div>
+          <div className={styles.heroContent}>
+            <Link href="/hot-apps" className={styles.backLink}>
+              ← Back to Apps
+            </Link>
 
-              <div className="detail-content">
-                <div className="detail-section">
-                  <h2>Why Clone Bluesky?</h2>
-                  <p className="app-description">
-                    Bluesky is an emerging decentralized social network that offers a fresh alternative to traditional platforms. 
-                    With Multi Run, manage multiple Bluesky accounts for:
-                  </p>
-                  <ul className="detail-list">
-                    <li>
-                      <span className="check">✓</span>
-                      <span>Separating personal and professional identities</span>
-                    </li>
-                    <li>
-                      <span className="check">✓</span>
-                      <span>Engaging with different communities and interests</span>
-                    </li>
-                    <li>
-                      <span className="check">✓</span>
-                      <span>Content creation across multiple niches</span>
-                    </li>
-                    <li>
-                      <span className="check">✓</span>
-                      <span>Testing different content strategies</span>
-                    </li>
-                  </ul>
-                </div>
+            <div className={styles.appIcon}>🦋</div>
 
-                <div className="detail-section">
-                  <h2>Key Features</h2>
-                  <div className="use-cases">
-                    <div className="use-case">
-                      <h3>🌐 Decentralized Network</h3>
-                      <p>Experience a social platform built on the AT Protocol for greater user control.</p>
-                    </div>
-                    <div className="use-case">
-                      <h3>📝 Custom Feeds</h3>
-                      <p>Create and follow custom feeds tailored to specific interests and communities.</p>
-                    </div>
-                    <div className="use-case">
-                      <h3>🔄 Cross-posting</h3>
-                      <p>Share content across multiple accounts with different audiences.</p>
-                    </div>
-                    <div className="use-case">
-                      <h3>🔍 Discovery Features</h3>
-                      <p>Find new connections and content through Bluesky's discovery tools.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <h1 className={styles.appTitle}>BlueSky</h1>
+            <p className={styles.appSubtitle}>
+              Manage multiple accounts on the decentralized social network that puts you in control
+            </p>
 
-              <div className="detail-section">
-                <h2>Popular Use Cases</h2>
-                <div className="use-cases">
-                  <div className="use-case">
-                    <h3>👤 Personal & Professional</h3>
-                    <p>Maintain separate accounts for personal connections and professional networking.</p>
-                  </div>
-                  <div className="use-case">
-                    <h3>🎨 Content Creators</h3>
-                    <p>Manage different accounts for various content themes and audience segments.</p>
-                  </div>
-                  <div className="use-case">
-                    <h3>🏢 Business Presence</h3>
-                    <p>Establish brand presence on this emerging platform while maintaining personal accounts.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="cta-section">
-                <div className="cta-card" style={{background: 'linear-gradient(135deg, #0080FF 0%, #0050A0 100%)'}}>
-                  <h2 className="cta-title">Ready to Clone Bluesky?</h2>
-                  <p className="cta-description">
-                    Download Multi Run now and start managing multiple Bluesky accounts seamlessly.
-                  </p>
-                  <div className="cta-buttons">
-                    <a href="/#download" className="cta-button">
-                      Clone with Multi Run
-                    </a>
-                    <Link href="/hot-apps" className="cta-button secondary">
-                      View More Apps
-                    </Link>
-                  </div>
-                </div>
-              </div>
+            <div className={styles.badgeContainer}>
+              <span className={styles.badge}>Social Media</span>
+              <span className={`${styles.badge} ${styles.featured}`}>Decentralized</span>
+              <span className={styles.badge}>Growing Fast</span>
             </div>
           </div>
         </Container>
-      </main>
+      </section>
+
+      {/* Content Section */}
+      <section className={styles.contentSection}>
+        <Container>
+          <div className={styles.sectionGrid}>
+            {/* Why Clone BlueSky */}
+            <div className={styles.contentBlock}>
+              <h2 className={styles.blockTitle}>Why Multiple BlueSky Accounts?</h2>
+              <p className={styles.blockDescription}>
+                BlueSky represents the future of social media with its decentralized approach.
+                Multi Run enables you to harness this platform's full potential across multiple identities.
+              </p>
+
+              <ul className={styles.featureList}>
+                <li className={styles.featureItem}>
+                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.featureText}>
+                    Separate personal and professional presence
+                  </span>
+                </li>
+                <li className={styles.featureItem}>
+                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.featureText}>
+                    Engage with different communities and interests
+                  </span>
+                </li>
+                <li className={styles.featureItem}>
+                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.featureText}>
+                    Test content strategies across niches
+                  </span>
+                </li>
+                <li className={styles.featureItem}>
+                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.featureText}>
+                    Build multiple brand identities
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Key Features */}
+            <div className={styles.contentBlock}>
+              <h2 className={styles.blockTitle}>Platform Advantages</h2>
+              <p className={styles.blockDescription}>
+                Experience the next generation of social networking with BlueSky's innovative features
+                and decentralized architecture.
+              </p>
+
+              <ul className={styles.featureList}>
+                <li className={styles.featureItem}>
+                  <span className={styles.checkIcon}>🌐</span>
+                  <span className={styles.featureText}>
+                    Built on AT Protocol for true decentralization
+                  </span>
+                </li>
+                <li className={styles.featureItem}>
+                  <span className={styles.checkIcon}>📝</span>
+                  <span className={styles.featureText}>
+                    Custom feeds tailored to your interests
+                  </span>
+                </li>
+                <li className={styles.featureItem}>
+                  <span className={styles.checkIcon}>🔍</span>
+                  <span className={styles.featureText}>
+                    Advanced discovery and connection tools
+                  </span>
+                </li>
+                <li className={styles.featureItem}>
+                  <span className={styles.checkIcon}>🔒</span>
+                  <span className={styles.featureText}>
+                    Enhanced privacy and user control
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Use Cases */}
+          <div className={styles.useCasesGrid}>
+            <div className={styles.useCaseCard}>
+              <span className={styles.useCaseIcon}>👤</span>
+              <h3 className={styles.useCaseTitle}>Personal & Professional</h3>
+              <p className={styles.useCaseDescription}>
+                Maintain distinct identities for personal connections and professional networking
+                on this emerging platform.
+              </p>
+            </div>
+
+            <div className={styles.useCaseCard}>
+              <span className={styles.useCaseIcon}>🎨</span>
+              <h3 className={styles.useCaseTitle}>Content Creation</h3>
+              <p className={styles.useCaseDescription}>
+                Manage specialized accounts for different content themes, audiences,
+                and creative projects.
+              </p>
+            </div>
+
+            <div className={styles.useCaseCard}>
+              <span className={styles.useCaseIcon}>🏢</span>
+              <h3 className={styles.useCaseTitle}>Brand Presence</h3>
+              <p className={styles.useCaseDescription}>
+                Establish early brand presence on BlueSky while maintaining personal accounts
+                for authentic engagement.
+              </p>
+            </div>
+
+            <div className={styles.useCaseCard}>
+              <span className={styles.useCaseIcon}>🌍</span>
+              <h3 className={styles.useCaseTitle}>Community Building</h3>
+              <p className={styles.useCaseDescription}>
+                Create and manage communities around different topics, interests,
+                and causes you care about.
+              </p>
+            </div>
+
+            <div className={styles.useCaseCard}>
+              <span className={styles.useCaseIcon}>📊</span>
+              <h3 className={styles.useCaseTitle}>Strategy Testing</h3>
+              <p className={styles.useCaseDescription}>
+                Experiment with different posting strategies, content types,
+                and engagement approaches.
+              </p>
+            </div>
+
+            <div className={styles.useCaseCard}>
+              <span className={styles.useCaseIcon}>🔄</span>
+              <h3 className={styles.useCaseTitle}>Cross-Platform Management</h3>
+              <p className={styles.useCaseDescription}>
+                Coordinate content across multiple BlueSky accounts and other
+                social media platforms.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* CTA Section */}
+      <section className={styles.ctaSection}>
+        <Container>
+          <div className={styles.ctaCard}>
+            <h2 className={styles.ctaTitle}>Ready to Join the Future?</h2>
+            <p className={styles.ctaDescription}>
+              Start managing multiple BlueSky accounts today and be part of the decentralized social media revolution.
+            </p>
+            <div className={styles.ctaButtons}>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.dong.multirun"
+                className={styles.ctaButton}
+                aria-label="Download Multi Run from Google Play Store"
+              >
+                Get Multi Run
+              </a>
+              <Link
+                href="/hot-apps"
+                className={`${styles.ctaButton} ${styles.secondary}`}
+                aria-label="View more supported apps"
+              >
+                Explore More Apps
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       <Footer />
-    </>
+    </div>
   );
 };
 
