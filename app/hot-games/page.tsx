@@ -53,7 +53,7 @@ const HotGamesPage: React.FC = () => {
   return (
     <div className={styles.appListingPage}>
       <NavBar />
-      
+
       {/* Hero Section */}
       <section className={styles.heroSection} style={{
         background: 'linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%)'
@@ -62,10 +62,10 @@ const HotGamesPage: React.FC = () => {
           <div className={styles.heroContent}>
             <h1 className={styles.heroTitle}>Popular Games</h1>
             <p className={styles.heroSubtitle}>
-              Discover the most popular games that support multiple accounts. 
+              Discover the most popular games that support multiple accounts.
               Level up your gaming experience with Multi Run's seamless account management.
             </p>
-            
+
             <div className={styles.statsContainer}>
               <div className={styles.statItem}>
                 <span className={styles.statNumber}>20+</span>
@@ -122,15 +122,15 @@ const HotGamesPage: React.FC = () => {
                     <span className={styles.appCategory}>{game.category}</span>
                   </div>
                 </div>
-                
+
                 <p className={styles.appDescription}>{game.description}</p>
-                
+
                 <div className={styles.appFooter}>
                   <div className={styles.appStats}>
                     <span className={styles.downloadCount}>{game.downloads}</span>
-                    <span style={{ 
-                      display: 'flex', 
-                      alignItems: 'center', 
+                    <span style={{
+                      display: 'flex',
+                      alignItems: 'center',
                       gap: '6px',
                       fontSize: '0.875rem',
                       color: '#64748b',
@@ -172,10 +172,10 @@ const HotGamesPage: React.FC = () => {
               marginRight: 'auto',
               lineHeight: '1.6'
             }}>
-              Unlock new gaming possibilities with separate accounts for different strategies, 
+              Unlock new gaming possibilities with separate accounts for different strategies,
               play styles, and gaming communities.
             </p>
-            
+
             <div style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
@@ -290,7 +290,7 @@ const HotGamesPage: React.FC = () => {
             <div className={styles.ctaContent}>
               <h2 className={styles.ctaTitle}>Level Up Your Gaming</h2>
               <p className={styles.ctaDescription}>
-                Download Multi Run now and start managing multiple gaming accounts like a pro. 
+                Download Multi Run now and start managing multiple gaming accounts like a pro.
                 Unlock new strategies and dominate your favorite games.
               </p>
               <div className={styles.ctaButtons}>
