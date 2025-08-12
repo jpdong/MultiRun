@@ -15,7 +15,7 @@ interface ContactMethod {
 }
 
 const contactMethods: ContactMethod[] = [
-  
+
   {
     id: 'telegram-channel',
     icon: <FaTelegram />,
@@ -70,7 +70,7 @@ const ContactUsPage: React.FC = () => {
   return (
     <div className={styles.contactPage}>
       <NavBar />
-      
+
       {/* Hero Section */}
       <section className={styles.heroSection}>
         <Container>
@@ -80,7 +80,7 @@ const ContactUsPage: React.FC = () => {
               We're here to help you make the most of Multi Run
             </p>
             <p className={styles.heroDescription}>
-              Whether you need support, have feedback, or want to collaborate, 
+              Whether you need support, have feedback, or want to collaborate,
               we'd love to hear from you through any of our channels.
             </p>
           </div>
@@ -93,7 +93,7 @@ const ContactUsPage: React.FC = () => {
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Contact Channels</h2>
             <p className={styles.sectionDescription}>
-              Choose the platform that works best for you. We're active on all channels 
+              Choose the platform that works best for you. We're active on all channels
               and respond quickly to your inquiries.
             </p>
           </div>
@@ -125,10 +125,10 @@ const ContactUsPage: React.FC = () => {
           <div className={styles.supportSection}>
             <h3 className={styles.supportTitle}>How We Can Help</h3>
             <p className={styles.supportDescription}>
-              Our team is dedicated to providing you with the best possible experience. 
+              Our team is dedicated to providing you with the best possible experience.
               Here's what we can assist you with:
             </p>
-            
+
             <div className={styles.supportGrid}>
               <div className={styles.supportItem}>
                 <div className={styles.supportItemIcon}>🛠️</div>
@@ -137,7 +137,7 @@ const ContactUsPage: React.FC = () => {
                   Get help with app installation, setup, and troubleshooting
                 </p>
               </div>
-              
+
               <div className={styles.supportItem}>
                 <div className={styles.supportItemIcon}>💡</div>
                 <h4 className={styles.supportItemTitle}>Feature Requests</h4>
@@ -145,7 +145,7 @@ const ContactUsPage: React.FC = () => {
                   Share your ideas for new features and improvements
                 </p>
               </div>
-              
+
               <div className={styles.supportItem}>
                 <div className={styles.supportItemIcon}>🤝</div>
                 <h4 className={styles.supportItemTitle}>Business Inquiries</h4>
@@ -153,7 +153,7 @@ const ContactUsPage: React.FC = () => {
                   Discuss partnerships, collaborations, and business opportunities
                 </p>
               </div>
-              
+
               <div className={styles.supportItem}>
                 <div className={styles.supportItemIcon}>📝</div>
                 <h4 className={styles.supportItemTitle}>Feedback</h4>
@@ -169,7 +169,7 @@ const ContactUsPage: React.FC = () => {
             <div className={styles.ctaContent}>
               <h2 className={styles.ctaTitle}>Ready to Get Started?</h2>
               <p className={styles.ctaDescription}>
-                Download Multi Run now and join thousands of users who are already 
+                Download Multi Run now and join thousands of users who are already
                 managing multiple accounts with ease.
               </p>
               <div className={styles.ctaButtons}>

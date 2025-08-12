@@ -1,12 +1,14 @@
 import React from 'react';
-import Footer from '../../../src/components/elements/Footer';
+import Link from 'next/link';
 import NavBar from '../../../src/components/elements/NavBar';
+import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
+import styles from '../../../src/components/app-pages/AppPage.module.css';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Grow a Garden Multiple Accounts | Multi Run',
-  description: 'Cultivate multiple virtual gardens with unique identities and creative styles.',
+  title: 'Grow a Garden Multiple Accounts | Multi Run - Virtual Gardening',
+  description: 'Cultivate multiple virtual gardens with unique identities and creative styles using Multi Run.',
   alternates: {
     canonical: 'https://multirun.space/hot-games/growagarden',
   },
@@ -14,162 +16,204 @@ export const metadata: Metadata = {
 
 const GrowGardenPage: React.FC = () => {
   return (
-    <>
+    <div className={styles.appPage}>
       <NavBar />
-      <main className="main">
+      
+      {/* Hero Section */}
+      <section className={styles.heroSection} style={{
+        background: 'linear-gradient(135deg, #4caf50 0%, #2e7d32 100%)'
+      }}>
         <Container>
-          <div className="py-16">
-            <div className="back-button-container">
-              <a href="/hot-games" className="back-button">
-                <span className="back-arrow">←</span>
-                Back to Hot Games
-              </a>
-            </div>
-            <div className="app-detail-header">
-              <div className="app-icon-large">🌱</div>
-              <div className="app-info">
-                <h1>Grow a Garden</h1>
-                <p className="app-tagline">Cultivate multiple virtual gardens with unique identities and creative styles</p>
-              </div>
-            </div>
-
-            <div className="app-content">
-              <section className="app-section">
-                <h2>Why Clone Grow a Garden?</h2>
-                <p>
-                  Grow a Garden is a peaceful yet engaging simulation game where creativity meets strategy.
-                  Cloning it allows you to explore unlimited gardening possibilities and create distinct
-                  botanical masterpieces without interfering with your main garden's progress.
-                </p>
-                <ul className="feature-list">
-                  <li><strong>Design Diversity</strong> - Create gardens with completely different themes and aesthetics</li>
-                  <li><strong>Plant Experimentation</strong> - Test various plant combinations and growth strategies</li>
-                  <li><strong>Seasonal Specialization</strong> - Focus on different seasons and events across accounts</li>
-                  <li><strong>Community Engagement</strong> - Participate in various gardening communities and competitions</li>
-                  <li><strong>Resource Optimization</strong> - Maximize rewards and achievements across multiple gardens</li>
-                </ul>
-              </section>
-
-              <section className="app-section">
-                <h2>Multi Run Benefits for Grow a Garden</h2>
-                <div className="benefits-grid">
-                  <div className="benefit-card">
-                    <h3>Creative Freedom</h3>
-                    <p>Design gardens with completely different themes without compromising your vision</p>
-                  </div>
-                  <div className="benefit-card">
-                    <h3>Seasonal Mastery</h3>
-                    <p>Specialize each account for different seasonal events and plant types</p>
-                  </div>
-                  <div className="benefit-card">
-                    <h3>Trading Networks</h3>
-                    <p>Create accounts for different plant trading and resource exchange strategies</p>
-                  </div>
-                  <div className="benefit-card">
-                    <h3>Achievement Hunting</h3>
-                    <p>Maximize achievements and rewards across multiple specialized gardens</p>
-                  </div>
-                </div>
-              </section>
-
-              <section className="app-section">
-                <h2>Garden Specialization Strategies</h2>
-                <div className="strategy-grid">
-                  <div className="strategy-card">
-                    <h3>Garden 1: Zen Paradise</h3>
-                    <p>Focus on peaceful, meditative garden designs with traditional elements</p>
-                    <ul>
-                      <li>Bonsai trees and bamboo gardens</li>
-                      <li>Water features and stone arrangements</li>
-                      <li>Meditation spaces and zen aesthetics</li>
-                      <li>Seasonal cherry blossom displays</li>
-                    </ul>
-                  </div>
-                  <div className="strategy-card">
-                    <h3>Garden 2: Tropical Oasis</h3>
-                    <p>Create lush tropical gardens with exotic plants and vibrant colors</p>
-                    <ul>
-                      <li>Exotic fruit trees and tropical flowers</li>
-                      <li>Colorful bird and butterfly attractions</li>
-                      <li>Waterfalls and tropical pools</li>
-                      <li>Year-round blooming paradise</li>
-                    </ul>
-                  </div>
-                  <div className="strategy-card">
-                    <h3>Garden 3: Modern Botanical</h3>
-                    <p>Design contemporary gardens with cutting-edge plant technology</p>
-                    <ul>
-                      <li>Genetically modified plants and hybrids</li>
-                      <li>Automated irrigation and lighting systems</li>
-                      <li>Sustainable and eco-friendly designs</li>
-                      <li>Scientific plant breeding experiments</li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
-
-              <section className="app-section">
-                <h2>Popular Garden Themes</h2>
-                <div className="popular-games-grid">
-                  <div className="game-card">
-                    <h4>Rose Garden Collection</h4>
-                    <p>Master every rose variety and create stunning rose gardens</p>
-                  </div>
-                  <div className="game-card">
-                    <h4>Vegetable Paradise</h4>
-                    <p>Focus on growing rare vegetables and maximizing harvest yields</p>
-                  </div>
-                  <div className="game-card">
-                    <h4>Butterfly Sanctuary</h4>
-                    <p>Create gardens specifically designed to attract rare butterflies</p>
-                  </div>
-                  <div className="game-card">
-                    <h4>Herbal Apothecary</h4>
-                    <p>Specialize in medicinal herbs and natural remedy gardens</p>
-                  </div>
-                </div>
-              </section>
-
-              <section className="app-section">
-                <h2>Advanced Strategies</h2>
-                <div className="advanced-tips">
-                  <div className="tip-item">
-                    <h4>Cross-Pollination Networks</h4>
-                    <p>Use separate accounts to create plant breeding networks and discover new hybrid varieties.</p>
-                  </div>
-                  <div className="tip-item">
-                    <h4>Seasonal Event Maximization</h4>
-                    <p>Dedicate accounts to different seasonal events for maximum limited-time rewards and achievements.</p>
-                  </div>
-                  <div className="tip-item">
-                    <h4>Community Competition Strategy</h4>
-                    <p>Enter different garden competitions with specialized accounts for various categories and themes.</p>
-                  </div>
-                  <div className="tip-item">
-                    <h4>Resource Trading Hub</h4>
-                    <p>Create accounts focused on different resource types for optimal trading and exchange opportunities.</p>
-                  </div>
-                </div>
-              </section>
-            </div>
-
-            <div className="cta-section">
-              <div className="cta-card green">
-                <h2>Ready to Grow Your Garden Empire?</h2>
-                <p>
-                  Transform your gardening experience with Multi Run. Create multiple gardens,
-                  explore endless creative possibilities, and become the ultimate virtual gardener!
-                </p>
-                <a href="/#download" className="cta-button green-button">
-                  Download Multi Run Now
-                </a>
-              </div>
+          <div className={styles.heroContent}>
+            <Link href="/hot-games" className={styles.backLink}>
+              ← Back to Games
+            </Link>
+            
+            <div className={styles.appIcon}>🌱</div>
+            
+            <h1 className={styles.appTitle}>Grow a Garden</h1>
+            <p className={styles.appSubtitle}>
+              Cultivate multiple virtual gardens with unique identities and creative styles
+            </p>
+            
+            <div className={styles.badgeContainer}>
+              <span className={styles.badge}>Simulation</span>
+              <span className={`${styles.badge} ${styles.featured}`}>3M+ Downloads</span>
+              <span className={styles.badge}>Relaxing</span>
             </div>
           </div>
         </Container>
-      </main>
+      </section>
+
+      {/* Content Section */}
+      <section className={styles.contentSection}>
+        <Container>
+          <div className={styles.sectionGrid}>
+            {/* Why Multiple Garden Accounts */}
+            <div className={styles.contentBlock}>
+              <h2 className={styles.blockTitle}>Why Multiple Garden Accounts?</h2>
+              <p className={styles.blockDescription}>
+                Grow a Garden is a peaceful yet engaging simulation game where creativity meets strategy. 
+                Multi Run allows you to explore unlimited gardening possibilities and create distinct botanical masterpieces.
+              </p>
+              
+              <ul className={styles.featureList}>
+                <li className={styles.featureItem}>
+                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.featureText}>
+                    Create gardens with completely different themes
+                  </span>
+                </li>
+                <li className={styles.featureItem}>
+                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.featureText}>
+                    Test various plant combinations and strategies
+                  </span>
+                </li>
+                <li className={styles.featureItem}>
+                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.featureText}>
+                    Focus on different seasons and events
+                  </span>
+                </li>
+                <li className={styles.featureItem}>
+                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.featureText}>
+                    Maximize rewards across multiple gardens
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Multi Run Benefits */}
+            <div className={styles.contentBlock}>
+              <h2 className={styles.blockTitle}>Multi Run Advantages</h2>
+              <p className={styles.blockDescription}>
+                Experience seamless garden management with Multi Run's powerful features 
+                designed for virtual gardening enthusiasts and creative minds.
+              </p>
+              
+              <ul className={styles.featureList}>
+                <li className={styles.featureItem}>
+                  <span className={styles.checkIcon}>🎨</span>
+                  <span className={styles.featureText}>
+                    Design gardens without compromising your vision
+                  </span>
+                </li>
+                <li className={styles.featureItem}>
+                  <span className={styles.checkIcon}>🌸</span>
+                  <span className={styles.featureText}>
+                    Specialize each account for different seasons
+                  </span>
+                </li>
+                <li className={styles.featureItem}>
+                  <span className={styles.checkIcon}>🔄</span>
+                  <span className={styles.featureText}>
+                    Create plant trading and resource networks
+                  </span>
+                </li>
+                <li className={styles.featureItem}>
+                  <span className={styles.checkIcon}>🏆</span>
+                  <span className={styles.featureText}>
+                    Maximize achievements across specialized gardens
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Use Cases */}
+          <div className={styles.useCasesGrid}>
+            <div className={styles.useCaseCard}>
+              <span className={styles.useCaseIcon}>🧘</span>
+              <h3 className={styles.useCaseTitle}>Zen Paradise</h3>
+              <p className={styles.useCaseDescription}>
+                Focus on peaceful, meditative garden designs with traditional 
+                elements like bonsai and water features.
+              </p>
+            </div>
+
+            <div className={styles.useCaseCard}>
+              <span className={styles.useCaseIcon}>🌺</span>
+              <h3 className={styles.useCaseTitle}>Tropical Oasis</h3>
+              <p className={styles.useCaseDescription}>
+                Create lush tropical gardens with exotic plants, vibrant colors, 
+                and year-round blooming paradise.
+              </p>
+            </div>
+
+            <div className={styles.useCaseCard}>
+              <span className={styles.useCaseIcon}>🔬</span>
+              <h3 className={styles.useCaseTitle}>Modern Botanical</h3>
+              <p className={styles.useCaseDescription}>
+                Design contemporary gardens with cutting-edge plant technology 
+                and sustainable eco-friendly designs.
+              </p>
+            </div>
+
+            <div className={styles.useCaseCard}>
+              <span className={styles.useCaseIcon}>🌹</span>
+              <h3 className={styles.useCaseTitle}>Rose Collection</h3>
+              <p className={styles.useCaseDescription}>
+                Master every rose variety and create stunning specialized 
+                rose gardens with different themes.
+              </p>
+            </div>
+
+            <div className={styles.useCaseCard}>
+              <span className={styles.useCaseIcon}>🥕</span>
+              <h3 className={styles.useCaseTitle}>Vegetable Paradise</h3>
+              <p className={styles.useCaseDescription}>
+                Focus on growing rare vegetables and maximizing harvest 
+                yields with optimal farming strategies.
+              </p>
+            </div>
+
+            <div className={styles.useCaseCard}>
+              <span className={styles.useCaseIcon}>🦋</span>
+              <h3 className={styles.useCaseTitle}>Butterfly Sanctuary</h3>
+              <p className={styles.useCaseDescription}>
+                Create gardens specifically designed to attract rare 
+                butterflies and beneficial insects.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* CTA Section */}
+      <section className={styles.ctaSection} style={{
+        background: 'linear-gradient(135deg, #4caf50 0%, #2e7d32 100%)'
+      }}>
+        <Container>
+          <div className={styles.ctaCard}>
+            <h2 className={styles.ctaTitle}>Ready to Grow Your Garden Empire?</h2>
+            <p className={styles.ctaDescription}>
+              Transform your gardening experience with Multi Run. Create multiple gardens, 
+              explore endless creative possibilities, and become the ultimate virtual gardener!
+            </p>
+            <div className={styles.ctaButtons}>
+              <a 
+                href="https://play.google.com/store/apps/details?id=com.dong.multirun" 
+                className={styles.ctaButton}
+                aria-label="Download Multi Run from Google Play Store"
+              >
+                Start Gardening
+              </a>
+              <Link 
+                href="/hot-games" 
+                className={`${styles.ctaButton} ${styles.secondary}`}
+                aria-label="View more supported games"
+              >
+                Explore More Games
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       <Footer />
-    </>
+    </div>
   );
 };
 
