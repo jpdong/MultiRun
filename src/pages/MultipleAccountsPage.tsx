@@ -154,10 +154,10 @@ const MultipleAccountsPage: React.FC<MultipleAccountsPageProps> = ({ blogPosts }
         </Container>
       </div>
     </div>
-    
+
     {/* Blog Section */}
     <HomeBlogSection posts={blogPosts} />
-    
+
     <HotArea />
     <Footer />
   </>
