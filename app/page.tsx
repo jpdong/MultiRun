@@ -1,4 +1,6 @@
 import MultipleAccountsPage from '../src/pages/MultipleAccountsPage'
+import { getAllBlogPosts } from '../src/lib/blog'
+import { BlogPost } from '../src/lib/types'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -10,5 +12,14 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-  return <MultipleAccountsPage />
+  // Fetch blog posts on the server side
+  let blogPosts: BlogPost[] = []
+  try {
+    blogPosts = getAllBlogPosts().slice(0, 3)
+  } catch (error) {
+    console.error('Error fetching blog posts:', error)
+    blogPosts = []
+  }
+  
+  return <MultipleAccountsPage blogPosts={blogPosts} />
 }

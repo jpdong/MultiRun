@@ -10,6 +10,8 @@ import Column from '../components/layout/Column';
 import DownloadButton from '../components/elements/DownloadButton';
 import { FaGooglePlay } from 'react-icons/fa';
 import HotArea from './HotArea';
+import HomeBlogSection from '../components/blog/HomeBlogSection';
+import { BlogPost } from '../lib/types';
 
 const features = [
   {
@@ -80,7 +82,11 @@ const testimonials = [
   },
 ];
 
-const MultipleAccountsPage: React.FC = () => (
+interface MultipleAccountsPageProps {
+  blogPosts: BlogPost[];
+}
+
+const MultipleAccountsPage: React.FC<MultipleAccountsPageProps> = ({ blogPosts }) => (
   <>
     <NavBar />
     <div style={{ background: '#f7f9fb', minHeight: '100vh' }}>
@@ -148,6 +154,10 @@ const MultipleAccountsPage: React.FC = () => (
         </Container>
       </div>
     </div>
+
+    {/* Blog Section */}
+    <HomeBlogSection posts={blogPosts} />
+
     <HotArea />
     <Footer />
   </>
