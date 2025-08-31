@@ -32,7 +32,7 @@ export default function RootLayout({
         <GoogleAnalytics />
         {children}
         <CookieConsent />
-        <Ad />
+        <Ad/>
       </body>
     </html>
   )

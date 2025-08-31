@@ -25,7 +25,7 @@ const Footer: React.FC = () => (
         </div>
       </div>
       <div className="footer-bottom">
-        &copy; 2024 Multi Run. All rights reserved.
+        &copy; 2025 Multi Run. All rights reserved.
       </div>
     </div>
   </footer>

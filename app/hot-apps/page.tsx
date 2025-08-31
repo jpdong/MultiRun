@@ -3,60 +3,49 @@ import Link from 'next/link';
 import NavBar from '../../src/components/elements/NavBar';
 import Footer from '../../src/components/elements/Footer';
 import Container from '../../src/components/layout/Container';
+import styles from '../../src/components/app-listing/AppListing.module.css';
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Hot Clone Apps Multiple Accounts | Multi Run',
-  description: 'Explore a variety of apps and manage multiple accounts simultaneously with Multi Run App.',
+export const metadata: Metadata = {
+  title: 'Popular Apps for Multiple Accounts | Multi Run - Clone & Manage',
+  description: 'Discover the most popular apps for multiple account management. Clone Instagram, Facebook, Twitter, BlueSky, Spotify and more with Multi Run.',
   alternates: {
-    canonical: 'https://multirun.space/hot-apps'
-  }
+    canonical: 'https://multirun.space/hot-apps',
+  },
 };
 
-const hotApps = [
-  // {
-  //   id: 'whatsapp-business',
-  //   name: 'WhatsApp Business',
-  //   description: 'Run multiple WhatsApp Business accounts for different business ventures or client management.',
-  //   icon: '💬',
-  //   category: 'Communication',
-  //   downloads: '2M+'
-  // },
+interface App {
+  id: string;
+  name: string;
+  description: string;
+  icon: string;
+  category: string;
+  downloads: string;
+  featured?: boolean;
+}
+
+const hotApps: App[] = [
   {
     id: 'bluesky',
-    name: 'Bluesky',
-    description: 'Manage multiple Bluesky accounts for personal use, content creation, and community engagement.',
-    icon: '🔵',
+    name: 'BlueSky',
+    description: 'Manage multiple accounts on the decentralized social network that puts you in control of your data and experience.',
+    icon: '🦋',
     category: 'Social Media',
-    downloads: 'Growing Fast'
+    downloads: 'Growing Fast',
+    featured: true
   },
   {
     id: 'instagram',
     name: 'Instagram',
-    description: 'Manage multiple Instagram accounts for personal use, business promotion, and content creation.',
+    description: 'Create and manage multiple Instagram accounts for personal branding, business promotion, and content creation.',
     icon: '📸',
     category: 'Social Media',
     downloads: '5M+'
   },
-  // {
-  //   id: 'telegram',
-  //   name: 'Telegram',
-  //   description: 'Use multiple Telegram accounts for different purposes while maintaining privacy and organization.',
-  //   icon: '✈️',
-  //   category: 'Communication',
-  //   downloads: '3M+'
-  // },
-  // {
-  //   id: 'tiktok',
-  //   name: 'TikTok',
-  //   description: 'Create and manage multiple TikTok accounts for different content themes and audiences.',
-  //   icon: '🎵',
-  //   category: 'Entertainment',
-  //   downloads: '4M+'
-  // },
   {
     id: 'facebook',
     name: 'Facebook',
-    description: 'Switch between personal and business Facebook accounts seamlessly without logging out.',
+    description: 'Switch seamlessly between personal and business Facebook accounts without the hassle of logging out.',
     icon: '👥',
     category: 'Social Media',
     downloads: '6M+'
@@ -64,87 +53,137 @@ const hotApps = [
   {
     id: 'twitter',
     name: 'Twitter (X)',
-    description: 'Manage multiple Twitter accounts for different interests, businesses, or social circles.',
+    description: 'Manage multiple Twitter accounts for different interests, businesses, or social circles with ease.',
     icon: '🐦',
     category: 'Social Media',
     downloads: '2.5M+'
   },
-  // {
-  //   id: 'discord',
-  //   name: 'Discord',
-  //   description: 'Join multiple Discord servers with different accounts for gaming, communities, and work.',
-  //   icon: '🎮',
-  //   category: 'Communication',
-  //   downloads: '1.8M+'
-  // },
   {
     id: 'spotify',
     name: 'Spotify',
-    description: 'Use multiple Spotify accounts for different music preferences and family sharing.',
+    description: 'Use multiple Spotify accounts for different music preferences, family sharing, and playlist management.',
     icon: '🎶',
     category: 'Entertainment',
     downloads: '3.2M+'
   }
 ];
 
+const categories = ['All', 'Social Media', 'Entertainment', 'Communication'];
+
 const HotAppsPage: React.FC = () => {
   return (
-    <>
+    <div className={styles.appListingPage}>
       <NavBar />
-      <main className="main">
+      
+      {/* Hero Section */}
+      <section className={styles.heroSection}>
         <Container>
-          <div className="py-16">
-            <div className="page-header">
-              <h1 className="page-title">Hot Clone Apps</h1>
-              <p className="page-subtitle">
-                Discover the most popular apps that users clone with Multi Run. 
-                Manage multiple accounts efficiently and boost your productivity.
-              </p>
-            </div>
+          <div className={styles.heroContent}>
+            <h1 className={styles.heroTitle}>Popular Apps</h1>
+            <p className={styles.heroSubtitle}>
+              Discover the most popular applications that users clone with Multi Run. 
+              Manage multiple accounts efficiently and unlock new possibilities.
+            </p>
             
-            <div className="app-grid">
-              {hotApps.map((app) => (
-                <Link 
-                  key={app.id} 
-                  href={`/hot-apps/${app.id}`}
-                  className="app-card"
-                >
-                  <div className="app-card-header">
-                    <div className="app-icon">{app.icon}</div>
-                  </div>
-                  <h3 className="app-title">{app.name}</h3>
-                  <span className="app-category">
-                    {app.category}
-                  </span>
-                  <p className="app-description">{app.description}</p>
-                  <div className="app-footer">
-                    <div className="app-stats">
-                      <span>Downloads: {app.downloads}</span>
-                    </div>
-                    <span className="app-link">Learn More →</span>
-                  </div>
-                </Link>
-              ))}
-            </div>
-            
-            <div className="cta-section">
-              <div className="cta-card blue">
-                <h2 className="cta-title">Ready to Clone Your Favorite Apps?</h2>
-                <p className="cta-description">
-                  Download Multi Run now and start managing multiple accounts with ease.
-                </p>
-                <div className="cta-buttons">
-                  <a href="/#download" className="cta-button">
-                    Download Multi Run
-                  </a>
-                </div>
+            <div className={styles.statsContainer}>
+              <div className={styles.statItem}>
+                <span className={styles.statNumber}>500+</span>
+                <span className={styles.statLabel}>Supported Apps</span>
+              </div>
+              <div className={styles.statItem}>
+                <span className={styles.statNumber}>50K+</span>
+                <span className={styles.statLabel}>Downloads</span>
+              </div>
+              <div className={styles.statItem}>
+                <span className={styles.statNumber}>4.5★</span>
+                <span className={styles.statLabel}>User Rating</span>
               </div>
             </div>
           </div>
         </Container>
-      </main>
+      </section>
+
+      {/* Content Section */}
+      <section className={styles.contentSection}>
+        <Container>
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionTitle}>Featured Applications</h2>
+            <p className={styles.sectionDescription}>
+              Explore our curated collection of the most popular apps for multiple account management
+            </p>
+          </div>
+
+          {/* Category Filter */}
+          <div className={styles.categoryFilter}>
+            {categories.map((category) => (
+              <button
+                key={category}
+                className={`${styles.filterButton} ${category === 'All' ? styles.active : ''}`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
+          {/* Apps Grid */}
+          <div className={styles.appsGrid}>
+            {hotApps.map((app) => (
+              <Link
+                key={app.id}
+                href={`/hot-apps/${app.id}`}
+                className={`${styles.appCard} ${app.featured ? styles.featured : ''}`}
+                aria-label={`Learn more about ${app.name}`}
+              >
+                <div className={styles.appCardHeader}>
+                  <div className={styles.appIcon}>{app.icon}</div>
+                  <div className={styles.appInfo}>
+                    <h3 className={styles.appName}>{app.name}</h3>
+                    <span className={styles.appCategory}>{app.category}</span>
+                  </div>
+                </div>
+                
+                <p className={styles.appDescription}>{app.description}</p>
+                
+                <div className={styles.appFooter}>
+                  <div className={styles.appStats}>
+                    <span className={styles.downloadCount}>{app.downloads}</span>
+                  </div>
+                  <span className={styles.learnMore}>Learn More</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          {/* CTA Section */}
+          <div className={styles.ctaSection}>
+            <div className={styles.ctaContent}>
+              <h2 className={styles.ctaTitle}>Ready to Get Started?</h2>
+              <p className={styles.ctaDescription}>
+                Download Multi Run now and start managing multiple accounts across all your favorite apps seamlessly.
+              </p>
+              <div className={styles.ctaButtons}>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.dong.multirun"
+                  className={styles.ctaButton}
+                  aria-label="Download Multi Run from Google Play Store"
+                >
+                  Download Multi Run
+                </a>
+                <Link
+                  href="/hot-games"
+                  className={`${styles.ctaButton} ${styles.secondary}`}
+                  aria-label="Explore popular games"
+                >
+                  Explore Games
+                </Link>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       <Footer />
-    </>
+    </div>
   );
 };
 

@@ -1,148 +1,112 @@
-import SectionTitle from '../components/elements/SectionTitle';
+import React from 'react';
+import Link from 'next/link';
 import Container from '../components/layout/Container';
+import styles from '../components/hot/HotArea.module.css';
 
-const HotArea = () => {
-    return (
-        <div style={{ background: '#fff', padding: '80px 0' }} id="hot-content">
-        <Container>
-          <SectionTitle>Hot Apps And Games</SectionTitle>
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-            gap: '20px',
-            marginTop: '40px'
-          }}>
-            {/* Instagram */}
-            <a className="card" href="/hot-apps/instagram" style={{
-              display: 'block',
-              padding: '15px 20px',
-              background: '#f8f9fa',
-              borderRadius: '8px',
-              textDecoration: 'none',
-              color: '#2c3e50',
-              textAlign: 'center',
-              transition: 'all 0.3s ease',
-              boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-              cursor: 'pointer'
-            }}>
-              📸 Instagram
-            </a>
-            
-            {/* Facebook */}
-            <a className="card" href="/hot-apps/facebook" style={{
-              display: 'block',
-              padding: '15px 20px',
-              background: '#f8f9fa',
-              borderRadius: '8px',
-              textDecoration: 'none',
-              color: '#2c3e50',
-              textAlign: 'center',
-              transition: 'all 0.3s ease',
-              boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-              cursor: 'pointer'
-            }}>
-              👥 Facebook
-            </a>
-            
-            {/* Twitter */}
-            <a className="card" href="/hot-apps/twitter" style={{
-              display: 'block',
-              padding: '15px 20px',
-              background: '#f8f9fa',
-              borderRadius: '8px',
-              textDecoration: 'none',
-              color: '#2c3e50',
-              textAlign: 'center',
-              transition: 'all 0.3s ease',
-              boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-              cursor: 'pointer'
-            }}>
-              🐦 Twitter (X)
-            </a>
-            
-            {/* Spotify */}
-            <a  className="card" href="/hot-apps/spotify" style={{
-              display: 'block',
-              padding: '15px 20px',
-              background: '#f8f9fa',
-              borderRadius: '8px',
-              textDecoration: 'none',
-              color: '#2c3e50',
-              textAlign: 'center',
-              transition: 'all 0.3s ease',
-              boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-              cursor: 'pointer'
-            }}>
-              🎶 Spotify
-            </a>
-            
-            {/* Roblox */}
-            <a  className="card" href="/hot-games/roblox" style={{
-              display: 'block',
-              padding: '15px 20px',
-              background: '#f8f9fa',
-              borderRadius: '8px',
-              textDecoration: 'none',
-              color: '#2c3e50',
-              textAlign: 'center',
-              transition: 'all 0.3s ease',
-              boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-              cursor: 'pointer'
-            }}>
-              🧱 Roblox
-            </a>
-            
-            {/* Grow a Garden */}
-            <a  className="card" href="/hot-games/growagarden" style={{
-              display: 'block',
-              padding: '15px 20px',
-              background: '#f8f9fa',
-              borderRadius: '8px',
-              textDecoration: 'none',
-              color: '#2c3e50',
-              textAlign: 'center',
-              transition: 'all 0.3s ease',
-              boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-              cursor: 'pointer'
-            }}>
-              🌱 Grow a Garden
-            </a>
-            
-            {/* View All Apps */}
-            <a  className="card" href="/hot-apps" style={{
-              display: 'block',
-              padding: '15px 20px',
-              background: '#3498db',
-              color: 'white',
-              borderRadius: '8px',
-              textDecoration: 'none',
-              textAlign: 'center',
-              transition: 'all 0.3s ease',
-              boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-              cursor: 'pointer'
-            }}>
-              Discover All Apps →
-            </a>
-            
-            {/* View All Games */}
-            <a  className="card" href="/hot-games" style={{
-              display: 'block',
-              padding: '15px 20px',
-              background: '#9b59b6',
-              color: 'white',
-              borderRadius: '8px',
-              textDecoration: 'none',
-              textAlign: 'center',
-              transition: 'all 0.3s ease',
-              boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-              cursor: 'pointer'
-            }}>
-              Discover All Games →
-            </a>
+// App and game data structure
+const appsData = [
+  { name: 'Instagram', icon: '📸', href: '/hot-apps/instagram' },
+  { name: 'Facebook', icon: '👥', href: '/hot-apps/facebook' },
+  { name: 'Twitter (X)', icon: '🐦', href: '/hot-apps/twitter' },
+  { name: 'Spotify', icon: '🎶', href: '/hot-apps/spotify' },
+  { name: 'BlueSky', icon: '🦋', href: '/hot-apps/bluesky' },
+];
+
+const gamesData = [
+  { name: 'Roblox', icon: '🧱', href: '/hot-games/roblox' },
+  { name: 'Grow a Garden', icon: '🌱', href: '/hot-games/growagarden' },
+];
+
+const HotArea: React.FC = () => {
+  return (
+    <section className={styles.hotSection} id="hot-content">
+      <Container>
+        <header className={styles.sectionHeader}>
+          <h2 className={styles.sectionTitle}>Popular Apps & Games</h2>
+          <p className={styles.sectionSubtitle}>
+            Discover the most popular applications and games that work seamlessly with Multi Run
+          </p>
+        </header>
+
+        <div className={styles.categoriesGrid}>
+          {/* Apps Section */}
+          <div className={styles.categorySection}>
+            <div className={styles.categoryHeader}>
+              <div className={styles.categoryIcon}>📱</div>
+              <h3 className={styles.categoryTitle}>Popular Apps</h3>
+            </div>
+            <div className={styles.appsGrid}>
+              {appsData.map((app) => (
+                <Link
+                  key={app.name}
+                  href={app.href}
+                  className={styles.appCard}
+                  aria-label={`Learn more about ${app.name}`}
+                >
+                  <div className={styles.appIcon}>{app.icon}</div>
+                  <span className={styles.appName}>{app.name}</span>
+                </Link>
+              ))}
+            </div>
           </div>
-        </Container>
-      </div>
-    )
-}
+
+          {/* Games Section */}
+          <div className={styles.categorySection}>
+            <div className={styles.categoryHeader}>
+              <div className={styles.categoryIcon}>🎮</div>
+              <h3 className={styles.categoryTitle}>Popular Games</h3>
+            </div>
+            <div className={styles.appsGrid}>
+              {gamesData.map((game) => (
+                <Link
+                  key={game.name}
+                  href={game.href}
+                  className={styles.appCard}
+                  aria-label={`Learn more about ${game.name}`}
+                >
+                  <div className={styles.appIcon}>{game.icon}</div>
+                  <span className={styles.appName}>{game.name}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Discover More Section */}
+        <div className={styles.discoverSection}>
+          <Link
+            href="/hot-apps"
+            className={styles.discoverCard}
+            aria-label="Discover all supported apps"
+          >
+            <div className={styles.discoverIcon}>📱</div>
+            <div className={styles.discoverContent}>
+              <h4 className={styles.discoverTitle}>Explore All Apps</h4>
+              <p className={styles.discoverDescription}>
+                Browse our complete collection of supported applications
+              </p>
+            </div>
+            <div className={styles.discoverArrow}>→</div>
+          </Link>
+
+          <Link
+            href="/hot-games"
+            className={`${styles.discoverCard} ${styles.games}`}
+            aria-label="Discover all supported games"
+          >
+            <div className={styles.discoverIcon}>🎮</div>
+            <div className={styles.discoverContent}>
+              <h4 className={styles.discoverTitle}>Explore All Games</h4>
+              <p className={styles.discoverDescription}>
+                Discover games that work perfectly with multiple accounts
+              </p>
+            </div>
+            <div className={styles.discoverArrow}>→</div>
+          </Link>
+        </div>
+      </Container>
+    </section>
+  );
+};
 
 export default HotArea;

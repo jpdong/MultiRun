@@ -6,7 +6,7 @@ export default function Ad() {
     return (
         <>
             <Script
-                src={`//pl27270116.profitableratecpm.com/de/10/ca/de10cadbf0d86062abdbd9bbcca5bdef.js`}
+                src={"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8978922596700722"}
             />
 
         </>

@@ -3,151 +3,217 @@ import Link from 'next/link';
 import NavBar from '../../../src/components/elements/NavBar';
 import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
+import styles from '../../../src/components/app-pages/AppPage.module.css';
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Facebook Multiple Accounts | Multi Run',
-  description: 'Manage multiple Facebook accounts for personal use, business promotion, and content creation.',
+export const metadata: Metadata = {
+  title: 'Facebook Multiple Accounts | Multi Run - Social Media Management',
+  description: 'Manage multiple Facebook accounts seamlessly with Multi Run. Perfect for businesses, content creators, and social media managers.',
   alternates: {
-    canonical: 'https://multirun.space/hot-apps/facebook'
-  }
+    canonical: 'https://multirun.space/hot-apps/facebook',
+  },
 };
 
 const FacebookPage: React.FC = () => {
   return (
-    <>
+    <div className={styles.appPage}>
       <NavBar />
-      <main className="main">
+      
+      {/* Hero Section */}
+      <section className={styles.heroSection} style={{
+        background: 'linear-gradient(135deg, #1877f2 0%, #42a5f5 100%)'
+      }}>
         <Container>
-          <div className="py-16">
-            <div className="mb-8">
-              <Link href="/hot-apps" className="back-link blue">
-                ← Back to Hot Apps
-              </Link>
-            </div>
+          <div className={styles.heroContent}>
+            <Link href="/hot-apps" className={styles.backLink}>
+              ← Back to Apps
+            </Link>
             
-            <div className="detail-page">
-              <div className="detail-header">
-                <div className="detail-icon">👥</div>
-                <h1 className="detail-title">Facebook</h1>
-                <p className="detail-subtitle">
-                  Switch between personal and business Facebook accounts seamlessly without logging out.
-                </p>
-                <div className="detail-badges">
-                  <span className="detail-badge app-category">
-                    Social Media
-                  </span>
-                  <span className="detail-badge app-category green">
-                    6M+ Downloads
-                  </span>
-                </div>
-              </div>
-
-              <div className="detail-content">
-                <div className="detail-section">
-                  <h2>Why Use Multiple Facebook Accounts?</h2>
-                  <ul className="detail-list">
-                    <li>
-                      <span className="check">✓</span>
-                      <span>Separate personal and business identities</span>
-                    </li>
-                    <li>
-                      <span className="check">✓</span>
-                      <span>Manage multiple business pages and accounts</span>
-                    </li>
-                    <li>
-                      <span className="check">✓</span>
-                      <span>Keep different social circles organized</span>
-                    </li>
-                    <li>
-                      <span className="check">✓</span>
-                      <span>Test marketing strategies across accounts</span>
-                    </li>
-                    <li>
-                      <span className="check">✓</span>
-                      <span>Maintain privacy between different aspects of life</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="detail-section">
-                  <h2>Multi Run Benefits</h2>
-                  <ul className="detail-list">
-                    <li>
-                      <span className="check blue">✓</span>
-                      <span>No more logging in and out constantly</span>
-                    </li>
-                    <li>
-                      <span className="check blue">✓</span>
-                      <span>Switch between accounts instantly</span>
-                    </li>
-                    <li>
-                      <span className="check blue">✓</span>
-                      <span>Isolated notifications for each account</span>
-                    </li>
-                    <li>
-                      <span className="check blue">✓</span>
-                      <span>Secure data separation</span>
-                    </li>
-                    <li>
-                      <span className="check blue">✓</span>
-                      <span>Simultaneous access to multiple accounts</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="detail-section">
-                <h2>Use Cases</h2>
-                <div className="use-cases">
-                  <div className="use-case">
-                    <h3>👤 Personal & Professional</h3>
-                    <p>Keep your personal life separate from your professional networking</p>
-                  </div>
-                  <div className="use-case">
-                    <h3>🏢 Business Management</h3>
-                    <p>Manage multiple business accounts for different ventures or clients</p>
-                  </div>
-                  <div className="use-case">
-                    <h3>📈 Marketing & Analytics</h3>
-                    <p>Test different marketing strategies and track performance across accounts</p>
-                  </div>
-                  <div className="use-case">
-                    <h3>👨‍👩‍👧‍👦 Family Management</h3>
-                    <p>Manage family member accounts or community group pages</p>
-                  </div>
-                  <div className="use-case">
-                    <h3>🌍 Regional Presence</h3>
-                    <p>Maintain different accounts for different geographical regions</p>
-                  </div>
-                  <div className="use-case">
-                    <h3>🎭 Creative Projects</h3>
-                    <p>Separate accounts for different creative projects or brands</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="cta-section">
-                <div className="cta-card" style={{background: 'linear-gradient(135deg, #1877f2 0%, #42a5f5 100%)'}}>
-                  <h2 className="cta-title">Ready to Manage Multiple Facebook Accounts?</h2>
-                  <p className="cta-description">
-                    Download Multi Run and seamlessly switch between your Facebook accounts without the hassle.
-                  </p>
-                  <div className="cta-buttons">
-                    <a href="/#download" className="cta-button">
-                      Download Multi Run
-                    </a>
-                    <Link href="/hot-apps" className="cta-button secondary">
-                      View More Apps
-                    </Link>
-                  </div>
-                </div>
-              </div>
+            <div className={styles.appIcon}>👥</div>
+            
+            <h1 className={styles.appTitle}>Facebook</h1>
+            <p className={styles.appSubtitle}>
+              Switch between personal and business Facebook accounts seamlessly without the hassle of logging out
+            </p>
+            
+            <div className={styles.badgeContainer}>
+              <span className={styles.badge}>Social Media</span>
+              <span className={`${styles.badge} ${styles.featured}`}>6M+ Downloads</span>
+              <span className={styles.badge}>Business Ready</span>
             </div>
           </div>
         </Container>
-      </main>
+      </section>
+
+      {/* Content Section */}
+      <section className={styles.contentSection}>
+        <Container>
+          <div className={styles.sectionGrid}>
+            {/* Why Multiple Facebook Accounts */}
+            <div className={styles.contentBlock}>
+              <h2 className={styles.blockTitle}>Why Multiple Facebook Accounts?</h2>
+              <p className={styles.blockDescription}>
+                Facebook remains the world's largest social network with billions of users. 
+                Multi Run enables you to maximize your Facebook presence across different identities and purposes.
+              </p>
+              
+              <ul className={styles.featureList}>
+                <li className={styles.featureItem}>
+                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.featureText}>
+                    Separate personal and business identities
+                  </span>
+                </li>
+                <li className={styles.featureItem}>
+                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.featureText}>
+                    Manage multiple business pages and accounts
+                  </span>
+                </li>
+                <li className={styles.featureItem}>
+                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.featureText}>
+                    Keep different social circles organized
+                  </span>
+                </li>
+                <li className={styles.featureItem}>
+                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.featureText}>
+                    Test marketing strategies across accounts
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Multi Run Benefits */}
+            <div className={styles.contentBlock}>
+              <h2 className={styles.blockTitle}>Multi Run Advantages</h2>
+              <p className={styles.blockDescription}>
+                Experience seamless Facebook account management with Multi Run's powerful features 
+                designed for efficiency and productivity.
+              </p>
+              
+              <ul className={styles.featureList}>
+                <li className={styles.featureItem}>
+                  <span className={styles.checkIcon}>🚀</span>
+                  <span className={styles.featureText}>
+                    No more logging in and out constantly
+                  </span>
+                </li>
+                <li className={styles.featureItem}>
+                  <span className={styles.checkIcon}>⚡</span>
+                  <span className={styles.featureText}>
+                    Switch between accounts instantly
+                  </span>
+                </li>
+                <li className={styles.featureItem}>
+                  <span className={styles.checkIcon}>🔔</span>
+                  <span className={styles.featureText}>
+                    Isolated notifications for each account
+                  </span>
+                </li>
+                <li className={styles.featureItem}>
+                  <span className={styles.checkIcon}>🔒</span>
+                  <span className={styles.featureText}>
+                    Secure data separation and privacy
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Use Cases */}
+          <div className={styles.useCasesGrid}>
+            <div className={styles.useCaseCard}>
+              <span className={styles.useCaseIcon}>👤</span>
+              <h3 className={styles.useCaseTitle}>Personal & Professional</h3>
+              <p className={styles.useCaseDescription}>
+                Keep your personal life separate from your professional networking 
+                and business activities.
+              </p>
+            </div>
+
+            <div className={styles.useCaseCard}>
+              <span className={styles.useCaseIcon}>🏢</span>
+              <h3 className={styles.useCaseTitle}>Business Management</h3>
+              <p className={styles.useCaseDescription}>
+                Manage multiple business accounts for different ventures, 
+                clients, or brand portfolios.
+              </p>
+            </div>
+
+            <div className={styles.useCaseCard}>
+              <span className={styles.useCaseIcon}>📈</span>
+              <h3 className={styles.useCaseTitle}>Marketing & Analytics</h3>
+              <p className={styles.useCaseDescription}>
+                Test different marketing strategies and track performance 
+                across multiple accounts.
+              </p>
+            </div>
+
+            <div className={styles.useCaseCard}>
+              <span className={styles.useCaseIcon}>👨‍👩‍👧‍👦</span>
+              <h3 className={styles.useCaseTitle}>Family Management</h3>
+              <p className={styles.useCaseDescription}>
+                Manage family member accounts or community group pages 
+                from a single device.
+              </p>
+            </div>
+
+            <div className={styles.useCaseCard}>
+              <span className={styles.useCaseIcon}>🌍</span>
+              <h3 className={styles.useCaseTitle}>Regional Presence</h3>
+              <p className={styles.useCaseDescription}>
+                Maintain different accounts for different geographical 
+                regions and local markets.
+              </p>
+            </div>
+
+            <div className={styles.useCaseCard}>
+              <span className={styles.useCaseIcon}>🎭</span>
+              <h3 className={styles.useCaseTitle}>Creative Projects</h3>
+              <p className={styles.useCaseDescription}>
+                Separate accounts for different creative projects, 
+                brands, or artistic endeavors.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* CTA Section */}
+      <section className={styles.ctaSection} style={{
+        background: 'linear-gradient(135deg, #1877f2 0%, #42a5f5 100%)'
+      }}>
+        <Container>
+          <div className={styles.ctaCard}>
+            <h2 className={styles.ctaTitle}>Ready to Master Facebook?</h2>
+            <p className={styles.ctaDescription}>
+              Download Multi Run and seamlessly switch between your Facebook accounts without the hassle. 
+              Join millions of users who trust Multi Run for their social media management.
+            </p>
+            <div className={styles.ctaButtons}>
+              <a 
+                href="https://play.google.com/store/apps/details?id=com.dong.multirun" 
+                className={styles.ctaButton}
+                aria-label="Download Multi Run from Google Play Store"
+              >
+                Get Multi Run
+              </a>
+              <Link 
+                href="/hot-apps" 
+                className={`${styles.ctaButton} ${styles.secondary}`}
+                aria-label="View more supported apps"
+              >
+                Explore More Apps
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       <Footer />
-    </>
+    </div>
   );
 };
 
