@@ -7,10 +7,6 @@ interface PaginationProps {
   hasNextPage: boolean;
   hasPrevPage: boolean;
   baseUrl: string;
-  searchParams?: {
-    query?: string;
-    tag?: string;
-  };
 }
 
 export const Pagination: React.FC<PaginationProps> = ({
@@ -18,26 +14,13 @@ export const Pagination: React.FC<PaginationProps> = ({
   totalPages,
   hasNextPage,
   hasPrevPage,
-  baseUrl,
-  searchParams = {}
+  baseUrl
 }) => {
   const createPageUrl = (page: number) => {
-    const params = new URLSearchParams();
-    
-    if (searchParams.query) {
-      params.set('query', searchParams.query);
-    }
-    
-    if (searchParams.tag) {
-      params.set('tag', searchParams.tag);
-    }
-    
     if (page > 1) {
-      params.set('page', page.toString());
+      return `${baseUrl}?page=${page}`;
     }
-    
-    const queryString = params.toString();
-    return `${baseUrl}${queryString ? `?${queryString}` : ''}`;
+    return baseUrl;
   };
 
   const getVisiblePages = () => {

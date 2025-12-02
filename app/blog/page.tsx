@@ -1,8 +1,6 @@
 import React from 'react';
-import { getAllBlogPosts, getAllTags } from '@/src/lib/blog';
+import { getAllBlogPosts } from '@/src/lib/blog';
 import { BlogList } from '@/src/components/blog/BlogList';
-import { BlogSearch } from '@/src/components/blog/BlogSearch';
-import { BlogTags } from '@/src/components/blog/BlogTags';
 import NavBar from '@/src/components/elements/NavBar';
 import Footer from '@/src/components/elements/Footer';
 import { Metadata } from 'next';
@@ -15,19 +13,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function BlogPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
-}) {
+export default async function BlogPage() {
   // Get data on the server side
   const allPosts = getAllBlogPosts();
-  const allTags = getAllTags();
-  
-  const searchParamsData = await searchParams;
-  const query = typeof searchParamsData.query === 'string' ? searchParamsData.query : '';
-  const tag = typeof searchParamsData.tag === 'string' ? searchParamsData.tag : '';
-  const page = typeof searchParamsData.page === 'string' ? parseInt(searchParamsData.page) : 1;
 
   return (
     <>
@@ -50,20 +38,12 @@ export default async function BlogPage({
         {/* Blog Content */}
         <section className="blog-content">
           <div className="container">
-            <div className="blog-layout">
-              {/* Sidebar */}
-              <aside className="blog-sidebar">
-                <div className="sidebar-sticky">
-                  <BlogSearch initialQuery={query} />
-                  <BlogTags tags={allTags} selectedTag={tag} />
-                </div>
-              </aside>
-
-              {/* Main Content */}
-              <div className="blog-main">
-                <BlogList 
+            <div className="blog-layout-no-sidebar">
+              {/* Main Content - Full Width */}
+              <div className="blog-main-full">
+                <BlogList
                   posts={allPosts}
-                  searchParams={{ query, tag, page }}
+                  searchParams={{}}
                 />
               </div>
             </div>

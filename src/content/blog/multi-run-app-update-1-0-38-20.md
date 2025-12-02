@@ -1,5 +1,6 @@
 ---
 title: "Multi Run App Update 1.0.38.20: System App Filter, Bug Fixes, and GDPR Compliance"
+description: "Discover the new system app filter feature, important bug fixes, and GDPR compliance improvements in Multi Run version 1.0.38.20."
 date: "2025-10-29"
 author: "The Multi Run Team"
 tags: ["update", "release notes"]

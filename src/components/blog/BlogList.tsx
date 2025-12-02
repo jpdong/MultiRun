@@ -67,32 +67,21 @@ function getPaginatedPosts(
 }
 
 export const BlogList: React.FC<BlogListProps> = ({ posts, searchParams }) => {
-  const { query = '', tag = '', page = 1 } = searchParams;
-  
-  // Filter articles
-  const filteredPosts = filterPosts(posts, { query, tag });
-  
+  const { page = 1 } = searchParams;
+
+  // No filtering - show all posts
+
   // Pagination
   const postsPerPage = 9;
-  const paginatedResult = getPaginatedPosts(filteredPosts, page, postsPerPage);
-  
-  if (filteredPosts.length === 0) {
+  const paginatedResult = getPaginatedPosts(posts, page, postsPerPage);
+
+  if (posts.length === 0) {
     return (
       <div className="blog-empty">
         <div className="blog-empty-content">
           <div className="blog-empty-icon">📝</div>
           <h3>No Articles Found</h3>
-          <p>
-            {query || tag 
-              ? 'No articles match your search criteria. Please try different search terms.'
-              : 'No articles have been published yet. Stay tuned!'
-            }
-          </p>
-          {(query || tag) && (
-            <Link href="/blog" className="btn btn-primary">
-              View All Articles
-            </Link>
-          )}
+          <p>No articles have been published yet. Stay tuned!</p>
         </div>
       </div>
     );
@@ -100,20 +89,6 @@ export const BlogList: React.FC<BlogListProps> = ({ posts, searchParams }) => {
 
   return (
     <div className="blog-list">
-      {/* Search results info */}
-      {(query || tag) && (
-        <div className="search-results-info">
-          <p>
-            Found <strong>{filteredPosts.length}</strong> articles
-            {query && <span> containing "<strong>{query}</strong>"</span>}
-            {tag && <span> tagged with "<strong>{tag}</strong>"</span>}
-          </p>
-          <Link href="/blog" className="clear-filters">
-            Clear Filters
-          </Link>
-        </div>
-      )}
-
       {/* Articles grid */}
       <div className="blog-grid">
         {paginatedResult.posts.map((post) => (
@@ -129,7 +104,6 @@ export const BlogList: React.FC<BlogListProps> = ({ posts, searchParams }) => {
           hasNextPage={paginatedResult.hasNextPage}
           hasPrevPage={paginatedResult.hasPrevPage}
           baseUrl="/blog"
-          searchParams={{ query, tag }}
         />
       )}
     </div>
