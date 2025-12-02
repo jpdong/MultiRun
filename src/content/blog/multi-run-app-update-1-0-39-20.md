@@ -1,5 +1,6 @@
 ---
 title: 'Multi-Run App Update 1.0.39.20: Introducing Subscription Service and Performance Enhancements'
+description: 'Learn about the new subscription service and performance enhancements in Multi-Run App version 1.0.39.20.'
 date: '2025-11-06'
 author: 'Multi-Run Team'
 tags: ['Update', 'Subscription', 'Performance']

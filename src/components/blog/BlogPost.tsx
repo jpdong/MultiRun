@@ -71,9 +71,9 @@ export const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
 
       {/* Article content */}
       <div className="blog-post-content">
-        <div 
+        <div
           className="prose prose-lg max-w-none"
-          dangerouslySetInnerHTML={{ __html: post.content }}
+          dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </div>
 

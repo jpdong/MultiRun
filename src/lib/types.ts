@@ -5,9 +5,11 @@ export interface BlogPost {
   date: string;
   author?: string;
   tags: string[];
-  content: string;
+  content: string;  // Raw markdown content
+  html: string;     // Processed HTML content
   readingTime: number;
   featured?: boolean;
+  coverImage?: string;
 }
 
 export interface BlogMetadata {
