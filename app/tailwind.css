@@ -4,21 +4,21 @@
 /* ===== Tailwind v4 主题配置 ===== */
 @theme {
   /* 品牌色 */
-  --color-primary: #3b82f6;
-  --color-primary-hover: #2563eb;
+  --color-primary: #0062FF;
+  --color-primary-hover: #0050d0;
 
   /* 项目使用的颜色体系 */
-  --color-dark: #2c3e50;
-  --color-text: #333333;
+  --color-dark: #0a0a0a;
+  --color-text: #1a1a1a;
   --color-text-light: #666666;
-  --color-text-lighter: #6b7280;
+  --color-text-lighter: #888888;
   --color-text-muted: #999999;
-  --color-bg-light: #f7f9fb;
-  --color-bg-lighter: #f8fafc;
-  --color-bg-card: #f9fafb;
+  --color-bg-light: #ffffff;
+  --color-bg-lighter: #fdfdfd;
+  --color-bg-card: #ffffff;
   --color-bg-code: #f3f4f6;
   --color-border: #e5e7eb;
-  --color-border-light: #f3f4f6;
+  --color-border-light: #eef0f2;
 
   /* Blog 相关颜色 */
   --color-blog-tag: #dbeafe;
