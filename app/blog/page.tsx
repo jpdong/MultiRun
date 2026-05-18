@@ -3,11 +3,12 @@ import { getAllBlogPosts } from '@/src/lib/blog';
 import { BlogList } from '@/src/components/blog/BlogList';
 import NavBar from '@/src/components/elements/NavBar';
 import Footer from '@/src/components/elements/Footer';
+import Container from '@/src/components/layout/Container';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Blog - Multi Run',
-  description: 'Explore the latest technical articles, usage tips, and industry insights from Multi Run',
+  title: 'Blog - Multi Run | Latest News & Tutorials',
+  description: 'Explore expert tips, app cloning guides, and updates on multiple account management with Multi Run.',
   alternates: {
     canonical: `https://multirun.space/blog`,
   },
@@ -18,42 +19,35 @@ export default async function BlogPage() {
   const allPosts = getAllBlogPosts();
 
   return (
-    <>
+    <div className="min-h-screen bg-white font-sans flex flex-col">
       <NavBar />
-      <main className="min-h-screen bg-gradient-to-br from-[#667eea] to-[#764ba2] relative">
-        {/* Decorative background */}
-        <div className="absolute inset-0 pointer-events-none before:content-[''] before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.3)_0%,transparent_50%)] before:bg-[radial-gradient(circle_at_80%_20%,rgba(255,119,198,0.3)_0%,transparent_50%)] before:bg-[radial-gradient(circle_at_40%_40%,rgba(120,219,255,0.2)_0%,transparent_50%)]" />
 
-        {/* Hero Section */}
-        <section className="pt-[120px] pb-20 relative z-10 max-md:pt-20 max-md:pb-16">
-          <div className="max-w-6xl mx-auto px-5 max-md:px-4">
-            <div className="text-center max-w-3xl mx-auto">
-              <h1 className="text-6xl font-extrabold text-white mb-6 leading-tight tracking-tight max-lg:text-5xl max-md:text-4xl max-sm:text-3xl">
-                Multi Run <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Blog</span>
-              </h1>
-              <p className="text-xl text-white/90 leading-relaxed max-w-xl mx-auto max-md:text-base">
-                Explore the latest technical insights, usage tips, and industry trends to enhance your multi-account experience
-              </p>
+      {/* Hero Section (Carbon Black) */}
+      <section className="pt-36 pb-24 bg-dark text-white relative overflow-hidden border-b border-border-light/10">
+        <Container>
+          <div className="relative z-1 text-center max-w-4xl mx-auto space-y-6">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/10 text-xs font-bold uppercase tracking-wider text-white">
+              <span>📝 Multi Run Insights</span>
             </div>
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight m-0 text-white">Latest News & Tutorials</h1>
+            <p className="text-lg md:text-xl text-text-lighter m-0 max-w-2xl mx-auto leading-relaxed">
+              Explore expert tips, app cloning guides, and updates on multiple account management.
+            </p>
           </div>
-        </section>
+        </Container>
+      </section>
 
-        {/* Blog Content */}
-        <section className="bg-bg-lighter min-h-screen relative z-10 rounded-t-4xl -mt-8 py-16 max-md:py-8">
-          <div className="max-w-6xl mx-auto px-5 max-md:px-4">
-            <div className="max-w-6xl mx-auto px-8 max-md:px-4">
-              {/* Main Content - Full Width */}
-              <div className="w-full">
-                <BlogList
-                  posts={allPosts}
-                  searchParams={{}}
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
+      {/* Blog Content */}
+      <section className="py-24 bg-bg-lighter flex-1">
+        <Container>
+          <BlogList
+            posts={allPosts}
+            searchParams={{}}
+          />
+        </Container>
+      </section>
+
       <Footer />
-    </>
+    </div>
   );
 }

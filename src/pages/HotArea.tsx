@@ -18,53 +18,53 @@ const gamesData = [
 
 const HotArea: React.FC = () => {
   return (
-    <section className="py-[120px] max-md:py-20 max-[480px]:py-15 relative overflow-hidden bg-gradient-to-br from-[#f8fafc] to-white" id="hot-content">
+    <section className="py-24 px-6 relative overflow-hidden bg-white border-t border-border-light font-sans" id="hot-content">
       <Container>
-        <header className="text-center mb-20 max-md:mb-[60px]">
-          <h2 className="text-[clamp(2.25rem,5vw,3rem)] max-md:text-4xl max-[480px]:text-8 font-extrabold text-[#0f172a] mt-0 mb-4 tracking-tight leading-[1.1] bg-gradient-to-br from-[#0f172a] to-[#475569] bg-clip-text [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">Popular Apps &amp; Games</h2>
-          <p className="text-xl max-md:text-lg text-[#64748b] m-0 font-normal max-w-[600px] mx-auto leading-relaxed">
+        <header className="text-center mb-16 space-y-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-dark tracking-tight m-0">Popular Apps &amp; Games</h2>
+          <p className="text-lg text-text-lighter m-0 max-w-2xl mx-auto leading-relaxed">
             Discover the most popular applications and games that work seamlessly with Multi Run
           </p>
         </header>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] max-lg:grid-cols-1 gap-10 max-lg:gap-8 mb-[60px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-12">
           {/* Apps Section */}
-          <div className="bg-white rounded-3xl max-md:rounded-[20px] p-8 max-md:p-6 max-[480px]:p-5 border border-[#f1f5f9] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06)] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-1 hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.1),0_10px_10px_-5px_rgba(0,0,0,0.04)] hover:border-[#e2e8f0]">
-            <div className="flex items-center gap-4 max-[480px]:gap-3 mb-6 max-[480px]:mb-5">
-              <div className="w-12 h-12 max-md:w-10 max-md:h-10 rounded-xl flex items-center justify-center text-2xl max-md:text-xl bg-gradient-to-br from-[#667eea] to-[#764ba2] text-white shadow-[0_4px_12px_rgba(102,126,234,0.3)]">📱</div>
-              <h3 className="text-2xl max-md:text-xl font-bold text-[#0f172a] m-0 tracking-tight">Popular Apps</h3>
+          <div className="bg-bg-lighter rounded-3xl p-8 border border-border-light shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:border-primary/30">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl bg-primary/10 text-primary border border-primary/20 shadow-[0_4px_12px_rgba(0,98,255,0.1)]">📱</div>
+              <h3 className="text-2xl font-bold text-dark m-0 tracking-tight">Popular Apps</h3>
             </div>
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))] max-lg:grid-cols-[repeat(auto-fit,minmax(120px,1fr))] max-md:grid-cols-[repeat(auto-fit,minmax(100px,1fr))] max-[480px]:grid-cols-2 gap-4 max-lg:gap-3 max-md:gap-3 max-[480px]:gap-[10px]">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {appsData.map((app) => (
                 <Link
                   key={app.name}
                   href={app.href}
-                  className="flex flex-col items-center py-5 px-4 max-md:py-4 max-md:px-3 max-[480px]:py-[14px] max-[480px]:px-[10px] bg-[#f8fafc] rounded-2xl no-underline text-[#475569] transition-all duration-200 ease-[cubic-bezier(0.4,0,0.2,1)] border border-[#e2e8f0] relative overflow-hidden hover:bg-white hover:text-[#334155] hover:-translate-y-0.5 hover:shadow-[0_8px_25px_-8px_rgba(0,0,0,0.15)] hover:border-[#cbd5e1] group"
+                  className="flex flex-col items-center py-6 px-4 bg-white rounded-2xl no-underline text-text transition-all duration-200 border border-border-light hover:border-primary hover:shadow-[0_8px_24px_rgba(0,98,255,0.12)] hover:-translate-y-1 group"
                   aria-label={`Learn more about ${app.name}`}
                 >
-                  <div className="text-[32px] max-md:text-[28px] max-[480px]:text-2xl mb-3 max-md:mb-2 max-[480px]:mb-1.5 transition-transform duration-200 ease group-hover:scale-110">{app.icon}</div>
-                  <span className="text-sm max-[480px]:text-xs font-semibold text-center leading-[1.3] m-0">{app.name}</span>
+                  <div className="text-3xl mb-3 transition-transform duration-200 group-hover:scale-110">{app.icon}</div>
+                  <span className="text-sm font-bold text-center leading-snug m-0 group-hover:text-primary transition-colors">{app.name}</span>
                 </Link>
               ))}
             </div>
           </div>
 
           {/* Games Section */}
-          <div className="bg-white rounded-3xl max-md:rounded-[20px] p-8 max-md:p-6 max-[480px]:p-5 border border-[#f1f5f9] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06)] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-1 hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.1),0_10px_10px_-5px_rgba(0,0,0,0.04)] hover:border-[#e2e8f0]">
-            <div className="flex items-center gap-4 max-[480px]:gap-3 mb-6 max-[480px]:mb-5">
-              <div className="w-12 h-12 max-md:w-10 max-md:h-10 rounded-xl flex items-center justify-center text-2xl max-md:text-xl bg-gradient-to-br from-[#667eea] to-[#764ba2] text-white shadow-[0_4px_12px_rgba(102,126,234,0.3)]">🎮</div>
-              <h3 className="text-2xl max-md:text-xl font-bold text-[#0f172a] m-0 tracking-tight">Popular Games</h3>
+          <div className="bg-bg-lighter rounded-3xl p-8 border border-border-light shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:border-primary/30">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl bg-primary/10 text-primary border border-primary/20 shadow-[0_4px_12px_rgba(0,98,255,0.1)]">🎮</div>
+              <h3 className="text-2xl font-bold text-dark m-0 tracking-tight">Popular Games</h3>
             </div>
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))] max-lg:grid-cols-[repeat(auto-fit,minmax(120px,1fr))] max-md:grid-cols-[repeat(auto-fit,minmax(100px,1fr))] max-[480px]:grid-cols-2 gap-4 max-lg:gap-3 max-md:gap-3 max-[480px]:gap-[10px]">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {gamesData.map((game) => (
                 <Link
                   key={game.name}
                   href={game.href}
-                  className="flex flex-col items-center py-5 px-4 max-md:py-4 max-md:px-3 max-[480px]:py-[14px] max-[480px]:px-[10px] bg-[#f8fafc] rounded-2xl no-underline text-[#475569] transition-all duration-200 ease-[cubic-bezier(0.4,0,0.2,1)] border border-[#e2e8f0] relative overflow-hidden hover:bg-white hover:text-[#334155] hover:-translate-y-0.5 hover:shadow-[0_8px_25px_-8px_rgba(0,0,0,0.15)] hover:border-[#cbd5e1] group"
+                  className="flex flex-col items-center py-6 px-4 bg-white rounded-2xl no-underline text-text transition-all duration-200 border border-border-light hover:border-primary hover:shadow-[0_8px_24px_rgba(0,98,255,0.12)] hover:-translate-y-1 group"
                   aria-label={`Learn more about ${game.name}`}
                 >
-                  <div className="text-[32px] max-md:text-[28px] max-[480px]:text-2xl mb-3 max-md:mb-2 max-[480px]:mb-1.5 transition-transform duration-200 ease group-hover:scale-110">{game.icon}</div>
-                  <span className="text-sm max-[480px]:text-xs font-semibold text-center leading-[1.3] m-0">{game.name}</span>
+                  <div className="text-3xl mb-3 transition-transform duration-200 group-hover:scale-110">{game.icon}</div>
+                  <span className="text-sm font-bold text-center leading-snug m-0 group-hover:text-primary transition-colors">{game.name}</span>
                 </Link>
               ))}
             </div>
@@ -72,31 +72,31 @@ const HotArea: React.FC = () => {
         </div>
 
         {/* Discover More Section */}
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] max-md:grid-cols-1 gap-6 max-md:gap-4 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
           <Link
             href="/hot-apps"
-            className="flex items-center gap-5 max-md:gap-4 p-6 max-md:p-5 bg-gradient-to-br from-[#667eea] to-[#764ba2] rounded-[20px] no-underline text-white transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] shadow-[0_10px_25px_-5px_rgba(102,126,234,0.3)] relative overflow-hidden hover:-translate-y-1 hover:shadow-[0_20px_40px_-10px_rgba(102,126,234,0.4)] group"
+            className="flex items-center gap-5 p-6 bg-dark rounded-2xl no-underline text-white transition-all duration-300 shadow-[0_8px_24px_rgba(0,0,0,0.15)] border border-white/10 hover:-translate-y-1 hover:border-primary hover:shadow-[0_12px_32px_rgba(0,98,255,0.25)] group"
             aria-label="Discover all supported apps"
           >
-            <div className="w-14 h-14 max-md:w-12 max-md:h-12 rounded-2xl bg-white/20 flex items-center justify-center text-[28px] max-md:text-2xl shrink-0 backdrop-blur-[10px]">📱</div>
+            <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-2xl border border-white/10 shrink-0">📱</div>
             <div className="flex-1">
-              <h4 className="text-xl max-md:text-lg font-bold mt-0 mb-1 tracking-tight">Explore All Apps</h4>
-              <p className="text-sm opacity-90 m-0 leading-[1.4]">Browse our complete collection of supported applications</p>
+              <h4 className="text-xl font-bold mt-0 mb-1 tracking-tight text-white group-hover:text-primary transition-colors">Explore All Apps</h4>
+              <p className="text-sm text-text-lighter m-0 leading-relaxed">Browse our complete collection of supported applications</p>
             </div>
-            <div className="text-xl transition-transform duration-200 ease group-hover:translate-x-1">&rarr;</div>
+            <div className="text-xl transition-transform duration-200 group-hover:translate-x-1 text-primary">&rarr;</div>
           </Link>
 
           <Link
             href="/hot-games"
-            className="flex items-center gap-5 max-md:gap-4 p-6 max-md:p-5 bg-gradient-to-br from-[#9b59b6] to-[#8e44ad] rounded-[20px] no-underline text-white transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] shadow-[0_10px_25px_-5px_rgba(155,89,182,0.3)] relative overflow-hidden hover:-translate-y-1 hover:shadow-[0_20px_40px_-10px_rgba(155,89,182,0.4)] group"
+            className="flex items-center gap-5 p-6 bg-primary rounded-2xl no-underline text-white transition-all duration-300 shadow-[0_8px_24px_rgba(0,98,255,0.25)] hover:-translate-y-1 hover:bg-primary-hover hover:shadow-[0_12px_32px_rgba(0,98,255,0.35)] group"
             aria-label="Discover all supported games"
           >
-            <div className="w-14 h-14 max-md:w-12 max-md:h-12 rounded-2xl bg-white/20 flex items-center justify-center text-[28px] max-md:text-2xl shrink-0 backdrop-blur-[10px]">🎮</div>
+            <div className="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center text-2xl shrink-0">🎮</div>
             <div className="flex-1">
-              <h4 className="text-xl max-md:text-lg font-bold mt-0 mb-1 tracking-tight">Explore All Games</h4>
-              <p className="text-sm opacity-90 m-0 leading-[1.4]">Discover games that work perfectly with multiple accounts</p>
+              <h4 className="text-xl font-bold mt-0 mb-1 tracking-tight text-white">Explore All Games</h4>
+              <p className="text-sm text-white/80 m-0 leading-relaxed">Discover games that work perfectly with multiple accounts</p>
             </div>
-            <div className="text-xl transition-transform duration-200 ease group-hover:translate-x-1">&rarr;</div>
+            <div className="text-xl transition-transform duration-200 group-hover:translate-x-1 text-white">&rarr;</div>
           </Link>
         </div>
       </Container>
