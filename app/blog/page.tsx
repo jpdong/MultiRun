@@ -20,15 +20,18 @@ export default async function BlogPage() {
   return (
     <>
       <NavBar />
-      <main className="blog-page">
+      <main className="min-h-screen bg-gradient-to-br from-[#667eea] to-[#764ba2] relative">
+        {/* Decorative background */}
+        <div className="absolute inset-0 pointer-events-none before:content-[''] before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.3)_0%,transparent_50%)] before:bg-[radial-gradient(circle_at_80%_20%,rgba(255,119,198,0.3)_0%,transparent_50%)] before:bg-[radial-gradient(circle_at_40%_40%,rgba(120,219,255,0.2)_0%,transparent_50%)]" />
+
         {/* Hero Section */}
-        <section className="blog-hero">
-          <div className="container">
-            <div className="blog-hero-content">
-              <h1 className="blog-hero-title">
-                Multi Run <span className="gradient-text">Blog</span>
+        <section className="pt-[120px] pb-20 relative z-10 max-md:pt-20 max-md:pb-16">
+          <div className="max-w-6xl mx-auto px-5 max-md:px-4">
+            <div className="text-center max-w-3xl mx-auto">
+              <h1 className="text-6xl font-extrabold text-white mb-6 leading-tight tracking-tight max-lg:text-5xl max-md:text-4xl max-sm:text-3xl">
+                Multi Run <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Blog</span>
               </h1>
-              <p className="blog-hero-description">
+              <p className="text-xl text-white/90 leading-relaxed max-w-xl mx-auto max-md:text-base">
                 Explore the latest technical insights, usage tips, and industry trends to enhance your multi-account experience
               </p>
             </div>
@@ -36,11 +39,11 @@ export default async function BlogPage() {
         </section>
 
         {/* Blog Content */}
-        <section className="blog-content">
-          <div className="container">
-            <div className="blog-layout-no-sidebar">
+        <section className="bg-bg-lighter min-h-screen relative z-10 rounded-t-4xl -mt-8 py-16 max-md:py-8">
+          <div className="max-w-6xl mx-auto px-5 max-md:px-4">
+            <div className="max-w-6xl mx-auto px-8 max-md:px-4">
               {/* Main Content - Full Width */}
-              <div className="blog-main-full">
+              <div className="w-full">
                 <BlogList
                   posts={allPosts}
                   searchParams={{}}

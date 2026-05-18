@@ -18,7 +18,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const post = getBlogPostBySlug(slug);
-  
+
   if (!post) {
     return {
       title: 'Article Not Found - Multi Run Blog',
@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = getBlogPostBySlug(slug);
-  
+
   if (!post) {
     notFound();
   }
@@ -57,16 +57,16 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   return (
     <>
       <NavBar />
-      <main className="blog-post-page">
-        <article className="blog-article">
-          <div className="container">
+      <main className="min-h-screen bg-bg-lighter">
+        <article className="py-8 pb-16">
+          <div className="max-w-6xl mx-auto px-5 max-md:px-4">
             <BlogPost post={post} />
           </div>
         </article>
-        
+
         {relatedPosts.length > 0 && (
-          <section className="related-posts-section">
-            <div className="container">
+          <section className="py-16 bg-bg-lighter">
+            <div className="max-w-6xl mx-auto px-5 max-md:px-4">
               <RelatedPosts posts={relatedPosts} />
             </div>
           </section>

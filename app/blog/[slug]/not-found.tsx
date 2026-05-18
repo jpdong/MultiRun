@@ -9,19 +9,19 @@ export default function BlogPostNotFound() {
   return (
     <>
       <NavBar />
-      <main className="blog-not-found">
-        <div className="container">
-          <div className="not-found-content">
-            <div className="not-found-icon">📝</div>
-            <h1 className="not-found-title">Article Not Found</h1>
-            <p className="not-found-description">
+      <main className="min-h-[80vh] flex items-center justify-center bg-bg-lighter">
+        <div className="max-w-6xl mx-auto px-5 max-md:px-4">
+          <div className="text-center max-w-[500px] py-12 px-8 bg-white rounded-2xl shadow-sm max-[480px]:mx-4 max-[480px]:py-8 max-[480px]:px-6">
+            <div className="text-7xl mb-6">&#128221;</div>
+            <h1 className="text-4xl font-bold text-gray-800 mb-4 max-[480px]:text-3xl">Article Not Found</h1>
+            <p className="text-text-lighter text-lg leading-relaxed mb-8">
               Sorry, the article you are looking for does not exist or has been removed.
             </p>
-            <div className="not-found-actions">
-              <Link href="/blog" className="btn btn-primary">
+            <div className="flex gap-4 justify-center flex-wrap max-[480px]:flex-col">
+              <Link href="/blog" className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-br from-primary to-blue-700 text-white no-underline rounded-lg font-semibold transition-all duration-200 hover:-translate-y-px hover:shadow-[0_4px_12px_rgba(59,130,246,0.4)]">
                 Back to Blog
               </Link>
-              <Link href="/" className="btn btn-outline">
+              <Link href="/" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-primary no-underline rounded-lg font-semibold bg-transparent transition-all duration-200 hover:bg-primary hover:text-white max-[480px]:w-full">
                 Back to Home
               </Link>
             </div>
@@ -29,66 +29,6 @@ export default function BlogPostNotFound() {
         </div>
       </main>
       <Footer />
-      
-      <style jsx>{`
-        .blog-not-found {
-          min-height: 80vh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: #f8fafc;
-        }
-        
-        .not-found-content {
-          text-align: center;
-          max-width: 500px;
-          padding: 3rem 2rem;
-          background: white;
-          border-radius: 1rem;
-          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-        
-        .not-found-icon {
-          font-size: 4rem;
-          margin-bottom: 1.5rem;
-        }
-        
-        .not-found-title {
-          font-size: 2rem;
-          font-weight: 700;
-          color: #1f2937;
-          margin-bottom: 1rem;
-        }
-        
-        .not-found-description {
-          color: #6b7280;
-          font-size: 1.125rem;
-          line-height: 1.6;
-          margin-bottom: 2rem;
-        }
-        
-        .not-found-actions {
-          display: flex;
-          gap: 1rem;
-          justify-content: center;
-          flex-wrap: wrap;
-        }
-        
-        @media (max-width: 480px) {
-          .not-found-content {
-            margin: 1rem;
-            padding: 2rem 1.5rem;
-          }
-          
-          .not-found-title {
-            font-size: 1.5rem;
-          }
-          
-          .not-found-actions {
-            flex-direction: column;
-          }
-        }
-      `}</style>
     </>
   );
 }

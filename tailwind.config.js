@@ -14,8 +14,4 @@ module.exports = {
     }
   },
   plugins: [],
-  // 避免与现有 CSS 冲突的配置
-  corePlugins: {
-    preflight: false, // 禁用 CSS reset 避免影响现有样式
-  }
 }

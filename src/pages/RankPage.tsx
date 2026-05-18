@@ -13,40 +13,24 @@ const RankPage: React.FC = () => {
   return (
     <div>
       <Container>
-        <div className="page-content">
-          <h1>Top 5 Cloned Applications</h1>
-          <p style={{ marginBottom: '3rem', fontSize: '1.2rem' }}>
+        <div className="py-8 max-w-[800px] mx-auto">
+          <h1 className="text-dark mb-4">Top 5 Cloned Applications</h1>
+          <p className="mb-12 text-xl">
             Here are the most popular apps that users clone with Multi Run.
           </p>
-          
-          <div style={{ maxWidth: 800, margin: '0 auto' }}>
+
+          <div className="max-w-[800px] mx-auto">
             {apps.map(app => (
-              <div key={app.rank} style={{ 
-                display: 'flex', 
-                alignItems: 'center', 
-                padding: '20px', 
-                marginBottom: '16px',
-                background: '#f9f9f9', 
-                borderRadius: '10px',
-                textAlign: 'left'
-              }}>
-                <div style={{ 
-                  width: '40px', 
-                  height: '40px', 
-                  borderRadius: '50%', 
-                  background: '#1890ff', 
-                  color: 'white',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  marginRight: '20px',
-                  fontWeight: 'bold'
-                }}>
+              <div
+                key={app.rank}
+                className="flex items-center p-5 mb-4 bg-[#f9f9f9] rounded-[10px] text-left"
+              >
+                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center mr-5 font-bold">
                   {app.rank}
                 </div>
                 <div>
-                  <h3 style={{ margin: 0, color: '#2c3e50' }}>{app.name}</h3>
-                  <p style={{ margin: 0, color: '#666' }}>{app.description}</p>
+                  <h3 className="m-0 text-dark">{app.name}</h3>
+                  <p className="m-0 text-[#666]">{app.description}</p>
                 </div>
               </div>
             ))}

@@ -7,8 +7,8 @@ interface RowProps {
   children: React.ReactNode;
 }
 
-const Row: React.FC<RowProps> = ({ children, style, ...props }) => (
-  <div className="row" style={style}>
+const Row: React.FC<RowProps> = ({ children, style }) => (
+  <div className="flex flex-wrap -m-2.5" style={style}>
     {children}
   </div>
 );

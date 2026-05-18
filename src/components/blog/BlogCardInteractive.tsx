@@ -10,10 +10,10 @@ interface BlogCardInteractiveProps {
 }
 
 // Client-side interactive wrapper for blog cards
-const BlogCardInteractive: React.FC<BlogCardInteractiveProps> = ({ 
-  post, 
-  children, 
-  className = '' 
+const BlogCardInteractive: React.FC<BlogCardInteractiveProps> = ({
+  post,
+  children,
+  className = ''
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -32,32 +32,12 @@ const BlogCardInteractive: React.FC<BlogCardInteractiveProps> = ({
 
   return (
     <div
-      className={`blog-card-interactive ${className} ${isHovered ? 'hovered' : ''}`}
+      className={`transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] motion-reduce:transition-none ${isHovered ? '-translate-y-1 motion-reduce:translate-y-0' : ''} ${className}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
     >
       {children}
-      
-      <style jsx>{`
-        .blog-card-interactive {
-          transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .blog-card-interactive.hovered {
-          transform: translateY(-4px);
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-          .blog-card-interactive {
-            transition: none;
-          }
-          
-          .blog-card-interactive.hovered {
-            transform: none;
-          }
-        }
-      `}</style>
     </div>
   );
 };

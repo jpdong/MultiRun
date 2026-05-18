@@ -24,7 +24,7 @@ const ShareButton: React.FC<ShareButtonProps> = ({ title, description }) => {
   return (
     <button
       onClick={handleShare}
-      className="share-button"
+      className="flex items-center gap-2 px-4 py-2 bg-bg-code border-none rounded-lg text-gray-700 font-medium cursor-pointer transition-all duration-200 hover:bg-border hover:-translate-y-px"
       aria-label="Share article"
     >
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
