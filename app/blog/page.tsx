@@ -1,14 +1,14 @@
-import React from 'react';
+import ProductVisual from '@/src/components/site/ProductVisual';
+import SiteShell from '@/src/components/site/SiteShell';
+import React, { Suspense } from 'react';
+import BlogCard from '@/src/components/blog/BlogCard';
 import { getAllBlogPosts } from '@/src/lib/blog';
 import { BlogList } from '@/src/components/blog/BlogList';
-import NavBar from '@/src/components/elements/NavBar';
-import Footer from '@/src/components/elements/Footer';
-import Container from '@/src/components/layout/Container';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Blog - Multi Run | Latest News & Tutorials',
-  description: 'Explore expert tips, app cloning guides, and updates on multiple account management with Multi Run.',
+  title: 'Blog - Multi Run',
+  description: 'Explore the latest technical articles, usage tips, and industry insights from Multi Run',
   alternates: {
     canonical: `https://multirun.space/blog`,
   },
@@ -19,35 +19,37 @@ export default async function BlogPage() {
   const allPosts = getAllBlogPosts();
 
   return (
-    <div className="min-h-screen bg-white font-sans flex flex-col">
-      <NavBar />
-
-      {/* Hero Section (Carbon Black) */}
-      <section className="pt-36 pb-24 bg-dark text-white relative overflow-hidden border-b border-border-light/10">
-        <Container>
-          <div className="relative z-1 text-center max-w-4xl mx-auto space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/10 text-xs font-bold uppercase tracking-wider text-white">
-              <span>📝 Multi Run Insights</span>
+    <SiteShell variant="blog-shell">
+      <div className="blog-page">
+        {/* Hero Section */}
+        <section className="blog-hero">
+          <div className="container">
+            <div className="blog-hero-content">
+              <h1 className="blog-hero-title">
+                Multi Run Blog
+              </h1>
+              <p className="blog-hero-description">
+                Explore the latest technical insights, usage tips, and industry trends to enhance your multi-account experience
+              </p>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight m-0 text-white">Latest News & Tutorials</h1>
-            <p className="text-lg md:text-xl text-text-lighter m-0 max-w-2xl mx-auto leading-relaxed">
-              Explore expert tips, app cloning guides, and updates on multiple account management.
-            </p>
+            <ProductVisual image="/multi_run_2.webp" />
           </div>
-        </Container>
-      </section>
+        </section>
 
-      {/* Blog Content */}
-      <section className="py-24 bg-bg-lighter flex-1">
-        <Container>
-          <BlogList
-            posts={allPosts}
-            searchParams={{}}
-          />
-        </Container>
-      </section>
-
-      <Footer />
-    </div>
+        {/* Blog Content */}
+        <section className="blog-content">
+          <div className="container">
+            <div className="blog-layout-no-sidebar">
+              {/* Main Content - Full Width */}
+              <div className="blog-main-full">
+                <Suspense fallback={<div className="blog-grid">{allPosts.slice(0, 9).map(post => <BlogCard key={post.slug} post={post} />)}</div>}>
+                  <BlogList posts={allPosts} searchParams={{}} />
+                </Suspense>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </SiteShell>
   );
 }

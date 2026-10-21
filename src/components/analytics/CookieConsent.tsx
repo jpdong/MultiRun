@@ -52,7 +52,7 @@ export default function CookieConsent() {
   if (!showBanner) return null;
 
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 sm:left-6 sm:translate-x-0 z-[9999] w-[calc(100%-2rem)] sm:w-auto max-w-md bg-white rounded-2xl shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1),0_8px_10px_-6px_rgba(0,0,0,0.1)] border border-gray-100 py-3 px-4 flex items-center justify-between gap-4 animate-[fadeInUp_0.3s_ease-out]">
+    <div role="region" aria-label="Cookie preferences" className="fixed bottom-6 left-1/2 -translate-x-1/2 sm:left-6 sm:translate-x-0 z-[9999] w-[calc(100%-2rem)] sm:w-auto max-w-md bg-white rounded-2xl shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1),0_8px_10px_-6px_rgba(0,0,0,0.1)] border border-gray-100 py-3 px-4 flex items-center justify-between gap-4 animate-[fadeInUp_0.3s_ease-out]">
       <div className="flex items-center gap-3">
         <span className="text-2xl select-none" role="img" aria-label="cookie">🍪</span>
         <div className="flex flex-col gap-0.5">

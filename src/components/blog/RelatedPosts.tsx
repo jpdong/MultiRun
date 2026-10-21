@@ -21,22 +21,22 @@ export const RelatedPosts: React.FC<RelatedPostsProps> = ({ posts }) => {
   };
 
   return (
-    <section className="max-w-6xl mx-auto px-8 max-md:px-4">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-extrabold text-gray-800 mb-2">Related Articles</h2>
-        <p className="text-text-lighter text-lg">You might also be interested in</p>
+    <section className="related-posts">
+      <div className="related-posts-header">
+        <h2 className="related-posts-title">Related Articles</h2>
+        <p className="related-posts-subtitle">You might also be interested in</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+      <div className="related-posts-grid">
         {posts.map((post) => (
-          <article key={post.slug} className="bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300 ease-in-out relative hover:-translate-y-1 hover:shadow-xl group">
-            <Link href={`/blog/${post.slug}`} className="block no-underline text-inherit h-full">
-              <div className="p-6 h-full flex flex-col relative">
+          <article key={post.slug} className="related-post-card">
+            <Link href={`/blog/${post.slug}`} className="related-post-link">
+              <div className="related-post-content">
                 {/* Tags */}
                 {post.tags.length > 0 && (
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="related-post-tags">
                     {post.tags.slice(0, 2).map((tag) => (
-                      <span key={tag} className="px-2 py-1 bg-gradient-to-br from-emerald-500 to-emerald-600 text-white text-xs font-medium rounded">
+                      <span key={tag} className="related-post-tag">
                         {tag}
                       </span>
                     ))}
@@ -44,22 +44,22 @@ export const RelatedPosts: React.FC<RelatedPostsProps> = ({ posts }) => {
                 )}
 
                 {/* Title */}
-                <h3 className="text-lg font-bold text-gray-800 mb-3 leading-snug">{post.title}</h3>
+                <h3 className="related-post-title">{post.title}</h3>
 
                 {/* Description */}
-                <p className="text-text-lighter leading-relaxed mb-6 flex-grow line-clamp-2">{post.description}</p>
+                <p className="related-post-description">{post.description}</p>
 
                 {/* Meta information */}
-                <div className="flex items-center gap-2 text-sm text-text-lighter mt-auto">
-                  <span>{post.author}</span>
-                  <span className="opacity-50">&bull;</span>
-                  <span>{formatDate(post.date)}</span>
-                  <span className="opacity-50">&bull;</span>
-                  <span>{post.readingTime} min</span>
+                <div className="related-post-meta">
+                  <span className="related-post-author">{post.author}</span>
+                  <span className="related-post-separator">•</span>
+                  <span className="related-post-date">{formatDate(post.date)}</span>
+                  <span className="related-post-separator">•</span>
+                  <span className="related-post-reading-time">{post.readingTime} min</span>
                 </div>
 
                 {/* Read more indicator */}
-                <div className="absolute top-4 right-4 opacity-0 transition-all duration-300 ease-in-out text-primary group-hover:opacity-100 group-hover:translate-x-1">
+                <div className="related-post-arrow">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <polyline points="9,18 15,12 9,6"></polyline>
                   </svg>
@@ -71,8 +71,8 @@ export const RelatedPosts: React.FC<RelatedPostsProps> = ({ posts }) => {
       </div>
 
       {/* View all link */}
-      <div className="text-center">
-        <Link href="/blog" className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-br from-primary to-blue-700 text-white no-underline rounded-lg font-semibold transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(59,130,246,0.4)]">
+      <div className="related-posts-footer">
+        <Link href="/blog" className="view-all-posts">
           View all articles
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <polyline points="9,18 15,12 9,6"></polyline>

@@ -1,4 +1,4 @@
-import MultipleAccountsPage from '../src/pages/MultipleAccountsPage'
+import MultipleAccountsPage from '../src/views/MultipleAccountsPage'
 import { getAllBlogPosts } from '../src/lib/blog'
 import { BlogPost } from '../src/lib/types'
 import { Metadata } from 'next'

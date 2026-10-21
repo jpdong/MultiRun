@@ -35,7 +35,7 @@ A world-class, minimalist design component showcasing popular apps and games.
 ## Usage
 
 ```tsx
-import HotArea from '@/src/pages/HotArea';
+import HotArea from '@/src/views/HotArea';
 
 // In your page component
 export default function HomePage() {
@@ -111,6 +111,6 @@ src/components/hot/
 ├── HotArea.module.css    # Styles
 └── README.md            # Documentation
 
-src/pages/
+src/views/
 └── HotArea.tsx          # Main component
 ```

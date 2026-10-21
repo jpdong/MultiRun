@@ -1,4 +1,4 @@
-import TermsOfUsePage from '../../src/pages/TermsOfUsePage'
+import TermsOfUsePage from '../../src/views/TermsOfUsePage'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {

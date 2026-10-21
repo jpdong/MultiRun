@@ -11,7 +11,7 @@ module.exports = {
   plugins: ['prettier-plugin-tailwindcss'],
   
   // TailwindCSS 插件配置
-  tailwindConfig: './tailwind.config.js',
+  tailwindConfig: './tailwind.config.cjs',
   tailwindFunctions: ['clsx', 'cn', 'cva'],
   
   // 文件类型特定配置

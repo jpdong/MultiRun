@@ -7,19 +7,25 @@ export interface TestimonialCardProps {
 }
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ avatar, name, text }) => (
-  <div className="bg-white rounded-xl border border-border-light shadow-[0_4px_16px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] mb-6 h-full flex flex-col justify-between">
-    <div className="p-6 flex flex-col h-full">
-      <div className="flex items-center mb-6">
+  <div className="card" style={{ marginBottom: 24 }}>
+    <div className="card-body">
+      <div style={{ display: 'flex', alignItems: 'center', marginBottom: 16 }}>
         <img
           src={avatar}
           alt={name}
-          className="w-12 h-12 rounded-full mr-4 object-cover border border-border-light"
+          style={{
+            width: 48,
+            height: 48,
+            borderRadius: '50%',
+            marginRight: 16,
+            objectFit: 'cover'
+          }}
         />
         <div>
-          <h4 className="font-bold text-dark text-lg m-0">{name}</h4>
+          <h4 style={{ fontWeight: 'bold', color: '#2c3e50', margin: 0 }}>{name}</h4>
         </div>
       </div>
-      <p className="text-text-lighter text-sm leading-relaxed m-0 flex-grow">{text}</p>
+      <p style={{ color: '#666', fontSize: '1rem', margin: 0, minHeight: '200px' }}>{text}</p>
     </div>
   </div>
 );
