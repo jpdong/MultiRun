@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import styles from './CookieConsent.module.css';
 
 declare global {
   interface Window {
@@ -22,7 +23,7 @@ export default function CookieConsent() {
   const acceptCookies = () => {
     localStorage.setItem('cookieConsent', 'accepted');
     setShowBanner(false);
-    
+
     // 更新Google Analytics同意状态
     if (window.gtag) {
       window.gtag('consent', 'update', {
@@ -37,7 +38,7 @@ export default function CookieConsent() {
   const rejectCookies = () => {
     localStorage.setItem('cookieConsent', 'rejected');
     setShowBanner(false);
-    
+
     // 更新Google Analytics同意状态（只允许基本分析）
     if (window.gtag) {
       window.gtag('consent', 'update', {
@@ -52,55 +53,38 @@ export default function CookieConsent() {
   if (!showBanner) return null;
 
   return (
-    <div className="cookie-consent" role="region" aria-label="Cookie preferences" style={{
-      position: 'fixed',
-      bottom: 0,
-      left: 0,
-      right: 0,
-      background: '#fff',
-      padding: '20px',
-      boxShadow: '0 -2px 8px rgba(0,0,0,0.1)',
-      zIndex: 9999,
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      flexWrap: 'wrap',
-      gap: '1rem'
-    }}>
-      <span style={{ maxWidth: '70%' }}>
-        This website uses cookies for analytics and ad personalization. Please agree to our collection of your data to improve your experience.
-      </span>
-      <div>
+    <div role="region" aria-label="Cookie preferences" className={styles.banner}>
+      <div className={styles.content}>
+        <span className={styles.icon} role="img" aria-label="cookie">🍪</span>
+        <div className={styles.message}>
+          <span className={styles.text}>
+            This website uses cookies.
+          </span>
+          <a
+            href="/privacy-policy"
+            className={styles.learnMore}
+          >
+            Learn more
+          </a>
+        </div>
+      </div>
+      <div className={styles.actions}>
         <button
+          type="button"
           onClick={acceptCookies}
-          style={{
-            marginRight: '10px',
-            backgroundColor: '#165DFF',
-            color: 'white',
-            border: 'none',
-            padding: '10px 20px',
-            borderRadius: '8px',
-            cursor: 'pointer',
-            boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-            transition: 'all 0.3s ease'
-          }}
+          className={styles.accept}
         >
-          Accept All
+          Accept
         </button>
         <button
+          type="button"
           onClick={rejectCookies}
-          style={{
-            backgroundColor: '#f5f5f5',
-            color: '#333',
-            border: 'none',
-            padding: '10px 20px',
-            borderRadius: '8px',
-            cursor: 'pointer',
-            boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-            transition: 'all 0.3s ease'
-          }}
+          className={styles.close}
+          aria-label="Close cookie consent banner"
         >
-          Necessary Only
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M18 6L6 18M6 6l12 12"/>
+          </svg>
         </button>
       </div>
     </div>
