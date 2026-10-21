@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import styles from './CookieConsent.module.css';
 
 declare global {
   interface Window {
@@ -52,31 +53,33 @@ export default function CookieConsent() {
   if (!showBanner) return null;
 
   return (
-    <div role="region" aria-label="Cookie preferences" className="fixed bottom-6 left-1/2 -translate-x-1/2 sm:left-6 sm:translate-x-0 z-[9999] w-[calc(100%-2rem)] sm:w-auto max-w-md bg-white rounded-2xl shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1),0_8px_10px_-6px_rgba(0,0,0,0.1)] border border-gray-100 py-3 px-4 flex items-center justify-between gap-4 animate-[fadeInUp_0.3s_ease-out]">
-      <div className="flex items-center gap-3">
-        <span className="text-2xl select-none" role="img" aria-label="cookie">🍪</span>
-        <div className="flex flex-col gap-0.5">
-          <span className="font-semibold text-gray-900 text-sm leading-snug">
+    <div role="region" aria-label="Cookie preferences" className={styles.banner}>
+      <div className={styles.content}>
+        <span className={styles.icon} role="img" aria-label="cookie">🍪</span>
+        <div className={styles.message}>
+          <span className={styles.text}>
             This website uses cookies.
           </span>
           <a
             href="/privacy-policy"
-            className="text-xs text-gray-600 underline underline-offset-2 hover:text-gray-900 transition-colors font-medium w-fit"
+            className={styles.learnMore}
           >
             Learn more
           </a>
         </div>
       </div>
-      <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+      <div className={styles.actions}>
         <button
+          type="button"
           onClick={acceptCookies}
-          className="bg-primary hover:bg-primary-hover text-white font-medium text-sm px-5 py-2 rounded-full shadow-sm hover:shadow-md hover:shadow-primary/20 active:scale-95 transition-all duration-200 cursor-pointer"
+          className={styles.accept}
         >
           Accept
         </button>
         <button
+          type="button"
           onClick={rejectCookies}
-          className="text-gray-400 hover:text-gray-600 hover:bg-gray-100 p-1.5 rounded-full transition-all duration-200 cursor-pointer"
+          className={styles.close}
           aria-label="Close cookie consent banner"
         >
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
