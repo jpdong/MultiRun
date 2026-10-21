@@ -5,9 +5,10 @@ The application uses the App Router through vinext, Vite and the native Cloudfla
 ## Commands
 
 - `pnpm install --frozen-lockfile`
-- `pnpm dev` — build Markdown data, then start the Workers development server on port 3000.
+- `pnpm dev` — check article fingerprints, regenerate JSON only when content has changed, then start the Workers development server on port 3001.
 - `pnpm typecheck` — check TypeScript after the initial development/build command has generated Cloudflare types.
-- `pnpm build` — regenerate Markdown data, then build and prerender the app.
+- `pnpm build:blog` — regenerate all blog data; use this after editing articles during an active development session.
+- `pnpm build` — always regenerate Markdown data, then build and prerender the app.
 - `pnpm start` — preview the production output locally on port 3000.
 - `pnpm deploy` — regenerate blog data, build, and deploy using `vinext-cloudflare deploy`.
 
@@ -16,6 +17,12 @@ For deployment, authenticate with `pnpm exec cf auth login`, or provide `CLOUDFL
 ## Validation
 
 After `pnpm build`, run `pnpm start --port 4174` in one terminal and `pnpm verify:production http://localhost:4174` in another. The verification script checks every page, HTML/RSC snapshot counts, metadata, immutable build assets, RSC responses, private-cache isolation and 404s. `pnpm lint` currently passes with warnings inherited from the project’s Next.js lint rules.
+
+## Blog generation
+
+Development startup fingerprints article filenames and contents, the generator script and the lockfile. Additions, edits, deletions and parser changes invalidate the fingerprint. If nothing changed, the JSON and its timestamp remain untouched. There is no background watcher; use `pnpm build:blog` or restart development after editing an article.
+
+Production build and deployment always regenerate the data. Missing required fields, invalid metadata, unreadable source files and Markdown processing failures stop the command with a nonzero exit code. All articles must succeed before the JSON is replaced atomically, so failures do not publish a partial article list. Deleting the last article generates an empty list instead of retaining old posts. Runtime code still imports the finished JSON and does not parse Markdown.
 
 ## Cache behavior
 

@@ -1,14 +1,9 @@
+import LegalDocument from '../components/site/LegalDocument';
 import React from 'react';
-import Container from '../components/layout/Container';
-import Footer from '../components/elements/Footer';
-import NavBar from '../components/elements/NavBar';
 
 const PrivacyPolicyPage: React.FC = () => {
   return (
-    <div>
-      <NavBar />
-      <Container>
-        <div className="page-content">
+    <LegalDocument>
           <h1>Privacy Policy</h1>
           <p>
             Last updated: July 3, 2025
@@ -45,7 +40,7 @@ const PrivacyPolicyPage: React.FC = () => {
           </p>
 
           <h2>Use of Data</h2>
-          <p>
+          <div>
             MultiRun uses the collected data for various purposes:
             <ul>
               <li>To provide and maintain the Service</li>
@@ -56,7 +51,7 @@ const PrivacyPolicyPage: React.FC = () => {
               <li>To monitor the usage of the Service</li>
               <li>To detect, prevent and address technical issues</li>
             </ul>
-          </p>
+          </div>
 
           <h2>Security of Data</h2>
           <p>
@@ -75,10 +70,7 @@ const PrivacyPolicyPage: React.FC = () => {
           <p>
             dongshan1025@gmail.com
           </p>
-        </div>
-      </Container>
-      <Footer />
-    </div>
+    </LegalDocument>
   );
 };
 

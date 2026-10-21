@@ -18,7 +18,7 @@ export const Pagination: React.FC<PaginationProps> = ({
 }) => {
   const createPageUrl = (page: number) => {
     if (page > 1) {
-      return `${baseUrl}?page=${page}`;
+      return `${baseUrl}${baseUrl.includes('?') ? '&' : '?'}page=${page}`;
     }
     return baseUrl;
   };

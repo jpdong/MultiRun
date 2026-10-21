@@ -1,7 +1,7 @@
+import SiteShell from '../../../src/components/site/SiteShell';
+import ProductVisual from '../../../src/components/site/ProductVisual';
 import React from 'react';
 import Link from 'next/link';
-import NavBar from '../../../src/components/elements/NavBar';
-import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
 import styles from '../../../src/components/app-pages/AppPage.module.css';
 import { Metadata } from 'next';
@@ -16,20 +16,17 @@ export const metadata: Metadata = {
 
 const RobloxPage: React.FC = () => {
   return (
-    <div className={styles.appPage}>
-      <NavBar />
+    <SiteShell variant="detail-page-shell"><div className={styles.appPage}>
       
       {/* Hero Section */}
-      <section className={styles.heroSection} style={{
-        background: 'linear-gradient(135deg, #00a2ff 0%, #0078d4 100%)'
-      }}>
+      <section className={styles.heroSection} >
         <Container>
           <div className={styles.heroContent}>
             <Link href="/hot-games" className={styles.backLink}>
               ← Back to Games
             </Link>
             
-            <div className={styles.appIcon}>🧱</div>
+            
             
             <h1 className={styles.appTitle}>Roblox</h1>
             <p className={styles.appSubtitle}>
@@ -42,7 +39,8 @@ const RobloxPage: React.FC = () => {
               <span className={styles.badge}>Creator Platform</span>
             </div>
           </div>
-        </Container>
+        <ProductVisual app="roblox" />
+</Container>
       </section>
 
       {/* Content Section */}
@@ -50,7 +48,7 @@ const RobloxPage: React.FC = () => {
         <Container>
           <div className={styles.sectionGrid}>
             {/* Why Multiple Roblox Accounts */}
-            <div className={styles.contentBlock}>
+            <div className={styles.contentBlock} data-motion>
               <h2 className={styles.blockTitle}>Why Multiple Roblox Accounts?</h2>
               <p className={styles.blockDescription}>
                 Roblox is the ultimate metaverse platform where imagination meets creation. 
@@ -59,25 +57,25 @@ const RobloxPage: React.FC = () => {
               
               <ul className={styles.featureList}>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Diverse gaming experiences across genres
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Separate creator and player identities
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Build different social circles and communities
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Maximize achievements and trading opportunities
                   </span>
@@ -86,7 +84,7 @@ const RobloxPage: React.FC = () => {
             </div>
 
             {/* Multi Run Benefits */}
-            <div className={styles.contentBlock}>
+            <div className={styles.contentBlock} data-motion>
               <h2 className={styles.blockTitle}>Multi Run Advantages</h2>
               <p className={styles.blockDescription}>
                 Experience seamless Roblox gaming with Multi Run's powerful features 
@@ -95,25 +93,25 @@ const RobloxPage: React.FC = () => {
               
               <ul className={styles.featureList}>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>🌍</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Access different Roblox experiences simultaneously
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>🎨</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Separate accounts for development and gameplay
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>👥</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Join different communities without mixing identities
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>💰</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Optimize trading and marketplace activities
                   </span>
@@ -124,8 +122,8 @@ const RobloxPage: React.FC = () => {
 
           {/* Use Cases */}
           <div className={styles.useCasesGrid}>
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>🎮</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Game Developer</h3>
               <p className={styles.useCaseDescription}>
                 Focus on creating and publishing your own Roblox games 
@@ -133,8 +131,8 @@ const RobloxPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>👥</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Social Gamer</h3>
               <p className={styles.useCaseDescription}>
                 Connect with friends and explore popular games together 
@@ -142,8 +140,8 @@ const RobloxPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>🏆</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Competitive Player</h3>
               <p className={styles.useCaseDescription}>
                 Master competitive games and climb leaderboards 
@@ -151,8 +149,8 @@ const RobloxPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>🐾</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Pet Collector</h3>
               <p className={styles.useCaseDescription}>
                 Maximize pet collection and trading in games like 
@@ -160,8 +158,8 @@ const RobloxPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>🎭</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Role Player</h3>
               <p className={styles.useCaseDescription}>
                 Build different character roles and storylines 
@@ -169,8 +167,8 @@ const RobloxPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>⚔️</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Combat Specialist</h3>
               <p className={styles.useCaseDescription}>
                 Master different fighting styles and strategies 
@@ -182,9 +180,7 @@ const RobloxPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className={styles.ctaSection} style={{
-        background: 'linear-gradient(135deg, #00a2ff 0%, #0078d4 100%)'
-      }}>
+      <section className={styles.ctaSection} >
         <Container>
           <div className={styles.ctaCard}>
             <h2 className={styles.ctaTitle}>Ready to Explore Infinite Worlds?</h2>
@@ -211,9 +207,7 @@ const RobloxPage: React.FC = () => {
           </div>
         </Container>
       </section>
-
-      <Footer />
-    </div>
+    </div></SiteShell>
   );
 };
 

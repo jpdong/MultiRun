@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import { BlogPost } from '@/src/lib/types';
 import BlogCard from './BlogCard';
 import Pagination from './Pagination';
@@ -67,15 +67,17 @@ function getPaginatedPosts(
 }
 
 export const BlogList: React.FC<BlogListProps> = ({ posts, searchParams }) => {
-  const { page = 1 } = searchParams;
-
-  // No filtering - show all posts
-
-  // Pagination
+  const queryParams = useSearchParams();
+  const tag = queryParams.get('tag') || searchParams.tag;
+  const query = queryParams.get('query') || searchParams.query;
+  const requestedPage = Number(queryParams.get('page') || searchParams.page || 1);
+  const filteredPosts = filterPosts(posts, { tag, query });
   const postsPerPage = 9;
-  const paginatedResult = getPaginatedPosts(posts, page, postsPerPage);
+  const totalPages = Math.max(1, Math.ceil(filteredPosts.length / postsPerPage));
+  const page = Number.isFinite(requestedPage) ? Math.min(totalPages, Math.max(1, Math.floor(requestedPage))) : 1;
+  const paginatedResult = getPaginatedPosts(filteredPosts, page, postsPerPage);
 
-  if (posts.length === 0) {
+  if (filteredPosts.length === 0) {
     return (
       <div className="blog-empty">
         <div className="blog-empty-content">
@@ -103,7 +105,7 @@ export const BlogList: React.FC<BlogListProps> = ({ posts, searchParams }) => {
           totalPages={paginatedResult.totalPages}
           hasNextPage={paginatedResult.hasNextPage}
           hasPrevPage={paginatedResult.hasPrevPage}
-          baseUrl="/blog"
+          baseUrl={tag || query ? `/blog?${new URLSearchParams({ ...(tag ? { tag } : {}), ...(query ? { query } : {}) }).toString()}` : "/blog"}
         />
       )}
     </div>

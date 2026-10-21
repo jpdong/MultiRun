@@ -1,7 +1,7 @@
+import SiteShell from '../../../src/components/site/SiteShell';
+import ProductVisual from '../../../src/components/site/ProductVisual';
 import React from 'react';
 import Link from 'next/link';
-import NavBar from '../../../src/components/elements/NavBar';
-import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
 import styles from '../../../src/components/app-pages/AppPage.module.css';
 import { Metadata } from 'next';
@@ -16,8 +16,7 @@ export const metadata: Metadata = {
 
 const BlueskyPage: React.FC = () => {
   return (
-    <div className={styles.appPage}>
-      <NavBar />
+    <SiteShell variant="detail-page-shell"><div className={styles.appPage}>
 
       {/* Hero Section */}
       <section className={styles.heroSection}>
@@ -27,7 +26,7 @@ const BlueskyPage: React.FC = () => {
               ← Back to Apps
             </Link>
 
-            <div className={styles.appIcon}>🦋</div>
+            
 
             <h1 className={styles.appTitle}>BlueSky</h1>
             <p className={styles.appSubtitle}>
@@ -40,7 +39,8 @@ const BlueskyPage: React.FC = () => {
               <span className={styles.badge}>Growing Fast</span>
             </div>
           </div>
-        </Container>
+        <ProductVisual app="bluesky" />
+</Container>
       </section>
 
       {/* Content Section */}
@@ -48,7 +48,7 @@ const BlueskyPage: React.FC = () => {
         <Container>
           <div className={styles.sectionGrid}>
             {/* Why Clone BlueSky */}
-            <div className={styles.contentBlock}>
+            <div className={styles.contentBlock} data-motion>
               <h2 className={styles.blockTitle}>Why Multiple BlueSky Accounts?</h2>
               <p className={styles.blockDescription}>
                 BlueSky represents the future of social media with its decentralized approach.
@@ -57,25 +57,25 @@ const BlueskyPage: React.FC = () => {
 
               <ul className={styles.featureList}>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Separate personal and professional presence
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Engage with different communities and interests
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Test content strategies across niches
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Build multiple brand identities
                   </span>
@@ -84,7 +84,7 @@ const BlueskyPage: React.FC = () => {
             </div>
 
             {/* Key Features */}
-            <div className={styles.contentBlock}>
+            <div className={styles.contentBlock} data-motion>
               <h2 className={styles.blockTitle}>Platform Advantages</h2>
               <p className={styles.blockDescription}>
                 Experience the next generation of social networking with BlueSky's innovative features
@@ -93,25 +93,25 @@ const BlueskyPage: React.FC = () => {
 
               <ul className={styles.featureList}>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>🌐</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Built on AT Protocol for true decentralization
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>📝</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Custom feeds tailored to your interests
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>🔍</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Advanced discovery and connection tools
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>🔒</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Enhanced privacy and user control
                   </span>
@@ -122,8 +122,8 @@ const BlueskyPage: React.FC = () => {
 
           {/* Use Cases */}
           <div className={styles.useCasesGrid}>
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>👤</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Personal & Professional</h3>
               <p className={styles.useCaseDescription}>
                 Maintain distinct identities for personal connections and professional networking
@@ -131,8 +131,8 @@ const BlueskyPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>🎨</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Content Creation</h3>
               <p className={styles.useCaseDescription}>
                 Manage specialized accounts for different content themes, audiences,
@@ -140,8 +140,8 @@ const BlueskyPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>🏢</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Brand Presence</h3>
               <p className={styles.useCaseDescription}>
                 Establish early brand presence on BlueSky while maintaining personal accounts
@@ -149,8 +149,8 @@ const BlueskyPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>🌍</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Community Building</h3>
               <p className={styles.useCaseDescription}>
                 Create and manage communities around different topics, interests,
@@ -158,8 +158,8 @@ const BlueskyPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>📊</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Strategy Testing</h3>
               <p className={styles.useCaseDescription}>
                 Experiment with different posting strategies, content types,
@@ -167,8 +167,8 @@ const BlueskyPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>🔄</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Cross-Platform Management</h3>
               <p className={styles.useCaseDescription}>
                 Coordinate content across multiple BlueSky accounts and other
@@ -206,9 +206,7 @@ const BlueskyPage: React.FC = () => {
           </div>
         </Container>
       </section>
-
-      <Footer />
-    </div>
+    </div></SiteShell>
   );
 };
 

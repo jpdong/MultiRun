@@ -1,7 +1,7 @@
+import SiteShell from '../../../src/components/site/SiteShell';
+import ProductVisual from '../../../src/components/site/ProductVisual';
 import React from 'react';
 import Link from 'next/link';
-import NavBar from '../../../src/components/elements/NavBar';
-import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
 import styles from '../../../src/components/app-pages/AppPage.module.css';
 import { Metadata } from 'next';
@@ -16,20 +16,17 @@ export const metadata: Metadata = {
 
 const InstagramPage: React.FC = () => {
   return (
-    <div className={styles.appPage}>
-      <NavBar />
+    <SiteShell variant="detail-page-shell"><div className={styles.appPage}>
       
       {/* Hero Section */}
-      <section className={styles.heroSection} style={{
-        background: 'linear-gradient(135deg, #e91e63 0%, #ad1457 100%)'
-      }}>
+      <section className={styles.heroSection} >
         <Container>
           <div className={styles.heroContent}>
             <Link href="/hot-apps" className={styles.backLink}>
               ← Back to Apps
             </Link>
             
-            <div className={styles.appIcon}>📸</div>
+            
             
             <h1 className={styles.appTitle}>Instagram</h1>
             <p className={styles.appSubtitle}>
@@ -42,7 +39,8 @@ const InstagramPage: React.FC = () => {
               <span className={styles.badge}>Creator Friendly</span>
             </div>
           </div>
-        </Container>
+        <ProductVisual app="instagram" />
+</Container>
       </section>
 
       {/* Content Section */}
@@ -50,7 +48,7 @@ const InstagramPage: React.FC = () => {
         <Container>
           <div className={styles.sectionGrid}>
             {/* Why Multiple Instagram Accounts */}
-            <div className={styles.contentBlock}>
+            <div className={styles.contentBlock} data-motion>
               <h2 className={styles.blockTitle}>Why Multiple Instagram Accounts?</h2>
               <p className={styles.blockDescription}>
                 Instagram is the leading platform for visual storytelling and brand building. 
@@ -59,25 +57,25 @@ const InstagramPage: React.FC = () => {
               
               <ul className={styles.featureList}>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Personal and business content separation
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Different niche audiences and themes
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Brand management across multiple businesses
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Content testing and A/B strategies
                   </span>
@@ -86,7 +84,7 @@ const InstagramPage: React.FC = () => {
             </div>
 
             {/* Key Features */}
-            <div className={styles.contentBlock}>
+            <div className={styles.contentBlock} data-motion>
               <h2 className={styles.blockTitle}>Instagram Features</h2>
               <p className={styles.blockDescription}>
                 Leverage Instagram's powerful features across multiple accounts to maximize 
@@ -95,25 +93,25 @@ const InstagramPage: React.FC = () => {
               
               <ul className={styles.featureList}>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>📱</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Stories & Reels for engaging content
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>💼</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Business tools and analytics insights
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>🛍️</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Shopping features and product tagging
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>🎨</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Creator studio and content scheduling
                   </span>
@@ -124,8 +122,8 @@ const InstagramPage: React.FC = () => {
 
           {/* Use Cases */}
           <div className={styles.useCasesGrid}>
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>🎬</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Content Creators</h3>
               <p className={styles.useCaseDescription}>
                 Separate personal life from content creation with dedicated accounts 
@@ -133,8 +131,8 @@ const InstagramPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>🏪</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Small Businesses</h3>
               <p className={styles.useCaseDescription}>
                 Manage multiple business accounts for different products, 
@@ -142,8 +140,8 @@ const InstagramPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>⭐</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Influencers</h3>
               <p className={styles.useCaseDescription}>
                 Test different content strategies and maintain multiple 
@@ -151,8 +149,8 @@ const InstagramPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>🎨</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Artists & Designers</h3>
               <p className={styles.useCaseDescription}>
                 Showcase different art styles, projects, or creative 
@@ -160,8 +158,8 @@ const InstagramPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>📈</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Marketing Agencies</h3>
               <p className={styles.useCaseDescription}>
                 Manage client accounts and test different marketing 
@@ -169,8 +167,8 @@ const InstagramPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>🌟</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Personal Branding</h3>
               <p className={styles.useCaseDescription}>
                 Build different aspects of your personal brand with 
@@ -182,9 +180,7 @@ const InstagramPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className={styles.ctaSection} style={{
-        background: 'linear-gradient(135deg, #e91e63 0%, #ad1457 100%)'
-      }}>
+      <section className={styles.ctaSection} >
         <Container>
           <div className={styles.ctaCard}>
             <h2 className={styles.ctaTitle}>Ready to Amplify Your Instagram?</h2>
@@ -211,9 +207,7 @@ const InstagramPage: React.FC = () => {
           </div>
         </Container>
       </section>
-
-      <Footer />
-    </div>
+    </div></SiteShell>
   );
 };
 

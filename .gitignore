@@ -44,3 +44,6 @@ Thumbs.db
 
 .playwright-mcp/
 .taste-skill/*.png
+
+# Temporary files used for atomic blog data updates
+src/data/blog-data.json.*.tmp

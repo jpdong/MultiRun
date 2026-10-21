@@ -1,7 +1,8 @@
+import AppCatalog from '../../src/components/site/AppCatalog';
+import SiteShell from '../../src/components/site/SiteShell';
+import ProductVisual from '../../src/components/site/ProductVisual';
 import React from 'react';
 import Link from 'next/link';
-import NavBar from '../../src/components/elements/NavBar';
-import Footer from '../../src/components/elements/Footer';
 import Container from '../../src/components/layout/Container';
 import styles from '../../src/components/app-listing/AppListing.module.css';
 import { Metadata } from 'next';
@@ -72,8 +73,7 @@ const categories = ['All', 'Social Media', 'Entertainment', 'Communication'];
 
 const HotAppsPage: React.FC = () => {
   return (
-    <div className={styles.appListingPage}>
-      <NavBar />
+    <SiteShell variant="directory-shell"><div className={styles.appListingPage}>
       
       {/* Hero Section */}
       <section className={styles.heroSection}>
@@ -100,7 +100,8 @@ const HotAppsPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </Container>
+        <ProductVisual  />
+</Container>
       </section>
 
       {/* Content Section */}
@@ -113,46 +114,7 @@ const HotAppsPage: React.FC = () => {
             </p>
           </div>
 
-          {/* Category Filter */}
-          <div className={styles.categoryFilter}>
-            {categories.map((category) => (
-              <button
-                key={category}
-                className={`${styles.filterButton} ${category === 'All' ? styles.active : ''}`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-
-          {/* Apps Grid */}
-          <div className={styles.appsGrid}>
-            {hotApps.map((app) => (
-              <Link
-                key={app.id}
-                href={`/hot-apps/${app.id}`}
-                className={`${styles.appCard} ${app.featured ? styles.featured : ''}`}
-                aria-label={`Learn more about ${app.name}`}
-              >
-                <div className={styles.appCardHeader}>
-                  <div className={styles.appIcon}>{app.icon}</div>
-                  <div className={styles.appInfo}>
-                    <h3 className={styles.appName}>{app.name}</h3>
-                    <span className={styles.appCategory}>{app.category}</span>
-                  </div>
-                </div>
-                
-                <p className={styles.appDescription}>{app.description}</p>
-                
-                <div className={styles.appFooter}>
-                  <div className={styles.appStats}>
-                    <span className={styles.downloadCount}>{app.downloads}</span>
-                  </div>
-                  <span className={styles.learnMore}>Learn More</span>
-                </div>
-              </Link>
-            ))}
-          </div>
+          <AppCatalog items={hotApps} categories={categories} kind="apps" />
 
           {/* CTA Section */}
           <div className={styles.ctaSection}>
@@ -181,9 +143,7 @@ const HotAppsPage: React.FC = () => {
           </div>
         </Container>
       </section>
-
-      <Footer />
-    </div>
+    </div></SiteShell>
   );
 };
 

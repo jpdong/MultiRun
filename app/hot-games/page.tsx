@@ -1,7 +1,8 @@
+import AppCatalog from '../../src/components/site/AppCatalog';
+import SiteShell from '../../src/components/site/SiteShell';
+import ProductVisual from '../../src/components/site/ProductVisual';
 import React from 'react';
 import Link from 'next/link';
-import NavBar from '../../src/components/elements/NavBar';
-import Footer from '../../src/components/elements/Footer';
 import Container from '../../src/components/layout/Container';
 import styles from '../../src/components/app-listing/AppListing.module.css';
 import { Metadata } from 'next';
@@ -51,13 +52,10 @@ const gameCategories = ['All', 'Metaverse', 'Simulation', 'Strategy', 'Battle Ro
 
 const HotGamesPage: React.FC = () => {
   return (
-    <div className={styles.appListingPage}>
-      <NavBar />
+    <SiteShell variant="directory-shell"><div className={styles.appListingPage}>
 
       {/* Hero Section */}
-      <section className={styles.heroSection} style={{
-        background: 'linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%)'
-      }}>
+      <section className={styles.heroSection} >
         <Container>
           <div className={styles.heroContent}>
             <h1 className={styles.heroTitle}>Popular Games</h1>
@@ -81,7 +79,8 @@ const HotGamesPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </Container>
+        <ProductVisual app="roblox" image="/multi_run_3.webp" />
+</Container>
       </section>
 
       {/* Content Section */}
@@ -94,189 +93,45 @@ const HotGamesPage: React.FC = () => {
             </p>
           </div>
 
-          {/* Category Filter */}
-          <div className={styles.categoryFilter}>
-            {gameCategories.map((category) => (
-              <button
-                key={category}
-                className={`${styles.filterButton} ${category === 'All' ? styles.active : ''}`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-
-          {/* Games Grid */}
-          <div className={styles.appsGrid}>
-            {hotGames.map((game) => (
-              <Link
-                key={game.id}
-                href={`/hot-games/${game.id}`}
-                className={`${styles.appCard} ${game.featured ? styles.featured : ''}`}
-                aria-label={`Learn more about ${game.name}`}
-              >
-                <div className={styles.appCardHeader}>
-                  <div className={styles.appIcon}>{game.icon}</div>
-                  <div className={styles.appInfo}>
-                    <h3 className={styles.appName}>{game.name}</h3>
-                    <span className={styles.appCategory}>{game.category}</span>
-                  </div>
-                </div>
-
-                <p className={styles.appDescription}>{game.description}</p>
-
-                <div className={styles.appFooter}>
-                  <div className={styles.appStats}>
-                    <span className={styles.downloadCount}>{game.downloads}</span>
-                    <span style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '6px',
-                      fontSize: '0.875rem',
-                      color: '#64748b',
-                      fontWeight: '500'
-                    }}>
-                      ⭐ {game.rating}
-                    </span>
-                  </div>
-                  <span className={styles.learnMore}>Learn More</span>
-                </div>
-              </Link>
-            ))}
-          </div>
+          <AppCatalog items={hotGames} categories={gameCategories} kind="games" />
 
           {/* Gaming Benefits Section */}
-          <div style={{
-            background: 'linear-gradient(135deg, #f8fafc 0%, #ffffff 100%)',
-            borderRadius: '24px',
-            padding: '60px 40px',
-            margin: '80px 0',
-            border: '1px solid #f1f5f9',
-            textAlign: 'center'
-          }}>
-            <h3 style={{
-              fontSize: 'clamp(1.75rem, 3vw, 2.25rem)',
-              fontWeight: '700',
-              color: '#0f172a',
-              margin: '0 0 20px 0',
-              letterSpacing: '-0.01em'
-            }}>
+          <div className="gaming-benefits">
+            <h3 >
               Why Multiple Gaming Accounts?
             </h3>
-            <p style={{
-              fontSize: '1.125rem',
-              color: '#64748b',
-              margin: '0 0 40px 0',
-              maxWidth: '600px',
-              marginLeft: 'auto',
-              marginRight: 'auto',
-              lineHeight: '1.6'
-            }}>
+            <p >
               Unlock new gaming possibilities with separate accounts for different strategies,
               play styles, and gaming communities.
             </p>
 
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-              gap: '32px',
-              marginTop: '40px'
-            }}>
-              <div style={{ textAlign: 'center' }}>
-                <div style={{
-                  width: '64px',
-                  height: '64px',
-                  background: 'linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%)',
-                  borderRadius: '16px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '28px',
-                  margin: '0 auto 16px',
-                  color: 'white'
-                }}>
-                  🎯
-                </div>
-                <h4 style={{
-                  fontSize: '1.125rem',
-                  fontWeight: '600',
-                  color: '#0f172a',
-                  margin: '0 0 8px 0'
-                }}>
+            <div >
+              <div >
+                
+                <h4 >
                   Strategy Testing
                 </h4>
-                <p style={{
-                  fontSize: '0.9375rem',
-                  color: '#64748b',
-                  margin: '0',
-                  lineHeight: '1.5'
-                }}>
+                <p >
                   Test different strategies without affecting your main progress
                 </p>
               </div>
 
-              <div style={{ textAlign: 'center' }}>
-                <div style={{
-                  width: '64px',
-                  height: '64px',
-                  background: 'linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%)',
-                  borderRadius: '16px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '28px',
-                  margin: '0 auto 16px',
-                  color: 'white'
-                }}>
-                  👥
-                </div>
-                <h4 style={{
-                  fontSize: '1.125rem',
-                  fontWeight: '600',
-                  color: '#0f172a',
-                  margin: '0 0 8px 0'
-                }}>
+              <div >
+                
+                <h4 >
                   Community Separation
                 </h4>
-                <p style={{
-                  fontSize: '0.9375rem',
-                  color: '#64748b',
-                  margin: '0',
-                  lineHeight: '1.5'
-                }}>
+                <p >
                   Join different gaming communities with separate identities
                 </p>
               </div>
 
-              <div style={{ textAlign: 'center' }}>
-                <div style={{
-                  width: '64px',
-                  height: '64px',
-                  background: 'linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%)',
-                  borderRadius: '16px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '28px',
-                  margin: '0 auto 16px',
-                  color: 'white'
-                }}>
-                  🏆
-                </div>
-                <h4 style={{
-                  fontSize: '1.125rem',
-                  fontWeight: '600',
-                  color: '#0f172a',
-                  margin: '0 0 8px 0'
-                }}>
+              <div >
+                
+                <h4 >
                   Competitive Edge
                 </h4>
-                <p style={{
-                  fontSize: '0.9375rem',
-                  color: '#64748b',
-                  margin: '0',
-                  lineHeight: '1.5'
-                }}>
+                <p >
                   Maintain multiple ranks and achievements simultaneously
                 </p>
               </div>
@@ -284,9 +139,7 @@ const HotGamesPage: React.FC = () => {
           </div>
 
           {/* CTA Section */}
-          <div className={styles.ctaSection} style={{
-            background: 'linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%)'
-          }}>
+          <div className={styles.ctaSection} >
             <div className={styles.ctaContent}>
               <h2 className={styles.ctaTitle}>Level Up Your Gaming</h2>
               <p className={styles.ctaDescription}>
@@ -313,9 +166,7 @@ const HotGamesPage: React.FC = () => {
           </div>
         </Container>
       </section>
-
-      <Footer />
-    </div>
+    </div></SiteShell>
   );
 };
 

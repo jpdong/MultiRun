@@ -1,8 +1,7 @@
+import SiteShell from '@/src/components/site/SiteShell';
 import { getBlogPostBySlug, getRelatedBlogPosts, getAllBlogPosts } from '@/src/lib/blog';
 import BlogPost from '@/src/components/blog/BlogPost';
 import RelatedPosts from '@/src/components/blog/RelatedPosts';
-import NavBar from '@/src/components/elements/NavBar';
-import Footer from '@/src/components/elements/Footer';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 
@@ -55,9 +54,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const relatedPosts = getRelatedBlogPosts(post, 3);
 
   return (
-    <>
-      <NavBar />
-      <main className="blog-post-page">
+    <SiteShell variant="blog-shell">
+      <div className="blog-post-page">
         <article className="blog-article">
           <div className="container">
             <BlogPost post={post} />
@@ -71,8 +69,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             </div>
           </section>
         )}
-      </main>
-      <Footer />
-    </>
+      </div>
+    </SiteShell>
   );
 }

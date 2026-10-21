@@ -1,0 +1,226 @@
+/* Shared interior pages inherit the approved homepage palette, type and navigation. */
+.subpage-main { min-height: 60vh; }
+.subpage .site-container, .subpage .container {
+  width: min(1280px, calc(100% - 112px));
+  max-width: none !important;
+  margin-inline: auto;
+  padding-inline: 0 !important;
+}
+.subpage :is(h1, h2, h3, h4) { text-wrap: pretty; }
+.subpage h1 { line-height: 1.02; }
+.subpage a, .subpage button { -webkit-tap-highlight-color: transparent; }
+.subpage :is(button, summary):focus-visible { outline-offset: 5px; }
+.subpage .app-mark { display: inline-flex; align-items: center; justify-content: center; }
+.subpage .app-mark > svg { width: 1em; height: 1em; }
+.subpage .app-mark img { width: 1em; height: 1em; object-fit: contain; }
+.subpage .interior-product { position: relative; width: min(100%, 490px); height: 380px; justify-self: center; }
+.subpage .interior-product-layer { position: absolute; width: 80%; height: 88%; left: 8%; top: 7%; border-radius: var(--home-radius); transform-origin: center 75%; }
+.subpage .layer-yellow { background: var(--home-yellow); transform: rotate(10deg) translate(25px, -2px); }
+.subpage .layer-cyan { background: var(--home-cyan); transform: rotate(-7deg) translate(-5px, 5px); }
+.subpage .interior-product-screen { position: absolute; inset: 12% 14% 1% 12%; overflow: hidden; border-radius: 18px; background: var(--home-white); transform: rotate(-3deg); }
+.subpage .interior-product-screen img { display: block; width: 100%; height: auto; transform: translateY(-27%); }
+.subpage .interior-product-mark { position: absolute; right: 0; bottom: 4%; padding: 23px; background: var(--home-dark); color: var(--home-cyan); border-radius: 22px; transform: rotate(8deg); font-size: 62px; line-height: 1; }
+.subpage .interior-product-mark .app-mark { display: flex; }
+.subpage .gaming-benefits { background: var(--home-dark); color: var(--home-white); border-radius: var(--home-radius); padding: 50px; margin-top: 65px; }
+.subpage .gaming-benefits > h3 { font-size: 40px; max-width: 600px; margin-bottom: 20px; }
+.subpage .gaming-benefits > p { max-width: 650px; color: #c1d3da; margin-bottom: 35px; }
+.subpage .gaming-benefits > div { display: grid; grid-template-columns: repeat(3, 1fr); gap: 35px; }
+.subpage .gaming-benefits h4 { font-family: 'League Spartan', sans-serif; font-size: 27px; line-height: 1.2; letter-spacing: -.03em; margin-bottom: 15px; }
+.subpage .gaming-benefits p { color: #c1d3da; }
+.subpage .catalog-empty { padding: 40px; background: var(--home-white); border-radius: 18px; }
+
+/* Magazine-like blog archive: one lead story, then a quiet two-column archive. */
+.subpage .blog-page, .subpage .blog-post-page { background: var(--home-bg); min-height: auto; }
+.subpage .blog-page::before { content: none; }
+.subpage .blog-hero { padding: 70px 0 85px; }
+.subpage .blog-hero > .container { display: grid; grid-template-columns: 1.1fr 1fr; gap: 75px; align-items: center; }
+.subpage .blog-hero-content { max-width: none; text-align: left; margin: 0; }
+.subpage .blog-hero-title { font-size: clamp(64px, 7.5vw, 108px); color: var(--home-ink); line-height: 1; margin-bottom: 28px; }
+.subpage .blog-hero-description { margin: 0; max-width: 540px; font-size: 20px; color: var(--home-muted); }
+.subpage .blog-content { min-height: auto; background: var(--home-surface); border-radius: 0; margin: 0; padding: 65px 0 85px; }
+.subpage .blog-layout-no-sidebar { max-width: none; padding: 0; }
+.subpage .blog-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 0; }
+.subpage .blog-card { border: 0; box-shadow: none; background: var(--home-white); border-radius: var(--home-radius); transition: transform .3s; overflow: visible; }
+.subpage .blog-card:first-child { grid-column: 1 / -1; background: var(--home-cyan); }
+.subpage .blog-card:hover { transform: translateY(-5px); box-shadow: none; }
+.subpage .blog-card-link { height: 100%; display: flex; flex-direction: column; }
+.subpage .blog-card-content { display: flex; flex-direction: column; padding: 35px; height: 100%; }
+.subpage .blog-card:first-child .blog-card-content { padding: 44px; }
+.subpage .blog-card-tags { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 22px; }
+.subpage .blog-card-tag { padding: 0; background: none; color: var(--home-muted); font-size: 14px; font-weight: 500; border: 0; }
+.subpage .blog-card-title { color: var(--home-ink); font-size: 30px; line-height: 1.13; margin-bottom: 20px; }
+.subpage .blog-card:first-child .blog-card-title { font-size: clamp(32px, 3.3vw, 48px); max-width: 950px; }
+.subpage .blog-card-description { color: var(--home-muted); font-size: 17px; line-height: 1.7; display: block; -webkit-line-clamp: unset; overflow: visible; margin-bottom: 28px; }
+.subpage .blog-card-meta { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: 12px 24px; margin-top: auto; padding: 0; border: 0; font-size: 14px; color: var(--home-muted); }
+.subpage .blog-card-meta > div { color: inherit; font-size: inherit; }
+.subpage .author-avatar { display: none; }
+.subpage .blog-card-hover-overlay { position: static; opacity: 1; background: none; padding: 0 35px 32px; display: block; transform: none; }
+.subpage .blog-card:first-child .blog-card-hover-overlay { padding-inline: 44px; }
+.subpage .blog-card-hover-overlay .read-more { display: inline-flex; font-size: 15px; font-weight: 600; color: var(--home-ink); transform: none; }
+.subpage .blog-card:hover .blog-card-title { color: var(--home-blue); }
+.subpage .blog-empty { background: var(--home-white); }
+.subpage .pagination-container, .subpage .pagination-pages { flex-wrap: wrap; justify-content: center; }
+.subpage .pagination-link { border: 0; min-height: 44px; background: var(--home-white); }
+.subpage .pagination-link.active { background: var(--home-blue); color: var(--home-white); }
+
+/* Article reading surface remains steady; only the opening and related stories enter. */
+.subpage .blog-article { padding: 45px 0 65px; }
+.subpage .blog-post { background: transparent; max-width: 1040px; box-shadow: none; border-radius: 0; overflow: visible; }
+.subpage .blog-post-nav { padding: 0 0 35px; }
+.subpage .back-to-blog { font-size: 15px; color: var(--home-muted); }
+.subpage .blog-post-header { background: var(--home-cyan); border: 0; border-radius: var(--home-radius); padding: 45px; }
+.subpage .blog-post-tags { margin: 0 0 25px; gap: 10px; }
+.subpage .blog-post-tag { background: var(--home-white); color: var(--home-ink); padding: 7px 12px; font-size: 14px; border-radius: 8px; }
+.subpage .blog-post-tag:hover { box-shadow: none; background: var(--home-yellow); }
+.subpage .blog-post-title { font-size: clamp(36px, 4.4vw, 62px); line-height: 1.06; margin-bottom: 25px; color: var(--home-ink); }
+.subpage .blog-post-description { font-size: 19px; max-width: 820px; line-height: 1.65; margin-bottom: 30px; color: var(--home-muted); }
+.subpage .blog-post-meta { display: flex; flex-wrap: wrap; gap: 12px 28px; color: var(--home-muted); font-size: 14px; }
+.subpage .meta-icon { display: none; }
+.subpage .blog-post-content { padding: 45px 0; max-width: 780px; margin-inline: auto; }
+.subpage .prose { color: var(--home-ink); font-size: 18px; line-height: 1.85; overflow-wrap: anywhere; }
+.subpage .prose p { color: var(--home-ink); margin-block: 0 24px; }
+.subpage .prose h1, .subpage .prose h2 { font-size: 34px; line-height: 1.14; margin: 42px 0 20px; color: var(--home-ink); border: 0; padding: 0; }
+.subpage .prose h3 { font-size: 27px; line-height: 1.2; margin-block: 30px 16px; color: var(--home-ink); }
+.subpage .prose h4 { font-size: 22px; margin-block: 25px 14px; }
+.subpage .prose ul, .subpage .prose ol { padding-left: 25px; margin-block: 20px 28px; }
+.subpage .prose li { margin-bottom: 10px; }
+.subpage .prose strong { color: inherit; display: inline; margin: 0; }
+.subpage .prose a { color: var(--home-blue); text-decoration: underline; text-underline-offset: 4px; }
+.subpage .prose .anchor { text-decoration: none; color: inherit; }
+.subpage .prose img { display: block; max-width: 100%; height: auto; margin-block: 30px; border-radius: 16px; box-shadow: none; }
+.subpage .prose pre { background: var(--home-dark); color: var(--home-white); padding: 25px; border-radius: 15px; overflow-x: auto; max-width: 100%; font-size: 15px; }
+.subpage .prose code { overflow-wrap: anywhere; }
+.subpage .prose blockquote { padding: 25px; margin-block: 25px; background: var(--home-yellow); border: 0; color: var(--home-ink); border-radius: 15px; }
+.subpage .prose table { display: block; overflow-x: auto; max-width: 100%; }
+.subpage .blog-post-footer { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 25px; background: var(--home-surface); border: 0; border-radius: 18px; padding: 30px; }
+.subpage .post-share { margin: 0; text-align: left; }
+.subpage .post-share h4 { font-size: 17px; margin: 0 0 10px; }
+.subpage .share-buttons { justify-content: flex-start; }
+.subpage .share-button { display: inline-flex; align-items: center; gap: 10px; border: 0; border-radius: 10px; padding: 12px 18px; min-height: 46px; background: var(--home-white); color: var(--home-ink); font-weight: 600; cursor: pointer; transition: transform .2s; box-shadow: none; }
+.subpage .share-button:hover { transform: translateY(-2px); }
+.subpage .btn { display: inline-flex; align-items: center; justify-content: center; gap: 12px; background: var(--home-blue); color: var(--home-white); border-radius: 12px; border: 0; min-height: 50px; padding: 12px 22px; font-size: 15px; font-weight: 600; box-shadow: none; transition: transform .2s; }
+.subpage .btn:hover { transform: translateY(-3px); }
+.subpage .btn-outline { background: var(--home-cyan); color: var(--home-ink); }
+.subpage .related-posts { padding: 55px 0 75px; margin: 0; background: transparent; border: 0; }
+.subpage .related-posts-header { text-align: left; margin-bottom: 35px; }
+.subpage .related-posts-title { font-size: 42px; color: var(--home-ink); margin-bottom: 14px; }
+.subpage .related-posts-subtitle { font-size: 17px; }
+.subpage .related-posts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.subpage .related-post-card { min-width: 0; background: var(--home-surface); border: 0; border-radius: 20px; box-shadow: none; transition: transform .25s; }
+.subpage .related-post-card:first-child { background: var(--home-cyan); }
+.subpage .related-post-card:hover { box-shadow: none; transform: translateY(-4px); }
+.subpage .related-post-content { padding: 28px; height: 100%; }
+.subpage .related-post-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+.subpage .related-post-tag { background: none; padding: 0; color: var(--home-muted); font-size: 13px; }
+.subpage .related-post-title { font-size: 26px; line-height: 1.17; color: var(--home-ink); margin-bottom: 20px; }
+.subpage .related-post-description { font-size: 16px; line-height: 1.65; display: block; -webkit-line-clamp: unset; overflow: visible; }
+.subpage .related-post-meta { display: flex; flex-wrap: wrap; gap: 7px; color: var(--home-muted); font-size: 13px; margin-top: 25px; }
+.subpage .related-post-arrow { position: static; margin-top: 20px; color: var(--home-ink); transform: none; opacity: 1; }
+.subpage .related-posts-footer { margin-top: 30px; text-align: left; }
+.subpage .view-all-posts { display: inline-flex; gap: 12px; align-items: center; font-weight: 600; color: var(--home-blue); }
+
+/* Legal pages: chapter index and a generous, stable reading column. */
+.subpage .legal-hero { display: flex; align-items: center; justify-content: space-between; gap: 40px; padding-block: 65px 55px; }
+.subpage .legal-hero h1 { font-size: clamp(52px, 6.8vw, 96px); margin: 0 0 20px; }
+.subpage .legal-hero p { font-size: 15px; }
+.subpage .legal-hero > img { flex-shrink: 0; transform: rotate(-9deg); }
+.subpage .legal-layout { display: grid; grid-template-columns: 290px minmax(0, 1fr); gap: 80px; align-items: start; padding-bottom: 90px; }
+.subpage .legal-index { position: sticky; top: 30px; background: var(--home-cyan); border-radius: 20px; padding: 20px; }
+.subpage .legal-index nav { display: grid; gap: 5px; }
+.subpage .legal-index a { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 12px; border-radius: 10px; font-size: 15px; font-weight: 500; transition: background .2s, transform .2s; }
+.subpage .legal-index a:hover, .subpage .legal-index a:focus-visible { background: var(--home-white); transform: translateX(3px); }
+.subpage .legal-index a span { font-size: 19px; }
+.subpage .legal-prose { max-width: 820px; font-size: 17px; line-height: 1.85; overflow-wrap: anywhere; }
+.subpage .legal-intro { background: var(--home-surface); padding: 28px; border-radius: 20px; }
+.subpage .legal-prose p { color: var(--home-ink); margin-bottom: 20px; }
+.subpage .legal-prose p:last-child { margin-bottom: 0; }
+.subpage .legal-section { padding-top: 44px; scroll-margin-top: 30px; }
+.subpage .legal-prose h2 { font-size: 34px; line-height: 1.16; margin-bottom: 22px; scroll-margin-top: 35px; }
+.subpage .legal-prose h3 { font-size: 25px; line-height: 1.2; margin-block: 28px 16px; }
+.subpage .legal-prose ul { padding-left: 24px; margin-block: 18px 25px; }
+.subpage .legal-prose li { padding-left: 5px; margin-bottom: 8px; }
+.subpage .legal-prose a { color: var(--home-blue); text-decoration: underline; }
+.subpage .not-found-content { padding-block: 100px; min-height: 60vh; max-width: 750px; }
+.subpage .not-found-content h1 { font-size: clamp(48px, 6vw, 80px); margin-bottom: 25px; }
+.subpage .not-found-description { font-size: 20px; max-width: 550px; margin-bottom: 35px; }
+.subpage .not-found-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+@media (max-width: 1050px) {
+  .subpage .site-container, .subpage .container { width: calc(100% - 64px); }
+  .subpage .interior-product { height: 330px; }
+  .subpage .interior-product-mark { font-size: 45px; padding: 20px; }
+  .subpage .blog-hero > .container { gap: 35px; }
+  .subpage .legal-layout { grid-template-columns: 230px minmax(0, 1fr); gap: 40px; }
+  .subpage .related-posts-grid { grid-template-columns: 1fr 1fr; }
+  .subpage .related-post-card:last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 767px) {
+  .subpage .site-container, .subpage .container { width: calc(100% - 40px); }
+  .subpage .interior-product { height: 320px; width: min(100%, 410px); }
+  .subpage .interior-product-mark { font-size: 46px; padding: 18px; }
+  .subpage .gaming-benefits { padding: 30px 25px; margin-top: 45px; }
+  .subpage .gaming-benefits > h3 { font-size: 32px; }
+  .subpage .gaming-benefits > div { grid-template-columns: 1fr; gap: 28px; }
+  .subpage .blog-hero { padding-block: 40px 50px; }
+  .subpage .blog-hero > .container { grid-template-columns: 1fr; gap: 30px; }
+  .subpage .blog-hero-title { font-size: clamp(54px, 13vw, 76px); }
+  .subpage .blog-hero-description { font-size: 18px; }
+  .subpage .blog-content { padding-block: 40px 55px; }
+  .subpage .blog-grid { grid-template-columns: 1fr; gap: 16px; }
+  .subpage .blog-card:first-child { grid-column: auto; }
+  .subpage .blog-card-content, .subpage .blog-card:first-child .blog-card-content { padding: 26px; }
+  .subpage .blog-card-title, .subpage .blog-card:first-child .blog-card-title { font-size: 29px; }
+  .subpage .blog-card-hover-overlay, .subpage .blog-card:first-child .blog-card-hover-overlay { padding: 0 26px 26px; }
+  .subpage .blog-card-meta { gap: 8px 15px; font-size: 13px; }
+  .subpage .blog-article { padding-block: 30px 40px; }
+  .subpage .blog-post-nav { padding-bottom: 25px; }
+  .subpage .blog-post-header { padding: 28px 24px; }
+  .subpage .blog-post-title { font-size: clamp(32px, 8.2vw, 42px); }
+  .subpage .blog-post-description { font-size: 17px; }
+  .subpage .blog-post-meta { gap: 10px 18px; font-size: 13px; }
+  .subpage .blog-post-content { padding-block: 30px; }
+  .subpage .prose { font-size: 17px; }
+  .subpage .prose h1, .subpage .prose h2 { font-size: 29px; }
+  .subpage .prose h3 { font-size: 25px; }
+  .subpage .blog-post-footer { padding: 25px; align-items: flex-start; }
+  .subpage .related-posts { padding-block: 30px 50px; }
+  .subpage .related-posts-title { font-size: 36px; }
+  .subpage .related-posts-grid { grid-template-columns: 1fr; gap: 15px; }
+  .subpage .related-post-card:last-child { grid-column: auto; }
+  .subpage .related-post-content { padding: 25px; }
+  .subpage .legal-hero { padding-block: 40px; gap: 20px; }
+  .subpage .legal-hero h1 { font-size: clamp(44px, 11vw, 64px); }
+  .subpage .legal-hero > img { width: 54px; height: 54px; }
+  .subpage .legal-layout { grid-template-columns: 1fr; gap: 30px; padding-bottom: 55px; }
+  .subpage .legal-index { position: static; padding: 14px; }
+  .subpage .legal-index nav { grid-template-columns: 1fr 1fr; gap: 5px; }
+  .subpage .legal-index a { font-size: 14px; padding: 10px; }
+  .subpage .legal-prose { font-size: 17px; }
+  .subpage .legal-intro { padding: 24px; }
+  .subpage .legal-section { padding-top: 35px; }
+  .subpage .legal-prose h2 { font-size: 30px; }
+  .subpage .not-found-content { padding-block: 65px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .subpage .interior-product-screen { animation: interior-drift 6s ease-in-out infinite alternate; }
+  .subpage .legal-index a { scroll-behavior: smooth; }
+}
+@keyframes interior-drift {
+  from { transform: rotate(-3deg) translateY(0); }
+  to { transform: rotate(-1deg) translateY(-9px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .subpage *, .subpage *::before, .subpage *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+@media print {
+  .subpage .header, .subpage .footer, .subpage .legal-index, .subpage .blog-post-footer, .subpage .related-posts { display: none; }
+  .subpage .legal-layout { display: block; }
+  .subpage .legal-prose, .subpage .blog-post { max-width: none; }
+  .subpage .legal-intro, .subpage .blog-post-header { background: transparent; padding: 0; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .subpage .catalog-entry { animation: catalog-enter .6s cubic-bezier(.22, 1, .36, 1) both; }
+  .subpage .catalog-entry:nth-child(2) { animation-delay: .06s; }
+  .subpage .catalog-entry:nth-child(3) { animation-delay: .12s; }
+  .subpage .catalog-entry:nth-child(4) { animation-delay: .18s; }
+}
+@keyframes catalog-enter { from { opacity: .4; transform: translateY(22px); } to { opacity: 1; transform: none; } }

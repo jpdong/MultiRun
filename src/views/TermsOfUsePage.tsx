@@ -1,14 +1,9 @@
+import LegalDocument from '../components/site/LegalDocument';
 import React from 'react';
-import Container from '../components/layout/Container';
-import Footer from '../components/elements/Footer';
-import NavBar from '../components/elements/NavBar';
 
 const TermsOfUsePage: React.FC = () => {
   return (
-    <div>
-      <NavBar />
-      <Container>
-        <div className="page-content">
+    <LegalDocument>
           <h1>Terms of Use</h1>
           <p>
             Last updated: July 3, 2025
@@ -47,10 +42,7 @@ const TermsOfUsePage: React.FC = () => {
           <p>
             dongshan1025@gmail.com
           </p>
-        </div>
-      </Container>
-      <Footer />
-    </div>
+    </LegalDocument>
   );
 };
 

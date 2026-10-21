@@ -30,7 +30,7 @@ export const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
       </div>
 
       {/* Article header */}
-      <header className="blog-post-header">
+      <header className="blog-post-header" data-motion>
         {/* Tags */}
         {post.tags.length > 0 && (
           <div className="blog-post-tags">

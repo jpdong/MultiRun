@@ -1,7 +1,7 @@
+import SiteShell from '../../../src/components/site/SiteShell';
+import ProductVisual from '../../../src/components/site/ProductVisual';
 import React from 'react';
 import Link from 'next/link';
-import NavBar from '../../../src/components/elements/NavBar';
-import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
 import styles from '../../../src/components/app-pages/AppPage.module.css';
 import { Metadata } from 'next';
@@ -16,20 +16,17 @@ export const metadata: Metadata = {
 
 const FacebookPage: React.FC = () => {
   return (
-    <div className={styles.appPage}>
-      <NavBar />
+    <SiteShell variant="detail-page-shell"><div className={styles.appPage}>
       
       {/* Hero Section */}
-      <section className={styles.heroSection} style={{
-        background: 'linear-gradient(135deg, #1877f2 0%, #42a5f5 100%)'
-      }}>
+      <section className={styles.heroSection} >
         <Container>
           <div className={styles.heroContent}>
             <Link href="/hot-apps" className={styles.backLink}>
               ← Back to Apps
             </Link>
             
-            <div className={styles.appIcon}>👥</div>
+            
             
             <h1 className={styles.appTitle}>Facebook</h1>
             <p className={styles.appSubtitle}>
@@ -42,7 +39,8 @@ const FacebookPage: React.FC = () => {
               <span className={styles.badge}>Business Ready</span>
             </div>
           </div>
-        </Container>
+        <ProductVisual app="facebook" />
+</Container>
       </section>
 
       {/* Content Section */}
@@ -50,7 +48,7 @@ const FacebookPage: React.FC = () => {
         <Container>
           <div className={styles.sectionGrid}>
             {/* Why Multiple Facebook Accounts */}
-            <div className={styles.contentBlock}>
+            <div className={styles.contentBlock} data-motion>
               <h2 className={styles.blockTitle}>Why Multiple Facebook Accounts?</h2>
               <p className={styles.blockDescription}>
                 Facebook remains the world's largest social network with billions of users. 
@@ -59,25 +57,25 @@ const FacebookPage: React.FC = () => {
               
               <ul className={styles.featureList}>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Separate personal and business identities
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Manage multiple business pages and accounts
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Keep different social circles organized
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Test marketing strategies across accounts
                   </span>
@@ -86,7 +84,7 @@ const FacebookPage: React.FC = () => {
             </div>
 
             {/* Multi Run Benefits */}
-            <div className={styles.contentBlock}>
+            <div className={styles.contentBlock} data-motion>
               <h2 className={styles.blockTitle}>Multi Run Advantages</h2>
               <p className={styles.blockDescription}>
                 Experience seamless Facebook account management with Multi Run's powerful features 
@@ -95,25 +93,25 @@ const FacebookPage: React.FC = () => {
               
               <ul className={styles.featureList}>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>🚀</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     No more logging in and out constantly
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>⚡</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Switch between accounts instantly
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>🔔</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Isolated notifications for each account
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>🔒</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Secure data separation and privacy
                   </span>
@@ -124,8 +122,8 @@ const FacebookPage: React.FC = () => {
 
           {/* Use Cases */}
           <div className={styles.useCasesGrid}>
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>👤</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Personal & Professional</h3>
               <p className={styles.useCaseDescription}>
                 Keep your personal life separate from your professional networking 
@@ -133,8 +131,8 @@ const FacebookPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>🏢</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Business Management</h3>
               <p className={styles.useCaseDescription}>
                 Manage multiple business accounts for different ventures, 
@@ -142,8 +140,8 @@ const FacebookPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>📈</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Marketing & Analytics</h3>
               <p className={styles.useCaseDescription}>
                 Test different marketing strategies and track performance 
@@ -151,8 +149,8 @@ const FacebookPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>👨‍👩‍👧‍👦</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Family Management</h3>
               <p className={styles.useCaseDescription}>
                 Manage family member accounts or community group pages 
@@ -160,8 +158,8 @@ const FacebookPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>🌍</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Regional Presence</h3>
               <p className={styles.useCaseDescription}>
                 Maintain different accounts for different geographical 
@@ -169,8 +167,8 @@ const FacebookPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>🎭</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Creative Projects</h3>
               <p className={styles.useCaseDescription}>
                 Separate accounts for different creative projects, 
@@ -182,9 +180,7 @@ const FacebookPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className={styles.ctaSection} style={{
-        background: 'linear-gradient(135deg, #1877f2 0%, #42a5f5 100%)'
-      }}>
+      <section className={styles.ctaSection} >
         <Container>
           <div className={styles.ctaCard}>
             <h2 className={styles.ctaTitle}>Ready to Master Facebook?</h2>
@@ -211,9 +207,7 @@ const FacebookPage: React.FC = () => {
           </div>
         </Container>
       </section>
-
-      <Footer />
-    </div>
+    </div></SiteShell>
   );
 };
 

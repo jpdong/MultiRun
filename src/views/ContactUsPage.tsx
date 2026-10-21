@@ -1,8 +1,8 @@
+import SiteShell from '../components/site/SiteShell';
+import ProductVisual from '../components/site/ProductVisual';
 import React from 'react';
 import Container from '../components/layout/Container';
 import { FaEnvelope, FaTelegram, FaDiscord, FaTwitter, FaProductHunt } from 'react-icons/fa';
-import NavBar from '../components/elements/NavBar';
-import Footer from '../components/elements/Footer';
 import styles from '../components/contact/Contact.module.css';
 
 interface ContactMethod {
@@ -68,8 +68,7 @@ const contactMethods: ContactMethod[] = [
 
 const ContactUsPage: React.FC = () => {
   return (
-    <div className={styles.contactPage}>
-      <NavBar />
+    <SiteShell variant="contact-shell"><div className={styles.contactPage}>
 
       {/* Hero Section */}
       <section className={styles.heroSection}>
@@ -84,7 +83,8 @@ const ContactUsPage: React.FC = () => {
               we'd love to hear from you through any of our channels.
             </p>
           </div>
-        </Container>
+        <ProductVisual image="/multi_run_4.webp" />
+</Container>
       </section>
 
       {/* Content Section */}
@@ -104,7 +104,7 @@ const ContactUsPage: React.FC = () => {
               <a
                 key={method.id}
                 href={method.link}
-                className={`${styles.contactCard} ${styles[method.type]}`}
+                className={`${styles.contactCard} ${styles[method.type]}`} data-motion
                 target={method.type === 'email' ? '_self' : '_blank'}
                 rel={method.type === 'email' ? '' : 'noopener noreferrer'}
                 aria-label={`Contact us via ${method.title}`}
@@ -130,32 +130,32 @@ const ContactUsPage: React.FC = () => {
             </p>
 
             <div className={styles.supportGrid}>
-              <div className={styles.supportItem}>
-                <div className={styles.supportItemIcon}>🛠️</div>
+              <div className={styles.supportItem} data-motion>
+                <div className={styles.supportItemIcon} aria-hidden="true">↗</div>
                 <h4 className={styles.supportItemTitle}>Technical Support</h4>
                 <p className={styles.supportItemDescription}>
                   Get help with app installation, setup, and troubleshooting
                 </p>
               </div>
 
-              <div className={styles.supportItem}>
-                <div className={styles.supportItemIcon}>💡</div>
+              <div className={styles.supportItem} data-motion>
+                <div className={styles.supportItemIcon} aria-hidden="true">↗</div>
                 <h4 className={styles.supportItemTitle}>Feature Requests</h4>
                 <p className={styles.supportItemDescription}>
                   Share your ideas for new features and improvements
                 </p>
               </div>
 
-              <div className={styles.supportItem}>
-                <div className={styles.supportItemIcon}>🤝</div>
+              <div className={styles.supportItem} data-motion>
+                <div className={styles.supportItemIcon} aria-hidden="true">↗</div>
                 <h4 className={styles.supportItemTitle}>Business Inquiries</h4>
                 <p className={styles.supportItemDescription}>
                   Discuss partnerships, collaborations, and business opportunities
                 </p>
               </div>
 
-              <div className={styles.supportItem}>
-                <div className={styles.supportItemIcon}>📝</div>
+              <div className={styles.supportItem} data-motion>
+                <div className={styles.supportItemIcon} aria-hidden="true">↗</div>
                 <h4 className={styles.supportItemTitle}>Feedback</h4>
                 <p className={styles.supportItemDescription}>
                   Tell us about your experience and help us improve
@@ -196,9 +196,7 @@ const ContactUsPage: React.FC = () => {
           </div>
         </Container>
       </section>
-
-      <Footer />
-    </div>
+    </div></SiteShell>
   );
 };
 

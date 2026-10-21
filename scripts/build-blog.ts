@@ -4,9 +4,12 @@ import {
   writeFileSync,
   mkdirSync,
   existsSync,
+  renameSync,
+  rmSync,
 } from 'fs';
+import { createHash } from 'crypto';
 import { join, dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { fileURLToPath, pathToFileURL } from 'url';
 
 import matter from 'gray-matter';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
@@ -42,6 +45,7 @@ interface BlogData {
   posts: BlogPostData[];
   tags: string[];
   generatedAt: string;
+  sourceHash: string;
 }
 
 /**
@@ -87,7 +91,7 @@ async function processMarkdown(content: string): Promise<string> {
 async function processMarkdownFile(
   filePath: string,
   slug: string
-): Promise<BlogPostData | null> {
+): Promise<BlogPostData> {
   try {
     console.log(`📄 处理文件: ${filePath}`);
 
@@ -99,10 +103,29 @@ async function processMarkdownFile(
     const missingFields = requiredFields.filter((field) => !frontmatter[field]);
 
     if (missingFields.length > 0) {
-      console.warn(
-        `⚠️  文件 ${filePath} 缺少必需字段: ${missingFields.join(', ')}`
-      );
-      return null;
+      throw new Error(`缺少必需字段: ${missingFields.join(', ')}`);
+    }
+
+    for (const field of ['title', 'description', 'author']) {
+      if (
+        typeof frontmatter[field] !== 'string' ||
+        !frontmatter[field].trim()
+      ) {
+        throw new Error(`${field} 必须是非空字符串`);
+      }
+    }
+    const date =
+      frontmatter.date instanceof Date
+        ? frontmatter.date.toISOString()
+        : frontmatter.date;
+    if (typeof date !== 'string' || !Number.isFinite(Date.parse(date))) {
+      throw new Error('date 必须是有效日期');
+    }
+    const tags = Array.isArray(frontmatter.tags)
+      ? frontmatter.tags
+      : [frontmatter.tags];
+    if (tags.some((tag: unknown) => typeof tag !== 'string' || !tag.trim())) {
+      throw new Error('tags 必须是字符串或字符串数组');
     }
 
     // 处理markdown内容
@@ -112,11 +135,9 @@ async function processMarkdownFile(
       slug,
       title: frontmatter.title,
       description: frontmatter.description,
-      date: frontmatter.date,
+      date,
       author: frontmatter.author,
-      tags: Array.isArray(frontmatter.tags)
-        ? frontmatter.tags
-        : [frontmatter.tags],
+      tags,
       content,
       html,
       readingTime: calculateReadingTime(content),
@@ -124,8 +145,8 @@ async function processMarkdownFile(
       coverImage: frontmatter.coverImage || undefined,
     };
   } catch (error) {
-    console.error(`❌ 处理文件 ${filePath} 时出错:`, error);
-    return null;
+    const message = error instanceof Error ? error.message : String(error);
+    throw new Error(`处理 ${filePath} 失败: ${message}`);
   }
 }
 
@@ -133,95 +154,122 @@ async function processMarkdownFile(
  * 获取所有markdown文件
  */
 function getMarkdownFiles(): string[] {
-  if (!existsSync(CONTENT_DIR)) {
-    console.warn(`⚠️  目录 ${CONTENT_DIR} 不存在`);
-    return [];
-  }
+  // Missing/unreadable directories are errors, not an empty successful build.
+  return readdirSync(CONTENT_DIR)
+    .filter((file) => file.endsWith('.md'))
+    .sort()
+    .map((file) => file.replace(/\.md$/, ''));
+}
 
+function getSourceHash(slugs: string[]): string {
+  const hash = createHash('sha256');
+  hash.update(readFileSync(fileURLToPath(import.meta.url)));
+  hash.update(readFileSync(join(scriptDirectory, '../pnpm-lock.yaml')));
+  for (const slug of slugs) {
+    hash.update(
+      JSON.stringify([
+        slug,
+        readFileSync(join(CONTENT_DIR, `${slug}.md`), 'utf-8'),
+      ])
+    );
+  }
+  return hash.digest('hex');
+}
+
+function isBlogDataCurrent(sourceHash: string): boolean {
+  if (!existsSync(OUTPUT_FILE)) return false;
   try {
-    const files = readdirSync(CONTENT_DIR);
-    return files
-      .filter((file) => file.endsWith('.md'))
-      .map((file) => file.replace('.md', ''));
-  } catch (error) {
-    console.error(`❌ 读取目录 ${CONTENT_DIR} 失败:`, error);
-    return [];
+    const previous = JSON.parse(readFileSync(OUTPUT_FILE, 'utf-8')) as BlogData;
+    return (
+      previous.sourceHash === sourceHash &&
+      Array.isArray(previous.posts) &&
+      Array.isArray(previous.tags)
+    );
+  } catch {
+    // Rebuild a missing, malformed, or pre-fingerprint output.
+    return false;
   }
 }
 
 /**
  * 主构建函数
  */
-async function buildBlogData(): Promise<void> {
+async function buildBlogData({
+  ifChanged = false,
+}: { ifChanged?: boolean } = {}): Promise<void> {
   console.log('🚀 开始构建博客数据...');
   console.log(`📁 内容目录: ${CONTENT_DIR}`);
   console.log(`📤 输出文件: ${OUTPUT_FILE}`);
 
-  try {
-    // 确保输出目录存在
-    if (!existsSync(OUTPUT_DIR)) {
-      mkdirSync(OUTPUT_DIR, { recursive: true });
-      console.log(`📂 创建输出目录: ${OUTPUT_DIR}`);
-    }
-
-    const slugs = getMarkdownFiles();
-    console.log(`📊 发现 ${slugs.length} 个markdown文件`);
-
-    if (slugs.length === 0) {
-      console.warn('⚠️  没有发现markdown文件');
-      return;
-    }
-
-    const posts: BlogPostData[] = [];
-
-    // 处理所有markdown文件
-    for (const slug of slugs) {
-      const filePath = join(CONTENT_DIR, `${slug}.md`);
-      const post = await processMarkdownFile(filePath, slug);
-
-      if (post) {
-        posts.push(post);
-        console.log(`✅ 处理完成: ${post.title}`);
-      }
-    }
-
-    // 按日期排序（最新的在前）
-    posts.sort(
-      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-    );
-
-    // 提取所有标签
-    const allTags = Array.from(
-      new Set(posts.flatMap((post) => post.tags))
-    ).sort();
-
-    // 生成博客数据
-    const blogData: BlogData = {
-      posts,
-      tags: allTags,
-      generatedAt: new Date().toISOString(),
-    };
-
-    // 写入输出文件
-    writeFileSync(OUTPUT_FILE, JSON.stringify(blogData, null, 2), 'utf-8');
-
-    console.log(`\n🎉 博客数据构建完成！`);
-    console.log(`📊 文章数量: ${posts.length}`);
-    console.log(`🏷️  标签数量: ${allTags.length}`);
-    console.log(`📁 输出文件: ${OUTPUT_FILE}`);
-    console.log(`⏰ 生成时间: ${blogData.generatedAt}`);
-  } catch (error) {
-    console.error('❌ 构建过程失败:', error);
-    process.exit(1);
+  // 确保输出目录存在
+  if (!existsSync(OUTPUT_DIR)) {
+    mkdirSync(OUTPUT_DIR, { recursive: true });
+    console.log(`📂 创建输出目录: ${OUTPUT_DIR}`);
   }
+
+  const slugs = getMarkdownFiles();
+  console.log(`📊 发现 ${slugs.length} 个markdown文件`);
+
+  const sourceHash = getSourceHash(slugs);
+  if (ifChanged && isBlogDataCurrent(sourceHash)) {
+    console.log('✅ 博客内容未变化，跳过解析和 JSON 生成');
+    return;
+  }
+
+  const posts: BlogPostData[] = [];
+
+  // 处理所有markdown文件
+  for (const slug of slugs) {
+    const filePath = join(CONTENT_DIR, `${slug}.md`);
+    const post = await processMarkdownFile(filePath, slug);
+
+    posts.push(post);
+    console.log(`✅ 处理完成: ${post.title}`);
+  }
+
+  // 按日期排序（最新的在前）
+  posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+  // 提取所有标签
+  const allTags = Array.from(
+    new Set(posts.flatMap((post) => post.tags))
+  ).sort();
+
+  // 生成博客数据
+  const blogData: BlogData = {
+    posts,
+    tags: allTags,
+    generatedAt: new Date().toISOString(),
+    sourceHash,
+  };
+
+  // 写入输出文件
+  const temporaryFile = `${OUTPUT_FILE}.${process.pid}.tmp`;
+  try {
+    writeFileSync(temporaryFile, JSON.stringify(blogData, null, 2), 'utf-8');
+    renameSync(temporaryFile, OUTPUT_FILE);
+  } finally {
+    rmSync(temporaryFile, { force: true });
+  }
+
+  console.log(`\n🎉 博客数据构建完成！`);
+  console.log(`📊 文章数量: ${posts.length}`);
+  console.log(`🏷️  标签数量: ${allTags.length}`);
+  console.log(`📁 输出文件: ${OUTPUT_FILE}`);
+  console.log(`⏰ 生成时间: ${blogData.generatedAt}`);
 }
 
 // 如果直接运行此脚本
-if (import.meta.url === `file://${process.argv[1]}`) {
-  buildBlogData().catch((error) => {
-    console.error('❌ 构建失败:', error);
-    process.exit(1);
-  });
+if (
+  process.argv[1] &&
+  import.meta.url === pathToFileURL(process.argv[1]).href
+) {
+  buildBlogData({ ifChanged: process.argv.includes('--if-changed') }).catch(
+    (error) => {
+      console.error('❌ 构建失败:', error);
+      process.exit(1);
+    }
+  );
 }
 
 export { buildBlogData };

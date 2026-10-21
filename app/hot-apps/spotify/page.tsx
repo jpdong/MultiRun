@@ -1,7 +1,7 @@
+import SiteShell from '../../../src/components/site/SiteShell';
+import ProductVisual from '../../../src/components/site/ProductVisual';
 import React from 'react';
 import Link from 'next/link';
-import NavBar from '../../../src/components/elements/NavBar';
-import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
 import styles from '../../../src/components/app-pages/AppPage.module.css';
 import { Metadata } from 'next';
@@ -16,20 +16,17 @@ export const metadata: Metadata = {
 
 const SpotifyPage: React.FC = () => {
   return (
-    <div className={styles.appPage}>
-      <NavBar />
+    <SiteShell variant="detail-page-shell"><div className={styles.appPage}>
       
       {/* Hero Section */}
-      <section className={styles.heroSection} style={{
-        background: 'linear-gradient(135deg, #1db954 0%, #1ed760 100%)'
-      }}>
+      <section className={styles.heroSection} >
         <Container>
           <div className={styles.heroContent}>
             <Link href="/hot-apps" className={styles.backLink}>
               ← Back to Apps
             </Link>
             
-            <div className={styles.appIcon}>🎶</div>
+            
             
             <h1 className={styles.appTitle}>Spotify</h1>
             <p className={styles.appSubtitle}>
@@ -42,7 +39,8 @@ const SpotifyPage: React.FC = () => {
               <span className={styles.badge}>Music Streaming</span>
             </div>
           </div>
-        </Container>
+        <ProductVisual app="spotify" />
+</Container>
       </section>
 
       {/* Content Section */}
@@ -50,7 +48,7 @@ const SpotifyPage: React.FC = () => {
         <Container>
           <div className={styles.sectionGrid}>
             {/* Why Multiple Spotify Accounts */}
-            <div className={styles.contentBlock}>
+            <div className={styles.contentBlock} data-motion>
               <h2 className={styles.blockTitle}>Why Multiple Spotify Accounts?</h2>
               <p className={styles.blockDescription}>
                 Spotify is the world's leading music streaming platform with millions of songs and podcasts. 
@@ -59,25 +57,25 @@ const SpotifyPage: React.FC = () => {
               
               <ul className={styles.featureList}>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Separate music preferences for different moods
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Manage family accounts and shared playlists
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Keep work and personal music libraries separate
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Access region-specific content and artists
                   </span>
@@ -86,7 +84,7 @@ const SpotifyPage: React.FC = () => {
             </div>
 
             {/* Multi Run Benefits */}
-            <div className={styles.contentBlock}>
+            <div className={styles.contentBlock} data-motion>
               <h2 className={styles.blockTitle}>Multi Run Advantages</h2>
               <p className={styles.blockDescription}>
                 Experience seamless music streaming with Multi Run's powerful features 
@@ -95,25 +93,25 @@ const SpotifyPage: React.FC = () => {
               
               <ul className={styles.featureList}>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>🚀</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Switch between music libraries instantly
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>📊</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Maintain separate listening histories
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>💎</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Access multiple premium subscriptions
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>🎯</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Keep recommendations algorithm separate
                   </span>
@@ -124,8 +122,8 @@ const SpotifyPage: React.FC = () => {
 
           {/* Use Cases */}
           <div className={styles.useCasesGrid}>
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>🎵</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Genre Separation</h3>
               <p className={styles.useCaseDescription}>
                 Keep different music genres in separate accounts for pure 
@@ -133,8 +131,8 @@ const SpotifyPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>👨‍👩‍👧‍👦</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Family Sharing</h3>
               <p className={styles.useCaseDescription}>
                 Manage family members' accounts and create shared family 
@@ -142,8 +140,8 @@ const SpotifyPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>💼</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Work & Focus</h3>
               <p className={styles.useCaseDescription}>
                 Maintain a dedicated account for work music and 
@@ -151,8 +149,8 @@ const SpotifyPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>🏃‍♀️</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Activity-Based</h3>
               <p className={styles.useCaseDescription}>
                 Create accounts for specific activities like workout, 
@@ -160,8 +158,8 @@ const SpotifyPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>🌍</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Regional Content</h3>
               <p className={styles.useCaseDescription}>
                 Access different regional music libraries and discover 
@@ -169,8 +167,8 @@ const SpotifyPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>🎧</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Audio Quality Testing</h3>
               <p className={styles.useCaseDescription}>
                 Test different subscription tiers and audio quality 
@@ -182,9 +180,7 @@ const SpotifyPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className={styles.ctaSection} style={{
-        background: 'linear-gradient(135deg, #1db954 0%, #1ed760 100%)'
-      }}>
+      <section className={styles.ctaSection} >
         <Container>
           <div className={styles.ctaCard}>
             <h2 className={styles.ctaTitle}>Amplify Your Music Experience</h2>
@@ -211,9 +207,7 @@ const SpotifyPage: React.FC = () => {
           </div>
         </Container>
       </section>
-
-      <Footer />
-    </div>
+    </div></SiteShell>
   );
 };
 

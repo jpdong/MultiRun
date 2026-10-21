@@ -1,7 +1,7 @@
+import SiteShell from '../../../src/components/site/SiteShell';
+import ProductVisual from '../../../src/components/site/ProductVisual';
 import React from 'react';
 import Link from 'next/link';
-import NavBar from '../../../src/components/elements/NavBar';
-import Footer from '../../../src/components/elements/Footer';
 import Container from '../../../src/components/layout/Container';
 import styles from '../../../src/components/app-pages/AppPage.module.css';
 import { Metadata } from 'next';
@@ -16,20 +16,17 @@ export const metadata: Metadata = {
 
 const GrowGardenPage: React.FC = () => {
   return (
-    <div className={styles.appPage}>
-      <NavBar />
+    <SiteShell variant="detail-page-shell"><div className={styles.appPage}>
       
       {/* Hero Section */}
-      <section className={styles.heroSection} style={{
-        background: 'linear-gradient(135deg, #4caf50 0%, #2e7d32 100%)'
-      }}>
+      <section className={styles.heroSection} >
         <Container>
           <div className={styles.heroContent}>
             <Link href="/hot-games" className={styles.backLink}>
               ← Back to Games
             </Link>
             
-            <div className={styles.appIcon}>🌱</div>
+            
             
             <h1 className={styles.appTitle}>Grow a Garden</h1>
             <p className={styles.appSubtitle}>
@@ -42,7 +39,8 @@ const GrowGardenPage: React.FC = () => {
               <span className={styles.badge}>Relaxing</span>
             </div>
           </div>
-        </Container>
+        <ProductVisual app="growagarden" />
+</Container>
       </section>
 
       {/* Content Section */}
@@ -50,7 +48,7 @@ const GrowGardenPage: React.FC = () => {
         <Container>
           <div className={styles.sectionGrid}>
             {/* Why Multiple Garden Accounts */}
-            <div className={styles.contentBlock}>
+            <div className={styles.contentBlock} data-motion>
               <h2 className={styles.blockTitle}>Why Multiple Garden Accounts?</h2>
               <p className={styles.blockDescription}>
                 Grow a Garden is a peaceful yet engaging simulation game where creativity meets strategy. 
@@ -59,25 +57,25 @@ const GrowGardenPage: React.FC = () => {
               
               <ul className={styles.featureList}>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Create gardens with completely different themes
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Test various plant combinations and strategies
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Focus on different seasons and events
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>✓</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Maximize rewards across multiple gardens
                   </span>
@@ -86,7 +84,7 @@ const GrowGardenPage: React.FC = () => {
             </div>
 
             {/* Multi Run Benefits */}
-            <div className={styles.contentBlock}>
+            <div className={styles.contentBlock} data-motion>
               <h2 className={styles.blockTitle}>Multi Run Advantages</h2>
               <p className={styles.blockDescription}>
                 Experience seamless garden management with Multi Run's powerful features 
@@ -95,25 +93,25 @@ const GrowGardenPage: React.FC = () => {
               
               <ul className={styles.featureList}>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>🎨</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Design gardens without compromising your vision
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>🌸</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Specialize each account for different seasons
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>🔄</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Create plant trading and resource networks
                   </span>
                 </li>
                 <li className={styles.featureItem}>
-                  <span className={styles.checkIcon}>🏆</span>
+                  <span className={styles.checkIcon} aria-hidden="true">↗</span>
                   <span className={styles.featureText}>
                     Maximize achievements across specialized gardens
                   </span>
@@ -124,8 +122,8 @@ const GrowGardenPage: React.FC = () => {
 
           {/* Use Cases */}
           <div className={styles.useCasesGrid}>
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>🧘</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Zen Paradise</h3>
               <p className={styles.useCaseDescription}>
                 Focus on peaceful, meditative garden designs with traditional 
@@ -133,8 +131,8 @@ const GrowGardenPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>🌺</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Tropical Oasis</h3>
               <p className={styles.useCaseDescription}>
                 Create lush tropical gardens with exotic plants, vibrant colors, 
@@ -142,8 +140,8 @@ const GrowGardenPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>🔬</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Modern Botanical</h3>
               <p className={styles.useCaseDescription}>
                 Design contemporary gardens with cutting-edge plant technology 
@@ -151,8 +149,8 @@ const GrowGardenPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>🌹</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Rose Collection</h3>
               <p className={styles.useCaseDescription}>
                 Master every rose variety and create stunning specialized 
@@ -160,8 +158,8 @@ const GrowGardenPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>🥕</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Vegetable Paradise</h3>
               <p className={styles.useCaseDescription}>
                 Focus on growing rare vegetables and maximizing harvest 
@@ -169,8 +167,8 @@ const GrowGardenPage: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.useCaseCard}>
-              <span className={styles.useCaseIcon}>🦋</span>
+            <div className={styles.useCaseCard} data-motion>
+              
               <h3 className={styles.useCaseTitle}>Butterfly Sanctuary</h3>
               <p className={styles.useCaseDescription}>
                 Create gardens specifically designed to attract rare 
@@ -182,9 +180,7 @@ const GrowGardenPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className={styles.ctaSection} style={{
-        background: 'linear-gradient(135deg, #4caf50 0%, #2e7d32 100%)'
-      }}>
+      <section className={styles.ctaSection} >
         <Container>
           <div className={styles.ctaCard}>
             <h2 className={styles.ctaTitle}>Ready to Grow Your Garden Empire?</h2>
@@ -211,9 +207,7 @@ const GrowGardenPage: React.FC = () => {
           </div>
         </Container>
       </section>
-
-      <Footer />
-    </div>
+    </div></SiteShell>
   );
 };
 
