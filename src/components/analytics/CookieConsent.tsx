@@ -52,7 +52,7 @@ export default function CookieConsent() {
   if (!showBanner) return null;
 
   return (
-    <div style={{
+    <div className="cookie-consent" role="region" aria-label="Cookie preferences" style={{
       position: 'fixed',
       bottom: 0,
       left: 0,

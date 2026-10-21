@@ -1,4 +1,4 @@
-import ContactUsPage from '../../src/pages/ContactUsPage'
+import ContactUsPage from '../../src/views/ContactUsPage'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {

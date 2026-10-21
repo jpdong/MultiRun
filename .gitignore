@@ -38,3 +38,9 @@ Thumbs.db
 *.log
 .open-next
 .wrangler
+.vinext/
+.cloudflare/
+.taste-skill/inspect/
+
+.playwright-mcp/
+.taste-skill/*.png

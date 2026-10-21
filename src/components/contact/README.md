@@ -39,7 +39,7 @@ A premium, minimalist contact page design that provides multiple communication c
 ### Basic Implementation
 
 ```tsx
-import ContactUsPage from '../pages/ContactUsPage';
+import ContactUsPage from '../views/ContactUsPage';
 
 // In your route component
 export default function Contact() {
@@ -207,7 +207,7 @@ src/components/contact/
 ├── Contact.module.css    # Main styles
 └── README.md            # Documentation
 
-src/pages/
+src/views/
 └── ContactUsPage.tsx    # Main component
 
 app/contact/

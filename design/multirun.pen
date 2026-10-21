@@ -1,0 +1,4557 @@
+{
+  "version": "2.11",
+  "children": [
+    {
+      "type": "frame",
+      "id": "bi8Au",
+      "x": 0,
+      "y": 0,
+      "name": "Frame",
+      "clip": true,
+      "width": 1280,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "ypeT8",
+          "name": "navbar",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "#EEF0F2"
+          },
+          "padding": [
+            32,
+            24
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "y1eBj7",
+              "name": "logo",
+              "fill": "#1A1A1A",
+              "content": "Multi Run",
+              "fontFamily": "Inter",
+              "fontSize": 24,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "frame",
+              "id": "gjRr3",
+              "name": "navRight",
+              "gap": 32,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "SWA96",
+                  "name": "navLinks",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "YlPTm",
+                      "name": "navLink1",
+                      "fill": "#888888",
+                      "content": "Features",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "D2rxzl",
+                      "name": "navLink2",
+                      "fill": "#888888",
+                      "content": "FAQ",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "sKef9",
+                      "name": "navLink3",
+                      "fill": "#888888",
+                      "content": "Testimonials",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "e2p54",
+                  "name": "navBtn",
+                  "fill": "#4A9FD8",
+                  "cornerRadius": 9999,
+                  "padding": [
+                    20,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "wqykx",
+                      "name": "navBtnTxt",
+                      "fill": "#FFFFFF",
+                      "content": "Download",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "GDEi0",
+          "name": "hero",
+          "width": "fill_container",
+          "fill": "#0A0A0A",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": [
+            100,
+            80
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "C3K4OC",
+              "name": "heroTextW",
+              "width": 800,
+              "layout": "vertical",
+              "gap": 20,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "B1fz9b",
+                  "name": "heroTitle",
+                  "fill": "#FFFFFF",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Run Multiple Accounts on One Device with Multi Run App",
+                  "lineHeight": 1.2,
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 48,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "text",
+                  "id": "n3TGsb",
+                  "name": "heroSub",
+                  "fill": "#888888",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Keep your personal and professional lives separate with our secure app clone solution. No more switching between multiple accounts - run them all simultaneously!",
+                  "lineHeight": 1.5,
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "s6ZB7",
+                  "name": "heroCta",
+                  "fill": "#4A9FD8",
+                  "cornerRadius": 9999,
+                  "padding": [
+                    36,
+                    18
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "L7HNpL",
+                      "name": "heroCtaTxt",
+                      "fill": "#FFFFFF",
+                      "content": "Get Started on Google Play",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "F5VOu",
+              "name": "heroImgW",
+              "clip": true,
+              "width": 900,
+              "height": 500,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "../public/multi_title_image.webp",
+                "mode": "fit"
+              },
+              "cornerRadius": 12,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#FFFFFF20"
+              },
+              "effect": [
+                {
+                  "type": "shadow",
+                  "shadowType": "outer",
+                  "color": "#00000008",
+                  "offset": {
+                    "x": 0,
+                    "y": 1
+                  },
+                  "blur": 3
+                },
+                {
+                  "type": "shadow",
+                  "shadowType": "outer",
+                  "color": "#0000000a",
+                  "offset": {
+                    "x": 0,
+                    "y": 8
+                  },
+                  "blur": 24
+                }
+              ],
+              "layout": "vertical"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Uqnsa",
+          "name": "featSec",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 64,
+          "padding": 80,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "D6IQgR",
+              "name": "featHeader",
+              "layout": "vertical",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "U2iPXy",
+                  "name": "featTitle",
+                  "fill": "#1A1A1A",
+                  "content": "Powerful Features of Multi Run",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "text",
+                  "id": "kRUzG",
+                  "name": "featSub",
+                  "fill": "#888888",
+                  "content": "Experience seamless app cloning and parallel running with enterprise-grade isolation.",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "mzC8c",
+              "name": "feat1",
+              "width": 1040,
+              "gap": 64,
+              "padding": [
+                0,
+                40
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "TENQY",
+                  "name": "f1Text",
+                  "width": 480,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ODdM8",
+                      "name": "f1Tag",
+                      "fill": "#EEF0F2",
+                      "cornerRadius": 9999,
+                      "padding": [
+                        12,
+                        6
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "oEsa5",
+                          "name": "f1TagTxt",
+                          "fill": "#4A9FD8",
+                          "content": "Core Feature",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "lSt5X",
+                      "name": "f1Title",
+                      "fill": "#1A1A1A",
+                      "content": "App Cloning",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "pl7gK",
+                      "name": "f1Desc",
+                      "fill": "#888888",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Clone and run multiple accounts of the same app with separate data storage.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "d5ATrH",
+                  "name": "f1Img",
+                  "clip": true,
+                  "width": 480,
+                  "height": 360,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "../public/multi_run_1.webp",
+                    "mode": "fit"
+                  },
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "effect": [
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#00000008",
+                      "offset": {
+                        "x": 0,
+                        "y": 1
+                      },
+                      "blur": 3
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0000000a",
+                      "offset": {
+                        "x": 0,
+                        "y": 8
+                      },
+                      "blur": 24
+                    }
+                  ],
+                  "layout": "vertical"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Y5WxHz",
+              "name": "rule1",
+              "width": 1040,
+              "height": 1,
+              "fill": "#EEF0F2",
+              "layout": "vertical"
+            },
+            {
+              "type": "frame",
+              "id": "J8oPJ",
+              "name": "feat2",
+              "width": 1040,
+              "gap": 64,
+              "padding": [
+                0,
+                40
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "zyXga",
+                  "name": "f2Img",
+                  "clip": true,
+                  "width": 480,
+                  "height": 360,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "../public/multi_run_2.webp",
+                    "mode": "fit"
+                  },
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "effect": [
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#00000008",
+                      "offset": {
+                        "x": 0,
+                        "y": 1
+                      },
+                      "blur": 3
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0000000a",
+                      "offset": {
+                        "x": 0,
+                        "y": 8
+                      },
+                      "blur": 24
+                    }
+                  ],
+                  "layout": "vertical"
+                },
+                {
+                  "type": "frame",
+                  "id": "IgbsH",
+                  "name": "f2Text",
+                  "width": 480,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "eFHdm",
+                      "name": "f2Tag",
+                      "fill": "#EEF0F2",
+                      "cornerRadius": 9999,
+                      "padding": [
+                        12,
+                        6
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "aAP8B",
+                          "name": "f2TagTxt",
+                          "fill": "#4A9FD8",
+                          "content": "Secure & Private",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "dUFdo",
+                      "name": "f2Title",
+                      "fill": "#1A1A1A",
+                      "content": "Data Isolation",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Zjh78",
+                      "name": "f2Desc",
+                      "fill": "#888888",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Keep your multiple accounts secure with isolated data spaces and no cross-contamination.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "pt4e3",
+              "name": "rule2",
+              "width": 1040,
+              "height": 1,
+              "fill": "#EEF0F2",
+              "layout": "vertical"
+            },
+            {
+              "type": "frame",
+              "id": "XRziW",
+              "name": "feat3",
+              "width": 1040,
+              "gap": 64,
+              "padding": [
+                0,
+                40
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "pbh2V",
+                  "name": "f3Text",
+                  "width": 480,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "PppVL",
+                      "name": "f3Tag",
+                      "fill": "#EEF0F2",
+                      "cornerRadius": 9999,
+                      "padding": [
+                        12,
+                        6
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "VPaul",
+                          "name": "f3TagTxt",
+                          "fill": "#4A9FD8",
+                          "content": "High Performance",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "I6dnK",
+                      "name": "f3Title",
+                      "fill": "#1A1A1A",
+                      "content": "Parallel Running",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "yptos",
+                      "name": "f3Desc",
+                      "fill": "#888888",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Run multiple accounts simultaneously without performance issues.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "O8DOL",
+                  "name": "f3Img",
+                  "clip": true,
+                  "width": 480,
+                  "height": 360,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "../public/multi_run_3.webp",
+                    "mode": "fit"
+                  },
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "effect": [
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#00000008",
+                      "offset": {
+                        "x": 0,
+                        "y": 1
+                      },
+                      "blur": 3
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0000000a",
+                      "offset": {
+                        "x": 0,
+                        "y": 8
+                      },
+                      "blur": 24
+                    }
+                  ],
+                  "layout": "vertical"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "mBzmP",
+              "name": "rule3",
+              "width": 1040,
+              "height": 1,
+              "fill": "#EEF0F2",
+              "layout": "vertical"
+            },
+            {
+              "type": "frame",
+              "id": "Qti8R",
+              "name": "feat4",
+              "width": 1040,
+              "gap": 64,
+              "padding": [
+                0,
+                40
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "G0x3s",
+                  "name": "f4Img",
+                  "clip": true,
+                  "width": 480,
+                  "height": 360,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "../public/multi_run_4.webp",
+                    "mode": "fit"
+                  },
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "effect": [
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#00000008",
+                      "offset": {
+                        "x": 0,
+                        "y": 1
+                      },
+                      "blur": 3
+                    },
+                    {
+                      "type": "shadow",
+                      "shadowType": "outer",
+                      "color": "#0000000a",
+                      "offset": {
+                        "x": 0,
+                        "y": 8
+                      },
+                      "blur": 24
+                    }
+                  ],
+                  "layout": "vertical"
+                },
+                {
+                  "type": "frame",
+                  "id": "Cp4ME",
+                  "name": "f4Text",
+                  "width": 480,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "vGhxd",
+                      "name": "f4Tag",
+                      "fill": "#EEF0F2",
+                      "cornerRadius": 9999,
+                      "padding": [
+                        12,
+                        6
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "FoNtt",
+                          "name": "f4TagTxt",
+                          "fill": "#4A9FD8",
+                          "content": "Seamless Experience",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "yaIVR",
+                      "name": "f4Title",
+                      "fill": "#1A1A1A",
+                      "content": "Easy Switching",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "VXTTv",
+                      "name": "f4Desc",
+                      "fill": "#888888",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Quickly switch between multiple accounts with our intuitive interface.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "b2ERK",
+          "name": "dlSec",
+          "width": "fill_container",
+          "fill": "#0A0A0A",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            80,
+            60
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "y8zNO",
+              "name": "dlTitle",
+              "fill": "#FFFFFF",
+              "content": "Download Multi Run",
+              "fontFamily": "Inter",
+              "fontSize": 36,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "text",
+              "id": "UCJJS",
+              "name": "dlDesc",
+              "fill": "#888888",
+              "content": "Available on all major platforms. Get started today!",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "Go0DG",
+              "name": "dlBtn",
+              "fill": "#4A9FD8",
+              "cornerRadius": 9999,
+              "padding": [
+                36,
+                18
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "p1RIj",
+                  "name": "dlBtnTxt",
+                  "fill": "#FFFFFF",
+                  "content": "Google Play",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "q60I7",
+          "name": "faqSec",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": 80,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "c2LIx",
+              "name": "faqTitle",
+              "fill": "#1A1A1A",
+              "content": "Frequently Asked Questions",
+              "fontFamily": "Inter",
+              "fontSize": 36,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "frame",
+              "id": "Y0Jzku",
+              "name": "faqList",
+              "width": 800,
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "VpaqD",
+                  "name": "faq1",
+                  "width": "fill_container",
+                  "fill": "#FDFDFD",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 28,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "T7igX",
+                      "name": "f1Q",
+                      "fill": "#1A1A1A",
+                      "content": "How do I clone an app?",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Vdxez",
+                      "name": "f1A",
+                      "fill": "#888888",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Simply open Multi Run, select the app you want to clone, and follow the on-screen instructions.Separate workspaces for professional/personal use. Auto-schedule switches (e.g., mute work apps after hours) and hide sensitive apps in Stealth Mode.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "XGg4z",
+                  "name": "faq2",
+                  "width": "fill_container",
+                  "fill": "#FDFDFD",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 28,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "D9sQY",
+                      "name": "f2Q",
+                      "fill": "#1A1A1A",
+                      "content": "Is Multi Run free?",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "kAULQ",
+                      "name": "f2A",
+                      "fill": "#888888",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Yes, Multi Run is free to use for all users.Dominate PUBG, Free Fire, or Genshin Impact with multiple accounts resources, strategize, or share devices hassle-free.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "l6HSU",
+                  "name": "faq3",
+                  "width": "fill_container",
+                  "fill": "#FDFDFD",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 28,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "i8w8a",
+                      "name": "f3Q",
+                      "fill": "#1A1A1A",
+                      "content": "Will my data be safe and isolated?",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "vPPoM",
+                      "name": "f3A",
+                      "fill": "#888888",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Yes, each cloned app runs in a separate, isolated environment to keep your data secure.Clone WhatsApp, Instagram, TikTok, games, and 2000+ apps—manage personal, work, and gaming profiles simultaneously on one device. Keep data 100% isolated with no overlap!",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dxswi",
+                  "name": "faq4",
+                  "width": "fill_container",
+                  "fill": "#FDFDFD",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 28,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "OfCWN",
+                      "name": "f4Q",
+                      "fill": "#1A1A1A",
+                      "content": "Which platforms are supported?",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "jNppu",
+                      "name": "f4A",
+                      "fill": "#888888",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Multi Run is available for Android.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "C2ej8",
+          "name": "testSec",
+          "width": "fill_container",
+          "fill": "#FDFDFD",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "top": 1
+            },
+            "fill": "#EEF0F2"
+          },
+          "layout": "vertical",
+          "gap": 48,
+          "padding": 80,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "WBV21",
+              "name": "testTitle",
+              "fill": "#1A1A1A",
+              "content": "What Users Say About Multi Run",
+              "fontFamily": "Inter",
+              "fontSize": 36,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "frame",
+              "id": "W4Cc5",
+              "name": "testGrid",
+              "width": 1120,
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "YJXC4",
+                  "name": "tCard1",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000008",
+                    "offset": {
+                      "x": 0,
+                      "y": 1
+                    },
+                    "blur": 3
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 28,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Arnvt",
+                      "name": "uInfo1",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "QeBL5",
+                          "name": "av1",
+                          "clip": true,
+                          "width": 48,
+                          "height": 48,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "../public/avatars/alex.jpg",
+                            "mode": "fit"
+                          },
+                          "cornerRadius": 24,
+                          "layout": "vertical"
+                        },
+                        {
+                          "type": "text",
+                          "id": "R4Ij5v",
+                          "name": "name1",
+                          "fill": "#1A1A1A",
+                          "content": "Alex",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "g1w8L",
+                      "name": "txt1",
+                      "fill": "#888888",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Ever since I started using it with multiple accounts, I enjoyed every bit of it. It's very simple to use and has a great interface. The experience so far is great. Worth 5 stars!",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "cgEzm",
+                  "name": "tCard2",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000008",
+                    "offset": {
+                      "x": 0,
+                      "y": 1
+                    },
+                    "blur": 3
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 28,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "hyD6G",
+                      "name": "uInfo2",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "AeBw7",
+                          "name": "av2",
+                          "clip": true,
+                          "width": 48,
+                          "height": 48,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "../public/avatars/linda.jpg",
+                            "mode": "fit"
+                          },
+                          "cornerRadius": 24,
+                          "layout": "vertical"
+                        },
+                        {
+                          "type": "text",
+                          "id": "L0AGy",
+                          "name": "name2",
+                          "fill": "#1A1A1A",
+                          "content": "Linda",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "oLNv9",
+                      "name": "txt2",
+                      "fill": "#888888",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "i can't really believe my eyes it's really totaly free and there is no ads u can add multiple accounts with free and quickly thank you so much for the creator 😙😙😍really advice everyone to try it it's better than others apps",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Qq9MX",
+                  "name": "tCard3",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000008",
+                    "offset": {
+                      "x": 0,
+                      "y": 1
+                    },
+                    "blur": 3
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 28,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "lum8d",
+                      "name": "uInfo3",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "AtaP4",
+                          "name": "av3",
+                          "clip": true,
+                          "width": 48,
+                          "height": 48,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "../public/avatars/sam.jpg",
+                            "mode": "fit"
+                          },
+                          "cornerRadius": 24,
+                          "layout": "vertical"
+                        },
+                        {
+                          "type": "text",
+                          "id": "s1kTy",
+                          "name": "name3",
+                          "fill": "#1A1A1A",
+                          "content": "Sam",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "eHleI",
+                      "name": "txt3",
+                      "fill": "#888888",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Finally an app which works with WhatsApp and with less ads. I love this app. It's very simple to use and has a great interface. The experience so far is great. Worth 5 stars!",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "KS6lg",
+                  "name": "tCard4",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000008",
+                    "offset": {
+                      "x": 0,
+                      "y": 1
+                    },
+                    "blur": 3
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 28,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "sDm6M",
+                      "name": "uInfo4",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "kzuTr",
+                          "name": "av4",
+                          "clip": true,
+                          "width": 48,
+                          "height": 48,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "../public/avatars/emily.jpg",
+                            "mode": "fit"
+                          },
+                          "cornerRadius": 24,
+                          "layout": "vertical"
+                        },
+                        {
+                          "type": "text",
+                          "id": "mK6Np",
+                          "name": "name4",
+                          "fill": "#1A1A1A",
+                          "content": "Emily",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "ixinx",
+                      "name": "txt4",
+                      "fill": "#888888",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "I tried so many multiple accounts clone apps for this particular app and all didn't work except this one! Simple and plays its role very nicely.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "B4zD7",
+          "name": "footer",
+          "width": "fill_container",
+          "fill": "#0A0A0A",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            60,
+            80
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "BiSyj",
+              "name": "fBrand",
+              "fill": "#FFFFFF",
+              "content": "Multi Run - Clone Apps & Multiple Accounts",
+              "fontFamily": "Inter",
+              "fontSize": 20,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "text",
+              "id": "rpkfH",
+              "name": "fCopy",
+              "fill": "#888888",
+              "content": "© 2026 Multi Run. All rights reserved.",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "g4NZV",
+      "x": 1480,
+      "y": 0,
+      "name": "Hot Apps Page",
+      "width": 1280,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "c5CSRd",
+          "name": "haNav",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "#EEF0F2"
+          },
+          "padding": [
+            24,
+            80
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "D541uy",
+              "name": "haLogoBox",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "lFVJh",
+                  "name": "haLogo",
+                  "width": 40,
+                  "height": 40,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "../public/logo.webp",
+                    "mode": "fit"
+                  },
+                  "layout": "vertical"
+                },
+                {
+                  "type": "text",
+                  "id": "ycEQY",
+                  "name": "haBrand",
+                  "fill": "#1A1A1A",
+                  "content": "Multi Run",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "bold"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "PqTbq",
+              "name": "haLinks",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "wZ1Fd",
+                  "name": "haL1",
+                  "fill": "#888888",
+                  "content": "Home",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "nrbhi",
+                  "name": "haL2",
+                  "fill": "#0062FF",
+                  "content": "Hot Apps",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "text",
+                  "id": "SIZPe",
+                  "name": "haL3",
+                  "fill": "#888888",
+                  "content": "Hot Games",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "cUCAi",
+                  "name": "haL4",
+                  "fill": "#888888",
+                  "content": "Blog",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "dN9yL",
+                  "name": "haL5",
+                  "fill": "#888888",
+                  "content": "Contact",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "A7uPuW",
+              "name": "haCta",
+              "fill": "#0062FF",
+              "cornerRadius": 20,
+              "padding": [
+                12,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "UwmW4",
+                  "name": "haCtaTxt",
+                  "fill": "#FFFFFF",
+                  "content": "Download Now",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "uIjaO",
+          "name": "haHero",
+          "width": "fill_container",
+          "fill": "#0A0A0A",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": 80,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "EtXdE",
+              "name": "haBadge",
+              "fill": "#FFFFFF1A",
+              "cornerRadius": 16,
+              "padding": [
+                6,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "eMfL4",
+                  "name": "haBadgeTxt",
+                  "fill": "#FFFFFF",
+                  "content": "📱 Supported Applications",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "ZeQgr",
+              "name": "haTitle",
+              "fill": "#FFFFFF",
+              "content": "Popular Apps for Multi Run",
+              "fontFamily": "Inter",
+              "fontSize": 48,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "text",
+              "id": "onkZz",
+              "name": "haSub",
+              "fill": "#888888",
+              "textGrowth": "fixed-width",
+              "width": 600,
+              "content": "Clone and manage multiple accounts for your favorite social and productivity apps simultaneously.",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "LkCi0",
+          "name": "haGridSec",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": 80,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "vaOi3",
+              "name": "haRow1",
+              "width": 1120,
+              "gap": 32,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "iYwZs",
+                  "name": "haCard1",
+                  "width": 350,
+                  "fill": "#FDFDFD",
+                  "cornerRadius": 24,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000008",
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "blur": 16
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "sZdWd",
+                      "name": "haH1",
+                      "gap": 16,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "zXzm3",
+                          "name": "haIb1",
+                          "width": 56,
+                          "height": 56,
+                          "fill": "#0062FF1A",
+                          "cornerRadius": 16,
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "rcWUE",
+                              "name": "haIc1",
+                              "content": "📸",
+                              "fontFamily": "Inter",
+                              "fontSize": 28,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Xtsle",
+                          "name": "haNb1",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "GH0LK",
+                              "name": "haN1",
+                              "fill": "#1A1A1A",
+                              "content": "Instagram",
+                              "fontFamily": "Inter",
+                              "fontSize": 20,
+                              "fontWeight": "bold"
+                            },
+                            {
+                              "type": "text",
+                              "id": "P18JW",
+                              "name": "haCat1",
+                              "fill": "#888888",
+                              "content": "Social Media",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "K0GRo",
+                      "name": "haD1",
+                      "fill": "#666666",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Run dual Instagram accounts seamlessly with isolated data and zero cross-tracking.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "L2wZi1",
+                      "name": "haBtn1",
+                      "width": "fill_container",
+                      "fill": "#EEF0F2",
+                      "cornerRadius": 12,
+                      "padding": [
+                        12,
+                        20
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "RvIO0",
+                          "name": "haBtnTxt1",
+                          "fill": "#0062FF",
+                          "content": "Clone App",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Ydcgb",
+                  "name": "haCard2",
+                  "width": 350,
+                  "fill": "#FDFDFD",
+                  "cornerRadius": 24,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000008",
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "blur": 16
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "LXOsC",
+                      "name": "haH2",
+                      "gap": 16,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "S85Rs",
+                          "name": "haIb2",
+                          "width": 56,
+                          "height": 56,
+                          "fill": "#0062FF1A",
+                          "cornerRadius": 16,
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "tu6bv",
+                              "name": "haIc2",
+                              "content": "👥",
+                              "fontFamily": "Inter",
+                              "fontSize": 28,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "D3YWQu",
+                          "name": "haNb2",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "tZU8M",
+                              "name": "haN2",
+                              "fill": "#1A1A1A",
+                              "content": "Facebook",
+                              "fontFamily": "Inter",
+                              "fontSize": 20,
+                              "fontWeight": "bold"
+                            },
+                            {
+                              "type": "text",
+                              "id": "oT2FA",
+                              "name": "haCat2",
+                              "fill": "#888888",
+                              "content": "Social Network",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "vjPrl",
+                      "name": "haD2",
+                      "fill": "#666666",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Manage personal and business Facebook profiles simultaneously on one device.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "tg5t4",
+                      "name": "haBtn2",
+                      "width": "fill_container",
+                      "fill": "#EEF0F2",
+                      "cornerRadius": 12,
+                      "padding": [
+                        12,
+                        20
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "DJEBE",
+                          "name": "haBtnTxt2",
+                          "fill": "#0062FF",
+                          "content": "Clone App",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "H4KCIq",
+                  "name": "haCard3",
+                  "width": 350,
+                  "fill": "#FDFDFD",
+                  "cornerRadius": 24,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000008",
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "blur": 16
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "VTe3o",
+                      "name": "haH3",
+                      "gap": 16,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "B3QR9i",
+                          "name": "haIb3",
+                          "width": 56,
+                          "height": 56,
+                          "fill": "#0062FF1A",
+                          "cornerRadius": 16,
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "W843U",
+                              "name": "haIc3",
+                              "content": "🐦",
+                              "fontFamily": "Inter",
+                              "fontSize": 28,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "E0ZZs",
+                          "name": "haNb3",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "L2h5D",
+                              "name": "haN3",
+                              "fill": "#1A1A1A",
+                              "content": "Twitter (X)",
+                              "fontFamily": "Inter",
+                              "fontSize": 20,
+                              "fontWeight": "bold"
+                            },
+                            {
+                              "type": "text",
+                              "id": "C5LKU",
+                              "name": "haCat3",
+                              "fill": "#888888",
+                              "content": "News & Social",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "KIWdt",
+                      "name": "haD3",
+                      "fill": "#666666",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Switch between multiple Twitter handles instantly without logging out.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "G9GHS",
+                      "name": "haBtn3",
+                      "width": "fill_container",
+                      "fill": "#EEF0F2",
+                      "cornerRadius": 12,
+                      "padding": [
+                        12,
+                        20
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "d9veWN",
+                          "name": "haBtnTxt3",
+                          "fill": "#0062FF",
+                          "content": "Clone App",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "z6PgQk",
+              "name": "haRow2",
+              "width": 1120,
+              "gap": 32,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "efD6d",
+                  "name": "haCard4",
+                  "width": 350,
+                  "fill": "#FDFDFD",
+                  "cornerRadius": 24,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000008",
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "blur": 16
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "kXMOZ",
+                      "name": "haH4",
+                      "gap": 16,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "cyYAU",
+                          "name": "haIb4",
+                          "width": 56,
+                          "height": 56,
+                          "fill": "#0062FF1A",
+                          "cornerRadius": 16,
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "VG1du",
+                              "name": "haIc4",
+                              "content": "🎶",
+                              "fontFamily": "Inter",
+                              "fontSize": 28,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "NrExm",
+                          "name": "haNb4",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ylAol",
+                              "name": "haN4",
+                              "fill": "#1A1A1A",
+                              "content": "Spotify",
+                              "fontFamily": "Inter",
+                              "fontSize": 20,
+                              "fontWeight": "bold"
+                            },
+                            {
+                              "type": "text",
+                              "id": "eYkAQ",
+                              "name": "haCat4",
+                              "fill": "#888888",
+                              "content": "Music & Audio",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "e7p3mD",
+                      "name": "haD4",
+                      "fill": "#666666",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Keep different music playlists and listening histories completely separate.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "TNOQE",
+                      "name": "haBtn4",
+                      "width": "fill_container",
+                      "fill": "#EEF0F2",
+                      "cornerRadius": 12,
+                      "padding": [
+                        12,
+                        20
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "epwKe",
+                          "name": "haBtnTxt4",
+                          "fill": "#0062FF",
+                          "content": "Clone App",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "utMs3",
+                  "name": "haCard5",
+                  "width": 350,
+                  "fill": "#FDFDFD",
+                  "cornerRadius": 24,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000008",
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "blur": 16
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "tko2c",
+                      "name": "haH5",
+                      "gap": 16,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "hjlwk",
+                          "name": "haIb5",
+                          "width": 56,
+                          "height": 56,
+                          "fill": "#0062FF1A",
+                          "cornerRadius": 16,
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "az7mz",
+                              "name": "haIc5",
+                              "content": "🦋",
+                              "fontFamily": "Inter",
+                              "fontSize": 28,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "G28vg",
+                          "name": "haNb5",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "jqbcU",
+                              "name": "haN5",
+                              "fill": "#1A1A1A",
+                              "content": "BlueSky",
+                              "fontFamily": "Inter",
+                              "fontSize": 20,
+                              "fontWeight": "bold"
+                            },
+                            {
+                              "type": "text",
+                              "id": "x32ha",
+                              "name": "haCat5",
+                              "fill": "#888888",
+                              "content": "Social Network",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "rkc0Z",
+                      "name": "haD5",
+                      "fill": "#666666",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Run multiple decentralized social profiles with enterprise data isolation.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Wa9mN",
+                      "name": "haBtn5",
+                      "width": "fill_container",
+                      "fill": "#EEF0F2",
+                      "cornerRadius": 12,
+                      "padding": [
+                        12,
+                        20
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "K20wDs",
+                          "name": "haBtnTxt5",
+                          "fill": "#0062FF",
+                          "content": "Clone App",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "EwXh2",
+                  "name": "haCard6",
+                  "width": 350,
+                  "fill": "#FDFDFD",
+                  "cornerRadius": 24,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000008",
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "blur": 16
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "BCVEn",
+                      "name": "haH6",
+                      "gap": 16,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "m6Q8j",
+                          "name": "haIb6",
+                          "width": 56,
+                          "height": 56,
+                          "fill": "#0062FF1A",
+                          "cornerRadius": 16,
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "I3Z3ds",
+                              "name": "haIc6",
+                              "content": "💬",
+                              "fontFamily": "Inter",
+                              "fontSize": 28,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "m51Ym",
+                          "name": "haNb6",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "TMmOt",
+                              "name": "haN6",
+                              "fill": "#1A1A1A",
+                              "content": "WhatsApp",
+                              "fontFamily": "Inter",
+                              "fontSize": 20,
+                              "fontWeight": "bold"
+                            },
+                            {
+                              "type": "text",
+                              "id": "J1vTYQ",
+                              "name": "haCat6",
+                              "fill": "#888888",
+                              "content": "Communication",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "PAP4q",
+                      "name": "haD6",
+                      "fill": "#666666",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Run dual WhatsApp accounts for personal and work numbers on one phone.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Zj9BY",
+                      "name": "haBtn6",
+                      "width": "fill_container",
+                      "fill": "#EEF0F2",
+                      "cornerRadius": 12,
+                      "padding": [
+                        12,
+                        20
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "qXcui",
+                          "name": "haBtnTxt6",
+                          "fill": "#0062FF",
+                          "content": "Clone App",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "lAS67",
+          "name": "haFooter",
+          "width": "fill_container",
+          "fill": "#0A0A0A",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            60,
+            80
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "NuTu2",
+              "name": "haFB",
+              "fill": "#FFFFFF",
+              "content": "Multi Run - Clone Apps & Multiple Accounts",
+              "fontFamily": "Inter",
+              "fontSize": 20,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "text",
+              "id": "bfzvm",
+              "name": "haFC",
+              "fill": "#888888",
+              "content": "© 2026 Multi Run. All rights reserved.",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "rVG4j",
+      "x": 2960,
+      "y": 0,
+      "name": "Hot Games Page",
+      "width": 1280,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "uFAm0",
+          "name": "hgNav",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "#EEF0F2"
+          },
+          "padding": [
+            24,
+            80
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "RgF5x",
+              "name": "hgLogoBox",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "KsyXd",
+                  "name": "hgLogo",
+                  "width": 40,
+                  "height": 40,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "../public/logo.webp",
+                    "mode": "fit"
+                  },
+                  "layout": "vertical"
+                },
+                {
+                  "type": "text",
+                  "id": "x0wmpI",
+                  "name": "hgBrand",
+                  "fill": "#1A1A1A",
+                  "content": "Multi Run",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "bold"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "RwEVV",
+              "name": "hgLinks",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "b3uVe",
+                  "name": "hgL1",
+                  "fill": "#888888",
+                  "content": "Home",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "f5aFE",
+                  "name": "hgL2",
+                  "fill": "#888888",
+                  "content": "Hot Apps",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "ogFTq",
+                  "name": "hgL3",
+                  "fill": "#0062FF",
+                  "content": "Hot Games",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "text",
+                  "id": "fwkaT",
+                  "name": "hgL4",
+                  "fill": "#888888",
+                  "content": "Blog",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "I2W1I",
+                  "name": "hgL5",
+                  "fill": "#888888",
+                  "content": "Contact",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "nSCBP",
+              "name": "hgCta",
+              "fill": "#0062FF",
+              "cornerRadius": 20,
+              "padding": [
+                12,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ehd7u",
+                  "name": "hgCtaTxt",
+                  "fill": "#FFFFFF",
+                  "content": "Download Now",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ATgYG",
+          "name": "hgHero",
+          "width": "fill_container",
+          "fill": "#0A0A0A",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": 80,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "f98dX1",
+              "name": "hgBadge",
+              "fill": "#FFFFFF1A",
+              "cornerRadius": 16,
+              "padding": [
+                6,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "wCjEt",
+                  "name": "hgBadgeTxt",
+                  "fill": "#FFFFFF",
+                  "content": "🎮 Supported Games",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "yySAg",
+              "name": "hgTitle",
+              "fill": "#FFFFFF",
+              "content": "Popular Games for Multi Run",
+              "fontFamily": "Inter",
+              "fontSize": 48,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "text",
+              "id": "I6R4n",
+              "name": "hgSub",
+              "fill": "#888888",
+              "textGrowth": "fixed-width",
+              "width": 600,
+              "content": "Level up your gaming experience by running dual accounts, farming resources, and playing co-op with yourself.",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Ev0pD",
+          "name": "hgGridSec",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": 80,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "jnrdS",
+              "name": "hgRow1",
+              "width": 1120,
+              "gap": 32,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "KJynh",
+                  "name": "hgCard1",
+                  "width": 350,
+                  "fill": "#FDFDFD",
+                  "cornerRadius": 24,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000008",
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "blur": 16
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "xy4A1",
+                      "name": "hgH1",
+                      "gap": 16,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "NuLpy",
+                          "name": "hgIb1",
+                          "width": 56,
+                          "height": 56,
+                          "fill": "#0062FF1A",
+                          "cornerRadius": 16,
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Cd04K",
+                              "name": "hgIc1",
+                              "content": "🧱",
+                              "fontFamily": "Inter",
+                              "fontSize": 28,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "zDEMd",
+                          "name": "hgNb1",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "zUvKi",
+                              "name": "hgN1",
+                              "fill": "#1A1A1A",
+                              "content": "Roblox",
+                              "fontFamily": "Inter",
+                              "fontSize": 20,
+                              "fontWeight": "bold"
+                            },
+                            {
+                              "type": "text",
+                              "id": "fAo3k",
+                              "name": "hgCat1",
+                              "fill": "#888888",
+                              "content": "Adventure & Sandbox",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "T1m2Le",
+                      "name": "hgD1",
+                      "fill": "#666666",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Run dual Roblox accounts simultaneously for efficient resource farming and leveling.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "CYXpP",
+                      "name": "hgBtn1",
+                      "width": "fill_container",
+                      "fill": "#EEF0F2",
+                      "cornerRadius": 12,
+                      "padding": [
+                        12,
+                        20
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "d0Jc0",
+                          "name": "hgBtnTxt1",
+                          "fill": "#0062FF",
+                          "content": "Clone Game",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dlbwr",
+                  "name": "hgCard2",
+                  "width": 350,
+                  "fill": "#FDFDFD",
+                  "cornerRadius": 24,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000008",
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "blur": 16
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "WWlLn",
+                      "name": "hgH2",
+                      "gap": 16,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "agcPW",
+                          "name": "hgIb2",
+                          "width": 56,
+                          "height": 56,
+                          "fill": "#0062FF1A",
+                          "cornerRadius": 16,
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "MphBU",
+                              "name": "hgIc2",
+                              "content": "🌱",
+                              "fontFamily": "Inter",
+                              "fontSize": 28,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "WXFH1",
+                          "name": "hgNb2",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "t5tr0G",
+                              "name": "hgN2",
+                              "fill": "#1A1A1A",
+                              "content": "Grow a Garden",
+                              "fontFamily": "Inter",
+                              "fontSize": 20,
+                              "fontWeight": "bold"
+                            },
+                            {
+                              "type": "text",
+                              "id": "EbqSv",
+                              "name": "hgCat2",
+                              "fill": "#888888",
+                              "content": "Simulation & Casual",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "xGa2G",
+                      "name": "hgD2",
+                      "fill": "#666666",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Manage multiple garden plots and trade items between your own dual accounts.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "TOZQQ",
+                      "name": "hgBtn2",
+                      "width": "fill_container",
+                      "fill": "#EEF0F2",
+                      "cornerRadius": 12,
+                      "padding": [
+                        12,
+                        20
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "hjnGe",
+                          "name": "hgBtnTxt2",
+                          "fill": "#0062FF",
+                          "content": "Clone Game",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "oHofV",
+                  "name": "hgCard3",
+                  "width": 350,
+                  "fill": "#FDFDFD",
+                  "cornerRadius": 24,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000008",
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "blur": 16
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "P5Zxpa",
+                      "name": "hgH3",
+                      "gap": 16,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Txhy3",
+                          "name": "hgIb3",
+                          "width": 56,
+                          "height": 56,
+                          "fill": "#0062FF1A",
+                          "cornerRadius": 16,
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "yBoRV",
+                              "name": "hgIc3",
+                              "content": "⚔️",
+                              "fontFamily": "Inter",
+                              "fontSize": 28,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ijtbD",
+                          "name": "hgNb3",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "t9qnJ",
+                              "name": "hgN3",
+                              "fill": "#1A1A1A",
+                              "content": "Clash of Clans",
+                              "fontFamily": "Inter",
+                              "fontSize": 20,
+                              "fontWeight": "bold"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Nw2Xu",
+                              "name": "hgCat3",
+                              "fill": "#888888",
+                              "content": "Strategy",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "JB1hq",
+                      "name": "hgD3",
+                      "fill": "#666666",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Manage your main base and feeder clan accounts simultaneously on one device.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "R83iw",
+                      "name": "hgBtn3",
+                      "width": "fill_container",
+                      "fill": "#EEF0F2",
+                      "cornerRadius": 12,
+                      "padding": [
+                        12,
+                        20
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dGTzA",
+                          "name": "hgBtnTxt3",
+                          "fill": "#0062FF",
+                          "content": "Clone Game",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ZZ0CT",
+              "name": "hgRow2",
+              "width": 1120,
+              "gap": 32,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Tmiz8",
+                  "name": "hgCard4",
+                  "width": 350,
+                  "fill": "#FDFDFD",
+                  "cornerRadius": 24,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000008",
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "blur": 16
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "vnCkw",
+                      "name": "hgH4",
+                      "gap": 16,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "V1ROk",
+                          "name": "hgIb4",
+                          "width": 56,
+                          "height": 56,
+                          "fill": "#0062FF1A",
+                          "cornerRadius": 16,
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "PeeIH",
+                              "name": "hgIc4",
+                              "content": "🌟",
+                              "fontFamily": "Inter",
+                              "fontSize": 28,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "eNwY4",
+                          "name": "hgNb4",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "mL88f",
+                              "name": "hgN4",
+                              "fill": "#1A1A1A",
+                              "content": "Genshin Impact",
+                              "fontFamily": "Inter",
+                              "fontSize": 20,
+                              "fontWeight": "bold"
+                            },
+                            {
+                              "type": "text",
+                              "id": "mvIEC",
+                              "name": "hgCat4",
+                              "fill": "#888888",
+                              "content": "Action RPG",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "SOySh",
+                      "name": "hgD4",
+                      "fill": "#666666",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Run dual accounts for daily commission farming and co-op domain challenges.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "h8xFIi",
+                      "name": "hgBtn4",
+                      "width": "fill_container",
+                      "fill": "#EEF0F2",
+                      "cornerRadius": 12,
+                      "padding": [
+                        12,
+                        20
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "nR3mk",
+                          "name": "hgBtnTxt4",
+                          "fill": "#0062FF",
+                          "content": "Clone Game",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mYyaB",
+                  "name": "hgCard5",
+                  "width": 350,
+                  "fill": "#FDFDFD",
+                  "cornerRadius": 24,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000008",
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "blur": 16
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "fZeEH",
+                      "name": "hgH5",
+                      "gap": 16,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "yHX4J",
+                          "name": "hgIb5",
+                          "width": 56,
+                          "height": 56,
+                          "fill": "#0062FF1A",
+                          "cornerRadius": 16,
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ZP2Gj",
+                              "name": "hgIc5",
+                              "content": "🪂",
+                              "fontFamily": "Inter",
+                              "fontSize": 28,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "L66Sd0",
+                          "name": "hgNb5",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "jQ1h6",
+                              "name": "hgN5",
+                              "fill": "#1A1A1A",
+                              "content": "PUBG Mobile",
+                              "fontFamily": "Inter",
+                              "fontSize": 20,
+                              "fontWeight": "bold"
+                            },
+                            {
+                              "type": "text",
+                              "id": "sih6r",
+                              "name": "hgCat5",
+                              "fill": "#888888",
+                              "content": "Battle Royale",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "IaumB",
+                      "name": "hgD5",
+                      "fill": "#666666",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Maintain separate rank tiers and play in different regional servers easily.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "QdZhf",
+                      "name": "hgBtn5",
+                      "width": "fill_container",
+                      "fill": "#EEF0F2",
+                      "cornerRadius": 12,
+                      "padding": [
+                        12,
+                        20
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Q5OtO",
+                          "name": "hgBtnTxt5",
+                          "fill": "#0062FF",
+                          "content": "Clone Game",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "c7Ckel",
+                  "name": "hgCard6",
+                  "width": 350,
+                  "fill": "#FDFDFD",
+                  "cornerRadius": 24,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000008",
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "blur": 16
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "kkIAg",
+                      "name": "hgH6",
+                      "gap": 16,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "HMmYT",
+                          "name": "hgIb6",
+                          "width": 56,
+                          "height": 56,
+                          "fill": "#0062FF1A",
+                          "cornerRadius": 16,
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "P6KSp",
+                              "name": "hgIc6",
+                              "content": "🔥",
+                              "fontFamily": "Inter",
+                              "fontSize": 28,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Tb7bt",
+                          "name": "hgNb6",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "DHdnG",
+                              "name": "hgN6",
+                              "fill": "#1A1A1A",
+                              "content": "Free Fire",
+                              "fontFamily": "Inter",
+                              "fontSize": 20,
+                              "fontWeight": "bold"
+                            },
+                            {
+                              "type": "text",
+                              "id": "eNVLy",
+                              "name": "hgCat6",
+                              "fill": "#888888",
+                              "content": "Shooter",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "VCDCX",
+                      "name": "hgD6",
+                      "fill": "#666666",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Switch between your competitive squad account and casual solo account instantly.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "EK0q4",
+                      "name": "hgBtn6",
+                      "width": "fill_container",
+                      "fill": "#EEF0F2",
+                      "cornerRadius": 12,
+                      "padding": [
+                        12,
+                        20
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "NIFP4",
+                          "name": "hgBtnTxt6",
+                          "fill": "#0062FF",
+                          "content": "Clone Game",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "cHwC8",
+          "name": "hgFooter",
+          "width": "fill_container",
+          "fill": "#0A0A0A",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            60,
+            80
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "AWdP2",
+              "name": "hgFB",
+              "fill": "#FFFFFF",
+              "content": "Multi Run - Clone Apps & Multiple Accounts",
+              "fontFamily": "Inter",
+              "fontSize": 20,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "text",
+              "id": "mIRE0",
+              "name": "hgFC",
+              "fill": "#888888",
+              "content": "© 2026 Multi Run. All rights reserved.",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ttptg",
+      "x": 4440,
+      "y": 0,
+      "name": "Blog Page",
+      "width": 1280,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "r1tqoC",
+          "name": "bgNav",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "#EEF0F2"
+          },
+          "padding": [
+            24,
+            80
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "L7rn7e",
+              "name": "bgLogoBox",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "g13Gwn",
+                  "name": "bgLogo",
+                  "width": 40,
+                  "height": 40,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "../public/logo.webp",
+                    "mode": "fit"
+                  },
+                  "layout": "vertical"
+                },
+                {
+                  "type": "text",
+                  "id": "ZPE9N",
+                  "name": "bgBrand",
+                  "fill": "#1A1A1A",
+                  "content": "Multi Run",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "bold"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "EilUQ",
+              "name": "bgLinks",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "SIShc",
+                  "name": "bgL1",
+                  "fill": "#888888",
+                  "content": "Home",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "QRkME",
+                  "name": "bgL2",
+                  "fill": "#888888",
+                  "content": "Hot Apps",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Pfy41",
+                  "name": "bgL3",
+                  "fill": "#888888",
+                  "content": "Hot Games",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Y1kgW",
+                  "name": "bgL4",
+                  "fill": "#0062FF",
+                  "content": "Blog",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "bold"
+                },
+                {
+                  "type": "text",
+                  "id": "BdwMg",
+                  "name": "bgL5",
+                  "fill": "#888888",
+                  "content": "Contact",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "O5ZuYC",
+              "name": "bgCta",
+              "fill": "#0062FF",
+              "cornerRadius": 20,
+              "padding": [
+                12,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "r9gLM",
+                  "name": "bgCtaTxt",
+                  "fill": "#FFFFFF",
+                  "content": "Download Now",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "pAJE7",
+          "name": "bgHero",
+          "width": "fill_container",
+          "fill": "#0A0A0A",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": 80,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "PGeCw",
+              "name": "bgBadge",
+              "fill": "#FFFFFF1A",
+              "cornerRadius": 16,
+              "padding": [
+                6,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "mKFc3",
+                  "name": "bgBadgeTxt",
+                  "fill": "#FFFFFF",
+                  "content": "📝 Multi Run Insights",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "SXpQO",
+              "name": "bgTitle",
+              "fill": "#FFFFFF",
+              "content": "Latest News & Tutorials",
+              "fontFamily": "Inter",
+              "fontSize": 48,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "text",
+              "id": "ulLBC",
+              "name": "bgSub",
+              "fill": "#888888",
+              "textGrowth": "fixed-width",
+              "width": 600,
+              "content": "Explore expert tips, app cloning guides, and updates on multiple account management.",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "gsRSv",
+          "name": "bgFeatSec",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "padding": 80,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "gy09N",
+              "name": "bgFeatCard",
+              "width": 1120,
+              "fill": "#0A0A0A",
+              "cornerRadius": 32,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#EEF0F233"
+              },
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#00000024",
+                "offset": {
+                  "x": 0,
+                  "y": 12
+                },
+                "blur": 32
+              },
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "FrhmT",
+                  "name": "bgFeatLeft",
+                  "width": 560,
+                  "layout": "vertical",
+                  "gap": 32,
+                  "padding": 60,
+                  "justifyContent": "space_between",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Bxvme",
+                      "name": "bgFeatMeta",
+                      "gap": 16,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "iK2R8",
+                          "name": "bgFeatDate",
+                          "fill": "#FFFFFFB3",
+                          "content": "May 18, 2026",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "I4Pcdx",
+                          "name": "bgFeatDot",
+                          "fill": "#FFFFFF4D",
+                          "content": "•",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "wj3tE",
+                          "name": "bgFeatTime",
+                          "fill": "#FFFFFFB3",
+                          "content": "5 min read",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "qiUQ4",
+                      "name": "bgFeatTitleBox",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "K3Hvm3",
+                          "name": "bgFeatTitle",
+                          "fill": "#FFFFFF",
+                          "textGrowth": "fixed-width",
+                          "width": 440,
+                          "content": "How to Run Multiple WhatsApp Accounts on One Phone in 2026",
+                          "fontFamily": "Inter",
+                          "fontSize": 32,
+                          "fontWeight": "bold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "anecL",
+                          "name": "bgFeatDesc",
+                          "fill": "#888888",
+                          "textGrowth": "fixed-width",
+                          "width": 440,
+                          "content": "A comprehensive guide to managing dual WhatsApp profiles for work and personal use with complete data isolation and zero ban risk.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "zPS0D",
+                      "name": "bgFeatFoot",
+                      "gap": 16,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "l6zoMM",
+                          "name": "bgFeatTag",
+                          "fill": "#FFFFFF1A",
+                          "cornerRadius": 8,
+                          "padding": [
+                            8,
+                            16
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "iVpng",
+                              "name": "bgFeatTagTxt",
+                              "fill": "#FFFFFF",
+                              "content": "Tutorial",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "M06A1w",
+                          "name": "bgFeatRead",
+                          "fill": "#0062FF",
+                          "content": "Read Article →",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ZS72F",
+                  "name": "bgFeatRight",
+                  "width": 560,
+                  "height": 480,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "../public/multi_run_4.webp",
+                    "mode": "fill"
+                  },
+                  "layout": "vertical"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Ketqf",
+          "name": "bgRecSec",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": [
+            0,
+            80,
+            80,
+            80
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "rTL2U",
+              "name": "bgRow1",
+              "width": 1120,
+              "gap": 32,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "AM7Hz",
+                  "name": "bgCard1",
+                  "width": 350,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 24,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000008",
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "blur": 16
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "NydXz",
+                      "name": "bgImg1",
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "../public/multi_run_1.webp",
+                        "mode": "fill"
+                      },
+                      "layout": "vertical"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "nzNIv",
+                      "name": "bgCb1",
+                      "layout": "vertical",
+                      "gap": 20,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "P3cCGX",
+                          "name": "bgM1",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Q5Biqn",
+                              "name": "bgD1",
+                              "fill": "#888888",
+                              "content": "May 15, 2026 • 4 min read",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "qtXP0",
+                          "name": "bgT1",
+                          "fill": "#1A1A1A",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Top 10 Productivity Apps to Clone for Work-Life Balance",
+                          "fontFamily": "Inter",
+                          "fontSize": 20,
+                          "fontWeight": "bold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "q2UMw",
+                          "name": "bgP1",
+                          "fill": "#666666",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Learn how separating your professional tools from personal accounts can boost focus and reduce burnout.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "lGvNO",
+                          "name": "bgRm1",
+                          "fill": "#0062FF",
+                          "content": "Read More →",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "c70Yb",
+                  "name": "bgCard2",
+                  "width": 350,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 24,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000008",
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "blur": 16
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "t4Fi4a",
+                      "name": "bgImg2",
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "../public/multi_run_2.webp",
+                        "mode": "fill"
+                      },
+                      "layout": "vertical"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "tObir",
+                      "name": "bgCb2",
+                      "layout": "vertical",
+                      "gap": 20,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "K8xz5",
+                          "name": "bgM2",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "nZ2qE",
+                              "name": "bgD2",
+                              "fill": "#888888",
+                              "content": "May 12, 2026 • 6 min read",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "yHZP8",
+                          "name": "bgT2",
+                          "fill": "#1A1A1A",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Is App Cloning Safe? Understanding Data Privacy in 2026",
+                          "fontFamily": "Inter",
+                          "fontSize": 20,
+                          "fontWeight": "bold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "jq8ql",
+                          "name": "bgP2",
+                          "fill": "#666666",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "We deep dive into sandbox encryption, permission isolation, and how Multi Run secures your sensitive data.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "FztDf",
+                          "name": "bgRm2",
+                          "fill": "#0062FF",
+                          "content": "Read More →",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ilEtn",
+                  "name": "bgCard3",
+                  "width": 350,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 24,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000008",
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "blur": 16
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "tIoDm",
+                      "name": "bgImg3",
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "../public/multi_run_3.webp",
+                        "mode": "fill"
+                      },
+                      "layout": "vertical"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "bUQ4u",
+                      "name": "bgCb3",
+                      "layout": "vertical",
+                      "gap": 20,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "wGuxb",
+                          "name": "bgM3",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "FqNYQ",
+                              "name": "bgD3",
+                              "fill": "#888888",
+                              "content": "May 08, 2026 • 3 min read",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "yVHZA",
+                          "name": "bgT3",
+                          "fill": "#1A1A1A",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Gaming on Dual Accounts: Tips for Resource Farming",
+                          "fontFamily": "Inter",
+                          "fontSize": 20,
+                          "fontWeight": "bold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "iU3PN",
+                          "name": "bgP3",
+                          "fill": "#666666",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Maximize your efficiency in strategy and RPG games by running your main and smurf accounts side-by-side.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "z8S1r",
+                          "name": "bgRm3",
+                          "fill": "#0062FF",
+                          "content": "Read More →",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "HOrAo",
+              "name": "bgRow2",
+              "width": 1120,
+              "gap": 32,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Rt1ko",
+                  "name": "bgCard4",
+                  "width": 350,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 24,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000008",
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "blur": 16
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "A2gbw",
+                      "name": "bgImg4",
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "../public/multi_run_4.webp",
+                        "mode": "fill"
+                      },
+                      "layout": "vertical"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "eafTP",
+                      "name": "bgCb4",
+                      "layout": "vertical",
+                      "gap": 20,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "k2ACsB",
+                          "name": "bgM4",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "a1OysA",
+                              "name": "bgD4",
+                              "fill": "#888888",
+                              "content": "May 02, 2026 • 5 min read",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "TpJMp",
+                          "name": "bgT4",
+                          "fill": "#1A1A1A",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Multi Run v4.2 Release Notes: Enhanced Android 16 Support",
+                          "fontFamily": "Inter",
+                          "fontSize": 20,
+                          "fontWeight": "bold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "qF8U8",
+                          "name": "bgP4",
+                          "fill": "#666666",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Discover the new features, performance boosts, and compatibility updates in our latest system release.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "UplRV",
+                          "name": "bgRm4",
+                          "fill": "#0062FF",
+                          "content": "Read More →",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "l7GPWQ",
+                  "name": "bgCard5",
+                  "width": 350,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 24,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000008",
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "blur": 16
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "CjYbI",
+                      "name": "bgImg5",
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "../public/multi_run_1.webp",
+                        "mode": "fill"
+                      },
+                      "layout": "vertical"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "vDhug",
+                      "name": "bgCb5",
+                      "layout": "vertical",
+                      "gap": 20,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "yxKJx",
+                          "name": "bgM5",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "BIoGU",
+                              "name": "bgD5",
+                              "fill": "#888888",
+                              "content": "Apr 28, 2026 • 7 min read",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "CGwt9",
+                          "name": "bgT5",
+                          "fill": "#1A1A1A",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "The Ultimate Guide to Social Media Management on Mobile",
+                          "fontFamily": "Inter",
+                          "fontSize": 20,
+                          "fontWeight": "bold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "wFfJR",
+                          "name": "bgP5",
+                          "fill": "#666666",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "How agencies and creators use Multi Run to handle dozens of client profiles without logging out.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ZSpyb",
+                          "name": "bgRm5",
+                          "fill": "#0062FF",
+                          "content": "Read More →",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "GPYo8",
+                  "name": "bgCard6",
+                  "width": 350,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 24,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#EEF0F2"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000008",
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "blur": 16
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "K8DDV",
+                      "name": "bgImg6",
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "../public/multi_run_2.webp",
+                        "mode": "fill"
+                      },
+                      "layout": "vertical"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "q99aMo",
+                      "name": "bgCb6",
+                      "layout": "vertical",
+                      "gap": 20,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "BORkC",
+                          "name": "bgM6",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ph0Yu",
+                              "name": "bgD6",
+                              "fill": "#888888",
+                              "content": "Apr 20, 2026 • 4 min read",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "xrumj",
+                          "name": "bgT6",
+                          "fill": "#1A1A1A",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Troubleshooting Common Dual App Notification Issues",
+                          "fontFamily": "Inter",
+                          "fontSize": 20,
+                          "fontWeight": "bold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "B1iyOF",
+                          "name": "bgP6",
+                          "fill": "#666666",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Quick fixes for ensuring you never miss an urgent message on your secondary cloned accounts.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "yXEU3",
+                          "name": "bgRm6",
+                          "fill": "#0062FF",
+                          "content": "Read More →",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "k2YW8K",
+          "name": "bgFooter",
+          "width": "fill_container",
+          "fill": "#0A0A0A",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            60,
+            80
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "j0VoC",
+              "name": "bgFB",
+              "fill": "#FFFFFF",
+              "content": "Multi Run - Clone Apps & Multiple Accounts",
+              "fontFamily": "Inter",
+              "fontSize": 20,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "text",
+              "id": "v0eI4A",
+              "name": "bgFC",
+              "fill": "#888888",
+              "content": "© 2026 Multi Run. All rights reserved.",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

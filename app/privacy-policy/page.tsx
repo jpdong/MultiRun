@@ -1,4 +1,4 @@
-import PrivacyPolicyPage from '../../src/pages/PrivacyPolicyPage'
+import PrivacyPolicyPage from '../../src/views/PrivacyPolicyPage'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {

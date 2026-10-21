@@ -1,3 +1,5 @@
+import staticBlogData from '../data/blog-data.json';
+
 import { BlogPost, BlogSearchParams } from './types';
 
 // 静态博客数据将在构建时生成
@@ -21,11 +23,11 @@ function loadBlogData(): {
 
   try {
     // 在构建时，数据文件会被生成到src/data/blog-data.json
-    const data = require('../data/blog-data.json');
+    const data = staticBlogData;
     blogData = {
       posts: data.posts || [],
       tags: data.tags || [],
-      generatedAt: data.generatedAt || new Date().toISOString()
+      generatedAt: data.generatedAt || new Date().toISOString(),
     };
     return blogData;
   } catch (error) {
@@ -34,7 +36,7 @@ function loadBlogData(): {
     blogData = {
       posts: [],
       tags: [],
-      generatedAt: new Date().toISOString()
+      generatedAt: new Date().toISOString(),
     };
     return blogData;
   }
@@ -53,7 +55,7 @@ export function getAllBlogPosts(): BlogPost[] {
  */
 export function getBlogPostBySlug(slug: string): BlogPost | null {
   const data = loadBlogData();
-  return data.posts.find(post => post.slug === slug) || null;
+  return data.posts.find((post) => post.slug === slug) || null;
 }
 
 /**
@@ -61,7 +63,7 @@ export function getBlogPostBySlug(slug: string): BlogPost | null {
  */
 export function getFeaturedBlogPosts(): BlogPost[] {
   const data = loadBlogData();
-  return data.posts.filter(post => post.featured);
+  return data.posts.filter((post) => post.featured);
 }
 
 /**
@@ -75,23 +77,27 @@ export function getAllTags(): string[] {
 /**
  * 过滤博客文章
  */
-export function filterBlogPosts(posts: BlogPost[], params: BlogSearchParams): BlogPost[] {
+export function filterBlogPosts(
+  posts: BlogPost[],
+  params: BlogSearchParams
+): BlogPost[] {
   let filteredPosts = [...posts];
 
   // Filter by search query
   if (params.query) {
     const query = params.query.toLowerCase();
-    filteredPosts = filteredPosts.filter(post =>
-      post.title.toLowerCase().includes(query) ||
-      post.description.toLowerCase().includes(query) ||
-      post.content.toLowerCase().includes(query) ||
-      post.tags.some(tag => tag.toLowerCase().includes(query))
+    filteredPosts = filteredPosts.filter(
+      (post) =>
+        post.title.toLowerCase().includes(query) ||
+        post.description.toLowerCase().includes(query) ||
+        post.content.toLowerCase().includes(query) ||
+        post.tags.some((tag) => tag.toLowerCase().includes(query))
     );
   }
 
   // Filter by tag
   if (params.tag) {
-    filteredPosts = filteredPosts.filter(post =>
+    filteredPosts = filteredPosts.filter((post) =>
       post.tags.includes(params.tag!)
     );
   }
@@ -102,16 +108,23 @@ export function filterBlogPosts(posts: BlogPost[], params: BlogSearchParams): Bl
 /**
  * 获取相关博客文章
  */
-export function getRelatedBlogPosts(currentPost: BlogPost, limit: number = 3): BlogPost[] {
+export function getRelatedBlogPosts(
+  currentPost: BlogPost,
+  limit: number = 3
+): BlogPost[] {
   const data = loadBlogData();
-  const otherPosts = data.posts.filter(post => post.slug !== currentPost.slug);
+  const otherPosts = data.posts.filter(
+    (post) => post.slug !== currentPost.slug
+  );
 
   // 基于标签匹配相关文章
-  const scoredPosts = otherPosts.map(post => {
-    const sharedTags = post.tags.filter(tag => currentPost.tags.includes(tag));
+  const scoredPosts = otherPosts.map((post) => {
+    const sharedTags = post.tags.filter((tag) =>
+      currentPost.tags.includes(tag)
+    );
     return {
       post,
-      score: sharedTags.length
+      score: sharedTags.length,
     };
   });
 
@@ -119,5 +132,5 @@ export function getRelatedBlogPosts(currentPost: BlogPost, limit: number = 3): B
   return scoredPosts
     .sort((a, b) => b.score - a.score)
     .slice(0, limit)
-    .map(item => item.post);
+    .map((item) => item.post);
 }

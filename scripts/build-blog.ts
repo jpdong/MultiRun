@@ -1,21 +1,27 @@
-import { unified } from 'unified';
-import remarkParse from 'remark-parse';
-import remarkGfm from 'remark-gfm';
-import remarkRehype from 'remark-rehype';
-import rehypeStringify from 'rehype-stringify';
-import rehypeHighlight from 'rehype-highlight';
-import rehypeSlug from 'rehype-slug';
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import { readFileSync, readdirSync, writeFileSync, mkdirSync, existsSync } from 'fs';
+import {
+  readFileSync,
+  readdirSync,
+  writeFileSync,
+  mkdirSync,
+  existsSync,
+} from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+
 import matter from 'gray-matter';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeHighlight from 'rehype-highlight';
+import rehypeSlug from 'rehype-slug';
+import rehypeStringify from 'rehype-stringify';
+import remarkGfm from 'remark-gfm';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import { unified } from 'unified';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 
-const CONTENT_DIR = join(__dirname, '../src/content/blog');
-const OUTPUT_DIR = join(__dirname, '../src/data');
+const CONTENT_DIR = join(scriptDirectory, '../src/content/blog');
+const OUTPUT_DIR = join(scriptDirectory, '../src/data');
 const OUTPUT_FILE = join(OUTPUT_DIR, 'blog-data.json');
 
 interface BlogPostData {
@@ -61,13 +67,13 @@ async function processMarkdown(content: string): Promise<string> {
       properties: {
         className: ['anchor'],
         ariaHidden: 'true',
-        tabIndex: -1
-      }
+        tabIndex: -1,
+      },
     })
     .use(rehypeHighlight, {
       // 使用highlight.js的CSS类
       detect: true,
-      ignoreMissing: true
+      ignoreMissing: true,
     })
     .use(rehypeStringify, { allowDangerousHtml: true })
     .process(content);
@@ -78,7 +84,10 @@ async function processMarkdown(content: string): Promise<string> {
 /**
  * 处理单个markdown文件
  */
-async function processMarkdownFile(filePath: string, slug: string): Promise<BlogPostData | null> {
+async function processMarkdownFile(
+  filePath: string,
+  slug: string
+): Promise<BlogPostData | null> {
   try {
     console.log(`📄 处理文件: ${filePath}`);
 
@@ -87,10 +96,12 @@ async function processMarkdownFile(filePath: string, slug: string): Promise<Blog
 
     // 验证必需的frontmatter字段
     const requiredFields = ['title', 'description', 'date', 'author', 'tags'];
-    const missingFields = requiredFields.filter(field => !frontmatter[field]);
+    const missingFields = requiredFields.filter((field) => !frontmatter[field]);
 
     if (missingFields.length > 0) {
-      console.warn(`⚠️  文件 ${filePath} 缺少必需字段: ${missingFields.join(', ')}`);
+      console.warn(
+        `⚠️  文件 ${filePath} 缺少必需字段: ${missingFields.join(', ')}`
+      );
       return null;
     }
 
@@ -103,12 +114,14 @@ async function processMarkdownFile(filePath: string, slug: string): Promise<Blog
       description: frontmatter.description,
       date: frontmatter.date,
       author: frontmatter.author,
-      tags: Array.isArray(frontmatter.tags) ? frontmatter.tags : [frontmatter.tags],
+      tags: Array.isArray(frontmatter.tags)
+        ? frontmatter.tags
+        : [frontmatter.tags],
       content,
       html,
       readingTime: calculateReadingTime(content),
       featured: frontmatter.featured || false,
-      coverImage: frontmatter.coverImage || undefined
+      coverImage: frontmatter.coverImage || undefined,
     };
   } catch (error) {
     console.error(`❌ 处理文件 ${filePath} 时出错:`, error);
@@ -128,8 +141,8 @@ function getMarkdownFiles(): string[] {
   try {
     const files = readdirSync(CONTENT_DIR);
     return files
-      .filter(file => file.endsWith('.md'))
-      .map(file => file.replace('.md', ''));
+      .filter((file) => file.endsWith('.md'))
+      .map((file) => file.replace('.md', ''));
   } catch (error) {
     console.error(`❌ 读取目录 ${CONTENT_DIR} 失败:`, error);
     return [];
@@ -173,16 +186,20 @@ async function buildBlogData(): Promise<void> {
     }
 
     // 按日期排序（最新的在前）
-    posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    posts.sort(
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
 
     // 提取所有标签
-    const allTags = Array.from(new Set(posts.flatMap(post => post.tags))).sort();
+    const allTags = Array.from(
+      new Set(posts.flatMap((post) => post.tags))
+    ).sort();
 
     // 生成博客数据
     const blogData: BlogData = {
       posts,
       tags: allTags,
-      generatedAt: new Date().toISOString()
+      generatedAt: new Date().toISOString(),
     };
 
     // 写入输出文件
@@ -193,7 +210,6 @@ async function buildBlogData(): Promise<void> {
     console.log(`🏷️  标签数量: ${allTags.length}`);
     console.log(`📁 输出文件: ${OUTPUT_FILE}`);
     console.log(`⏰ 生成时间: ${blogData.generatedAt}`);
-
   } catch (error) {
     console.error('❌ 构建过程失败:', error);
     process.exit(1);
@@ -202,7 +218,7 @@ async function buildBlogData(): Promise<void> {
 
 // 如果直接运行此脚本
 if (import.meta.url === `file://${process.argv[1]}`) {
-  buildBlogData().catch(error => {
+  buildBlogData().catch((error) => {
     console.error('❌ 构建失败:', error);
     process.exit(1);
   });
