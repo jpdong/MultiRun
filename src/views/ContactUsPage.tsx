@@ -60,8 +60,8 @@ const contactMethods: ContactMethod[] = [
     id: 'email',
     icon: <FaEnvelope />,
     title: 'Email Support',
-    value: 'dongshan1025@gmail.com',
-    link: 'mailto:dongshan1025@gmail.com',
+    value: 'support@multirun.space',
+    link: 'mailto:support@multirun.space',
     type: 'email'
   }
 ];

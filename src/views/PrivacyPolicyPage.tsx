@@ -68,7 +68,7 @@ const PrivacyPolicyPage: React.FC = () => {
             If you have any questions about this Privacy Policy, please contact us.
           </p>
           <p>
-            dongshan1025@gmail.com
+            <a href="mailto:support@multirun.space">support@multirun.space</a>
           </p>
     </LegalDocument>
   );

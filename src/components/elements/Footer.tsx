@@ -19,8 +19,10 @@ const Footer: React.FC = () => (
         <div className="col col-4">
           <h3>Support</h3>
           <ul>
-            <li><Link href="/privacy-policy">Privacy Policy</Link></li>
-            <li><Link href="/terms-of-use">Terms of Use</Link></li>
+            <li><Link href="/mobile/privacy-policy">App Privacy Policy</Link></li>
+            <li><Link href="/mobile/terms-of-service">App Terms of Service</Link></li>
+            <li><Link href="/privacy-policy">Website Privacy Policy</Link></li>
+            <li><Link href="/terms-of-use">Website Terms of Use</Link></li>
           </ul>
         </div>
       </div>

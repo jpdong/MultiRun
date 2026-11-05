@@ -71,7 +71,7 @@ Alternatively, if you have automatic updates enabled, the app should update auto
 
 ## Feedback and Support
 
-We're constantly working to improve Multi Run based on your feedback. If you encounter any issues or have suggestions for future updates, please contact our support team through the app's "Help & Feedback" section or email us at dongshan1025@gmail.com.
+We're constantly working to improve Multi Run based on your feedback. If you encounter any issues or have suggestions for future updates, please contact our support team through the app's "Help & Feedback" section or email us at support@multirun.space.
 
 Thank you for using Multi Run! We're committed to providing the best multi-instance experience for all your application needs.
 
