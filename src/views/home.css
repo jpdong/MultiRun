@@ -719,6 +719,30 @@
   transform: translateY(20%);
   letter-spacing: -0.065em;
 }
+.home-badges {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 16px;
+  height: 48px;
+  margin-block: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.home-badges > a {
+  display: flex;
+  flex: 0 0 120px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.home-badges img {
+  display: block;
+  width: 120px;
+  height: auto;
+  max-height: 48px;
+  object-fit: contain;
+}
 .home-page .footer {
   background: var(--home-dark);
   padding-block: 60px 25px;

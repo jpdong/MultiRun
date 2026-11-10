@@ -28,6 +28,14 @@ const apps = [
   { name: 'Spotify', href: '/hot-apps/spotify', icon: <FaSpotify /> },
   { name: 'BlueSky', href: '/hot-apps/bluesky', icon: <FaBluesky /> },
 ];
+const badges = [
+  {
+    name: 'Fazier',
+    href: 'https://fazier.com/launches/multirun.space',
+    src: 'https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=neutral',
+    alt: 'Fazier badge',
+  },
+];
 
 export default function MultipleAccountsPage({
   blogPosts,
@@ -259,6 +267,23 @@ export default function MultipleAccountsPage({
             </div>
           </div>
         </section>
+        <div className="home-badges home-container">
+          {badges.map((badge) => (
+            <a
+              key={badge.name}
+              href={badge.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={badge.src}
+                width={120}
+                alt={badge.alt}
+                loading="lazy"
+              />
+            </a>
+          ))}
+        </div>
       </main>
       <Footer />
     </div>
