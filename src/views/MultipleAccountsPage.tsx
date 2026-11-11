@@ -28,12 +28,29 @@ const apps = [
   { name: 'Spotify', href: '/hot-apps/spotify', icon: <FaSpotify /> },
   { name: 'BlueSky', href: '/hot-apps/bluesky', icon: <FaBluesky /> },
 ];
-const badges = [
+type Badge = {
+  name: string;
+  href: string;
+  src: string;
+  alt: string;
+  width: number;
+  height?: number;
+};
+const badges: Badge[] = [
   {
     name: 'Fazier',
     href: 'https://fazier.com/launches/multirun.space',
     src: 'https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=neutral',
     alt: 'Fazier badge',
+    width: 120,
+  },
+  {
+    name: 'Startup Fame',
+    href: 'https://startupfa.me/s/multi-run?utm_source=multirun.space',
+    src: 'https://startupfa.me/badges/featured-badge.webp',
+    alt: 'Multi Run - Featured on Startup Fame',
+    width: 171,
+    height: 54,
   },
 ];
 
@@ -277,7 +294,8 @@ export default function MultipleAccountsPage({
             >
               <img
                 src={badge.src}
-                width={120}
+                width={badge.width}
+                height={badge.height}
                 alt={badge.alt}
                 loading="lazy"
               />
