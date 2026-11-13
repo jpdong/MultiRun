@@ -52,6 +52,14 @@ const badges: Badge[] = [
     width: 171,
     height: 54,
   },
+  {
+    name: 'Twelve Tools',
+    href: 'https://twelve.tools',
+    src: 'https://twelve.tools/badge3-white.svg',
+    alt: 'Featured on Twelve Tools',
+    width: 148,
+    height: 40,
+  },
 ];
 
 export default function MultipleAccountsPage({
