@@ -1,0 +1,138 @@
+{
+  "seo": {
+    "title": "Multi Run - Gandakan Aplikasi & Banyak Akun",
+    "description": "Gandakan aplikasi dan jalankan banyak akun di satu perangkat. Mendukung WhatsApp, Facebook, Instagram, game, dan lainnya."
+  },
+  "nav": {
+    "brand": "Multi Run",
+    "logoAlt": "Logo Multiple Accounts",
+    "mainNavAriaLabel": "Navigasi utama",
+    "mobileNavAriaLabel": "Navigasi seluler",
+    "toggleMobileMenuAriaLabel": "Buka menu seluler",
+    "closeMobileMenuAriaLabel": "Tutup menu seluler",
+    "languageLabel": "Bahasa",
+    "home": "Beranda",
+    "hotApps": "Aplikasi Populer",
+    "hotGames": "Game Populer",
+    "blog": "Blog",
+    "contact": "Kontak",
+    "downloadNow": "Unduh Sekarang"
+  },
+  "hero": {
+    "title": "Jalankan Banyak Akun di Satu Perangkat dengan Aplikasi Multi Run",
+    "description": "Pisahkan kehidupan pribadi dan pekerjaan Anda dengan solusi kloning aplikasi kami yang aman. Tidak perlu lagi bolak-balik ganti akun — jalankan semuanya secara bersamaan!",
+    "cta": "Mulai Sekarang",
+    "showcase": {
+      "deckAriaLabel": "Fitur aplikasi Multi Run",
+      "showFeaturePrefix": "Tampilkan",
+      "playAnimation": "Putar animasi fitur",
+      "pauseAnimation": "Jeda animasi fitur"
+    }
+  },
+  "features": {
+    "heading": "Fitur Unggulan Multi Run",
+    "tablistAriaLabel": "Fitur Unggulan Multi Run",
+    "stageWordmark": "Multi Run",
+    "items": [
+      {
+        "title": "Kloning Aplikasi",
+        "alt": "Multi Run dengan Banyak Akun",
+        "desc": "Gandakan dan jalankan beberapa akun dari aplikasi yang sama dengan penyimpanan data terpisah."
+      },
+      {
+        "title": "Isolasi Data",
+        "alt": "Aplikasi Banyak Akun",
+        "desc": "Jaga keamanan akun Anda dengan ruang data terisolasi tanpa saling bercampur."
+      },
+      {
+        "title": "Jalan Bersamaan",
+        "alt": "Ruang Paralel",
+        "desc": "Jalankan banyak akun sekaligus secara bersamaan tanpa menurunkan performa."
+      },
+      {
+        "title": "Pindah Cepat",
+        "alt": "Aplikasi Kloning Ganda",
+        "desc": "Berpindah antar-akun dengan cepat melalui antarmuka yang intuitif."
+      }
+    ]
+  },
+  "popular": {
+    "heading": "Aplikasi & Game Populer",
+    "description": "Temukan aplikasi dan game terpopuler yang berjalan lancar bersama Multi Run",
+    "imageAlt": "Multi Run dengan Banyak Akun",
+    "appsHeading": "Aplikasi Populer",
+    "gamesHeading": "Game Populer",
+    "exploreApps": {
+      "title": "Jelajahi Semua Aplikasi",
+      "description": "Lihat koleksi lengkap aplikasi yang didukung"
+    },
+    "exploreGames": {
+      "title": "Jelajahi Semua Game",
+      "description": "Temukan game yang berjalan optimal dengan banyak akun"
+    }
+  },
+  "testimonials": {
+    "heading": "Kata Pengguna Tentang Multi Run",
+    "items": [
+      {
+        "text": "Sejak mulai memakainya untuk banyak akun, saya suka sekali setiap fiturnya. Sangat mudah digunakan dan tampilannya keren. Layak dapat bintang 5!"
+      },
+      {
+        "text": "Benar-benar tidak percaya ini gratis total dan tanpa iklan, bisa tambah banyak akun gratis dan cepat. Terima kasih banyak untuk pembuatnya 😙😙😍 Sangat menyarankan semua orang mencobanya, lebih bagus dari aplikasi lain!"
+      },
+      {
+        "text": "Akhirnya ada aplikasi yang lancar untuk WhatsApp dan minim iklan. Saya suka aplikasi ini. Simpel dan antarmukanya bagus. Layak 5 bintang!"
+      },
+      {
+        "text": "Sudah mencoba banyak aplikasi kloning untuk aplikasi tertentu dan semuanya gagal kecuali yang satu ini! Sederhana dan bekerja dengan sangat baik."
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Pertanyaan yang Sering Diajukan",
+    "items": [
+      {
+        "question": "Bagaimana cara menggandakan aplikasi?",
+        "answer": "Cukup buka Multi Run, pilih aplikasi yang ingin digandakan, lalu ikuti petunjuk di layar. Pisahkan ruang kerja dan pribadi, atur jadwal otomatis, serta sembunyikan aplikasi sensitif di Mode Tersembunyi."
+      },
+      {
+        "question": "Apakah Multi Run gratis?",
+        "answer": "Ya, Multi Run gratis digunakan oleh semua pengguna. Mainkan PUBG, Free Fire, atau Genshin Impact dengan beberapa akun tanpa repot."
+      },
+      {
+        "question": "Apakah data saya aman dan terisolasi?",
+        "answer": "Ya, setiap aplikasi hasil kloning berjalan di lingkungan terpisah yang aman. Gandakan WhatsApp, Instagram, TikTok, game, dan 2000+ aplikasi dengan pemisahan data 100%."
+      },
+      {
+        "question": "Platform apa saja yang didukung?",
+        "answer": "Multi Run tersedia untuk Android."
+      }
+    ]
+  },
+  "blog": {
+    "heading": "Artikel Terbaru",
+    "description": "Temukan info dan tips terbaru",
+    "viewAll": "Lihat Semua",
+    "minRead": "menit baca",
+    "readMore": "Baca Selengkapnya"
+  },
+  "download": {
+    "heading": "Unduh Multi Run",
+    "description": "Tersedia untuk Android. Mulai gunakan hari ini!",
+    "googlePlay": "Google Play",
+    "wordmark": "Multi Run"
+  },
+  "footer": {
+    "brand": "Multi Run",
+    "description": "Jalankan banyak akun dan aplikasi secara bersamaan di satu perangkat dengan isolasi data menyeluruh.",
+    "productsHeading": "Produk",
+    "download": "Unduh",
+    "contactUs": "Hubungi Kami",
+    "supportHeading": "Dukungan",
+    "appPrivacyPolicy": "Kebijakan Privasi Aplikasi",
+    "appTermsOfService": "Ketentuan Layanan Aplikasi",
+    "websitePrivacyPolicy": "Kebijakan Privasi Situs",
+    "websiteTermsOfUse": "Ketentuan Penggunaan Situs",
+    "copyright": "© 2025 Multi Run. Hak cipta dilindungi."
+  }
+}

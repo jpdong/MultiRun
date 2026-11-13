@@ -1,0 +1,138 @@
+{
+  "seo": {
+    "title": "Multi Run - 앱 복제 및 다중 계정 실행",
+    "description": "앱을 복제하여 한 기기에서 여러 계정을 동시에 실행하세요. WhatsApp, Facebook, Instagram, 게임 등 다양한 앱을 지원합니다."
+  },
+  "nav": {
+    "brand": "Multi Run",
+    "logoAlt": "Multiple Accounts 로고",
+    "mainNavAriaLabel": "주 메뉴",
+    "mobileNavAriaLabel": "모바일 메뉴",
+    "toggleMobileMenuAriaLabel": "모바일 메뉴 열기",
+    "closeMobileMenuAriaLabel": "모바일 메뉴 닫기",
+    "languageLabel": "언어",
+    "home": "홈",
+    "hotApps": "인기 앱",
+    "hotGames": "인기 게임",
+    "blog": "블로그",
+    "contact": "문의하기",
+    "downloadNow": "지금 다운로드"
+  },
+  "hero": {
+    "title": "Multi Run 앱으로 한 기기에서 여러 계정을 동시에 사용하세요",
+    "description": "안전한 앱 복제 솔루션으로 개인 생활과 업무를 깔끔하게 분리하세요. 계정을 번갈아 로그인할 필요 없이 모두 동시에 실행할 수 있습니다!",
+    "cta": "시작하기",
+    "showcase": {
+      "deckAriaLabel": "Multi Run 앱 기능",
+      "showFeaturePrefix": "보기",
+      "playAnimation": "기능 애니메이션 재생",
+      "pauseAnimation": "기능 애니메이션 일시정지"
+    }
+  },
+  "features": {
+    "heading": "Multi Run의 강력한 기능",
+    "tablistAriaLabel": "Multi Run의 강력한 기능",
+    "stageWordmark": "Multi Run",
+    "items": [
+      {
+        "title": "앱 복제",
+        "alt": "다중 계정 지원 Multi Run",
+        "desc": "동일한 앱을 복제해 독립된 데이터 저장 공간으로 여러 계정을 실행하세요."
+      },
+      {
+        "title": "데이터 격리",
+        "alt": "다중 계정 앱",
+        "desc": "서로 섞이지 않는 격리된 데이터 공간으로 모든 계정을 안전하게 보호합니다."
+      },
+      {
+        "title": "동시 실행",
+        "alt": "패러렐 스페이스",
+        "desc": "성능 저하 없이 여러 계정을 동시에 실행할 수 있습니다."
+      },
+      {
+        "title": "간편한 전환",
+        "alt": "듀얼 복제 앱",
+        "desc": "직관적인 인터페이스로 여러 계정 사이를 빠르게 전환하세요."
+      }
+    ]
+  },
+  "popular": {
+    "heading": "인기 앱 및 게임",
+    "description": "Multi Run과 완벽하게 호환되는 인기 애플리케이션과 게임을 만나보세요",
+    "imageAlt": "다중 계정을 지원하는 Multi Run",
+    "appsHeading": "인기 앱",
+    "gamesHeading": "인기 게임",
+    "exploreApps": {
+      "title": "모든 앱 살펴보기",
+      "description": "지원되는 전체 애플리케이션 목록을 확인하세요"
+    },
+    "exploreGames": {
+      "title": "모든 게임 살펴보기",
+      "description": "다중 계정에 최적화된 다양한 게임을 찾아보세요"
+    }
+  },
+  "testimonials": {
+    "heading": "Multi Run 사용자 후기",
+    "items": [
+      {
+        "text": "다중 계정을 쓰려고 시작한 뒤로 모든 점이 마음에 듭니다. 사용법이 정말 간단하고 인터페이스도 훌륭해요. 별점 5점이 아깝지 않습니다!"
+      },
+      {
+        "text": "정말 완전히 무료이고 광고도 없다니 믿기지 않아요. 여러 계정을 빠르고 무료로 추가할 수 있어서 개발자분께 정말 감사드립니다 😙😙😍 다른 앱들보다 훨씬 좋으니 꼭 써보세요!"
+      },
+      {
+        "text": "드디어 WhatsApp이 잘 작동하고 광고도 적은 앱을 찾았네요. 정말 마음에 들어요. 사용이 간편하고 인터페이스도 깔끔합니다. 별 5개 드립니다!"
+      },
+      {
+        "text": "특정 앱 때문에 복제 앱을 정말 많이 써봤는데 다른 건 다 안 되고 이 앱만 제대로 작동했어요! 단순하면서도 역할을 아주 훌륭하게 해냅니다."
+      }
+    ]
+  },
+  "faq": {
+    "heading": "자주 묻는 질문",
+    "items": [
+      {
+        "question": "앱은 어떻게 복제하나요?",
+        "answer": "Multi Run을 열고 복제할 앱을 선택한 뒤 화면 안내를 따라 하면 됩니다. 업무용과 개인용 공간을 나누고 자동 전환 예약이나 스텔스 모드로 민감한 앱 숨기기도 가능합니다."
+      },
+      {
+        "question": "Multi Run은 무료인가요?",
+        "answer": "네, Multi Run은 모든 사용자에게 무료로 제공됩니다. PUBG, 프리 파이어, 원신 등을 다중 계정으로 편리하게 즐겨보세요."
+      },
+      {
+        "question": "내 데이터는 안전하게 분리되나요?",
+        "answer": "네, 복제된 각 앱은 독립된 격리 환경에서 실행됩니다. WhatsApp, Instagram, TikTok, 게임 등 2000개 이상의 앱을 데이터가 100% 분리된 상태로 동시에 관리하세요."
+      },
+      {
+        "question": "어떤 플랫폼을 지원하나요?",
+        "answer": "Multi Run은 Android에서 사용할 수 있습니다."
+      }
+    ]
+  },
+  "blog": {
+    "heading": "최신 글",
+    "description": "최신 소식과 유용한 팁을 확인하세요",
+    "viewAll": "모두 보기",
+    "minRead": "분 소요",
+    "readMore": "더 읽기"
+  },
+  "download": {
+    "heading": "Multi Run 다운로드",
+    "description": "Android 기기에서 바로 이용할 수 있습니다. 오늘 시작해 보세요!",
+    "googlePlay": "Google Play",
+    "wordmark": "Multi Run"
+  },
+  "footer": {
+    "brand": "Multi Run",
+    "description": "완벽한 데이터 격리 환경에서 하나의 기기로 여러 계정과 앱을 동시에 실행하세요.",
+    "productsHeading": "제품",
+    "download": "다운로드",
+    "contactUs": "문의하기",
+    "supportHeading": "지원",
+    "appPrivacyPolicy": "앱 개인정보처리방침",
+    "appTermsOfService": "앱 서비스 이용약관",
+    "websitePrivacyPolicy": "웹사이트 개인정보처리방침",
+    "websiteTermsOfUse": "웹사이트 이용약관",
+    "copyright": "© 2025 Multi Run. All rights reserved."
+  }
+}

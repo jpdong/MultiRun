@@ -1,0 +1,138 @@
+{
+  "seo": {
+    "title": "Multi Run - Clonar apps y múltiples cuentas",
+    "description": "Clona aplicaciones y ejecuta múltiples cuentas en un solo dispositivo. Compatible con WhatsApp, Facebook, Instagram, juegos y más."
+  },
+  "nav": {
+    "brand": "Multi Run",
+    "logoAlt": "Logo de Multiple Accounts",
+    "mainNavAriaLabel": "Navegación principal",
+    "mobileNavAriaLabel": "Navegación móvil",
+    "toggleMobileMenuAriaLabel": "Abrir menú móvil",
+    "closeMobileMenuAriaLabel": "Cerrar menú móvil",
+    "languageLabel": "Idioma",
+    "home": "Inicio",
+    "hotApps": "Apps populares",
+    "hotGames": "Juegos populares",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "downloadNow": "Descargar"
+  },
+  "hero": {
+    "title": "Usa múltiples cuentas en un dispositivo con Multi Run",
+    "description": "Mantén separadas tu vida personal y profesional con nuestra solución segura para clonar apps. Olvídate de cambiar de cuenta: ¡ejecútalas todas a la vez!",
+    "cta": "Empezar",
+    "showcase": {
+      "deckAriaLabel": "Funciones de Multi Run",
+      "showFeaturePrefix": "Mostrar",
+      "playAnimation": "Reproducir animación de funciones",
+      "pauseAnimation": "Pausar animación de funciones"
+    }
+  },
+  "features": {
+    "heading": "Potentes funciones de Multi Run",
+    "tablistAriaLabel": "Potentes funciones de Multi Run",
+    "stageWordmark": "Multi Run",
+    "items": [
+      {
+        "title": "Clonación de apps",
+        "alt": "Multi Run con múltiples cuentas",
+        "desc": "Clona y ejecuta varias cuentas de la misma aplicación con almacenamiento independiente."
+      },
+      {
+        "title": "Aislamiento de datos",
+        "alt": "App de múltiples cuentas",
+        "desc": "Mantén tus cuentas seguras en espacios de datos aislados y sin mezclas."
+      },
+      {
+        "title": "Ejecución paralela",
+        "alt": "Espacio paralelo",
+        "desc": "Ejecuta múltiples cuentas al mismo tiempo sin pérdida de rendimiento."
+      },
+      {
+        "title": "Cambio rápido",
+        "alt": "App de doble clonación",
+        "desc": "Cambia rápidamente entre tus cuentas gracias a nuestra interfaz intuitiva."
+      }
+    ]
+  },
+  "popular": {
+    "heading": "Apps y juegos populares",
+    "description": "Descubre las aplicaciones y juegos más populares que funcionan sin problemas con Multi Run",
+    "imageAlt": "Multi Run con múltiples cuentas",
+    "appsHeading": "Apps populares",
+    "gamesHeading": "Juegos populares",
+    "exploreApps": {
+      "title": "Explorar todas las apps",
+      "description": "Explora nuestra colección completa de aplicaciones compatibles"
+    },
+    "exploreGames": {
+      "title": "Explorar todos los juegos",
+      "description": "Descubre juegos que funcionan genial con múltiples cuentas"
+    }
+  },
+  "testimonials": {
+    "heading": "Qué dicen los usuarios de Multi Run",
+    "items": [
+      {
+        "text": "Desde que empecé a usarla con varias cuentas he disfrutado cada detalle. Es muy fácil de usar y tiene una interfaz genial. ¡Vale 5 estrellas!"
+      },
+      {
+        "text": "No me lo puedo creer, es totalmente gratis y sin anuncios. Puedes añadir varias cuentas gratis y rápido. ¡Muchas gracias al creador! 😙😙😍 Se la recomiendo a todos, es mejor que otras apps."
+      },
+      {
+        "text": "Por fin una app que funciona con WhatsApp y con menos anuncios. Me encanta. Muy sencilla de usar y con gran diseño. ¡Merece 5 estrellas!"
+      },
+      {
+        "text": "Probé muchas apps para clonar esta aplicación en concreto y ninguna funcionaba excepto esta. Sencilla y cumple su función de maravilla."
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Preguntas frecuentes",
+    "items": [
+      {
+        "question": "¿Cómo clono una aplicación?",
+        "answer": "Solo abre Multi Run, elige la app que quieres clonar y sigue las instrucciones en pantalla. Separa espacios de trabajo y personales, programa cambios automáticos y oculta apps sensibles en el modo oculto."
+      },
+      {
+        "question": "¿Multi Run es gratis?",
+        "answer": "Sí, Multi Run es gratuito para todos los usuarios. Disfruta de PUBG, Free Fire o Genshin Impact con múltiples cuentas sin complicaciones."
+      },
+      {
+        "question": "¿Mis datos estarán seguros y aislados?",
+        "answer": "Sí, cada app clonada funciona en un entorno independiente y aislado. Clona WhatsApp, Instagram, TikTok, juegos y más de 2000 apps manteniendo los datos 100 % separados."
+      },
+      {
+        "question": "¿Qué plataformas son compatibles?",
+        "answer": "Multi Run está disponible para Android."
+      }
+    ]
+  },
+  "blog": {
+    "heading": "Últimos artículos",
+    "description": "Descubre las últimas novedades y consejos",
+    "viewAll": "Ver todo",
+    "minRead": "min de lectura",
+    "readMore": "Leer más"
+  },
+  "download": {
+    "heading": "Descargar Multi Run",
+    "description": "Disponible para Android. ¡Empieza hoy mismo!",
+    "googlePlay": "Google Play",
+    "wordmark": "Multi Run"
+  },
+  "footer": {
+    "brand": "Multi Run",
+    "description": "Ejecuta múltiples cuentas y aplicaciones simultáneamente en un dispositivo con total aislamiento de datos.",
+    "productsHeading": "Productos",
+    "download": "Descargar",
+    "contactUs": "Contáctanos",
+    "supportHeading": "Soporte",
+    "appPrivacyPolicy": "Privacidad de la app",
+    "appTermsOfService": "Términos de la app",
+    "websitePrivacyPolicy": "Privacidad del sitio web",
+    "websiteTermsOfUse": "Términos de uso del sitio",
+    "copyright": "© 2025 Multi Run. Todos los derechos reservados."
+  }
+}

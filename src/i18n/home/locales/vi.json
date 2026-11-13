@@ -1,0 +1,138 @@
+{
+  "seo": {
+    "title": "Multi Run - Nhân bản ứng dụng & Đa tài khoản",
+    "description": "Nhân bản ứng dụng và chạy nhiều tài khoản trên cùng một thiết bị. Hỗ trợ WhatsApp, Facebook, Instagram, trò chơi và nhiều ứng dụng khác."
+  },
+  "nav": {
+    "brand": "Multi Run",
+    "logoAlt": "Logo Multiple Accounts",
+    "mainNavAriaLabel": "Điều hướng chính",
+    "mobileNavAriaLabel": "Điều hướng di động",
+    "toggleMobileMenuAriaLabel": "Mở menu di động",
+    "closeMobileMenuAriaLabel": "Đóng menu di động",
+    "languageLabel": "Ngôn ngữ",
+    "home": "Trang chủ",
+    "hotApps": "Ứng dụng hot",
+    "hotGames": "Game hot",
+    "blog": "Blog",
+    "contact": "Liên hệ",
+    "downloadNow": "Tải ngay"
+  },
+  "hero": {
+    "title": "Chạy nhiều tài khoản trên một thiết bị với ứng dụng Multi Run",
+    "description": "Tách biệt công việc và cuộc sống cá nhân với giải pháp nhân bản ứng dụng an toàn. Không cần đăng xuất hay chuyển đổi qua lại — chạy tất cả cùng lúc!",
+    "cta": "Bắt đầu ngay",
+    "showcase": {
+      "deckAriaLabel": "Các tính năng của ứng dụng Multi Run",
+      "showFeaturePrefix": "Hiển thị",
+      "playAnimation": "Phát hiệu ứng tính năng",
+      "pauseAnimation": "Tạm dừng hiệu ứng tính năng"
+    }
+  },
+  "features": {
+    "heading": "Tính năng mạnh mẽ của Multi Run",
+    "tablistAriaLabel": "Tính năng mạnh mẽ của Multi Run",
+    "stageWordmark": "Multi Run",
+    "items": [
+      {
+        "title": "Nhân bản ứng dụng",
+        "alt": "Multi Run hỗ trợ nhiều tài khoản",
+        "desc": "Nhân bản và chạy nhiều tài khoản của cùng một ứng dụng với vùng lưu trữ dữ liệu riêng biệt."
+      },
+      {
+        "title": "Cô lập dữ liệu",
+        "alt": "Ứng dụng đa tài khoản",
+        "desc": "Bảo vệ các tài khoản của bạn trong không gian dữ liệu tách biệt, không lẫn lộn."
+      },
+      {
+        "title": "Chạy song song",
+        "alt": "Không gian song song",
+        "desc": "Sử dụng đồng thời nhiều tài khoản cùng lúc mà vẫn mượt mà, ổn định."
+      },
+      {
+        "title": "Chuyển đổi dễ dàng",
+        "alt": "Ứng dụng nhân bản kép",
+        "desc": "Chuyển đổi nhanh chóng giữa các tài khoản với giao diện trực quan."
+      }
+    ]
+  },
+  "popular": {
+    "heading": "Ứng dụng & Trò chơi phổ biến",
+    "description": "Khám phá những ứng dụng và trò chơi phổ biến nhất hoạt động mượt mà với Multi Run",
+    "imageAlt": "Multi Run với nhiều tài khoản",
+    "appsHeading": "Ứng dụng phổ biến",
+    "gamesHeading": "Trò chơi phổ biến",
+    "exploreApps": {
+      "title": "Khám phá tất cả ứng dụng",
+      "description": "Xem danh sách đầy đủ các ứng dụng được hỗ trợ"
+    },
+    "exploreGames": {
+      "title": "Khám phá tất cả trò chơi",
+      "description": "Tìm kiếm những trò chơi hoạt động tuyệt vời với nhiều tài khoản"
+    }
+  },
+  "testimonials": {
+    "heading": "Người dùng nói gì về Multi Run",
+    "items": [
+      {
+        "text": "Từ lúc dùng để chạy nhiều tài khoản, tôi rất hài lòng với mọi trải nghiệm. Rất dễ sử dụng và giao diện đẹp. Xứng đáng 5 sao!"
+      },
+      {
+        "text": "Không thể tin được là hoàn toàn miễn phí và không có quảng cáo, lại thêm nhiều tài khoản nhanh chóng. Cảm ơn tác giả rất nhiều 😙😙😍 Khuyên mọi người nên dùng thử, tốt hơn hẳn các app khác!"
+      },
+      {
+        "text": "Cuối cùng cũng tìm thấy một ứng dụng chạy tốt WhatsApp mà ít quảng cáo. Rất dễ dùng với giao diện thân thiện. Xứng đáng 5 sao!"
+      },
+      {
+        "text": "Tôi đã thử rất nhiều ứng dụng nhân bản cho app này nhưng đều không chạy được, chỉ có ứng dụng này hoạt động hoàn hảo! Đơn giản mà rất hiệu quả."
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Câu hỏi thường gặp",
+    "items": [
+      {
+        "question": "Làm thế nào để nhân bản một ứng dụng?",
+        "answer": "Chỉ cần mở Multi Run, chọn ứng dụng bạn muốn nhân bản và làm theo hướng dẫn trên màn hình. Bạn có thể tách riêng không gian làm việc/cá nhân, hẹn giờ chuyển đổi tự động và ẩn ứng dụng nhạy cảm bằng Chế độ Ẩn."
+      },
+      {
+        "question": "Multi Run có miễn phí không?",
+        "answer": "Có, Multi Run miễn phí cho tất cả người dùng. Chiến PUBG, Free Fire hoặc Genshin Impact với nhiều tài khoản thật dễ dàng."
+      },
+      {
+        "question": "Dữ liệu của tôi có an toàn và tách biệt không?",
+        "answer": "Có, mỗi ứng dụng nhân bản chạy trong một môi trường độc lập, an toàn. Nhân bản WhatsApp, Instagram, TikTok, game và hơn 2000 ứng dụng với dữ liệu tách biệt 100%."
+      },
+      {
+        "question": "Ứng dụng hỗ trợ những nền tảng nào?",
+        "answer": "Multi Run hiện có sẵn cho Android."
+      }
+    ]
+  },
+  "blog": {
+    "heading": "Bài viết mới nhất",
+    "description": "Cập nhật những thông tin và mẹo hay mới nhất",
+    "viewAll": "Xem tất cả",
+    "minRead": "phút đọc",
+    "readMore": "Đọc thêm"
+  },
+  "download": {
+    "heading": "Tải xuống Multi Run",
+    "description": "Có mặt trên Android. Bắt đầu ngay hôm nay!",
+    "googlePlay": "Google Play",
+    "wordmark": "Multi Run"
+  },
+  "footer": {
+    "brand": "Multi Run",
+    "description": "Chạy đồng thời nhiều tài khoản và ứng dụng trên một thiết bị với dữ liệu được cô lập hoàn toàn.",
+    "productsHeading": "Sản phẩm",
+    "download": "Tải xuống",
+    "contactUs": "Liên hệ",
+    "supportHeading": "Hỗ trợ",
+    "appPrivacyPolicy": "Chính sách bảo mật ứng dụng",
+    "appTermsOfService": "Điều khoản dịch vụ ứng dụng",
+    "websitePrivacyPolicy": "Chính sách bảo mật trang web",
+    "websiteTermsOfUse": "Điều khoản sử dụng trang web",
+    "copyright": "© 2025 Multi Run. Bảo lưu mọi quyền."
+  }
+}

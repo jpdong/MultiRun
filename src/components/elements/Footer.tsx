@@ -1,36 +1,68 @@
-import React from 'react';
 import Link from 'next/link';
+import React from 'react';
 
-const Footer: React.FC = () => (
-  <footer className="footer">
-    <div className="container">
-      <div className="row">
-        <div className="col col-4">
-          <h3>Multi Run</h3>
-          <p>Run multiple accounts and apps simultaneously on one device with complete data isolation.</p>
+import {
+  defaultHomeLocale,
+  homeLocalePath,
+  type HomeLocale,
+} from '../../i18n/home/config';
+import { homeCopy, type HomeCopy } from '../../i18n/home/en';
+
+type FooterProps = {
+  locale?: HomeLocale;
+  copy?: HomeCopy['footer'];
+};
+
+const Footer: React.FC<FooterProps> = ({
+  locale = defaultHomeLocale,
+  copy = homeCopy.footer,
+}) => {
+  const homePath = homeLocalePath(locale);
+  return (
+    <footer className="footer">
+      <div className="container">
+        <div className="row">
+          <div className="col col-4">
+            <h3>{copy.brand}</h3>
+            <p>{copy.description}</p>
+          </div>
+          <div className="col col-4">
+            <h3>{copy.productsHeading}</h3>
+            <ul>
+              <li>
+                <Link href={homePath}>{copy.download}</Link>
+              </li>
+              <li>
+                <Link href="/contact">{copy.contactUs}</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="col col-4">
+            <h3>{copy.supportHeading}</h3>
+            <ul>
+              <li>
+                <Link href="/mobile/privacy-policy">
+                  {copy.appPrivacyPolicy}
+                </Link>
+              </li>
+              <li>
+                <Link href="/mobile/terms-of-service">
+                  {copy.appTermsOfService}
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy-policy">{copy.websitePrivacyPolicy}</Link>
+              </li>
+              <li>
+                <Link href="/terms-of-use">{copy.websiteTermsOfUse}</Link>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className="col col-4">
-          <h3>Products</h3>
-          <ul>
-            <li><Link href="/">Download</Link></li>
-            <li><Link href="/contact">Contact Us</Link></li>
-          </ul>
-        </div>
-        <div className="col col-4">
-          <h3>Support</h3>
-          <ul>
-            <li><Link href="/mobile/privacy-policy">App Privacy Policy</Link></li>
-            <li><Link href="/mobile/terms-of-service">App Terms of Service</Link></li>
-            <li><Link href="/privacy-policy">Website Privacy Policy</Link></li>
-            <li><Link href="/terms-of-use">Website Terms of Use</Link></li>
-          </ul>
-        </div>
+        <div className="footer-bottom">{copy.copyright}</div>
       </div>
-      <div className="footer-bottom">
-        &copy; 2025 Multi Run. All rights reserved.
-      </div>
-    </div>
-  </footer>
-);
+    </footer>
+  );
+};
 
 export default Footer;

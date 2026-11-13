@@ -2,22 +2,34 @@
 
 import { useState } from 'react';
 
-import { features } from '../../data/home-content';
+import { featureImages } from '../../data/home-content';
+import { homeCopy, type HomeCopy } from '../../i18n/home/en';
 
 import Reveal from './Reveal';
 
-export default function FeatureExplorer() {
+type FeatureExplorerProps = {
+  copy?: HomeCopy['features'];
+};
+
+export default function FeatureExplorer({
+  copy = homeCopy.features,
+}: FeatureExplorerProps) {
   const [active, setActive] = useState(0);
+  const items = copy.items.map((item, index) => ({
+    ...item,
+    img: featureImages[index],
+  }));
+
   return (
     <div className="feature-explorer">
       <div
         className="feature-index"
         role="tablist"
         aria-orientation="vertical"
-        aria-label="Powerful Features of Multi Run"
+        aria-label={copy.tablistAriaLabel}
       >
-        {features.map((feature, index) => (
-          <Reveal key={feature.title} delay={index * 0.06}>
+        {items.map((feature, index) => (
+          <Reveal key={feature.img} delay={index * 0.06}>
             <button
               type="button"
               role="tab"
@@ -30,11 +42,11 @@ export default function FeatureExplorer() {
               onKeyDown={(event) => {
                 let next = index;
                 if (event.key === 'ArrowDown' || event.key === 'ArrowRight')
-                  next = (index + 1) % features.length;
+                  next = (index + 1) % items.length;
                 else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft')
-                  next = (index + features.length - 1) % features.length;
+                  next = (index + items.length - 1) % items.length;
                 else if (event.key === 'Home') next = 0;
-                else if (event.key === 'End') next = features.length - 1;
+                else if (event.key === 'End') next = items.length - 1;
                 else return;
                 event.preventDefault();
                 setActive(next);
@@ -51,9 +63,9 @@ export default function FeatureExplorer() {
         ))}
       </div>
       <div className="feature-stage">
-        {features.map((feature, index) => (
+        {items.map((feature, index) => (
           <div
-            key={feature.title}
+            key={feature.img}
             id={`feature-panel-${index}`}
             role="tabpanel"
             aria-labelledby={`feature-tab-${index}`}
@@ -70,7 +82,7 @@ export default function FeatureExplorer() {
           </div>
         ))}
         <span className="feature-stage-word" aria-hidden="true">
-          Multi Run
+          {copy.stageWordmark}
         </span>
       </div>
     </div>

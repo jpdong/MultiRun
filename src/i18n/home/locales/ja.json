@@ -1,0 +1,138 @@
+{
+  "seo": {
+    "title": "Multi Run - アプリ複製＆複数アカウント管理",
+    "description": "アプリを複製して1台の端末で複数アカウントを同時に利用できます。WhatsApp、Facebook、Instagram、ゲームなどに対応。"
+  },
+  "nav": {
+    "brand": "Multi Run",
+    "logoAlt": "Multiple Accounts ロゴ",
+    "mainNavAriaLabel": "メインナビゲーション",
+    "mobileNavAriaLabel": "モバイルナビゲーション",
+    "toggleMobileMenuAriaLabel": "モバイルメニューを開く",
+    "closeMobileMenuAriaLabel": "モバイルメニューを閉じる",
+    "languageLabel": "言語",
+    "home": "ホーム",
+    "hotApps": "人気アプリ",
+    "hotGames": "人気ゲーム",
+    "blog": "ブログ",
+    "contact": "お問い合わせ",
+    "downloadNow": "今すぐダウンロード"
+  },
+  "hero": {
+    "title": "Multi Run アプリで1台の端末から複数アカウントを同時運用",
+    "description": "安全なアプリ複製ソリューションで仕事用とプライベート用をしっかり分離。アカウントを切り替える手間なく、すべて同時に起動できます。",
+    "cta": "はじめる",
+    "showcase": {
+      "deckAriaLabel": "Multi Run アプリの機能",
+      "showFeaturePrefix": "表示",
+      "playAnimation": "機能アニメーションを再生",
+      "pauseAnimation": "機能アニメーションを一時停止"
+    }
+  },
+  "features": {
+    "heading": "Multi Run の強力な機能",
+    "tablistAriaLabel": "Multi Run の強力な機能",
+    "stageWordmark": "Multi Run",
+    "items": [
+      {
+        "title": "アプリ複製",
+        "alt": "複数アカウント対応の Multi Run",
+        "desc": "同じアプリを複製し、独立したデータ領域で複数アカウントを同時に利用できます。"
+      },
+      {
+        "title": "データ分離",
+        "alt": "複数アカウントアプリ",
+        "desc": "分離されたデータ空間により、情報が混ざることなく各アカウントを安全に保護します。"
+      },
+      {
+        "title": "同時稼働",
+        "alt": "パラレルスペース",
+        "desc": "パフォーマンスを落とさず、複数のアカウントを同時に起動して利用できます。"
+      },
+      {
+        "title": "かんたん切替",
+        "alt": "デュアルクローンアプリ",
+        "desc": "直感的なインターフェースで複数アカウント間をすばやく切り替えられます。"
+      }
+    ]
+  },
+  "popular": {
+    "heading": "人気のアプリ＆ゲーム",
+    "description": "Multi Run でスムーズに動作する定番アプリや人気ゲームをご紹介します",
+    "imageAlt": "複数アカウントで利用する Multi Run",
+    "appsHeading": "人気のアプリ",
+    "gamesHeading": "人気のゲーム",
+    "exploreApps": {
+      "title": "すべてのアプリを見る",
+      "description": "対応アプリケーションの一覧をチェックする"
+    },
+    "exploreGames": {
+      "title": "すべてのゲームを見る",
+      "description": "複数アカウントで快適に遊べるゲームを探す"
+    }
+  },
+  "testimonials": {
+    "heading": "ユーザーの声",
+    "items": [
+      {
+        "text": "複数アカウントで使い始めてから本当に満足しています。とてもシンプルで使いやすく、デザインも素晴らしいです。星5つの価値があります！"
+      },
+      {
+        "text": "本当に完全無料で広告も出ないなんて信じられません。複数アカウントを無料ですばやく追加できます。開発者さんありがとう 😙😙😍 他のどのアプリよりおすすめです。"
+      },
+      {
+        "text": "ついに WhatsApp で使えて広告も少ないアプリに出会えました。とてもシンプルで快適なUIです。今のところ最高の体験で、星5つ間違いなしです！"
+      },
+      {
+        "text": "特定のアプリで使える複製アプリを何個も試しましたが、うまく動いたのはこれだけでした！シンプルで期待通りにしっかり働いてくれます。"
+      }
+    ]
+  },
+  "faq": {
+    "heading": "よくある質問",
+    "items": [
+      {
+        "question": "アプリを複製するにはどうすればいいですか？",
+        "answer": "Multi Run を開いて複製したいアプリを選び、画面の案内に従うだけです。仕事用と個人用のスペースを分けたり、自動切替スケジュールを設定したり、ステルスモードで機密アプリを隠したりできます。"
+      },
+      {
+        "question": "Multi Run は無料ですか？",
+        "answer": "はい、Multi Run はすべてのユーザーが無料で利用できます。PUBG、Free Fire、原神などで複数アカウントのリソース管理や戦略的なプレイをストレスなく楽しめます。"
+      },
+      {
+        "question": "データは安全に分離されますか？",
+        "answer": "はい、複製された各アプリは独立した分離環境で動作し、データを安全に保ちます。WhatsApp、Instagram、TikTok、ゲームなど2000以上のアプリに対応し、100%分離された状態で同時管理できます。"
+      },
+      {
+        "question": "対応プラットフォームは何ですか？",
+        "answer": "Multi Run は Android に対応しています。"
+      }
+    ]
+  },
+  "blog": {
+    "heading": "最新記事",
+    "description": "最新のアップデート情報や活用のヒントをお届けします",
+    "viewAll": "すべて見る",
+    "minRead": "分で読めます",
+    "readMore": "続きを読む"
+  },
+  "download": {
+    "heading": "Multi Run をダウンロード",
+    "description": "主要な端末ですぐに使えます。今日から始めましょう！",
+    "googlePlay": "Google Play",
+    "wordmark": "Multi Run"
+  },
+  "footer": {
+    "brand": "Multi Run",
+    "description": "完全なデータ分離により、1台の端末で複数のアカウントやアプリを同時に実行できます。",
+    "productsHeading": "製品",
+    "download": "ダウンロード",
+    "contactUs": "お問い合わせ",
+    "supportHeading": "サポート",
+    "appPrivacyPolicy": "アプリ プライバシーポリシー",
+    "appTermsOfService": "アプリ 利用規約",
+    "websitePrivacyPolicy": "Webサイト プライバシーポリシー",
+    "websiteTermsOfUse": "Webサイト 利用規約",
+    "copyright": "© 2025 Multi Run. All rights reserved."
+  }
+}

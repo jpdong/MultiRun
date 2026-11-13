@@ -3,8 +3,29 @@
 import { gsap } from 'gsap';
 import { Fragment, useEffect, useRef } from 'react';
 
-export default function HomeTitle({ text }: { text: string }) {
+function splitTitleTokens(text: string, locale?: string): string[] {
+  if (
+    locale &&
+    (locale === 'ja' || locale === 'th') &&
+    typeof Intl !== 'undefined' &&
+    'Segmenter' in Intl
+  ) {
+    const segmenter = new Intl.Segmenter(locale, { granularity: 'word' });
+    return Array.from(segmenter.segment(text), (part) => part.segment);
+  }
+  return text.split(/(\s+)/).filter(Boolean);
+}
+
+export default function HomeTitle({
+  text,
+  locale,
+}: {
+  text: string;
+  locale?: string;
+}) {
   const ref = useRef<HTMLHeadingElement>(null);
+  const tokens = splitTitleTokens(text, locale);
+
   useEffect(() => {
     const media = gsap.matchMedia();
     media.add('(prefers-reduced-motion: no-preference)', () => {
@@ -18,17 +39,20 @@ export default function HomeTitle({ text }: { text: string }) {
       return () => ctx.revert();
     });
     return () => media.revert();
-  }, []);
+  }, [text]);
+
   return (
     <h1 ref={ref}>
-      {text.split(' ').map((word, index) => (
-        <Fragment key={index}>
-          <span className="title-word-mask">
-            <span className="title-word">{word}</span>
+      {tokens.map((token, index) => {
+        if (/^\s+$/.test(token)) {
+          return <Fragment key={index}>{token}</Fragment>;
+        }
+        return (
+          <span className="title-word-mask" key={index}>
+            <span className="title-word">{token}</span>
           </span>
-          {index < text.split(' ').length - 1 ? ' ' : null}
-        </Fragment>
-      ))}
+        );
+      })}
     </h1>
   );
 }

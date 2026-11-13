@@ -3,15 +3,30 @@
 import { gsap } from 'gsap';
 import { useEffect, useRef, useState } from 'react';
 
-import { features } from '../../data/home-content';
+import { featureImages } from '../../data/home-content';
+import { homeCopy, type HomeCopy } from '../../i18n/home/en';
+
+type ProductShowcaseProps = {
+  featuresCopy?: HomeCopy['features']['items'];
+  showcaseCopy?: HomeCopy['hero']['showcase'];
+};
 
 /** Account layers inspired by React Bits Card Swap; native buttons keep every
  * state accessible on touch and keyboard, without relying on drag gestures. */
-export default function ProductShowcase() {
+export default function ProductShowcase({
+  featuresCopy = homeCopy.features.items,
+  showcaseCopy = homeCopy.hero.showcase,
+}: ProductShowcaseProps) {
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
   const [interacting, setInteracting] = useState(false);
   const root = useRef<HTMLDivElement>(null);
+
+  const showcaseFeatures = featuresCopy.slice(0, 3).map((item, index) => ({
+    ...item,
+    img: featureImages[index],
+  }));
+
   useEffect(() => {
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
     if (paused || interacting || reduced.matches) return;
@@ -28,6 +43,7 @@ export default function ProductShowcase() {
       reduced.removeEventListener('change', onChange);
     };
   }, [paused, interacting]);
+
   useEffect(() => {
     const media = gsap.matchMedia();
     media.add('(prefers-reduced-motion: no-preference)', () => {
@@ -46,6 +62,7 @@ export default function ProductShowcase() {
     });
     return () => media.revert();
   }, []);
+
   return (
     <div
       className="product-showcase"
@@ -58,13 +75,13 @@ export default function ProductShowcase() {
           setInteracting(false);
       }}
     >
-      <div className="account-deck" aria-label="Multi Run app features">
-        {features.slice(0, 3).map((feature, index) => {
+      <div className="account-deck" aria-label={showcaseCopy.deckAriaLabel}>
+        {showcaseFeatures.map((feature, index) => {
           const position = (index - active + 3) % 3;
           return (
             <div
               className={`account-layer account-layer-${index} layer-position-${position}`}
-              key={feature.title}
+              key={feature.img}
               aria-hidden={position !== 0}
             >
               <div className="account-tab">
@@ -85,11 +102,11 @@ export default function ProductShowcase() {
         })}
       </div>
       <div className="deck-controls">
-        {features.slice(0, 3).map((feature, index) => (
+        {showcaseFeatures.map((feature, index) => (
           <button
-            key={feature.title}
+            key={feature.img}
             type="button"
-            aria-label={`Show ${feature.title}`}
+            aria-label={`${showcaseCopy.showFeaturePrefix} ${feature.title}`}
             aria-pressed={active === index}
             onClick={() => {
               setActive(index);
@@ -103,7 +120,7 @@ export default function ProductShowcase() {
           className="deck-pause"
           type="button"
           aria-label={
-            paused ? 'Play feature animation' : 'Pause feature animation'
+            paused ? showcaseCopy.playAnimation : showcaseCopy.pauseAnimation
           }
           onClick={() => setPaused(!paused)}
         >

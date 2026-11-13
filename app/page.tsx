@@ -1,25 +1,20 @@
-import MultipleAccountsPage from '../src/views/MultipleAccountsPage'
-import { getAllBlogPosts } from '../src/lib/blog'
-import { BlogPost } from '../src/lib/types'
-import { Metadata } from 'next'
+import type { Metadata } from 'next';
+import { buildHomeMetadata } from '../src/i18n/home/config';
+import { getAllBlogPosts } from '../src/lib/blog';
+import type { BlogPost } from '../src/lib/types';
+import MultipleAccountsPage from '../src/views/MultipleAccountsPage';
 
-export const metadata: Metadata = {
-  title: 'Multi Run - Clone Apps & Multiple Accounts',
-  description: 'Clone apps and run multiple accounts on one device. Support for WhatsApp, Facebook, Instagram, games and more.',
-  alternates: {
-    canonical: 'https://multirun.space/',
-  },
-}
+export const metadata: Metadata = buildHomeMetadata('en');
 
 export default function Home() {
   // Fetch blog posts on the server side
-  let blogPosts: BlogPost[] = []
+  let blogPosts: BlogPost[] = [];
   try {
-    blogPosts = getAllBlogPosts().slice(0, 3)
+    blogPosts = getAllBlogPosts().slice(0, 3);
   } catch (error) {
-    console.error('Error fetching blog posts:', error)
-    blogPosts = []
+    console.error('Error fetching blog posts:', error);
+    blogPosts = [];
   }
-  
-  return <MultipleAccountsPage blogPosts={blogPosts} />
+
+  return <MultipleAccountsPage blogPosts={blogPosts} locale="en" />;
 }
